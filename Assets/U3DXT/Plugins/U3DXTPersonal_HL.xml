@@ -1,0 +1,155 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>U3DXTPersonal_HL</name>
+    </assembly>
+    <members>
+        <member name="T:U3DXT.iOS.Personal.GrantedEventArgs">
+            <summary>
+            Granted arguments.
+            </summary>
+        </member>
+        <member name="F:U3DXT.iOS.Personal.GrantedEventArgs.granted">
+            <summary>
+            The granted.
+            </summary>
+        </member>
+        <member name="M:U3DXT.iOS.Personal.GrantedEventArgs.#ctor(System.Boolean)">
+            <summary>
+            Initializes a new instance of the <see cref="T:U3DXT.iOS.Personal.GrantedEventArgs" /> class.
+            </summary>
+            <param name="granted">If set to <c>true</c> granted.</param>
+        </member>
+        <member name="T:U3DXT.iOS.Personal.PersonalXT">
+            <summary>
+            Main class for iOS Personal plugin. High-level API.</summary>
+            <remarks>
+            </remarks>
+        </member>
+        <member name="E:U3DXT.iOS.Personal.PersonalXT.CalendarAccess">
+            <summary>
+            Occurs when calendar granted.
+            </summary>
+        </member>
+        <member name="E:U3DXT.iOS.Personal.PersonalXT.ReminderAccess">
+            <summary>
+            Occurs when reminder granted.
+            </summary>
+        </member>
+        <member name="E:U3DXT.iOS.Personal.PersonalXT.RemindersFound">
+            <summary>
+            Occurs when reminders found.
+            </summary>
+        </member>
+        <member name="F:U3DXT.iOS.Personal.PersonalXT.eventStore">
+            <summary>
+            The event store.
+            </summary>
+        </member>
+        <member name="F:U3DXT.iOS.Personal.PersonalXT.calendar">
+            <summary>
+            The calendar.
+            </summary>
+        </member>
+        <member name="M:U3DXT.iOS.Personal.PersonalXT.Init">
+            <summary>
+            Initializes the <see cref="T:U3DXT.iOS.Personal.PersonalXT" /> class.
+            </summary>
+        </member>
+        <member name="M:U3DXT.iOS.Personal.PersonalXT.RequestCalendarAccess">
+            <summary>
+            Requests the calendar access.
+            </summary>
+        </member>
+        <member name="M:U3DXT.iOS.Personal.PersonalXT._RequestAccessToCalendarHandler(System.Boolean,U3DXT.iOS.Native.Foundation.NSError)">
+            <summary>
+            _s the request access to calendar handler.
+            </summary>
+            <param name="granted">If set to <c>true</c> granted.</param>
+            <param name="arg2">Arg2.</param>
+        </member>
+        <member name="M:U3DXT.iOS.Personal.PersonalXT.RequestReminderAccess">
+            <summary>
+            Requests the reminder access.
+            </summary>
+        </member>
+        <member name="M:U3DXT.iOS.Personal.PersonalXT._fetchRemindersHandler(System.Object[])">
+            <summary>
+            _fetchs the reminders handler.
+            </summary>
+            <param name="objList">Object list.</param>
+        </member>
+        <member name="M:U3DXT.iOS.Personal.PersonalXT._removeReminders(System.Object[])">
+            <summary>
+            _removes the reminders.
+            </summary>
+            <param name="objList">Object list.</param>
+        </member>
+        <member name="M:U3DXT.iOS.Personal.PersonalXT.GetCalendarAccessStatus">
+            <summary>
+            Gets the calendar access status.
+            </summary>
+            <returns>The calendar access status. Authorized, NotDetermined, StatusDenied, or StatusRestricted.</returns>
+        </member>
+        <member name="M:U3DXT.iOS.Personal.PersonalXT.GetReminderAccessStatus">
+            <summary>
+            Gets the reminder access status.
+            </summary>
+            <returns>The reminder access status.</returns>
+        </member>
+        <member name="M:U3DXT.iOS.Personal.PersonalXT.GetAllContactRecords">
+            <summary>
+            Gets ABRecords on contacts
+            </summary>
+        </member>
+        <member name="M:U3DXT.iOS.Personal.PersonalXT.GetAllContactNames">
+            <summary>
+            Gets all contact names in a form of string[]
+            </summary>
+        </member>
+        <member name="M:U3DXT.iOS.Personal.PersonalXT.GetEventsFromTo(System.DateTime,System.DateTime)">
+            <summary>
+            Gets event data in a specific date range
+            </summary>
+        </member>
+        <member name="M:U3DXT.iOS.Personal.PersonalXT.CreateSimpleEvent(System.String,System.DateTime,System.DateTime)">
+            <summary>
+            Creates the simple event.
+            </summary>
+            <param name="titleTxt">Title text.</param>
+            <param name="fromDate">From date.</param>
+            <param name="toDate">To date.</param>
+        </member>
+        <member name="M:U3DXT.iOS.Personal.PersonalXT.RemoveAllEvents">
+            <summary>
+            Removes all events.
+            </summary>
+        </member>
+        <member name="M:U3DXT.iOS.Personal.PersonalXT.GetAllReminders">
+            <summary>
+            Removes all reminders.
+            </summary>
+        </member>
+        <member name="M:U3DXT.iOS.Personal.PersonalXT.RemoveAllReminders">
+            <summary>
+            Removes all reminders.
+            </summary>
+        </member>
+        <member name="T:U3DXT.iOS.Personal.ReminderArgs">
+            <summary>
+            Reminder arguments.
+            </summary>
+        </member>
+        <member name="F:U3DXT.iOS.Personal.ReminderArgs.objList">
+            <summary>
+            The object list.
+            </summary>
+        </member>
+        <member name="M:U3DXT.iOS.Personal.ReminderArgs.#ctor(System.Object[])">
+            <summary>
+            Initializes a new instance of the <see cref="T:U3DXT.iOS.Personal.ReminderArgs" /> class.
+            </summary>
+            <param name="objList">Object list.</param>
+        </member>
+    </members>
+</doc>

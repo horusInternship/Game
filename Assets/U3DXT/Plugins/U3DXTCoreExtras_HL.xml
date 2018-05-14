@@ -1,0 +1,251 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>U3DXTCoreExtras_HL</name>
+    </assembly>
+    <members>
+        <member name="T:U3DXT.iOS.Data.iCloudPrefs">
+            <summary>
+            High-level class for iCloud Key-Value Store to resemble PlayerPrefs.
+            </summary>
+        </member>
+        <member name="E:U3DXT.iOS.Data.iCloudPrefs.AccountChanged">
+            <summary>
+            Occurs when the iCloud account changes (logs in, logs out, or different account).
+            </summary>
+        </member>
+        <member name="E:U3DXT.iOS.Data.iCloudPrefs.ValuesChangedExternally">
+            <summary>
+            Occurs when key values are changed externally from another device with the same iCloud account.
+            </summary>
+        </member>
+        <member name="P:U3DXT.iOS.Data.iCloudPrefs.store">
+            <summary>
+            The low-level NSUbiquitousKeyValueStore.
+            </summary>
+            <value>The low-level NSUbiquitousKeyValueStore.</value>
+        </member>
+        <member name="P:U3DXT.iOS.Data.iCloudPrefs.iCloudID">
+            <summary>
+            The iCloud ID, which is meaningless, just a way to identify between accounts.
+            Available in iOS 6.0 and later.
+            </summary>
+            <value>The iCloud ID.</value>
+        </member>
+        <member name="M:U3DXT.iOS.Data.iCloudPrefs.Synchronize">
+            <summary>
+            Explicitly synchronizes with iCloud server.
+            You don't have to call this manually because it synchronizes automatically at appropriate times.
+            </summary>
+        </member>
+        <member name="M:U3DXT.iOS.Data.iCloudPrefs.GetInt(System.String,System.Int32)">
+            <summary>
+            Returns the value associated with key.
+            </summary>
+            <returns>The int value.</returns>
+            <param name="key">Key.</param>
+            <param name="defaultValue">Default value.</param>
+        </member>
+        <member name="M:U3DXT.iOS.Data.iCloudPrefs.GetInt(System.String)">
+            <summary>
+            Returns the value associated with key.
+            </summary>
+            <returns>The int value.</returns>
+            <param name="key">Key.</param>
+        </member>
+        <member name="M:U3DXT.iOS.Data.iCloudPrefs.SetInt(System.String,System.Int32)">
+            <summary>
+            Sets the value associated with key.
+            </summary>
+            <param name="key">Key.</param>
+            <param name="value">Int value.</param>
+        </member>
+        <member name="M:U3DXT.iOS.Data.iCloudPrefs.GetFloat(System.String,System.Single)">
+            <summary>
+            Returns the value associated with key.
+            </summary>
+            <returns>The float value.</returns>
+            <param name="key">Key.</param>
+            <param name="defaultValue">Default value.</param>
+        </member>
+        <member name="M:U3DXT.iOS.Data.iCloudPrefs.GetFloat(System.String)">
+            <summary>
+            Returns the value associated with key.
+            </summary>
+            <returns>The float value.</returns>
+            <param name="key">Key.</param>
+        </member>
+        <member name="M:U3DXT.iOS.Data.iCloudPrefs.SetFloat(System.String,System.Single)">
+            <summary>
+            Sets the value associated with key.
+            </summary>
+            <param name="key">Key.</param>
+            <param name="value">Float value.</param>
+        </member>
+        <member name="M:U3DXT.iOS.Data.iCloudPrefs.GetString(System.String,System.String)">
+            <summary>
+            Returns the value associated with key.
+            </summary>
+            <returns>The string value.</returns>
+            <param name="key">Key.</param>
+            <param name="defaultValue">Default value.</param>
+        </member>
+        <member name="M:U3DXT.iOS.Data.iCloudPrefs.GetString(System.String)">
+            <summary>
+            Returns the value associated with key.
+            </summary>
+            <returns>The string value.</returns>
+            <param name="key">Key.</param>
+        </member>
+        <member name="M:U3DXT.iOS.Data.iCloudPrefs.SetString(System.String,System.String)">
+            <summary>
+            Sets the value associated with key.
+            </summary>
+            <param name="key">Key.</param>
+            <param name="value">String value.</param>
+        </member>
+        <member name="M:U3DXT.iOS.Data.iCloudPrefs.HasKey(System.String)">
+            <summary>
+            Determines if has key the specified key.
+            </summary>
+            <returns>
+                <c>true</c> if has key the specified key; otherwise, <c>false</c>.</returns>
+            <param name="key">Key.</param>
+        </member>
+        <member name="P:U3DXT.iOS.Data.iCloudPrefs.keys">
+            <summary>
+            All keys in iCloud store.
+            </summary>
+            <value>The keys.</value>
+        </member>
+        <member name="M:U3DXT.iOS.Data.iCloudPrefs.DeleteAll">
+            <summary>
+            Deletes all iCloudPrefs data.
+            </summary>
+        </member>
+        <member name="M:U3DXT.iOS.Data.iCloudPrefs.DeleteKey(System.String)">
+            <summary>
+            Deletes the value associated with the key.
+            </summary>
+            <param name="key">Key.</param>
+        </member>
+        <member name="T:U3DXT.iOS.Data.iCloudPrefsChangedEventArgs">
+            <summary>
+            iCloudPrefs changed event arguments.
+            </summary>
+        </member>
+        <member name="F:U3DXT.iOS.Data.iCloudPrefsChangedEventArgs.reason">
+            <summary>
+            The reason.
+            </summary>
+        </member>
+        <member name="F:U3DXT.iOS.Data.iCloudPrefsChangedEventArgs.changes">
+            <summary>
+            The changes.
+            </summary>
+        </member>
+        <member name="M:U3DXT.iOS.Data.iCloudPrefsChangedEventArgs.#ctor(U3DXT.iOS.Native.Foundation.NSUbiquitousKeyValueStoreChangeReasonValues,U3DXT.iOS.Data.iCloudPrefsChange[])">
+            <summary>
+            Initializes a new instance of the <see cref="T:U3DXT.iOS.Data.iCloudPrefsChangedEventArgs" /> class.
+            </summary>
+            <param name="reason">Reason.</param>
+            <param name="changes">Changes.</param>
+        </member>
+        <member name="T:U3DXT.iOS.Data.iCloudPrefsChange">
+            <summary>
+            iCloudPrefs change.
+            </summary>
+        </member>
+        <member name="F:U3DXT.iOS.Data.iCloudPrefsChange.key">
+            <summary>
+            The key.
+            </summary>
+        </member>
+        <member name="F:U3DXT.iOS.Data.iCloudPrefsChange.newValue">
+            <summary>
+            The new value.
+            </summary>
+        </member>
+        <member name="F:U3DXT.iOS.Data.iCloudPrefsChange.oldValue">
+            <summary>
+            The old value.
+            </summary>
+        </member>
+        <member name="M:U3DXT.iOS.Data.iCloudPrefsChange.#ctor(System.String,System.Object,System.Object)">
+            <summary>
+            Initializes a new instance of the <see cref="T:U3DXT.iOS.Data.iCloudPrefsChange" /> class.
+            </summary>
+            <param name="key">Key.</param>
+            <param name="newValue">New value.</param>
+            <param name="oldValue">Old value.</param>
+        </member>
+        <member name="T:U3DXT.iOS.UserMedia.PhotosLibrary">
+            <summary>
+            The <c>PhotosLibrary</c> class provides high-level API access to photos and videos in the Photos app.</summary>
+            <remarks>
+            </remarks>
+        </member>
+        <member name="E:U3DXT.iOS.UserMedia.PhotosLibrary.ExportCompleted">
+            <summary>
+            Occurs when an export operation has completed.
+            </summary>
+        </member>
+        <member name="E:U3DXT.iOS.UserMedia.PhotosLibrary.ExportFailed">
+            <summary>
+            Occurs when an export operation has failed.
+            </summary>
+        </member>
+        <member name="P:U3DXT.iOS.UserMedia.PhotosLibrary.assetsLibrary">
+            <summary>
+            The low-level native assets library.
+            </summary>
+            <value>The low-level native assets library.</value>
+        </member>
+        <member name="M:U3DXT.iOS.UserMedia.PhotosLibrary.ExportPNG(UnityEngine.Texture2D)">
+            <summary>
+            Exports a texture in PNG format to Photos album.
+            Raises ExportCompleted or ExportFailed events on completion.
+            </summary>
+            <param name="texture">Texture.</param>
+        </member>
+        <member name="M:U3DXT.iOS.UserMedia.PhotosLibrary.ExportPNG(U3DXT.iOS.Native.UIKit.UIImage)">
+            <summary>
+            Exports an UIImage in PNG format to Photos album.
+            Raises ExportCompleted or ExportFailed events on completion.
+            </summary>
+            <param name="image">Image.</param>
+        </member>
+        <member name="M:U3DXT.iOS.UserMedia.PhotosLibrary.ExportJPEG(UnityEngine.Texture2D,System.Single)">
+            <summary>
+            Exports a texture in JPEG format to Photos album.
+            Raises ExportCompleted or ExportFailed events on completion.
+            </summary>
+            <param name="texture">Texture.</param>
+            <param name="quality">Quality of the resulting JPEG from 0.0 to 1.0.</param>
+        </member>
+        <member name="M:U3DXT.iOS.UserMedia.PhotosLibrary.ExportJPEG(U3DXT.iOS.Native.UIKit.UIImage,System.Single)">
+            <summary>
+            Exports an UIImage in JPEG format to Photos album.
+            Raises ExportCompleted or ExportFailed events on completion.
+            </summary>
+            <param name="image">Image.</param>
+            <param name="quality">Quality of the resulting JPEG from 0.0 to 1.0.</param>
+        </member>
+        <member name="T:U3DXT.iOS.UserMedia.PhotosLibraryExportedEventArgs">
+            <summary>
+            Photos Library exported event arguments.
+            </summary>
+        </member>
+        <member name="F:U3DXT.iOS.UserMedia.PhotosLibraryExportedEventArgs.assetURL">
+            <summary>
+            The asset URL.
+            </summary>
+        </member>
+        <member name="M:U3DXT.iOS.UserMedia.PhotosLibraryExportedEventArgs.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:U3DXT.iOS.UserMedia.PhotosLibraryExportedEventArgs" /> class.
+            </summary>
+            <param name="assetURL">Asset UR.</param>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,13 @@
+<script>
+function sayPhrase()
+{
+	var text = document.getElementById("phrase").value;
+	console.log(text);
+	document.location = "u3dxt://external/say/"+text+"/";
+}	
+</script>	
+		
+<style type="text/css">.text {font-size:20px}</style>
+
+<textarea class="text" id="phrase" type="text" rows=5 cols=30>I am a web view</textarea><br>
+<input class="text" type="button" value="Say It!" onclick="sayPhrase()"></input>

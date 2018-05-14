@@ -1,0 +1,144 @@
+U3DXT by vitapoly
+http://www.U3DXT.com
+
+Version 1.7.1.2:
+- Added support for 64-bit.
+- Fixed PersonalXT.GetAllContactRecords() to return a valid array.
+
+Version 1.7.1.1:
+- Added option to rename U3DXT files on unsupported platforms, defaults to false.
+- Added a cameraDevice argument to GUIXT.ShowImagePicker().
+- Added more demo code to Multipeer example for sending data.
+
+Version 1.7.1.0:
+- Updated CoreImage to include iOS 7 features such as detecting smiles, face angle, and blinks.
+- Added examples under CoreImage for face detection and image filtering.
+- Fixed CoreImage face detector memory leak.
+- Added scale and rotate to FromTexture2D(), ToTexture2D(), and CopyToTexture2D() for CGImage and UIImage.
+- Removed GameKit module. All should use GameKit7 module.
+- All callbacks from Objective-C that do not expect a return value are now called from the GUI thread.
+- Fixed GUIXT.ShowImagePicker() dispatching MediaPickCancelled event on iPad.
+- Added url property to MediaPicked event.
+- Editor script renames all plugin files when switching to unsupported platforms like Android.
+
+Version 1.7.0.0:
+- Added Maps module with MapKit framework.
+- Added Bluetooth module with CoreBluetooth framework.
+- Updated CoreLocation framework in Personal module to include iBeacon APIs.
+- Added CFType.FromObject() to convert strings, numbers, and other native types to CFType.
+- Added statusBarHidden, statusBarStyle, SetStatusBarStyle(), SetStatusBarHidden() to UIApplication.
+- Moved CGImage.FromWebCamTexture() to CGImageExtension high-level API.
+- Fixed calendar permissions granting.
+- Default SpeechXT.Pause() and Stop() to use immediate as boundary.
+
+Version 1.6.4.1:
+- Fixed TurnBasedMatch.currentParticipant crash.
+- iCloud high-level API support for iOS 5.
+- Updater truncates change log to be less than 10 lines.
+- Fixed IAP crash caused by Apple server not returning a productIdentifier.
+- Fixed all DateTime related APIs to correct for local time.
+- Fixed calendar permission granting.
+- Added GKMeeting cleanup code.
+
+Version 1.6.4.0:
+- Added UIPasteboard for clipboard functionalities to CoreExtras.
+- Added option to not show Options Window on new versions or new projects.
+- Removed destroying Texture2D in Player.UnloadPhoto() high-level method.
+
+Version 1.6.3.1:
+- Fixed Unicode characters crashes.
+- Added auto check updates to options.
+- Fixed turn-based match currentParticipant returning one in the participants list.
+
+Version 1.6.3.0:
+- Fixed Unicode characters crashes.
+- Fixed Web View prefab not showing and crashes.
+- Changed ALAssetsLibraryTypesofAsset enum to uint.
+
+Version 1.6.2.1:
+- Updated MultipeerXT.SessionDidReceiveCertificate event to have an acceptCertificate flag.
+
+Version 1.6.2.0:
+- Added partial Security framework to CoreExtras module.
+- Added MCSessionDelegate.DidReceiveCertificate delegate method.
+- Changed SKProduct.localizedPrice to use native NSNumberFormatter to fix a crash.
+- Added InitializationEventArgs.error property for when IAPXT.Init() cannot connect to server.
+
+Version 1.6.1.0:
+- Made all UI compatible with AirPlay.
+- Changed to not rely on system encryption library and uses a simple encryption with 48-bit key for IAP.
+- Added additional checking in IAPXT for crashes.
+- Added Convert functions to CFType for Address Book records and other low-level APIs.
+- Added vibrate functionality: AudioServices.PlaySystemSound(AudioServices.kSystemSoundID_Vibrate)
+- Added JavaScript version of GameKitBasics.
+- Fixed TurnBasedMatchesController.LoadAllMyMatches() crash when no participants in a match.
+
+Version 1.6.0.0:
+- Added CoreExtras module with iCloud, AssetsLibrary, and UIDocumentInteractionController.
+- Added MediaExporter to export audio from Music Library to storage.
+- Added SocialXT.Instagram().
+- Added IAPXT.useEncryptionForCache to allow developer to disable using encryption.
+- SocialXT.Share() also accepts UIImage in addition to Texture2D.
+- Added SocialXT.Post() and Mail() overloads that accept UIImage.
+- Added null checks to SocialXT.Share(), Post(), Mail(), and SMS() after creating view controller.
+- GUIXT.ShowImagePicker() uses UIPopoverController on iPad.
+- Added DirectRequestService: InitializationCompleted and InitializationFailed events, Init(), and account property.
+- Added NSLocale.ToCultureInfo().
+- Added SKProduct.localizedPrice property.
+
+Version 1.5.0.0:
+- Added Personal module with Address Book, Events, and Locations.
+- Added Kitchen Sink scene to launch other test scenes. More test scenes coming.
+- Split high-level and low-level APIs into different DLLs.
+- High-level API source is now on GitHub: https://github.com/vitapoly/u3dxt
+- Added an overloaded GUIXt.ShowAlert() for taking inputs.
+
+Version 1.4.1.0:
+**************************************************************************
+* Please manually delete the Assets/U3DXT folder before clicking Import. *
+**************************************************************************
+- Changed disabled modules to have a "_disabled" extension and not rename disabled folders.
+- Added MobileCoreServices framework for UTI to Core module.
+- Added GUIXT.ShowAlert() and GUIXT.AlertDismissed event.
+- Added UIDevice.
+- Added AVAudioPlayer to Media Player module.
+- Added TurnBasedMatchesController.LoadAllMyMatches().
+- Added applicationIconBadgeNumber, networkActivityIndicatorVisible, CanOpenURL() and OpenURL() for UIApplication.
+- Changed DirectRequestService.GetFromURL() to parse query strings in the URL.
+
+Version 1.4.0.1:
+- Fixed stripping build error.
+- Fixed Player.LoadPhoto() crash if there is no image.
+
+Version 1.4.0.0:
+- Added Media Player module.
+- Editor script generates link.xml for stripping.
+- Added events for Objective-C delegates in low-level API.
+- Moved enabling microphone use to when GameKit actually needs it.
+- Fixed SKProduct.price crash.
+- Changed disabled modules to have a .disabled extension.
+- Added UIImageView, UIPickerView, UIPickerViewDataSource, UIPickerViewDelegate.
+- Added Example, StoreKit Cross Promotion
+- Added Example, ShareNearMe
+- Added Prefab, Multipeer Browser and Advertiser
+- Added Prefab, StoreProductView Prefab
+
+Version 1.3.0.0:
+- Added iOS 7 Game Kit module.
+- Added iOS 7 Game Controller module.
+- Added iOS 7 Multipeer Connectivity module.
+- Added iOS 7 Speech Synthesis module.
+- Added iOS 7 Sprite Kit module.
+- Added Core Image module.
+- Added NSNotificationCenter and NSNotification.
+- Added UIDatePicker.
+
+Version 1.2.0.0:
+- Added Game Kit module for Game Center multiplayer.
+
+Version 1.1.0.0:
+- Support for Unity 3.5.7.
+- Renamed all properties to start with lower case.
+
+Version 1.0.0.0:
+- Initial version.

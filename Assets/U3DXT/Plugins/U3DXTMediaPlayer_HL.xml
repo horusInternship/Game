@@ -1,0 +1,69 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>U3DXTMediaPlayer_HL</name>
+    </assembly>
+    <members>
+        <member name="T:U3DXT.iOS.MediaPlayer.MediaPlayerXT">
+            <summary>
+            Main class for iOS MediaPlayer plugin. High-level API.</summary>
+            <remarks>
+            </remarks>
+        </member>
+        <member name="M:U3DXT.iOS.MediaPlayer.MediaPlayerXT.PlayStreamingFullscreenMovie(System.String,System.Boolean,U3DXT.iOS.Native.MediaPlayer.MPMovieControlStyle)">
+            <summary>
+            Plays the streaming fullscreen movie.
+            </summary>
+            <param name="url">URL.</param>
+            <param name="autoPlay">If set to <c>true</c> auto play.</param>
+            <param name="style">Style.</param>
+        </member>
+        <member name="M:U3DXT.iOS.MediaPlayer.MediaPlayerXT.CloseMoviePlayer">
+            <summary>
+            Closes the movie player.
+            </summary>
+        </member>
+        <member name="T:U3DXT.iOS.MediaPlayer.MediaExporter">
+            <summary>
+            High-level class to export media to storage.
+            </summary>
+        </member>
+        <member name="E:U3DXT.iOS.MediaPlayer.MediaExporter.ExportCompleted">
+            <summary>
+            Occurs when an export operation has completed.
+            </summary>
+        </member>
+        <member name="E:U3DXT.iOS.MediaPlayer.MediaExporter.ExportFailed">
+            <summary>
+            Occurs when an export operation has failed.
+            </summary>
+        </member>
+        <member name="M:U3DXT.iOS.MediaPlayer.MediaExporter.ExportAudio(U3DXT.iOS.Native.MediaPlayer.MPMediaItem,System.String,System.String,System.Boolean)">
+            <summary>
+            Exports the audio of a media item to storage.
+            </summary>
+            <returns>
+                <c>true</c> if audio started exporting, <c>false</c> if it is exporting another audio or the media item has DRM.</returns>
+            <param name="mediaItem">Media item.</param>
+            <param name="outputFolder">Absolute output folder or specify null to use Documents folder.</param>
+            <param name="outputFile">Output file name or specify null to use <c>[artist] - [title].[extension]</c>.</param>
+            <param name="overwrite">Whether to overwrite the output file.</param>
+        </member>
+        <member name="T:U3DXT.iOS.MediaPlayer.MediaExportedEventArgs">
+            <summary>
+            Media exported event arguments.
+            </summary>
+        </member>
+        <member name="F:U3DXT.iOS.MediaPlayer.MediaExportedEventArgs.outputURL">
+            <summary>
+            The output URL.
+            </summary>
+        </member>
+        <member name="M:U3DXT.iOS.MediaPlayer.MediaExportedEventArgs.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:U3DXT.iOS.MediaPlayer.MediaExportedEventArgs" /> class.
+            </summary>
+            <param name="outputURL">Output URL.</param>
+        </member>
+    </members>
+</doc>

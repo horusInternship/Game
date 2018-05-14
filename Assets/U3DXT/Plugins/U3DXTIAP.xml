@@ -1,0 +1,2488 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>U3DXTIAP</name>
+    </assembly>
+    <members>
+        <member name="T:U3DXT.iOS.Native.StoreKit.SKDownload">
+            <summary>
+            A <c>SKDownload</c> object represents downloadable content associated with a product. When you create a product in iTunes Connect, you can associate one or more pieces of downloadable content with it. Then, at runtime, when a product is purchased by a user, your app uses <c>SKDownload</c> objects to download the content from the App Store.
+            </summary>
+            <remarks>
+                <p>Your app never directly creates a <c>SKDownload</c> object. Instead, after a payment is processed, your app reads the transaction object’s <c>downloads</c>property to retrieve an array of <c>SKDownload</c> objects associated with the transaction. Then, to download the content, you queue a download object on the payment queue and wait for the content to be downloaded. After a download completes, read the download object’s <c>contentURL</c> property to get a URL to the downloaded content. Your app must process the downloaded file before completing the transaction. For example, it might copy the file into a directory whose contents are persistent. Once all downloads are complete, you finish the transaction. After the transaction is finished, the download objects cannot be queued to the payment queue and any URLs to the downloaded content are invalid.</p>
+            </remarks>
+            <exception cref="T:U3DXT.Core.U3DXTException">
+            Is thrown when creation or initialization fails.
+            </exception>
+        </member>
+        <member name="F:U3DXT.iOS.Native.StoreKit.SKDownload.TimeRemainingUnknown">
+            <summary>
+                <p>Indicates that the system cannot determine how much time is needed to finish downloading the content.</p>
+                <p>Available in iOS 6.0 and later.</p>
+                <p>
+                </p>
+                <br>
+                </br>Equivalent to the native <c>SKDownloadTimeRemainingUnknown</c> constant.
+            </summary>
+            <remarks>
+            Time values used to show special download states.
+            <p></p><br /><!-- Media player includes --><!-- /Media player includes --><p></p>This is a constant for "Download Time Values".
+            </remarks>
+        </member>
+        <member name="M:U3DXT.iOS.Native.StoreKit.SKDownload.UP_SKDownload_get_contentIdentifier(System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.StoreKit.SKDownload.UP_SKDownload_get_contentLength(System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.StoreKit.SKDownload.UP_SKDownload_get_contentURL(System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.StoreKit.SKDownload.UP_SKDownload_get_contentVersion(System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.StoreKit.SKDownload.UP_SKDownload_get_downloadState(System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.StoreKit.SKDownload.UP_SKDownload_get_error(System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.StoreKit.SKDownload.UP_SKDownload_get_progress(System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.StoreKit.SKDownload.UP_SKDownload_get_timeRemaining(System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.StoreKit.SKDownload.UP_SKDownload_get_transaction(System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.StoreKit.SKDownload.#ctor(U3DXT.iOS.Native.Internals._IosBaseClass._NewHelper)">
+            <summary>
+            U3DXT internal constructor.
+            </summary>
+            <param name="helper">
+            </param>
+        </member>
+        <member name="M:U3DXT.iOS.Native.StoreKit.SKDownload.#ctor(U3DXT.iOS.Native.Internals._IosBaseClass._NewHelper,System.String)">
+            <summary>
+            U3DXT internal constructor.
+            </summary>
+            <param name="helper">
+            </param>
+            <param name="uuid">
+            </param>
+        </member>
+        <member name="M:U3DXT.iOS.Native.StoreKit.SKDownload.#ctor">
+            <summary>
+            Creates and initializes a new instance of the native <see cref="T:U3DXT.iOS.Native.StoreKit.SKDownload" /> class.
+            <br></br>Equivalent to the native <c>[[SKDownload alloc] init]</c> calls.
+            </summary>
+            <exception cref="T:U3DXT.Core.U3DXTException">
+            Is thrown when creation or initialization fails.
+            </exception>
+        </member>
+        <member name="M:U3DXT.iOS.Native.StoreKit.SKDownload.InstancesRespondToSelector(System.String)">
+            <summary>
+            Returns whether native instances of this class can respond to a selector with the same name.
+            <br></br>Equivalent to the native <c>instancesRespondToSelector:</c> class method.
+            </summary>
+            <returns>
+                <c>true</c> if native instances of this class can respond to a selector with the same name, <c>false</c> otherwise.
+            </returns>
+            <param name="selectorName">The literal name of the selector.</param>
+        </member>
+        <member name="P:U3DXT.iOS.Native.StoreKit.SKDownload.ClassExists">
+            <summary>
+            Returns whether the native SKDownload class exists on the platform.
+            </summary>
+            <value>
+                <c>true</c> if class exists; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:U3DXT.iOS.Native.StoreKit.SKDownload.contentIdentifier">
+            <summary>
+            A string that uniquely identifies the downloadable content. (read-only)
+            <br></br>Equivalent to the native <c>contentIdentifier</c> property.
+            </summary>
+            <remarks>
+                <b>Discussion</b>
+                <p>Each piece of downloadable content associated with a product has its own unique identifier. The content identifier is specified in iTunes Connect when you add the content.</p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 6.0 and later.</li>
+                </ul>
+            </remarks>
+        </member>
+        <member name="P:U3DXT.iOS.Native.StoreKit.SKDownload.contentLength">
+            <summary>
+            The length of the downloadable content, in bytes. (read-only)
+            <br></br>Equivalent to the native <c>contentLength</c> property.
+            </summary>
+            <remarks>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 6.0 and later.</li>
+                </ul>
+            </remarks>
+        </member>
+        <member name="P:U3DXT.iOS.Native.StoreKit.SKDownload.contentURL">
+            <summary>
+            The local location of the downloaded file. (read-only)
+            <br></br>Equivalent to the native <c>contentURL</c> property.
+            </summary>
+            <remarks>
+                <b>Discussion</b>
+                <p>The value of this property is valid only when the <c>downloadState</c> property is set to <c>SKDownloadStateFinished</c>. The URL becomes invalid after the transaction object associated with the download is finalized.</p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 6.0 and later.</li>
+                </ul>
+            </remarks>
+        </member>
+        <member name="P:U3DXT.iOS.Native.StoreKit.SKDownload.contentVersion">
+            <summary>
+            A string that identifies which version of the content is available for download. (read-only)
+            <br></br>Equivalent to the native <c>contentVersion</c> property.
+            </summary>
+            <remarks>
+                <b>Discussion</b>
+                <p>The version string must be formatted as a series of integers separated by periods.</p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 6.0 and later.</li>
+                </ul>
+            </remarks>
+        </member>
+        <member name="P:U3DXT.iOS.Native.StoreKit.SKDownload.downloadState">
+            <summary>
+            The current state of the download object. (read-only)
+            <br></br>Equivalent to the native <c>downloadState</c> property.
+            </summary>
+            <remarks>
+                <b>Discussion</b>
+                <p>After you queue a download object, the payment queue object calls your transaction observer when the state of the download object changes. Your transaction observer should read the <c>downloadState</c> property and use it to determine how to proceed. For more information on the different states, see <c>“Download States”</c>.</p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 6.0 and later.</li>
+                </ul>
+            </remarks>
+        </member>
+        <member name="P:U3DXT.iOS.Native.StoreKit.SKDownload.error">
+            <summary>
+            The error that prevented the content from being downloaded. (read-only)
+            <br></br>Equivalent to the native <c>error</c> property.
+            </summary>
+            <remarks>
+                <b>Discussion</b>
+                <p>The value of this property is valid only when the <c>downloadState</c> property is set to <c>SKDownloadStateFailed</c>.</p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 6.0 and later.</li>
+                </ul>
+            </remarks>
+        </member>
+        <member name="P:U3DXT.iOS.Native.StoreKit.SKDownload.progress">
+            <summary>
+            A value that indicates how much of the file has been downloaded. (read-only)
+            <br></br>Equivalent to the native <c>progress</c> property.
+            </summary>
+            <remarks>
+                <b>Discussion</b>
+                <p>The value of this property is a floating point number between <c>0.0</c> and <c>1.0</c>, inclusive, where <c>0.0</c> means no data has been download and <c>1.0</c> means all the data has been downloaded. Typically, your app uses the value of this property to update a user interface element, such as a progress bar, that displays how much of the file has been downloaded.</p>
+                <p>Do not use the value of this property to determine whether the download has completed. Instead, use the <c>downloadState</c> property.</p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 6.0 and later.</li>
+                </ul>
+            </remarks>
+        </member>
+        <member name="P:U3DXT.iOS.Native.StoreKit.SKDownload.timeRemaining">
+            <summary>
+            An estimated time, in seconds, to finish downloading the content. (read-only)
+            <br></br>Equivalent to the native <c>timeRemaining</c> property.
+            </summary>
+            <remarks>
+                <b>Discussion</b>
+                <p>The system attempts to estimate how long it will take to finish downloading the file. If it cannot create a good estimate, the value of this property is set to <c>“Download Time Values”</c>.</p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 6.0 and later.</li>
+                </ul>
+            </remarks>
+        </member>
+        <member name="P:U3DXT.iOS.Native.StoreKit.SKDownload.transaction">
+            <summary>
+            The transaction associated with the downloadable file. (read-only)
+            <br></br>Equivalent to the native <c>transaction</c> property.
+            </summary>
+            <remarks>
+                <b>Discussion</b>
+                <p>A download object is always associated with a payment transaction. The download object may only be queued after payment is processed and before the transaction is finished.</p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 6.0 and later.</li>
+                </ul>
+            </remarks>
+        </member>
+        <member name="T:U3DXT.iOS.Native.StoreKit.SKDownloadState">
+            <summary>
+            The states that a download operation can be in.
+            </summary>
+            <remarks>
+            </remarks>
+        </member>
+        <member name="F:U3DXT.iOS.Native.StoreKit.SKDownloadState.Cancelled">
+            <summary>
+                <p>Indicates that your app canceled the download.</p>
+                <p>Available in iOS 6.0 and later.</p>
+                <p>
+                </p>
+                <br>
+                </br>Equivalent to the native <c>SKDownloadStateCancelled</c> enum constant.
+            </summary>
+        </member>
+        <member name="F:U3DXT.iOS.Native.StoreKit.SKDownloadState.Active">
+            <summary>
+                <p>Indicates that the content is currently being downloaded.</p>
+                <p>Available in iOS 6.0 and later.</p>
+                <p>
+                </p>
+                <br>
+                </br>Equivalent to the native <c>SKDownloadStateActive</c> enum constant.
+            </summary>
+        </member>
+        <member name="F:U3DXT.iOS.Native.StoreKit.SKDownloadState.Finished">
+            <summary>
+                <p>Indicates that the content was successfully downloaded.</p>
+                <p>Available in iOS 6.0 and later.</p>
+                <p>
+                </p>
+                <br>
+                </br>Equivalent to the native <c>SKDownloadStateFinished</c> enum constant.
+            </summary>
+        </member>
+        <member name="F:U3DXT.iOS.Native.StoreKit.SKDownloadState.Waiting">
+            <summary>
+                <p>Indicates that the download has not started yet.</p>
+                <p>Available in iOS 6.0 and later.</p>
+                <p>
+                </p>
+                <br>
+                </br>Equivalent to the native <c>SKDownloadStateWaiting</c> enum constant.
+            </summary>
+        </member>
+        <member name="F:U3DXT.iOS.Native.StoreKit.SKDownloadState.Paused">
+            <summary>
+                <p>Indicates that your app paused the download.</p>
+                <p>Available in iOS 6.0 and later.</p>
+                <p>
+                </p>
+                <br>
+                </br>Equivalent to the native <c>SKDownloadStatePaused</c> enum constant.
+            </summary>
+        </member>
+        <member name="F:U3DXT.iOS.Native.StoreKit.SKDownloadState.Failed">
+            <summary>
+                <p>Indicates that an error occurred while the file was being downloaded.</p>
+                <p>Available in iOS 6.0 and later.</p>
+                <p>
+                </p>
+                <br>
+                </br>Equivalent to the native <c>SKDownloadStateFailed</c> enum constant.
+            </summary>
+        </member>
+        <member name="T:U3DXT.iOS.Native.StoreKit.SKError">
+            <summary>
+            Error codes for the Store Kit error domain.
+            </summary>
+            <remarks>
+                <br />
+                <!-- Media player includes -->
+                <!-- /Media player includes -->
+            </remarks>
+        </member>
+        <member name="F:U3DXT.iOS.Native.StoreKit.SKError.Unknown">
+            <summary>
+                <p>Indicates that an unknown or unexpected error occurred.</p>
+                <p>Available in iOS 3.0 and later.</p>
+                <p>
+                </p>
+                <br>
+                </br>Equivalent to the native <c>SKErrorUnknown</c> enum constant.
+            </summary>
+        </member>
+        <member name="F:U3DXT.iOS.Native.StoreKit.SKError.PaymentCancelled">
+            <summary>
+                <p>Indicates that the user cancelled a payment request.</p>
+                <p>Available in iOS 3.0 and later.</p>
+                <p>
+                </p>
+                <br>
+                </br>Equivalent to the native <c>SKErrorPaymentCancelled</c> enum constant.
+            </summary>
+        </member>
+        <member name="F:U3DXT.iOS.Native.StoreKit.SKError.PaymentInvalid">
+            <summary>
+                <p>Indicates that one of the payment parameters was not recognized by the Apple App Store.</p>
+                <p>Available in iOS 3.0 and later.</p>
+                <p>
+                </p>
+                <br>
+                </br>Equivalent to the native <c>SKErrorPaymentInvalid</c> enum constant.
+            </summary>
+        </member>
+        <member name="F:U3DXT.iOS.Native.StoreKit.SKError.PaymentNotAllowed">
+            <summary>
+                <p>Indicates that the user is not allowed to authorize payments.</p>
+                <p>Available in iOS 3.0 and later.</p>
+                <p>
+                </p>
+                <br>
+                </br>Equivalent to the native <c>SKErrorPaymentNotAllowed</c> enum constant.
+            </summary>
+        </member>
+        <member name="F:U3DXT.iOS.Native.StoreKit.SKError.StoreProductNotAvailable">
+            <summary>
+                <p>Indicates that the requested product is not available in the store.</p>
+                <p>Available in iOS 6.0 and later.</p>
+                <p>
+                </p>
+                <br>
+                </br>Equivalent to the native <c>SKErrorStoreProductNotAvailable</c> enum constant.
+            </summary>
+        </member>
+        <member name="F:U3DXT.iOS.Native.StoreKit.SKError.ClientInvalid">
+            <summary>
+                <p>Indicates that the client is not allowed to perform the attempted action.</p>
+                <p>Available in iOS 3.0 and later.</p>
+                <p>
+                </p>
+                <br>
+                </br>Equivalent to the native <c>SKErrorClientInvalid</c> enum constant.
+            </summary>
+        </member>
+        <member name="T:U3DXT.iOS.Native.StoreKit.SKMutablePayment">
+            <summary>
+            The <c>SKMutablePayment</c> class defines a request to the Apple App Store to process payment for additional functionality offered by your application. A payment encapsulates a string that identifies a particular product and the quantity of that item the user would like to purchase.
+            </summary>
+            <remarks>
+                <p>When a  mutable  payment is added to the payment queue, the payment queue copies the contents into an immutable request before queueing the request. Your application can safely change the contents of the mutable payment object.</p>
+            </remarks>
+            <exception cref="T:U3DXT.Core.U3DXTException">
+            Is thrown when creation or initialization fails.
+            </exception>
+        </member>
+        <member name="M:U3DXT.iOS.Native.StoreKit.SKMutablePayment.UP_SKMutablePayment_get_productIdentifier(System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.StoreKit.SKMutablePayment.UP_SKMutablePayment_set_productIdentifier(System.String,System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.StoreKit.SKMutablePayment.UP_SKMutablePayment_get_quantity(System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.StoreKit.SKMutablePayment.UP_SKMutablePayment_set_quantity(System.String,System.Int32)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.StoreKit.SKMutablePayment.UP_SKMutablePayment_get_requestData(System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.StoreKit.SKMutablePayment.UP_SKMutablePayment_set_requestData(System.String,System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.StoreKit.SKMutablePayment.UP_SKMutablePayment_paymentWithProduct_(System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.StoreKit.SKMutablePayment.UP_SKMutablePayment_paymentWithProductIdentifier_(System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.StoreKit.SKMutablePayment.#ctor(U3DXT.iOS.Native.Internals._IosBaseClass._NewHelper)">
+            <summary>
+            U3DXT internal constructor.
+            </summary>
+            <param name="helper">
+            </param>
+        </member>
+        <member name="M:U3DXT.iOS.Native.StoreKit.SKMutablePayment.#ctor(U3DXT.iOS.Native.Internals._IosBaseClass._NewHelper,System.String)">
+            <summary>
+            U3DXT internal constructor.
+            </summary>
+            <param name="helper">
+            </param>
+            <param name="uuid">
+            </param>
+        </member>
+        <member name="M:U3DXT.iOS.Native.StoreKit.SKMutablePayment.#ctor">
+            <summary>
+            Creates and initializes a new instance of the native <see cref="T:U3DXT.iOS.Native.StoreKit.SKMutablePayment" /> class.
+            <br></br>Equivalent to the native <c>[[SKMutablePayment alloc] init]</c> calls.
+            </summary>
+            <exception cref="T:U3DXT.Core.U3DXTException">
+            Is thrown when creation or initialization fails.
+            </exception>
+        </member>
+        <member name="M:U3DXT.iOS.Native.StoreKit.SKMutablePayment.InstancesRespondToSelector(System.String)">
+            <summary>
+            Returns whether native instances of this class can respond to a selector with the same name.
+            <br></br>Equivalent to the native <c>instancesRespondToSelector:</c> class method.
+            </summary>
+            <returns>
+                <c>true</c> if native instances of this class can respond to a selector with the same name, <c>false</c> otherwise.
+            </returns>
+            <param name="selectorName">The literal name of the selector.</param>
+        </member>
+        <member name="P:U3DXT.iOS.Native.StoreKit.SKMutablePayment.ClassExists">
+            <summary>
+            Returns whether the native SKMutablePayment class exists on the platform.
+            </summary>
+            <value>
+                <c>true</c> if class exists; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="M:U3DXT.iOS.Native.StoreKit.SKMutablePayment.Payment(U3DXT.iOS.Native.StoreKit.SKProduct)">
+            <summary>
+            Returns a new payment for the specified product.
+            <br></br>Equivalent to the native <c>paymentWithProduct:</c> method.
+            </summary>
+            <remarks>
+                <b>Parameters</b>
+                <p>
+                </p>
+                <em>product</em>
+                <p>The product the user wishes to purchase.</p>
+                <b>Return Value</b>
+                <p>A new payment object.</p>
+                <b>Discussion</b>
+                <p>This  factory method  uses the <c>productIdentifier</c> property obtained from the <em>product</em> parameter to create and return a new payment with that identifier. The quantity property defaults to <c>1</c>.</p>
+                <p>To create a <c>SKPayment</c> object with a quantity greater than <c>1</c>, create a <c>SKMutablePayment</c> object, adjust its <c>quantity</c> property and then add it to the payment queue.</p>
+                <table>
+                    <tr>
+                        <td scope="row">
+                            <pre>SKMutablePayment *myPayment = [SKMutablePayment paymentWithProduct: myProduct];  </pre>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td scope="row">
+                            <pre>myPayment.quantity = 2;  </pre>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td scope="row">
+                            <pre>[[SKPaymentQueue defaultQueue] addPayment:myPayment];  </pre>
+                        </td>
+                    </tr>
+                </table>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 3.0 and later.</li>
+                </ul>
+            </remarks>
+            <param name="product">
+            </param>
+        </member>
+        <member name="M:U3DXT.iOS.Native.StoreKit.SKMutablePayment.Payment(System.String)">
+            <summary>
+            Returns a new payment with the specified product identifier. ( Deprecated in iOS 5.0. )
+            <br></br>Equivalent to the native <c>paymentWithProductIdentifier:</c> method.
+            </summary>
+            <remarks>
+                <b>Parameters</b>
+                <p>
+                </p>
+                <em>identifier</em>
+                <p>A string that identifies the item to be purchased.</p>
+                <b>Return Value</b>
+                <p>A new payment object.</p>
+                <b>Discussion</b>
+                <p>The product identifier is a string previously agreed on between your application and the Apple App Store. The quantity property defaults to <c>1</c>.</p>
+                <p>To create a <c>SKPayment</c> object with a quantity greater than <c>1</c>, create a <c>SKMutablePayment</c> object, adjust its <c>quantity</c> property and then add it to the payment queue:</p>
+                <table>
+                    <tr>
+                        <td scope="row">
+                            <pre>SKMutablePayment *myPayment = [SKMutablePayment paymentWithProductIdentifier: myIdentifier];  </pre>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td scope="row">
+                            <pre>myPayment.quantity = 2;  </pre>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td scope="row">
+                            <pre>[[SKPaymentQueue defaultQueue] addPayment:myPayment];  </pre>
+                        </td>
+                    </tr>
+                </table>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 3.0 and later.</li>
+                    <li>Deprecated in iOS 5.0.</li>
+                </ul>
+            </remarks>
+            <param name="identifier">
+            </param>
+        </member>
+        <member name="P:U3DXT.iOS.Native.StoreKit.SKMutablePayment.productIdentifier">
+            <summary>
+            A string that identifies a product that can be purchased from within your application.
+            <br></br>Equivalent to the native <c>productIdentifier</c> property.
+            </summary>
+            <remarks>
+                <b>Discussion</b>
+                <p>The product identifier is a string previously agreed on between your application and the Apple App Store.</p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 3.0 and later.</li>
+                </ul>
+            </remarks>
+        </member>
+        <member name="P:U3DXT.iOS.Native.StoreKit.SKMutablePayment.quantity">
+            <summary>
+            The number of items the user wants to purchase.
+            <br></br>Equivalent to the native <c>quantity</c> property.
+            </summary>
+            <remarks>
+                <b>Discussion</b>
+                <p>The quantity property must be greater than <c>0</c>.</p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 3.0 and later.</li>
+                </ul>
+            </remarks>
+        </member>
+        <member name="P:U3DXT.iOS.Native.StoreKit.SKMutablePayment.requestData">
+            <summary>
+            Reserved for future use. (read-only)
+            <br></br>Equivalent to the native <c>requestData</c> property.
+            </summary>
+            <remarks>
+                <b>Discussion</b>
+                <p>The default value is <c>null</c>. If <c>requestData</c> is not <c>null</c>, your payment will be rejected by the Apple App Store.</p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 3.0 and later.</li>
+                </ul>
+            </remarks>
+        </member>
+        <member name="T:U3DXT.iOS.Native.StoreKit.SKPayment">
+            <summary>
+            The <c>SKPayment</c> class defines a request to the Apple App Store to process payment for additional functionality offered by your application. A payment encapsulates a string that identifies a particular product and the quantity of those items the user would like to purchase.
+            </summary>
+            <remarks>
+            </remarks>
+            <exception cref="T:U3DXT.Core.U3DXTException">
+            Is thrown when creation or initialization fails.
+            </exception>
+        </member>
+        <member name="M:U3DXT.iOS.Native.StoreKit.SKPayment.UP_SKPayment_paymentWithProduct_(System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.StoreKit.SKPayment.UP_SKPayment_paymentWithProductIdentifier_(System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.StoreKit.SKPayment.UP_SKPayment_get_productIdentifier(System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.StoreKit.SKPayment.UP_SKPayment_get_quantity(System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.StoreKit.SKPayment.UP_SKPayment_get_requestData(System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.StoreKit.SKPayment.#ctor(U3DXT.iOS.Native.Internals._IosBaseClass._NewHelper)">
+            <summary>
+            U3DXT internal constructor.
+            </summary>
+            <param name="helper">
+            </param>
+        </member>
+        <member name="M:U3DXT.iOS.Native.StoreKit.SKPayment.#ctor(U3DXT.iOS.Native.Internals._IosBaseClass._NewHelper,System.String)">
+            <summary>
+            U3DXT internal constructor.
+            </summary>
+            <param name="helper">
+            </param>
+            <param name="uuid">
+            </param>
+        </member>
+        <member name="M:U3DXT.iOS.Native.StoreKit.SKPayment.#ctor">
+            <summary>
+            Creates and initializes a new instance of the native <see cref="T:U3DXT.iOS.Native.StoreKit.SKPayment" /> class.
+            <br></br>Equivalent to the native <c>[[SKPayment alloc] init]</c> calls.
+            </summary>
+            <exception cref="T:U3DXT.Core.U3DXTException">
+            Is thrown when creation or initialization fails.
+            </exception>
+        </member>
+        <member name="M:U3DXT.iOS.Native.StoreKit.SKPayment.InstancesRespondToSelector(System.String)">
+            <summary>
+            Returns whether native instances of this class can respond to a selector with the same name.
+            <br></br>Equivalent to the native <c>instancesRespondToSelector:</c> class method.
+            </summary>
+            <returns>
+                <c>true</c> if native instances of this class can respond to a selector with the same name, <c>false</c> otherwise.
+            </returns>
+            <param name="selectorName">The literal name of the selector.</param>
+        </member>
+        <member name="P:U3DXT.iOS.Native.StoreKit.SKPayment.ClassExists">
+            <summary>
+            Returns whether the native SKPayment class exists on the platform.
+            </summary>
+            <value>
+                <c>true</c> if class exists; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="M:U3DXT.iOS.Native.StoreKit.SKPayment.Payment(U3DXT.iOS.Native.StoreKit.SKProduct)">
+            <summary>
+            Returns a new payment for the specified product.
+            <br></br>Equivalent to the native <c>paymentWithProduct:</c> method.
+            </summary>
+            <remarks>
+                <b>Parameters</b>
+                <p>
+                </p>
+                <em>product</em>
+                <p>The product the user wishes to purchase.</p>
+                <b>Return Value</b>
+                <p>A new payment object.</p>
+                <b>Discussion</b>
+                <p>This  factory method  uses the <c>productIdentifier</c> property obtained from the <em>product</em> parameter to create and return a new payment with that identifier. The quantity property defaults to <c>1</c>.</p>
+                <p>To create a <c>SKPayment</c> object with a quantity greater than <c>1</c>, create a <c>SKMutablePayment</c> object, adjust its <c>quantity</c> property and then add it to the payment queue.</p>
+                <table>
+                    <tr>
+                        <td scope="row">
+                            <pre>SKMutablePayment *myPayment = [SKMutablePayment paymentWithProduct: myProduct];  </pre>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td scope="row">
+                            <pre>myPayment.quantity = 2;  </pre>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td scope="row">
+                            <pre>[[SKPaymentQueue defaultQueue] addPayment:myPayment];  </pre>
+                        </td>
+                    </tr>
+                </table>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 3.0 and later.</li>
+                </ul>
+            </remarks>
+            <param name="product">
+            </param>
+        </member>
+        <member name="M:U3DXT.iOS.Native.StoreKit.SKPayment.Payment(System.String)">
+            <summary>
+            Returns a new payment with the specified product identifier. ( Deprecated in iOS 5.0. )
+            <br></br>Equivalent to the native <c>paymentWithProductIdentifier:</c> method.
+            </summary>
+            <remarks>
+                <b>Parameters</b>
+                <p>
+                </p>
+                <em>identifier</em>
+                <p>A string that identifies the item to be purchased.</p>
+                <b>Return Value</b>
+                <p>A new payment object.</p>
+                <b>Discussion</b>
+                <p>The product identifier is a string previously agreed on between your application and the Apple App Store. The quantity property defaults to <c>1</c>.</p>
+                <p>To create a <c>SKPayment</c> object with a quantity greater than <c>1</c>, create a <c>SKMutablePayment</c> object, adjust its <c>quantity</c> property and then add it to the payment queue:</p>
+                <table>
+                    <tr>
+                        <td scope="row">
+                            <pre>SKMutablePayment *myPayment = [SKMutablePayment paymentWithProductIdentifier: myIdentifier];  </pre>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td scope="row">
+                            <pre>myPayment.quantity = 2;  </pre>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td scope="row">
+                            <pre>[[SKPaymentQueue defaultQueue] addPayment:myPayment];  </pre>
+                        </td>
+                    </tr>
+                </table>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 3.0 and later.</li>
+                    <li>Deprecated in iOS 5.0.</li>
+                </ul>
+            </remarks>
+            <param name="identifier">
+            </param>
+        </member>
+        <member name="P:U3DXT.iOS.Native.StoreKit.SKPayment.productIdentifier">
+            <summary>
+            A string used to identify a product that can be purchased from within your application. (read-only)
+            <br></br>Equivalent to the native <c>productIdentifier</c> property.
+            </summary>
+            <remarks>
+                <b>Discussion</b>
+                <p>The product identifier is a string previously agreed on between your application and the Apple App Store.</p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 3.0 and later.</li>
+                </ul>
+            </remarks>
+        </member>
+        <member name="P:U3DXT.iOS.Native.StoreKit.SKPayment.quantity">
+            <summary>
+            The number of items the user wants to purchase. (read-only)
+            <br></br>Equivalent to the native <c>quantity</c> property.
+            </summary>
+            <remarks>
+                <b>Discussion</b>
+                <p>Default value is <c>1</c>.</p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 3.0 and later.</li>
+                </ul>
+            </remarks>
+        </member>
+        <member name="P:U3DXT.iOS.Native.StoreKit.SKPayment.requestData">
+            <summary>
+            Reserved for future use. (read-only)
+            <br></br>Equivalent to the native <c>requestData</c> property.
+            </summary>
+            <remarks>
+                <b>Discussion</b>
+                <p>The default value is <c>null</c>. If <c>requestData</c> is not <c>null</c>, your payment will be rejected by the Apple App Store.</p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 3.0 and later.</li>
+                </ul>
+            </remarks>
+        </member>
+        <member name="T:U3DXT.iOS.Native.StoreKit.SKPaymentQueue">
+            <summary>
+            The <c>SKPaymentQueue</c> class provides a queue of payment transactions to be processed by the App Store. The payment queue communicates with the App Store and presents a user interface so that the user can authorize payment. The contents of the queue are persistent between launches of your app.
+            </summary>
+            <remarks>
+                <p>To process a payment, first attach at least one observer object to the queue. Then, add a payment object for the item the user wants to purchase. Each time you add a payment object, the queue creates a transaction object to process that payment and enqueues it to be processed. After payment is fulfilled, the queue updates the transaction object and then calls any observer objects to provide them the updated transaction. Your observer should process the transaction and then remove it from the queue.</p>
+                <p>The exact mechanism you use to process a processed transaction depends on the design of your app and the product being purchased. Here are a few common examples:</p>
+                <ul class="ul">
+                    <li class="li">
+                        <p>If the product is a feature already built into your app, then to process the transaction, your app would enable the feature.</p>
+                    </li>
+                    <li class="li">
+                        <p>If the product includes downloadable content provided by the App Store, your app would retrieve the <c>SKDownload</c> objects from the transaction and ask the payment queue to download them. You would provide the actual content files to be served by the App Store to iTunes Connect when you create the product information.</p>
+                    </li>
+                    <li class="li">
+                        <p>If the product represents downloadable content provided by your own server, your app might open a network connection to your server and download the content from there.</p>
+                    </li>
+                </ul>
+                <p>For more information on designing the payment processing portion of your app, see <em>In-App Purchase Programming Guide</em>.</p>
+            </remarks>
+            <exception cref="T:U3DXT.Core.U3DXTException">
+            Is thrown when creation or initialization fails.
+            </exception>
+        </member>
+        <member name="M:U3DXT.iOS.Native.StoreKit.SKPaymentQueue.UP_SKPaymentQueue_canMakePayments">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.StoreKit.SKPaymentQueue.UP_SKPaymentQueue_defaultQueue">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.StoreKit.SKPaymentQueue.UP_SKPaymentQueue_get_transactions(System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.StoreKit.SKPaymentQueue.UP_SKPaymentQueue_addPayment_(System.String,System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.StoreKit.SKPaymentQueue.UP_SKPaymentQueue_addTransactionObserver_(System.String,System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.StoreKit.SKPaymentQueue.UP_SKPaymentQueue_cancelDownloads_(System.String,System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.StoreKit.SKPaymentQueue.UP_SKPaymentQueue_finishTransaction_(System.String,System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.StoreKit.SKPaymentQueue.UP_SKPaymentQueue_pauseDownloads_(System.String,System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.StoreKit.SKPaymentQueue.UP_SKPaymentQueue_removeTransactionObserver_(System.String,System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.StoreKit.SKPaymentQueue.UP_SKPaymentQueue_restoreCompletedTransactions(System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.StoreKit.SKPaymentQueue.UP_SKPaymentQueue_resumeDownloads_(System.String,System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.StoreKit.SKPaymentQueue.UP_SKPaymentQueue_startDownloads_(System.String,System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.StoreKit.SKPaymentQueue.#ctor(U3DXT.iOS.Native.Internals._IosBaseClass._NewHelper)">
+            <summary>
+            U3DXT internal constructor.
+            </summary>
+            <param name="helper">
+            </param>
+        </member>
+        <member name="M:U3DXT.iOS.Native.StoreKit.SKPaymentQueue.#ctor(U3DXT.iOS.Native.Internals._IosBaseClass._NewHelper,System.String)">
+            <summary>
+            U3DXT internal constructor.
+            </summary>
+            <param name="helper">
+            </param>
+            <param name="uuid">
+            </param>
+        </member>
+        <member name="M:U3DXT.iOS.Native.StoreKit.SKPaymentQueue.#ctor">
+            <summary>
+            Creates and initializes a new instance of the native <see cref="T:U3DXT.iOS.Native.StoreKit.SKPaymentQueue" /> class.
+            <br></br>Equivalent to the native <c>[[SKPaymentQueue alloc] init]</c> calls.
+            </summary>
+            <exception cref="T:U3DXT.Core.U3DXTException">
+            Is thrown when creation or initialization fails.
+            </exception>
+        </member>
+        <member name="M:U3DXT.iOS.Native.StoreKit.SKPaymentQueue.InstancesRespondToSelector(System.String)">
+            <summary>
+            Returns whether native instances of this class can respond to a selector with the same name.
+            <br></br>Equivalent to the native <c>instancesRespondToSelector:</c> class method.
+            </summary>
+            <returns>
+                <c>true</c> if native instances of this class can respond to a selector with the same name, <c>false</c> otherwise.
+            </returns>
+            <param name="selectorName">The literal name of the selector.</param>
+        </member>
+        <member name="P:U3DXT.iOS.Native.StoreKit.SKPaymentQueue.ClassExists">
+            <summary>
+            Returns whether the native SKPaymentQueue class exists on the platform.
+            </summary>
+            <value>
+                <c>true</c> if class exists; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="M:U3DXT.iOS.Native.StoreKit.SKPaymentQueue.CanMakePayments">
+            <summary>
+            Returns whether the user is allowed to make payments.
+            <br></br>Equivalent to the native <c>canMakePayments</c> method.
+            </summary>
+            <remarks>
+                <b>Return Value</b>
+                <p>
+                    <c>true</c> if the user is allowed to authorize payment. <c>false</c> if they do not have permission.</p>
+                <b>Discussion</b>
+                <p>An iPhone can be restricted from accessing the Apple App Store. For example, parents can restrict their children’s ability to purchase additional content. Your application should confirm that the user is allowed to authorize payments before adding a payment to the queue. Your application may also want to alter its behavior or appearance when the user is not allowed to authorize payments.</p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 3.0 and later.</li>
+                </ul>
+            </remarks>
+        </member>
+        <member name="M:U3DXT.iOS.Native.StoreKit.SKPaymentQueue.DefaultQueue">
+            <summary>
+            Returns the singleton payment queue instance.
+            <br></br>Equivalent to the native <c>defaultQueue</c> method.
+            </summary>
+            <remarks>
+                <b>Return Value</b>
+                <p>The shared payment queue.</p>
+                <b>Discussion</b>
+                <p>Applications do not create a payment queue. Instead, they retrieve the  singleton  queue by calling this class method.</p>
+                <b>Special Considerations</b>
+                <p>The payment queue is not available in Simulator. Attempting to retrieve the payment queue logs a warning.</p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 3.0 and later.</li>
+                </ul>
+            </remarks>
+        </member>
+        <member name="P:U3DXT.iOS.Native.StoreKit.SKPaymentQueue.transactions">
+            <summary>
+            Returns an array of pending transactions. (read-only)
+            <br></br>Equivalent to the native <c>transactions</c> property.
+            </summary>
+            <remarks>
+                <b>Discussion</b>
+                <p>The value of this property is undefined when there are no observers attached to the payment queue.</p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 3.0 and later.</li>
+                </ul>
+                <b>See Also</b>
+                <ul>
+                    <li>
+                        <c>– addTransactionObserver:</c>
+                    </li>
+                </ul>
+            </remarks>
+        </member>
+        <member name="M:U3DXT.iOS.Native.StoreKit.SKPaymentQueue.AddPayment(U3DXT.iOS.Native.StoreKit.SKPayment)">
+            <summary>
+            Adds a payment request to the queue.
+            <br></br>Equivalent to the native <c>addPayment:</c> method.
+            </summary>
+            <remarks>
+                <b>Parameters</b>
+                <p>
+                </p>
+                <em>payment</em>
+                <p>A payment request.</p>
+                <b>Discussion</b>
+                <p>An application should always have at least one observer of the payment queue before adding payment requests.</p>
+                <p>The payment request must have a product identifier registered with the Apple App Store and a quantity greater than <c>0</c>. If either property is invalid, <c>addPayment:</c> throws an exception.</p>
+                <p>When a payment request is added to the queue, the payment queue processes that request with the Apple App Store and arranges for payment from the user. When that transaction is complete or if a failure occurs, the payment queue sends the <c>SKPaymentTransaction</c> object that encapsulates the request to all transaction observers.</p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 3.0 and later.</li>
+                </ul>
+            </remarks>
+            <param name="payment">
+            </param>
+        </member>
+        <member name="M:U3DXT.iOS.Native.StoreKit.SKPaymentQueue.AddTransactionObserver(U3DXT.iOS.Native.StoreKit.SKPaymentTransactionObserver)">
+            <summary>
+            Adds an observer to the payment queue.
+            <br></br>Equivalent to the native <c>addTransactionObserver:</c> method.
+            </summary>
+            <remarks>
+                <b>Parameters</b>
+                <p>
+                </p>
+                <em>observer</em>
+                <p>The observer to add to the queue.</p>
+                <b>Discussion</b>
+                <p>Your application should add an observer to the payment queue during application initialization. If there are no observers attached to the queue, the payment queue does not synchronize its list of pending transactions with the Apple App Store, because there is no observer to respond to updated transactions. </p>
+                <p>If an application quits when transactions are still being processed, those transactions are not lost. The next time the application launches, the payment queue will resume processing the transactions. Your application should always expect to be notified of completed transactions.</p>
+                <p>If more than one transaction observer is attached to the payment queue, no guarantees are made as to the order they will be called in. It is safe for multiple observers to call <c>finishTransaction:</c>, but not recommended. It is recommended that you use a single observer to process and finish the transaction.</p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 3.0 and later.</li>
+                </ul>
+                <b>See Also</b>
+                <ul>
+                    <li>
+                        <c>– removeTransactionObserver:</c>
+                    </li>
+                    <li>
+                        <c>transactions</c>
+                    </li>
+                </ul>
+            </remarks>
+            <param name="observer">
+            </param>
+        </member>
+        <member name="M:U3DXT.iOS.Native.StoreKit.SKPaymentQueue.CancelDownloads(System.Object[])">
+            <summary>
+            Removes a set of downloads from the download list.
+            <br></br>Equivalent to the native <c>cancelDownloads:</c> method.
+            </summary>
+            <remarks>
+                <b>Parameters</b>
+                <p>
+                </p>
+                <em>downloads</em>
+                <p>An array of <c>SKDownload</c> objects to cancel.</p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 6.0 and later.</li>
+                </ul>
+            </remarks>
+            <param name="downloads">
+            </param>
+        </member>
+        <member name="M:U3DXT.iOS.Native.StoreKit.SKPaymentQueue.FinishTransaction(U3DXT.iOS.Native.StoreKit.SKPaymentTransaction)">
+            <summary>
+            Completes a pending transaction.
+            <br></br>Equivalent to the native <c>finishTransaction:</c> method.
+            </summary>
+            <remarks>
+                <b>Parameters</b>
+                <p>
+                </p>
+                <em>transaction</em>
+                <p>The transaction to finish.</p>
+                <b>Discussion</b>
+                <p>Your application should call this method from a transaction observer that received a notification from the payment queue. Calling <c>finishTransaction:</c> on a transaction removes it from the queue. Your application should call <c>finishTransaction:</c> only after it has successfully processed the transaction and unlocked the functionality purchased by the user.</p>
+                <p>Calling <c>finishTransaction:</c> on a transaction that is in the <c>SKPaymentTransactionStatePurchasing</c> state throws an exception.</p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 3.0 and later.</li>
+                </ul>
+                <b>See Also</b>
+                <ul>
+                    <li>
+                        <c>paymentQueue:updatedTransactions:</c>
+                    </li>
+                </ul>
+            </remarks>
+            <param name="transaction">
+            </param>
+        </member>
+        <member name="M:U3DXT.iOS.Native.StoreKit.SKPaymentQueue.PauseDownloads(System.Object[])">
+            <summary>
+            Pauses a set of downloads.
+            <br></br>Equivalent to the native <c>pauseDownloads:</c> method.
+            </summary>
+            <remarks>
+                <b>Parameters</b>
+                <p>
+                </p>
+                <em>downloads</em>
+                <p>An array of <c>SKDownload</c> objects to pause.</p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 6.0 and later.</li>
+                </ul>
+            </remarks>
+            <param name="downloads">
+            </param>
+        </member>
+        <member name="M:U3DXT.iOS.Native.StoreKit.SKPaymentQueue.RemoveTransactionObserver(U3DXT.iOS.Native.StoreKit.SKPaymentTransactionObserver)">
+            <summary>
+            Removes an observer from the payment queue.
+            <br></br>Equivalent to the native <c>removeTransactionObserver:</c> method.
+            </summary>
+            <remarks>
+                <b>Parameters</b>
+                <p>
+                </p>
+                <em>observer</em>
+                <p>The observer to remove.</p>
+                <b>Discussion</b>
+                <p>If there are no observers attached to the queue, the payment queue does not synchronize its list of pending transactions with the Apple App Store, because there is no observer to respond to updated transactions.</p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 3.0 and later.</li>
+                </ul>
+                <b>See Also</b>
+                <ul>
+                    <li>
+                        <c>– addTransactionObserver:</c>
+                    </li>
+                    <li>
+                        <c>transactions</c>
+                    </li>
+                </ul>
+            </remarks>
+            <param name="observer">
+            </param>
+        </member>
+        <member name="M:U3DXT.iOS.Native.StoreKit.SKPaymentQueue.RestoreCompletedTransactions">
+            <summary>
+            Asks the payment queue to restore previously completed purchases.
+            <br></br>Equivalent to the native <c>restoreCompletedTransactions</c> method.
+            </summary>
+            <remarks>
+                <b>Discussion</b>
+                <p>Your application calls this method to restore transactions that were previously finished so that you can process them again. For example, your application would use this to allow a user to unlock previously purchased content onto a new device.</p>
+                <p>When you create a new product to be sold in your store, you choose whether that product can be restored or not. See the <em>In-App Purchase Programming Guide</em> for more information.</p>
+                <p>The payment queue will deliver a new transaction for each previously completed transaction that can be restored. Each transaction includes a copy of the original transaction.</p>
+                <p>After the transactions are delivered, the payment queue calls the observer’s <c>paymentQueueRestoreCompletedTransactionsFinished:</c> method. If an error occurred while restoring transactions, the observer will be notified through its <c>paymentQueue:restoreCompletedTransactionsFailedWithError:</c> method.</p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 3.0 and later.</li>
+                </ul>
+            </remarks>
+        </member>
+        <member name="M:U3DXT.iOS.Native.StoreKit.SKPaymentQueue.ResumeDownloads(System.Object[])">
+            <summary>
+            Resumes a set of downloads.
+            <br></br>Equivalent to the native <c>resumeDownloads:</c> method.
+            </summary>
+            <remarks>
+                <b>Parameters</b>
+                <p>
+                </p>
+                <em>downloads</em>
+                <p>An array of <c>SKDownload</c> objects to resume.</p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 6.0 and later.</li>
+                </ul>
+            </remarks>
+            <param name="downloads">
+            </param>
+        </member>
+        <member name="M:U3DXT.iOS.Native.StoreKit.SKPaymentQueue.StartDownloads(System.Object[])">
+            <summary>
+            Adds a set of downloads to the download list.
+            <br></br>Equivalent to the native <c>startDownloads:</c> method.
+            </summary>
+            <remarks>
+                <b>Parameters</b>
+                <p>
+                </p>
+                <em>downloads</em>
+                <p>An array of <c>SKDownload</c> objects to begin downloading.</p>
+                <b>Discussion</b>
+                <p>In order for a download object to be queued, it must be associated with a transaction that has been successfully purchased, but not yet finished.</p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 6.0 and later.</li>
+                </ul>
+            </remarks>
+            <param name="downloads">
+            </param>
+        </member>
+        <member name="T:U3DXT.iOS.Native.StoreKit.SKPaymentTransaction">
+            <summary>
+            The <c>SKPaymentTransaction</c> class defines objects residing in the payment queue. A payment transaction is created whenever a payment is added to the payment queue. Transactions are delivered to your application when the App Store has finished processing the payment. Completed transactions provide a receipt and transaction identifier that your application can use to save a permanent record of the processed payment.
+            </summary>
+            <remarks>
+            </remarks>
+            <exception cref="T:U3DXT.Core.U3DXTException">
+            Is thrown when creation or initialization fails.
+            </exception>
+        </member>
+        <member name="M:U3DXT.iOS.Native.StoreKit.SKPaymentTransaction.UP_SKPaymentTransaction_get_downloads(System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.StoreKit.SKPaymentTransaction.UP_SKPaymentTransaction_get_error(System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.StoreKit.SKPaymentTransaction.UP_SKPaymentTransaction_get_originalTransaction(System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.StoreKit.SKPaymentTransaction.UP_SKPaymentTransaction_get_payment(System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.StoreKit.SKPaymentTransaction.UP_SKPaymentTransaction_get_transactionDate(System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.StoreKit.SKPaymentTransaction.UP_SKPaymentTransaction_get_transactionIdentifier(System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.StoreKit.SKPaymentTransaction.UP_SKPaymentTransaction_get_transactionReceipt(System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.StoreKit.SKPaymentTransaction.UP_SKPaymentTransaction_get_transactionState(System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.StoreKit.SKPaymentTransaction.#ctor(U3DXT.iOS.Native.Internals._IosBaseClass._NewHelper)">
+            <summary>
+            U3DXT internal constructor.
+            </summary>
+            <param name="helper">
+            </param>
+        </member>
+        <member name="M:U3DXT.iOS.Native.StoreKit.SKPaymentTransaction.#ctor(U3DXT.iOS.Native.Internals._IosBaseClass._NewHelper,System.String)">
+            <summary>
+            U3DXT internal constructor.
+            </summary>
+            <param name="helper">
+            </param>
+            <param name="uuid">
+            </param>
+        </member>
+        <member name="M:U3DXT.iOS.Native.StoreKit.SKPaymentTransaction.#ctor">
+            <summary>
+            Creates and initializes a new instance of the native <see cref="T:U3DXT.iOS.Native.StoreKit.SKPaymentTransaction" /> class.
+            <br></br>Equivalent to the native <c>[[SKPaymentTransaction alloc] init]</c> calls.
+            </summary>
+            <exception cref="T:U3DXT.Core.U3DXTException">
+            Is thrown when creation or initialization fails.
+            </exception>
+        </member>
+        <member name="M:U3DXT.iOS.Native.StoreKit.SKPaymentTransaction.InstancesRespondToSelector(System.String)">
+            <summary>
+            Returns whether native instances of this class can respond to a selector with the same name.
+            <br></br>Equivalent to the native <c>instancesRespondToSelector:</c> class method.
+            </summary>
+            <returns>
+                <c>true</c> if native instances of this class can respond to a selector with the same name, <c>false</c> otherwise.
+            </returns>
+            <param name="selectorName">The literal name of the selector.</param>
+        </member>
+        <member name="P:U3DXT.iOS.Native.StoreKit.SKPaymentTransaction.ClassExists">
+            <summary>
+            Returns whether the native SKPaymentTransaction class exists on the platform.
+            </summary>
+            <value>
+                <c>true</c> if class exists; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:U3DXT.iOS.Native.StoreKit.SKPaymentTransaction.downloads">
+            <summary>
+            An array of download objects representing the downloadable content associated with the transaction. (read-only)
+            <br></br>Equivalent to the native <c>downloads</c> property.
+            </summary>
+            <remarks>
+                <b>Discussion</b>
+                <p>The contents of this property are undefined except when <c>transactionState</c> is set to <c>SKPaymentTransactionStatePurchased</c>. The <c>SKDownload</c> objects stored in this property must be used to download the transaction’s content before the transaction is finished. After the transaction is finished, the download objects are no longer queueable.</p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 6.0 and later.</li>
+                </ul>
+            </remarks>
+        </member>
+        <member name="P:U3DXT.iOS.Native.StoreKit.SKPaymentTransaction.error">
+            <summary>
+            An object describing the error that occurred while processing the transaction. (read-only)
+            <br></br>Equivalent to the native <c>error</c> property.
+            </summary>
+            <remarks>
+                <b>Discussion</b>
+                <p>The <c>error</c> property is undefined except when <c>transactionState</c> is set to <c>SKPaymentTransactionStateFailed</c>. Your application can read the <c>error</c> property to determine why the transaction failed.</p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 3.0 and later.</li>
+                </ul>
+            </remarks>
+        </member>
+        <member name="P:U3DXT.iOS.Native.StoreKit.SKPaymentTransaction.originalTransaction">
+            <summary>
+            The transaction that was restored by the App Store. (read-only)
+            <br></br>Equivalent to the native <c>originalTransaction</c> property.
+            </summary>
+            <remarks>
+                <b>Discussion</b>
+                <p>The contents of this property are undefined except when <c>transactionState</c> is set to <c>SKPaymentTransactionStateRestored</c>. When a transaction is restored, the current transaction holds a new transaction identifier, receipt, and so on. Your application will read this property to retrieve the restored transaction.</p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 3.0 and later.</li>
+                </ul>
+            </remarks>
+        </member>
+        <member name="P:U3DXT.iOS.Native.StoreKit.SKPaymentTransaction.payment">
+            <summary>
+            The payment for the transaction. (read-only)
+            <br></br>Equivalent to the native <c>payment</c> property.
+            </summary>
+            <remarks>
+                <b>Discussion</b>
+                <p>Each payment transaction is created in response to a payment that your application added to the payment queue.</p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 3.0 and later.</li>
+                </ul>
+            </remarks>
+        </member>
+        <member name="P:U3DXT.iOS.Native.StoreKit.SKPaymentTransaction.transactionDate">
+            <summary>
+            The date the transaction was added to the App Store’s payment queue. (read-only)
+            <br></br>Equivalent to the native <c>transactionDate</c> property.
+            </summary>
+            <remarks>
+                <b>Discussion</b>
+                <p>The contents of this property are undefined except when <c>transactionState</c> is set to <c>SKPaymentTransactionStatePurchased</c> or <c>SKPaymentTransactionStateRestored</c>.</p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 3.0 and later.</li>
+                </ul>
+            </remarks>
+        </member>
+        <member name="P:U3DXT.iOS.Native.StoreKit.SKPaymentTransaction.transactionIdentifier">
+            <summary>
+            A string that uniquely identifies a successful payment transaction. (read-only)
+            <br></br>Equivalent to the native <c>transactionIdentifier</c> property.
+            </summary>
+            <remarks>
+                <b>Discussion</b>
+                <p>The contents of this property are undefined except when <c>transactionState</c> is set to <c>SKPaymentTransactionStatePurchased</c> or <c>SKPaymentTransactionStateRestored</c>. The <c>transactionIdentifier</c> is a string that uniquely identifies the processed payment. Your application may wish to record this string as part of an audit trail for App Store purchases. See <em>In-App Purchase Programming Guide</em> for more information.</p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 3.0 and later.</li>
+                </ul>
+            </remarks>
+        </member>
+        <member name="P:U3DXT.iOS.Native.StoreKit.SKPaymentTransaction.transactionReceipt">
+            <summary>
+            A signed receipt that records all information about a successful payment transaction. (read-only)
+            <br></br>Equivalent to the native <c>transactionReceipt</c> property.
+            </summary>
+            <remarks>
+                <b>Discussion</b>
+                <p>The contents of this property are undefined except when <c>transactionState</c> is set to <c>SKPaymentTransactionStatePurchased</c>.</p>
+                <p>The receipt is a signed chunk of data that can be sent to the App Store to verify that the payment was successfully processed. This is most useful when designing a store that server separate from the iPhone to verify that payment was processed. For more information on verifying receipts, see <em>In-App Purchase Programming Guide</em>.</p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 3.0 and later.</li>
+                </ul>
+            </remarks>
+        </member>
+        <member name="P:U3DXT.iOS.Native.StoreKit.SKPaymentTransaction.transactionState">
+            <summary>
+            The current state of the transaction. (read-only)
+            <br></br>Equivalent to the native <c>transactionState</c> property.
+            </summary>
+            <remarks>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 3.0 and later.</li>
+                </ul>
+            </remarks>
+        </member>
+        <member name="T:U3DXT.iOS.Native.StoreKit.SKPaymentTransactionObserver">
+            <summary>
+            The <c>SKPaymentTransactionObserver</c> protocol declares methods that are implemented by observers of an <c>SKPaymentQueue</c> object.
+            </summary>
+            <remarks>
+                <p>An observer is called when transactions are updated by the queue or removed from the queue. An observer should process all successful transactions, unlock the functionality purchased by the user, and then finish the transaction by calling the payment queue’s <c>finishTransaction:</c> method.</p>
+            </remarks>
+        </member>
+        <member name="M:U3DXT.iOS.Native.StoreKit.SKPaymentTransactionObserver.UP_SKPaymentTransactionObserver_set__paymentQueue_removedTransactions__handler(System.String,System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.StoreKit.SKPaymentTransactionObserver.UP_SKPaymentTransactionObserver_set__paymentQueue_restoreCompletedTransactionsFailedWithError__handler(System.String,System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.StoreKit.SKPaymentTransactionObserver.UP_SKPaymentTransactionObserver_set__paymentQueue_updatedDownloads__handler(System.String,System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.StoreKit.SKPaymentTransactionObserver.UP_SKPaymentTransactionObserver_set__paymentQueue_updatedTransactions__handler(System.String,System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.StoreKit.SKPaymentTransactionObserver.UP_SKPaymentTransactionObserver_set__paymentQueueRestoreCompletedTransactionsFinished__handler(System.String,System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.StoreKit.SKPaymentTransactionObserver.#ctor">
+            <summary>
+            Default constructor.
+            </summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.StoreKit.SKPaymentTransactionObserver.#ctor(U3DXT.iOS.Native.Internals._IosBaseClass._NewHelper,System.String)">
+            <summary>
+            U3DXT internal constructor.
+            </summary>
+            <param name="helper">
+            </param>
+            <param name="className">
+            </param>
+        </member>
+        <member name="M:U3DXT.iOS.Native.StoreKit.SKPaymentTransactionObserver._InitImplementedMethods">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.StoreKit.SKPaymentTransactionObserver.RemovedTransactions(U3DXT.iOS.Native.StoreKit.SKPaymentQueue,System.Object[])">
+            <summary>
+            (optional) Tells an observer that one or more transactions have been removed from the queue.
+            <br></br>Equivalent to the native <c>paymentQueue:removedTransactions:</c> method.
+            </summary>
+            <remarks>
+                <b>Parameters</b>
+                <p>
+                </p>
+                <em>queue</em>
+                <p>The payment queue that updated the transactions.</p>
+                <em>transactions</em>
+                <p>An array of the transactions that were removed.</p>
+                <b>Discussion</b>
+                <p>Your application does not typically need to implement this method but might implement it to update its own user interface to reflect that a transaction has been completed.</p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 3.0 and later.</li>
+                </ul>
+            </remarks>
+            <param name="queue">
+            </param>
+            <param name="transactions">
+            </param>
+        </member>
+        <member name="M:U3DXT.iOS.Native.StoreKit.SKPaymentTransactionObserver.RestoreCompletedTransactionsFailed(U3DXT.iOS.Native.StoreKit.SKPaymentQueue,U3DXT.iOS.Native.Foundation.NSError)">
+            <summary>
+            (optional) Tells the observer that an error occurred while restoring transactions.
+            <br></br>Equivalent to the native <c>paymentQueue:restoreCompletedTransactionsFailedWithError:</c> method.
+            </summary>
+            <remarks>
+                <b>Parameters</b>
+                <p>
+                </p>
+                <em>queue</em>
+                <p>The payment queue that was restoring transactions.</p>
+                <em>error</em>
+                <p>The error that occurred.</p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 3.0 and later.</li>
+                </ul>
+            </remarks>
+            <param name="queue">
+            </param>
+            <param name="error">
+            </param>
+        </member>
+        <member name="M:U3DXT.iOS.Native.StoreKit.SKPaymentTransactionObserver.UpdatedDownloads(U3DXT.iOS.Native.StoreKit.SKPaymentQueue,System.Object[])">
+            <summary>
+            (optional) Tells the observer that the payment queue has updated one or more download objects. (required)
+            <br></br>Equivalent to the native <c>paymentQueue:updatedDownloads:</c> method.
+            </summary>
+            <remarks>
+                <b>Parameters</b>
+                <p>
+                </p>
+                <em>queue</em>
+                <p>The payment queue that updated the downloads.</p>
+                <em>downloads</em>
+                <p>The download objects that were updated.</p>
+                <b>Discussion</b>
+                <p>When a download object is updated, its <c>downloadState</c> property describes how it changed.</p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 6.0 and later.</li>
+                </ul>
+            </remarks>
+            <param name="queue">
+            </param>
+            <param name="downloads">
+            </param>
+        </member>
+        <member name="M:U3DXT.iOS.Native.StoreKit.SKPaymentTransactionObserver.UpdatedTransactions(U3DXT.iOS.Native.StoreKit.SKPaymentQueue,System.Object[])">
+            <summary>
+            (<b>required</b>) Tells an observer that one or more transactions have been updated. (required)
+            <br></br>Equivalent to the native <c>paymentQueue:updatedTransactions:</c> method.
+            </summary>
+            <remarks>
+                <b>Parameters</b>
+                <p>
+                </p>
+                <em>queue</em>
+                <p>The payment queue that updated the transactions.</p>
+                <em>transactions</em>
+                <p>An array of the transactions that were updated.</p>
+                <b>Discussion</b>
+                <p>The application should process each transaction by examining the transaction’s <c>transactionState</c> property. If <c>transactionState</c> is <c><!--a target="_self" -->SKPaymentTransactionStatePurchased<!--/a--></c>, payment was successfully received for the desired functionality. The application should make the functionality available to the user. If <c>transactionState</c> is <c><!--a target="_self" -->SKPaymentTransactionStateFailed<!--/a--></c>, the application can read the transaction’s error property to return a meaningful error to the user.</p>
+                <p>Once a transaction is processed, it should be removed from the payment queue by calling the payment queue’s <c>finishTransaction:</c> method, passing the transaction as a parameter.</p>
+                <p>
+                    <strong>Important:</strong> Once the transaction is finished, Store Kit can not tell you that this item is already purchased. It is important that applications process the transaction completely before calling <c>finishTransaction:</c>.</p>
+                <p>
+                </p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 3.0 and later.</li>
+                </ul>
+            </remarks>
+            <param name="queue">
+            </param>
+            <param name="transactions">
+            </param>
+        </member>
+        <member name="M:U3DXT.iOS.Native.StoreKit.SKPaymentTransactionObserver.RestoreCompletedTransactionsFinished(U3DXT.iOS.Native.StoreKit.SKPaymentQueue)">
+            <summary>
+            (optional) Tells the observer that the payment queue has finished sending restored transactions.
+            <br></br>Equivalent to the native <c>paymentQueueRestoreCompletedTransactionsFinished:</c> method.
+            </summary>
+            <remarks>
+                <b>Parameters</b>
+                <p>
+                </p>
+                <em>queue</em>
+                <p>The payment queue that restored the transactions.</p>
+                <b>Discussion</b>
+                <p>This method is called after all restorable transactions have been processed by the payment queue. Your application is not required to do anything in this method.</p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 3.0 and later.</li>
+                </ul>
+            </remarks>
+            <param name="queue">
+            </param>
+        </member>
+        <member name="P:U3DXT.iOS.Native.StoreKit.SKPaymentTransactionObserver._paymentQueue_removedTransactions__handler">
+            <summary>
+                <br>
+                </br>Equivalent to the native <c>_paymentQueue_removedTransactions__handler</c> property.
+            </summary>
+            <remarks>
+            </remarks>
+        </member>
+        <member name="P:U3DXT.iOS.Native.StoreKit.SKPaymentTransactionObserver._paymentQueue_restoreCompletedTransactionsFailedWithError__handler">
+            <summary>
+                <br>
+                </br>Equivalent to the native <c>_paymentQueue_restoreCompletedTransactionsFailedWithError__handler</c> property.
+            </summary>
+            <remarks>
+            </remarks>
+        </member>
+        <member name="P:U3DXT.iOS.Native.StoreKit.SKPaymentTransactionObserver._paymentQueue_updatedDownloads__handler">
+            <summary>
+                <br>
+                </br>Equivalent to the native <c>_paymentQueue_updatedDownloads__handler</c> property.
+            </summary>
+            <remarks>
+            </remarks>
+        </member>
+        <member name="P:U3DXT.iOS.Native.StoreKit.SKPaymentTransactionObserver._paymentQueue_updatedTransactions__handler">
+            <summary>
+                <br>
+                </br>Equivalent to the native <c>_paymentQueue_updatedTransactions__handler</c> property.
+            </summary>
+            <remarks>
+            </remarks>
+        </member>
+        <member name="P:U3DXT.iOS.Native.StoreKit.SKPaymentTransactionObserver._paymentQueueRestoreCompletedTransactionsFinished__handler">
+            <summary>
+                <br>
+                </br>Equivalent to the native <c>_paymentQueueRestoreCompletedTransactionsFinished__handler</c> property.
+            </summary>
+            <remarks>
+            </remarks>
+        </member>
+        <member name="T:U3DXT.iOS.Native.StoreKit.SKPaymentTransactionState">
+            <summary>
+            The state of a transaction.
+            </summary>
+            <remarks>
+                <br />
+                <!-- Media player includes -->
+                <!-- /Media player includes -->
+            </remarks>
+        </member>
+        <member name="F:U3DXT.iOS.Native.StoreKit.SKPaymentTransactionState.Purchasing">
+            <summary>
+                <p>The transaction is being processed by the App Store.</p>
+                <p>Available in iOS 3.0 and later.</p>
+                <p>
+                </p>
+                <br>
+                </br>Equivalent to the native <c>SKPaymentTransactionStatePurchasing</c> enum constant.
+            </summary>
+        </member>
+        <member name="F:U3DXT.iOS.Native.StoreKit.SKPaymentTransactionState.Restored">
+            <summary>
+                <p>This transaction restores content previously purchased by the user. Read the <c>originalTransaction</c> property to obtain information about the original purchase.</p>
+                <p>Available in iOS 3.0 and later.</p>
+                <p>
+                </p>
+                <br>
+                </br>Equivalent to the native <c>SKPaymentTransactionStateRestored</c> enum constant.
+            </summary>
+        </member>
+        <member name="F:U3DXT.iOS.Native.StoreKit.SKPaymentTransactionState.Purchased">
+            <summary>
+                <p>The App Store successfully processed payment. Your application should provide the content the user purchased.</p>
+                <p>Available in iOS 3.0 and later.</p>
+                <p>
+                </p>
+                <br>
+                </br>Equivalent to the native <c>SKPaymentTransactionStatePurchased</c> enum constant.
+            </summary>
+        </member>
+        <member name="F:U3DXT.iOS.Native.StoreKit.SKPaymentTransactionState.Failed">
+            <summary>
+                <p>The transaction failed. Check the <c>error</c> property to determine what happened.</p>
+                <p>Available in iOS 3.0 and later.</p>
+                <p>
+                </p>
+                <br>
+                </br>Equivalent to the native <c>SKPaymentTransactionStateFailed</c> enum constant.
+            </summary>
+        </member>
+        <member name="T:U3DXT.iOS.Native.StoreKit.SKProduct">
+            <summary>
+                <c>SKProduct</c> objects are returned as part of an <c>SKProductsResponse</c> object. Each product object provides information about a product you previously registered in iTunes Connect.
+            </summary>
+            <remarks>
+            </remarks>
+            <exception cref="T:U3DXT.Core.U3DXTException">
+            Is thrown when creation or initialization fails.
+            </exception>
+        </member>
+        <member name="P:U3DXT.iOS.Native.StoreKit.SKProduct.localizedPrice">
+            <summary>
+            The price of the product with localized currency and format.
+            </summary>
+            <value>The localized price.</value>
+        </member>
+        <member name="M:U3DXT.iOS.Native.StoreKit.SKProduct.UP_SKProduct_get_downloadable(System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.StoreKit.SKProduct.UP_SKProduct_get_downloadContentLengths(System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.StoreKit.SKProduct.UP_SKProduct_get_downloadContentVersion(System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.StoreKit.SKProduct.UP_SKProduct_get_localizedDescription(System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.StoreKit.SKProduct.UP_SKProduct_get_localizedTitle(System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.StoreKit.SKProduct.UP_SKProduct_get_price(System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.StoreKit.SKProduct.UP_SKProduct_get_priceLocale(System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.StoreKit.SKProduct.UP_SKProduct_get_productIdentifier(System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.StoreKit.SKProduct.#ctor(U3DXT.iOS.Native.Internals._IosBaseClass._NewHelper)">
+            <summary>
+            U3DXT internal constructor.
+            </summary>
+            <param name="helper">
+            </param>
+        </member>
+        <member name="M:U3DXT.iOS.Native.StoreKit.SKProduct.#ctor(U3DXT.iOS.Native.Internals._IosBaseClass._NewHelper,System.String)">
+            <summary>
+            U3DXT internal constructor.
+            </summary>
+            <param name="helper">
+            </param>
+            <param name="uuid">
+            </param>
+        </member>
+        <member name="M:U3DXT.iOS.Native.StoreKit.SKProduct.#ctor">
+            <summary>
+            Creates and initializes a new instance of the native <see cref="T:U3DXT.iOS.Native.StoreKit.SKProduct" /> class.
+            <br></br>Equivalent to the native <c>[[SKProduct alloc] init]</c> calls.
+            </summary>
+            <exception cref="T:U3DXT.Core.U3DXTException">
+            Is thrown when creation or initialization fails.
+            </exception>
+        </member>
+        <member name="M:U3DXT.iOS.Native.StoreKit.SKProduct.InstancesRespondToSelector(System.String)">
+            <summary>
+            Returns whether native instances of this class can respond to a selector with the same name.
+            <br></br>Equivalent to the native <c>instancesRespondToSelector:</c> class method.
+            </summary>
+            <returns>
+                <c>true</c> if native instances of this class can respond to a selector with the same name, <c>false</c> otherwise.
+            </returns>
+            <param name="selectorName">The literal name of the selector.</param>
+        </member>
+        <member name="P:U3DXT.iOS.Native.StoreKit.SKProduct.ClassExists">
+            <summary>
+            Returns whether the native SKProduct class exists on the platform.
+            </summary>
+            <value>
+                <c>true</c> if class exists; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:U3DXT.iOS.Native.StoreKit.SKProduct.downloadable">
+            <summary>
+            A Boolean value that indicates whether the App Store has downloadable content for this product. (read-only)
+            <br></br>Equivalent to the native <c>downloadable</c> property.
+            </summary>
+            <remarks>
+                <b>Discussion</b>
+                <p>You can associate a set of data files with the iTunes Connect record you created for a product. The value of this property is <c>true</c> if at least one file has been associated with the product.</p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 6.0 and later.</li>
+                </ul>
+            </remarks>
+        </member>
+        <member name="P:U3DXT.iOS.Native.StoreKit.SKProduct.downloadContentLengths">
+            <summary>
+            The lengths of the downloadable files available for this product. (read-only)
+            <br></br>Equivalent to the native <c>downloadContentLengths</c> property.
+            </summary>
+            <remarks>
+                <b>Discussion</b>
+                <p>The array holds <c>double</c> objects, each of which holds a <c>long</c> value that is the size of one of the downloadable files (in bytes).</p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 6.0 and later.</li>
+                </ul>
+            </remarks>
+        </member>
+        <member name="P:U3DXT.iOS.Native.StoreKit.SKProduct.downloadContentVersion">
+            <summary>
+            A string that identifies which version of the content is available for download. (read-only)
+            <br></br>Equivalent to the native <c>downloadContentVersion</c> property.
+            </summary>
+            <remarks>
+                <b>Discussion</b>
+                <p>The version string is formatted as a series of integers separated by periods.</p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 6.0 and later.</li>
+                </ul>
+            </remarks>
+        </member>
+        <member name="P:U3DXT.iOS.Native.StoreKit.SKProduct.localizedDescription">
+            <summary>
+            A description of the product. (read-only)
+            <br></br>Equivalent to the native <c>localizedDescription</c> property.
+            </summary>
+            <remarks>
+                <b>Discussion</b>
+                <p>The description is localized based on the <c>currentLocale</c> property.</p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 3.0 and later.</li>
+                </ul>
+            </remarks>
+        </member>
+        <member name="P:U3DXT.iOS.Native.StoreKit.SKProduct.localizedTitle">
+            <summary>
+            The name of the product. (read-only)
+            <br></br>Equivalent to the native <c>localizedTitle</c> property.
+            </summary>
+            <remarks>
+                <b>Discussion</b>
+                <p>The description is localized based on the <c>currentLocale</c> property.</p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 3.0 and later.</li>
+                </ul>
+            </remarks>
+        </member>
+        <member name="P:U3DXT.iOS.Native.StoreKit.SKProduct.price">
+            <summary>
+            The cost of the product in the local currency. (read-only)
+            <br></br>Equivalent to the native <c>price</c> property.
+            </summary>
+            <remarks>
+                <b>Discussion</b>
+                <p>Your application can format the price using a number formatter, as shown in the following sample code:</p>
+                <table>
+                    <tr>
+                        <td scope="row">
+                            <pre>NSNumberFormatter *numberFormatter = [[NSNumberFormatter alloc] init];  </pre>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td scope="row">
+                            <pre>[numberFormatter setFormatterBehavior:NSNumberFormatterBehavior10_4];  </pre>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td scope="row">
+                            <pre>[numberFormatter setNumberStyle:NSNumberFormatterCurrencyStyle];  </pre>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td scope="row">
+                            <pre>[numberFormatter setLocale:product.priceLocale];  </pre>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td scope="row">
+                            <pre>NSString *formattedString = [numberFormatter stringFromNumber:product.price];  </pre>
+                        </td>
+                    </tr>
+                </table>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 3.0 and later.</li>
+                </ul>
+                <b>See Also</b>
+                <ul>
+                    <li>
+                        <c>priceLocale</c>
+                    </li>
+                </ul>
+            </remarks>
+        </member>
+        <member name="P:U3DXT.iOS.Native.StoreKit.SKProduct.priceLocale">
+            <summary>
+            The locale used to format the price of the product. (read-only)
+            <br></br>Equivalent to the native <c>priceLocale</c> property.
+            </summary>
+            <remarks>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 3.0 and later.</li>
+                </ul>
+                <b>See Also</b>
+                <ul>
+                    <li>
+                        <c>price</c>
+                    </li>
+                </ul>
+            </remarks>
+        </member>
+        <member name="P:U3DXT.iOS.Native.StoreKit.SKProduct.productIdentifier">
+            <summary>
+            The string that identifies the product to the Apple App Store. (read-only)
+            <br></br>Equivalent to the native <c>productIdentifier</c> property.
+            </summary>
+            <remarks>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 3.0 and later.</li>
+                </ul>
+            </remarks>
+        </member>
+        <member name="T:U3DXT.iOS.Native.StoreKit.SKProductsRequest">
+            <summary>
+            An <c>SKProductsRequest</c> object is used to retrieve localized information about a list of products from the Apple App Store. Your application uses this request to present localized prices and other information to the user without having to maintain that list itself.
+            </summary>
+            <remarks>
+                <p>To use an <c>SKProductsRequest</c> object, you initialize it with a list of product identifier strings, attach a delegate, and then call the request’s <c>start</c> method. When the request completes, your delegate receives an <c>SKProductsResponse</c> object.</p>
+            </remarks>
+            <exception cref="T:U3DXT.Core.U3DXTException">
+            Is thrown when creation or initialization fails.
+            </exception>
+        </member>
+        <member name="E:U3DXT.iOS.Native.StoreKit.SKProductsRequest.DidReceive">
+            <summary>
+            Called when the Apple App Store responds to the product request. (required)
+            <br></br>Equivalent to implementing the native <c>productsRequest:didReceiveResponse:</c> method of <c>SKProductsRequestDelegate</c>.
+            </summary>
+        </member>
+        <member name="T:U3DXT.iOS.Native.StoreKit.SKProductsRequest.DidReceiveEventArgs">
+            <summary>
+            Event arguments for DidReceive.
+            </summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.StoreKit.SKProductsRequest.DidReceiveEventArgs.#ctor(U3DXT.iOS.Native.StoreKit.SKProductsResponse)">
+            <summary>
+            </summary>
+        </member>
+        <member name="F:U3DXT.iOS.Native.StoreKit.SKProductsRequest.DidReceiveEventArgs.response">
+            <summary>response</summary>
+        </member>
+        <member name="E:U3DXT.iOS.Native.StoreKit.SKProductsRequest.DidFail">
+            <summary>
+            Called if the request failed to execute.
+            <br></br>Equivalent to implementing the native <c>request:didFailWithError:</c> method of <c>SKRequestDelegate</c>.
+            </summary>
+        </member>
+        <member name="E:U3DXT.iOS.Native.StoreKit.SKProductsRequest.DidFinish">
+            <summary>
+            Called when the request has completed.
+            <br></br>Equivalent to implementing the native <c>requestDidFinish:</c> method of <c>SKRequestDelegate</c>.
+            </summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.StoreKit.SKProductsRequest.UP_SKProductsRequest_get_delegate(System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.StoreKit.SKProductsRequest.UP_SKProductsRequest_set_delegate(System.String,System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.StoreKit.SKProductsRequest.UP_SKProductsRequest_alloc_initWithProductIdentifiers_(System.String,System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.StoreKit.SKProductsRequest.#ctor(U3DXT.iOS.Native.Internals._IosBaseClass._NewHelper)">
+            <summary>
+            U3DXT internal constructor.
+            </summary>
+            <param name="helper">
+            </param>
+        </member>
+        <member name="M:U3DXT.iOS.Native.StoreKit.SKProductsRequest.#ctor(U3DXT.iOS.Native.Internals._IosBaseClass._NewHelper,System.String)">
+            <summary>
+            U3DXT internal constructor.
+            </summary>
+            <param name="helper">
+            </param>
+            <param name="uuid">
+            </param>
+        </member>
+        <member name="M:U3DXT.iOS.Native.StoreKit.SKProductsRequest.#ctor">
+            <summary>
+            Creates and initializes a new instance of the native <see cref="T:U3DXT.iOS.Native.StoreKit.SKProductsRequest" /> class.
+            <br></br>Equivalent to the native <c>[[SKProductsRequest alloc] init]</c> calls.
+            </summary>
+            <exception cref="T:U3DXT.Core.U3DXTException">
+            Is thrown when creation or initialization fails.
+            </exception>
+        </member>
+        <member name="M:U3DXT.iOS.Native.StoreKit.SKProductsRequest.InstancesRespondToSelector(System.String)">
+            <summary>
+            Returns whether native instances of this class can respond to a selector with the same name.
+            <br></br>Equivalent to the native <c>instancesRespondToSelector:</c> class method.
+            </summary>
+            <returns>
+                <c>true</c> if native instances of this class can respond to a selector with the same name, <c>false</c> otherwise.
+            </returns>
+            <param name="selectorName">The literal name of the selector.</param>
+        </member>
+        <member name="P:U3DXT.iOS.Native.StoreKit.SKProductsRequest.ClassExists">
+            <summary>
+            Returns whether the native SKProductsRequest class exists on the platform.
+            </summary>
+            <value>
+                <c>true</c> if class exists; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:U3DXT.iOS.Native.StoreKit.SKProductsRequest.Delegate">
+            <summary>
+            The delegate for the request.
+            <br></br>Equivalent to the native <c>delegate</c> property.
+            </summary>
+            <remarks>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 3.0 and later.</li>
+                </ul>
+            </remarks>
+        </member>
+        <member name="M:U3DXT.iOS.Native.StoreKit.SKProductsRequest.#ctor(System.Object[])">
+            <summary>
+            Creates an instance of the native SKProductsRequest and initializes the object. Initializes the request with the set of product identifiers.
+            <br></br>Equivalent to the native <c>[[SKProductsRequest alloc] initWithProductIdentifiers:]</c> calls.
+            </summary>
+            <remarks>
+                <b>Parameters</b>
+                <p>
+                </p>
+                <em>productIdentifiers</em>
+                <p>The list of product identifiers for the products you wish to retrieve descriptions of.</p>
+                <b>Return Value</b>
+                <p>The initialized request object.</p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 3.0 and later.</li>
+                </ul>
+            </remarks>
+            <param name="productIdentifiers">
+            </param>
+        </member>
+        <member name="T:U3DXT.iOS.Native.StoreKit.SKProductsRequestDelegate">
+            <summary>
+            The <c>SKProductsRequestDelegate</c> protocol declares methods that are implemented by the delegate of an <c>SKProductsRequest</c> object. The delegate receives the product information that the request was interested in.
+            </summary>
+            <remarks>
+            </remarks>
+        </member>
+        <member name="M:U3DXT.iOS.Native.StoreKit.SKProductsRequestDelegate.UP_SKProductsRequestDelegate_set__productsRequest_didReceiveResponse__handler(System.String,System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.StoreKit.SKProductsRequestDelegate.#ctor">
+            <summary>
+            Default constructor.
+            </summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.StoreKit.SKProductsRequestDelegate.#ctor(U3DXT.iOS.Native.Internals._IosBaseClass._NewHelper,System.String)">
+            <summary>
+            U3DXT internal constructor.
+            </summary>
+            <param name="helper">
+            </param>
+            <param name="className">
+            </param>
+        </member>
+        <member name="M:U3DXT.iOS.Native.StoreKit.SKProductsRequestDelegate._InitImplementedMethods">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.StoreKit.SKProductsRequestDelegate.DidReceive(U3DXT.iOS.Native.StoreKit.SKProductsRequest,U3DXT.iOS.Native.StoreKit.SKProductsResponse)">
+            <summary>
+            (<b>required</b>) Called when the Apple App Store responds to the product request. (required)
+            <br></br>Equivalent to the native <c>productsRequest:didReceiveResponse:</c> method.
+            </summary>
+            <remarks>
+                <b>Parameters</b>
+                <p>
+                </p>
+                <em>request</em>
+                <p>The product request sent to the Apple App Store.</p>
+                <em>response</em>
+                <p>Detailed information about the list of products.</p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 3.0 and later.</li>
+                </ul>
+            </remarks>
+            <param name="request">
+            </param>
+            <param name="response">
+            </param>
+        </member>
+        <member name="P:U3DXT.iOS.Native.StoreKit.SKProductsRequestDelegate._productsRequest_didReceiveResponse__handler">
+            <summary>
+                <br>
+                </br>Equivalent to the native <c>_productsRequest_didReceiveResponse__handler</c> property.
+            </summary>
+            <remarks>
+            </remarks>
+        </member>
+        <member name="T:U3DXT.iOS.Native.StoreKit.SKProductsResponse">
+            <summary>
+            An <c>SKProductsResponse</c> object is returned by the Apple App Store in response to a request for information about a list of products.
+            </summary>
+            <remarks>
+            </remarks>
+            <exception cref="T:U3DXT.Core.U3DXTException">
+            Is thrown when creation or initialization fails.
+            </exception>
+        </member>
+        <member name="M:U3DXT.iOS.Native.StoreKit.SKProductsResponse.UP_SKProductsResponse_get_invalidProductIdentifiers(System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.StoreKit.SKProductsResponse.UP_SKProductsResponse_get_products(System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.StoreKit.SKProductsResponse.#ctor(U3DXT.iOS.Native.Internals._IosBaseClass._NewHelper)">
+            <summary>
+            U3DXT internal constructor.
+            </summary>
+            <param name="helper">
+            </param>
+        </member>
+        <member name="M:U3DXT.iOS.Native.StoreKit.SKProductsResponse.#ctor(U3DXT.iOS.Native.Internals._IosBaseClass._NewHelper,System.String)">
+            <summary>
+            U3DXT internal constructor.
+            </summary>
+            <param name="helper">
+            </param>
+            <param name="uuid">
+            </param>
+        </member>
+        <member name="M:U3DXT.iOS.Native.StoreKit.SKProductsResponse.#ctor">
+            <summary>
+            Creates and initializes a new instance of the native <see cref="T:U3DXT.iOS.Native.StoreKit.SKProductsResponse" /> class.
+            <br></br>Equivalent to the native <c>[[SKProductsResponse alloc] init]</c> calls.
+            </summary>
+            <exception cref="T:U3DXT.Core.U3DXTException">
+            Is thrown when creation or initialization fails.
+            </exception>
+        </member>
+        <member name="M:U3DXT.iOS.Native.StoreKit.SKProductsResponse.InstancesRespondToSelector(System.String)">
+            <summary>
+            Returns whether native instances of this class can respond to a selector with the same name.
+            <br></br>Equivalent to the native <c>instancesRespondToSelector:</c> class method.
+            </summary>
+            <returns>
+                <c>true</c> if native instances of this class can respond to a selector with the same name, <c>false</c> otherwise.
+            </returns>
+            <param name="selectorName">The literal name of the selector.</param>
+        </member>
+        <member name="P:U3DXT.iOS.Native.StoreKit.SKProductsResponse.ClassExists">
+            <summary>
+            Returns whether the native SKProductsResponse class exists on the platform.
+            </summary>
+            <value>
+                <c>true</c> if class exists; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:U3DXT.iOS.Native.StoreKit.SKProductsResponse.invalidProductIdentifiers">
+            <summary>
+            An array of product identifier strings that were not recognized by the Apple App Store. (read-only)
+            <br></br>Equivalent to the native <c>invalidProductIdentifiers</c> property.
+            </summary>
+            <remarks>
+                <b>Discussion</b>
+                <p>This list should typically be empty.</p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 3.0 and later.</li>
+                </ul>
+            </remarks>
+        </member>
+        <member name="P:U3DXT.iOS.Native.StoreKit.SKProductsResponse.products">
+            <summary>
+            A list of products, one product for each valid product identifier provided in the original request. (read-only)
+            <br></br>Equivalent to the native <c>products</c> property.
+            </summary>
+            <remarks>
+                <b>Discussion</b>
+                <p>The array consists of a list of <c>SKProduct</c> objects.</p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 3.0 and later.</li>
+                </ul>
+            </remarks>
+        </member>
+        <member name="T:U3DXT.iOS.Native.StoreKit.SKRequest">
+            <summary>
+                <c>SKRequest</c> is an abstract class representing a request to the Apple App Store. Subclasses of <c>SKRequest</c> represent different kinds of requests.
+            </summary>
+            <remarks>
+                <p>To use a request object, initialize a subclass of <c>SKRequest</c> and set the <c>delegate</c> property, then call the <c>start</c> method.</p>
+            </remarks>
+            <exception cref="T:U3DXT.Core.U3DXTException">
+            Is thrown when creation or initialization fails.
+            </exception>
+        </member>
+        <member name="E:U3DXT.iOS.Native.StoreKit.SKRequest.DidFail">
+            <summary>
+            Called if the request failed to execute.
+            <br></br>Equivalent to implementing the native <c>request:didFailWithError:</c> method of <c>SKRequestDelegate</c>.
+            </summary>
+        </member>
+        <member name="T:U3DXT.iOS.Native.StoreKit.SKRequest.DidFailEventArgs">
+            <summary>
+            Event arguments for DidFail.
+            </summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.StoreKit.SKRequest.DidFailEventArgs.#ctor(U3DXT.iOS.Native.Foundation.NSError)">
+            <summary>
+            </summary>
+        </member>
+        <member name="F:U3DXT.iOS.Native.StoreKit.SKRequest.DidFailEventArgs.error">
+            <summary>error</summary>
+        </member>
+        <member name="E:U3DXT.iOS.Native.StoreKit.SKRequest.DidFinish">
+            <summary>
+            Called when the request has completed.
+            <br></br>Equivalent to implementing the native <c>requestDidFinish:</c> method of <c>SKRequestDelegate</c>.
+            </summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.StoreKit.SKRequest.UP_SKRequest_get_delegate(System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.StoreKit.SKRequest.UP_SKRequest_set_delegate(System.String,System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.StoreKit.SKRequest.UP_SKRequest_cancel(System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.StoreKit.SKRequest.UP_SKRequest_start(System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.StoreKit.SKRequest.#ctor(U3DXT.iOS.Native.Internals._IosBaseClass._NewHelper)">
+            <summary>
+            U3DXT internal constructor.
+            </summary>
+            <param name="helper">
+            </param>
+        </member>
+        <member name="M:U3DXT.iOS.Native.StoreKit.SKRequest.#ctor(U3DXT.iOS.Native.Internals._IosBaseClass._NewHelper,System.String)">
+            <summary>
+            U3DXT internal constructor.
+            </summary>
+            <param name="helper">
+            </param>
+            <param name="uuid">
+            </param>
+        </member>
+        <member name="M:U3DXT.iOS.Native.StoreKit.SKRequest.#ctor">
+            <summary>
+            Creates and initializes a new instance of the native <see cref="T:U3DXT.iOS.Native.StoreKit.SKRequest" /> class.
+            <br></br>Equivalent to the native <c>[[SKRequest alloc] init]</c> calls.
+            </summary>
+            <exception cref="T:U3DXT.Core.U3DXTException">
+            Is thrown when creation or initialization fails.
+            </exception>
+        </member>
+        <member name="M:U3DXT.iOS.Native.StoreKit.SKRequest.InstancesRespondToSelector(System.String)">
+            <summary>
+            Returns whether native instances of this class can respond to a selector with the same name.
+            <br></br>Equivalent to the native <c>instancesRespondToSelector:</c> class method.
+            </summary>
+            <returns>
+                <c>true</c> if native instances of this class can respond to a selector with the same name, <c>false</c> otherwise.
+            </returns>
+            <param name="selectorName">The literal name of the selector.</param>
+        </member>
+        <member name="P:U3DXT.iOS.Native.StoreKit.SKRequest.ClassExists">
+            <summary>
+            Returns whether the native SKRequest class exists on the platform.
+            </summary>
+            <value>
+                <c>true</c> if class exists; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:U3DXT.iOS.Native.StoreKit.SKRequest.Delegate">
+            <summary>
+            The delegate of the request object.
+            <br></br>Equivalent to the native <c>delegate</c> property.
+            </summary>
+            <remarks>
+                <b>Discussion</b>
+                <p>The delegate must adopt the <c>SKRequestDelegate</c> protocol, although most subclasses of <c>SKRequest</c> provide a more specific protocol to implement.</p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 3.0 and later.</li>
+                </ul>
+            </remarks>
+        </member>
+        <member name="M:U3DXT.iOS.Native.StoreKit.SKRequest.Cancel">
+            <summary>
+            Cancels a previously started request.
+            <br></br>Equivalent to the native <c>cancel</c> method.
+            </summary>
+            <remarks>
+                <b>Discussion</b>
+                <p>When you cancel a request, the delegate is not called with an error.</p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 3.0 and later.</li>
+                </ul>
+            </remarks>
+        </member>
+        <member name="M:U3DXT.iOS.Native.StoreKit.SKRequest.Start">
+            <summary>
+            Sends the request to the Apple App Store.
+            <br></br>Equivalent to the native <c>start</c> method.
+            </summary>
+            <remarks>
+                <b>Discussion</b>
+                <p>The results for a request are sent to the request’s delegate.</p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 3.0 and later.</li>
+                </ul>
+            </remarks>
+        </member>
+        <member name="T:U3DXT.iOS.Native.StoreKit.SKRequestDelegate">
+            <summary>
+            The <c>SKRequestDelegate</c> protocol declares common methods that are implemented by delegates for any subclass of the <c>SKRequest</c> abstract class.
+            </summary>
+            <remarks>
+            </remarks>
+        </member>
+        <member name="M:U3DXT.iOS.Native.StoreKit.SKRequestDelegate.UP_SKRequestDelegate_set__request_didFailWithError__handler(System.String,System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.StoreKit.SKRequestDelegate.UP_SKRequestDelegate_set__requestDidFinish__handler(System.String,System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.StoreKit.SKRequestDelegate.#ctor">
+            <summary>
+            Default constructor.
+            </summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.StoreKit.SKRequestDelegate.#ctor(U3DXT.iOS.Native.Internals._IosBaseClass._NewHelper,System.String)">
+            <summary>
+            U3DXT internal constructor.
+            </summary>
+            <param name="helper">
+            </param>
+            <param name="className">
+            </param>
+        </member>
+        <member name="M:U3DXT.iOS.Native.StoreKit.SKRequestDelegate._InitImplementedMethods">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.StoreKit.SKRequestDelegate.DidFail(U3DXT.iOS.Native.StoreKit.SKRequest,U3DXT.iOS.Native.Foundation.NSError)">
+            <summary>
+            (optional) Called if the request failed to execute.
+            <br></br>Equivalent to the native <c>request:didFailWithError:</c> method.
+            </summary>
+            <remarks>
+                <b>Parameters</b>
+                <p>
+                </p>
+                <em>request</em>
+                <p>The request that failed.</p>
+                <em>error</em>
+                <p>The error that caused the request to fail.</p>
+                <b>Discussion</b>
+                <p>When the request fails, your application should release the request. The <c>requestDidFinish:</c> method is not called after this method is called.</p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 3.0 and later.</li>
+                </ul>
+            </remarks>
+            <param name="request">
+            </param>
+            <param name="error">
+            </param>
+        </member>
+        <member name="M:U3DXT.iOS.Native.StoreKit.SKRequestDelegate.DidFinish(U3DXT.iOS.Native.StoreKit.SKRequest)">
+            <summary>
+            (optional) Called when the request has completed.
+            <br></br>Equivalent to the native <c>requestDidFinish:</c> method.
+            </summary>
+            <remarks>
+                <b>Parameters</b>
+                <p>
+                </p>
+                <em>request</em>
+                <p>The request that completed.</p>
+                <b>Discussion</b>
+                <p>This method is called after all processing of the request has been completed. Typically, subclasses of <c>SKRequest</c> require the delegate to implement additional methods to receive the response. When this method is called, your delegate receives no further communication from the request and can release it.</p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 3.0 and later.</li>
+                </ul>
+            </remarks>
+            <param name="request">
+            </param>
+        </member>
+        <member name="P:U3DXT.iOS.Native.StoreKit.SKRequestDelegate._request_didFailWithError__handler">
+            <summary>
+                <br>
+                </br>Equivalent to the native <c>_request_didFailWithError__handler</c> property.
+            </summary>
+            <remarks>
+            </remarks>
+        </member>
+        <member name="P:U3DXT.iOS.Native.StoreKit.SKRequestDelegate._requestDidFinish__handler">
+            <summary>
+                <br>
+                </br>Equivalent to the native <c>_requestDidFinish__handler</c> property.
+            </summary>
+            <remarks>
+            </remarks>
+        </member>
+        <member name="T:U3DXT.iOS.Native.StoreKit.SKStoreProductViewController">
+            <summary>
+            A <c>SKStoreProductViewController</c> object presents a store that allows the user to purchase other media from the App Store. For example, your app might display the store to allow the user to purchase another app.
+            </summary>
+            <remarks>
+                <p>To display a store, create a new <c>SKStoreProductViewController</c> object and set its delegate. Then, present the view controller modally from another view controller in your app. Your delegate dismisses the view controller when the user completes the purchase.</p>
+                <p>To choose a specific product, call the <c>loadProductWithParameters:completionBlock:</c> method, passing the iTunes item identifier for the item you want to sell.</p>
+            </remarks>
+            <exception cref="T:U3DXT.Core.U3DXTException">
+            Is thrown when creation or initialization fails.
+            </exception>
+        </member>
+        <member name="F:U3DXT.iOS.Native.StoreKit.SKStoreProductViewController.SKStoreProductParameterITunesItemIdentifier">
+            <summary>
+                <p>The value associated with this key should be a string representing the iTunes identifier for the item you want the store to display when the view controller is presented.</p>
+                <p>Available in iOS 6.0 and later.</p>
+                <p>
+                </p>
+                <br>
+                </br>Equivalent to the native <c>SKStoreProductParameterITunesItemIdentifier</c> constant.
+            </summary>
+            <remarks>
+            Keys supported in the product dictionary.
+            <p></p><br /><!-- Media player includes --><!-- /Media player includes --><p></p>This is a constant for "Product Dictionary Keys".
+            </remarks>
+        </member>
+        <member name="E:U3DXT.iOS.Native.StoreKit.SKStoreProductViewController.DidFinish">
+            <summary>
+            Called when the user dismisses the store screen. (required)
+            <br></br>Equivalent to implementing the native <c>productViewControllerDidFinish:</c> method of <c>SKStoreProductViewControllerDelegate</c>.
+            </summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.StoreKit.SKStoreProductViewController.UP_SKStoreProductViewController_get_delegate(System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.StoreKit.SKStoreProductViewController.UP_SKStoreProductViewController_set_delegate(System.String,System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.StoreKit.SKStoreProductViewController.UP_SKStoreProductViewController_loadProductWithParameters_completionBlock_(System.String,System.String,System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.StoreKit.SKStoreProductViewController.#ctor(U3DXT.iOS.Native.Internals._IosBaseClass._NewHelper)">
+            <summary>
+            U3DXT internal constructor.
+            </summary>
+            <param name="helper">
+            </param>
+        </member>
+        <member name="M:U3DXT.iOS.Native.StoreKit.SKStoreProductViewController.#ctor(U3DXT.iOS.Native.Internals._IosBaseClass._NewHelper,System.String)">
+            <summary>
+            U3DXT internal constructor.
+            </summary>
+            <param name="helper">
+            </param>
+            <param name="uuid">
+            </param>
+        </member>
+        <member name="M:U3DXT.iOS.Native.StoreKit.SKStoreProductViewController.#ctor">
+            <summary>
+            Creates and initializes a new instance of the native <see cref="T:U3DXT.iOS.Native.StoreKit.SKStoreProductViewController" /> class.
+            <br></br>Equivalent to the native <c>[[SKStoreProductViewController alloc] init]</c> calls.
+            </summary>
+            <exception cref="T:U3DXT.Core.U3DXTException">
+            Is thrown when creation or initialization fails.
+            </exception>
+        </member>
+        <member name="M:U3DXT.iOS.Native.StoreKit.SKStoreProductViewController.InstancesRespondToSelector(System.String)">
+            <summary>
+            Returns whether native instances of this class can respond to a selector with the same name.
+            <br></br>Equivalent to the native <c>instancesRespondToSelector:</c> class method.
+            </summary>
+            <returns>
+                <c>true</c> if native instances of this class can respond to a selector with the same name, <c>false</c> otherwise.
+            </returns>
+            <param name="selectorName">The literal name of the selector.</param>
+        </member>
+        <member name="P:U3DXT.iOS.Native.StoreKit.SKStoreProductViewController.ClassExists">
+            <summary>
+            Returns whether the native SKStoreProductViewController class exists on the platform.
+            </summary>
+            <value>
+                <c>true</c> if class exists; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:U3DXT.iOS.Native.StoreKit.SKStoreProductViewController.Delegate">
+            <summary>
+            The store view controller’s delegate.
+            <br></br>Equivalent to the native <c>delegate</c> property.
+            </summary>
+            <remarks>
+                <b>Discussion</b>
+                <p>Your application must set the delegate before presenting the store view controller.</p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 6.0 and later.</li>
+                </ul>
+            </remarks>
+        </member>
+        <member name="M:U3DXT.iOS.Native.StoreKit.SKStoreProductViewController.LoadProduct(System.Collections.Generic.Dictionary{System.Object,System.Object},System.Action{System.Boolean,U3DXT.iOS.Native.Foundation.NSError})">
+            <summary>
+            Loads a new product screen to display.
+            <br></br>Equivalent to the native <c>loadProductWithParameters:completionBlock:</c> method.
+            </summary>
+            <remarks>
+                <b>Parameters</b>
+                <p>
+                </p>
+                <em>parameters</em>
+                <p>A dictionary describing the content you want the view controller to display. See  “Product Dictionary Keys.” </p>
+                <em>block</em>
+                <p>A block to be called when the product information has been loaded from the App Store. The completion block is called on the main thread and receives the following parameters:</p>
+                <p>
+                </p>
+                <em>result</em>
+                <p>
+                    <c>true</c> if the product information was successfully loaded, otherwise <c>false</c>.</p>
+                <em>error</em>
+                <p>If an error occurred, this object describes the error. If the product information was successfully loaded, this value is <c>null</c>.</p>
+                <b>Discussion</b>
+                <p>In most cases, you should load the product information and then present the view controller. However, if you load new product information while the view controller is presented, the contents of the view controller are replaced after the new product data is loaded.</p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 6.0 and later.</li>
+                </ul>
+            </remarks>
+            <param name="parameters">
+            </param>
+            <param name="block"> A callback delegate.</param>
+        </member>
+        <member name="T:U3DXT.iOS.Native.StoreKit.SKStoreProductViewControllerDelegate">
+            <summary>
+            An object implementing the <c>SKStoreProductViewControllerDelegate</c> protocol is called when the user dismisses the store screen. Typically, this protocol is implemented by the view controller in your application that originally displayed the store screen.
+            </summary>
+            <remarks>
+            </remarks>
+        </member>
+        <member name="M:U3DXT.iOS.Native.StoreKit.SKStoreProductViewControllerDelegate.UP_SKStoreProductViewControllerDelegate_set__productViewControllerDidFinish__handler(System.String,System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.StoreKit.SKStoreProductViewControllerDelegate.#ctor">
+            <summary>
+            Default constructor.
+            </summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.StoreKit.SKStoreProductViewControllerDelegate.#ctor(U3DXT.iOS.Native.Internals._IosBaseClass._NewHelper,System.String)">
+            <summary>
+            U3DXT internal constructor.
+            </summary>
+            <param name="helper">
+            </param>
+            <param name="className">
+            </param>
+        </member>
+        <member name="M:U3DXT.iOS.Native.StoreKit.SKStoreProductViewControllerDelegate._InitImplementedMethods">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.StoreKit.SKStoreProductViewControllerDelegate.DidFinish(U3DXT.iOS.Native.StoreKit.SKStoreProductViewController)">
+            <summary>
+            (optional) Called when the user dismisses the store screen. (required)
+            <br></br>Equivalent to the native <c>productViewControllerDidFinish:</c> method.
+            </summary>
+            <remarks>
+                <b>Parameters</b>
+                <p>
+                </p>
+                <em>viewController</em>
+                <p>The store view controller whose interface was dismissed by the user.</p>
+                <b>Discussion</b>
+                <p>Your delegate should call the <c>dismissModalViewControllerAnimated:</c> method on the view controller that originally presented the store screen. If your app paused any other activities before presenting the store, it can restart those services in this method.</p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 6.0 and later.</li>
+                </ul>
+            </remarks>
+            <param name="viewController">
+            </param>
+        </member>
+        <member name="P:U3DXT.iOS.Native.StoreKit.SKStoreProductViewControllerDelegate._productViewControllerDidFinish__handler">
+            <summary>
+                <br>
+                </br>Equivalent to the native <c>_productViewControllerDidFinish__handler</c> property.
+            </summary>
+            <remarks>
+            </remarks>
+        </member>
+        <member name="T:U3DXT.iOS.Native.StoreKit.StoreKitConstants">
+            <summary>
+            Constants belonging to StoreKitConstants.
+            </summary>
+        </member>
+        <member name="F:U3DXT.iOS.Native.StoreKit.StoreKitConstants.SKErrorDomain">
+            <summary>
+                <p>Indicates an error occurred in Store Kit.</p>
+                <p>Available in iOS 3.0 and later.</p>
+                <p>
+                </p>
+                <br>
+                </br>Equivalent to the native <c>SKErrorDomain</c> constant.
+            </summary>
+            <remarks>
+            This constant defines the Store Kit framework error domain.
+            <p></p><p></p>This is a constant for "SKErrorDomain".
+            </remarks>
+        </member>
+    </members>
+</doc>

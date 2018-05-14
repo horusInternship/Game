@@ -1,0 +1,124 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>U3DXTCore_HL</name>
+    </assembly>
+    <members>
+        <member name="T:U3DXT.iOS.GUI.AlertViewDismissedEventArgs">
+            <summary>
+            Alert view dismissed event arguments.
+            </summary>
+        </member>
+        <member name="F:U3DXT.iOS.GUI.AlertViewDismissedEventArgs.selectedButtonIndex">
+            <summary>
+            The index of the selected button.
+            </summary>
+        </member>
+        <member name="F:U3DXT.iOS.GUI.AlertViewDismissedEventArgs.selectedButtonTitle">
+            <summary>
+            The selected button title.
+            </summary>
+        </member>
+        <member name="F:U3DXT.iOS.GUI.AlertViewDismissedEventArgs.inputString1">
+            <summary>
+            The first input string.
+            </summary>
+        </member>
+        <member name="F:U3DXT.iOS.GUI.AlertViewDismissedEventArgs.inputString2">
+            <summary>
+            The second input string.
+            </summary>
+        </member>
+        <member name="M:U3DXT.iOS.GUI.AlertViewDismissedEventArgs.#ctor(System.Int32,System.String,System.String,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:U3DXT.iOS.GUI.AlertViewDismissedEventArgs" /> class.
+            </summary>
+            <param name="selectedButtonIndex">Selected button index.</param>
+            <param name="selectedButtonTitle">Selected button title.</param>
+            <param name="inputString1">First input string.</param>
+            <param name="inputString2">Second input string.</param>
+        </member>
+        <member name="T:U3DXT.iOS.GUI.GUIXT">
+            <summary>
+            High-level API for GUI.
+            </summary>
+        </member>
+        <member name="E:U3DXT.iOS.GUI.GUIXT.MediaPicked">
+            <summary>
+            Occurs when an image picker operation has completed.
+            </summary>
+        </member>
+        <member name="E:U3DXT.iOS.GUI.GUIXT.MediaPickCancelled">
+            <summary>
+            Occurs when an image picker operation has cancelled.
+            </summary>
+        </member>
+        <member name="M:U3DXT.iOS.GUI.GUIXT.ShowImagePicker(U3DXT.iOS.Native.UIKit.UIImagePickerControllerSourceType,U3DXT.iOS.Native.UIKit.UIImagePickerControllerCameraDevice)">
+            <summary>
+            Shows the image picker.
+            </summary>
+        </member>
+        <member name="M:U3DXT.iOS.GUI.GUIXT.GetLocalizedString(System.String,System.String,System.String)">
+            <summary>
+            Returns the localized string.
+            </summary>
+            <returns>The localized string.</returns>
+            <param name="key">Key.</param>
+            <param name="defaultValue">Default value if key does not exist.</param>
+            <param name="file">File.</param>
+        </member>
+        <member name="M:U3DXT.iOS.GUI.GUIXT.GetLocalizedString(System.String)">
+            <summary>
+            Returns the localized string.
+            </summary>
+            <returns>The localized string.</returns>
+            <param name="key">Key.</param>
+        </member>
+        <member name="E:U3DXT.iOS.GUI.GUIXT.AlertDismissed">
+            <summary>
+            Occurs when an alert view is dismissed.
+            </summary>
+        </member>
+        <member name="M:U3DXT.iOS.GUI.GUIXT.ShowAlert(System.String,System.String,System.String,System.String[])">
+            <summary>
+            Shows a native alert view.
+            </summary>
+            <param name="title">Title.</param>
+            <param name="message">Message.</param>
+            <param name="cancelButton">Title of the cancel button or null if no cancel button.</param>
+            <param name="otherButtons">Titles of other buttons or null if no other buttons.</param>
+        </member>
+        <member name="M:U3DXT.iOS.GUI.GUIXT.ShowAlert(System.String,System.String,System.String,System.String[],U3DXT.iOS.Native.UIKit.UIAlertViewStyle)">
+            <summary>
+            Shows a native alert view.
+            </summary>
+            <param name="title">Title.</param>
+            <param name="message">Message.</param>
+            <param name="cancelButton">Title of the cancel button or null if no cancel button.</param>
+            <param name="otherButtons">Titles of other buttons or null if no other buttons.</param>
+            <param name="style">Style of the alert.</param>
+        </member>
+        <member name="T:U3DXT.iOS.GUI.MediaPickedEventArgs">
+            <summary>
+            Media picked event arguments.
+            </summary>
+        </member>
+        <member name="F:U3DXT.iOS.GUI.MediaPickedEventArgs.image">
+            <summary>
+            The image.
+            </summary>
+        </member>
+        <member name="F:U3DXT.iOS.GUI.MediaPickedEventArgs.url">
+            <summary>
+            The URL.
+            </summary>
+        </member>
+        <member name="M:U3DXT.iOS.GUI.MediaPickedEventArgs.#ctor(U3DXT.iOS.Native.UIKit.UIImage,U3DXT.iOS.Native.Foundation.NSURL)">
+            <summary>
+            Initializes a new instance of the <see cref="T:U3DXT.iOS.GUI.MediaPickedEventArgs" /> class.
+            </summary>
+            <param name="image">Image.</param>
+            <param name="url">URL.</param>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,1031 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>U3DXTSpeech</name>
+    </assembly>
+    <members>
+        <member name="T:U3DXT.iOS.Native.AVFoundation.AVSpeechBoundary">
+            <summary>
+            Constraints describing when speech may be paused or stopped.
+            </summary>
+            <remarks>
+                <br />
+            	Provide Feedback
+            </remarks>
+        </member>
+        <member name="F:U3DXT.iOS.Native.AVFoundation.AVSpeechBoundary.Immediate">
+            <summary>
+                <p>Indicates that speech should pause or stop immediately.</p>
+                <p>Available in iOS 7.0 and later.</p>
+                <p>
+                </p>
+                <br>
+                </br>Equivalent to the native <c>AVSpeechBoundaryImmediate</c> enum constant.
+            </summary>
+        </member>
+        <member name="F:U3DXT.iOS.Native.AVFoundation.AVSpeechBoundary.Word">
+            <summary>
+                <p>Indicates that speech should pause or stop after the word currently being spoken.</p>
+                <p>Available in iOS 7.0 and later.</p>
+                <p>
+                </p>
+                <br>
+                </br>Equivalent to the native <c>AVSpeechBoundaryWord</c> enum constant.
+            </summary>
+        </member>
+        <member name="T:U3DXT.iOS.Native.AVFoundation.AVSpeechSynthesisVoice">
+            <summary>
+            An <c>AVSpeechSynthesisVoice</c> object defines a distinct voice for use in speech synthesis. Voices are distinguished primarily by language and locale.
+            </summary>
+            <remarks>
+                <p>You can use this class to select a voice appropriate to the language of text to be spoken, or to select a voice exhibiting a particular local variant of that language (such as Australian or South African English).</p>
+                <p>To select a voice for use in speech, obtain an <c>AVSpeechSynthesisVoice</c> instance using one of the methods in <c>“Finding Voices”</c>, and then set it as the value of the  <c>voice</c> property on an <c>AVSpeechUtterance</c> instance containing text to be spoken.</p>
+            </remarks>
+            <exception cref="T:U3DXT.Core.U3DXTException">
+            Is thrown when creation or initialization fails.
+            </exception>
+        </member>
+        <member name="M:U3DXT.iOS.Native.AVFoundation.AVSpeechSynthesisVoice.UP_AVSpeechSynthesisVoice_currentLanguageCode">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.AVFoundation.AVSpeechSynthesisVoice.UP_AVSpeechSynthesisVoice_speechVoices">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.AVFoundation.AVSpeechSynthesisVoice.UP_AVSpeechSynthesisVoice_voiceWithLanguage_(System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.AVFoundation.AVSpeechSynthesisVoice.UP_AVSpeechSynthesisVoice_get_language(System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.AVFoundation.AVSpeechSynthesisVoice.#ctor(U3DXT.iOS.Native.Internals._IosBaseClass._NewHelper)">
+            <summary>
+            U3DXT internal constructor.
+            </summary>
+            <param name="helper">
+            </param>
+        </member>
+        <member name="M:U3DXT.iOS.Native.AVFoundation.AVSpeechSynthesisVoice.#ctor(U3DXT.iOS.Native.Internals._IosBaseClass._NewHelper,System.String)">
+            <summary>
+            U3DXT internal constructor.
+            </summary>
+            <param name="helper">
+            </param>
+            <param name="uuid">
+            </param>
+        </member>
+        <member name="M:U3DXT.iOS.Native.AVFoundation.AVSpeechSynthesisVoice.#ctor">
+            <summary>
+            Creates and initializes a new instance of the native <see cref="T:U3DXT.iOS.Native.AVFoundation.AVSpeechSynthesisVoice" /> class.
+            <br></br>Equivalent to the native <c>[[AVSpeechSynthesisVoice alloc] init]</c> calls.
+            </summary>
+            <exception cref="T:U3DXT.Core.U3DXTException">
+            Is thrown when creation or initialization fails.
+            </exception>
+        </member>
+        <member name="M:U3DXT.iOS.Native.AVFoundation.AVSpeechSynthesisVoice.InstancesRespondToSelector(System.String)">
+            <summary>
+            Returns whether native instances of this class can respond to a selector with the same name.
+            <br></br>Equivalent to the native <c>instancesRespondToSelector:</c> class method.
+            </summary>
+            <returns>
+                <c>true</c> if native instances of this class can respond to a selector with the same name, <c>false</c> otherwise.
+            </returns>
+            <param name="selectorName">The literal name of the selector.</param>
+        </member>
+        <member name="P:U3DXT.iOS.Native.AVFoundation.AVSpeechSynthesisVoice.ClassExists">
+            <summary>
+            Returns whether the native AVSpeechSynthesisVoice class exists on the platform.
+            </summary>
+            <value>
+                <c>true</c> if class exists; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="M:U3DXT.iOS.Native.AVFoundation.AVSpeechSynthesisVoice.CurrentLanguageCode">
+            <summary>
+            Returns the code for the user’s current locale.
+            <br></br>Equivalent to the native <c>currentLanguageCode</c> method.
+            </summary>
+            <remarks>
+                <b>Return Value</b>
+                <p>An <c>String</c> object containing the BCP-47 language and locale code for the user’s current locale.</p>
+                <b>Discussion</b>
+                <p>This code reflects the user’s language and region preferences selected in the Settings app.</p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 7.0 and later.</li>
+                </ul>
+            </remarks>
+        </member>
+        <member name="M:U3DXT.iOS.Native.AVFoundation.AVSpeechSynthesisVoice.SpeechVoices">
+            <summary>
+            Returns all available speech voices.
+            <br></br>Equivalent to the native <c>speechVoices</c> method.
+            </summary>
+            <remarks>
+                <b>Return Value</b>
+                <p>An array of <c>AVSpeechSynthesisVoice</c> objects, one for each available voice.</p>
+                <b>Discussion</b>
+                <p>Use the <c>language</c> property to differentiate between returned voices.</p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 7.0 and later.</li>
+                </ul>
+            </remarks>
+        </member>
+        <member name="M:U3DXT.iOS.Native.AVFoundation.AVSpeechSynthesisVoice.Voice(System.String)">
+            <summary>
+            Returns a voice object for the specified language and locale.
+            <br></br>Equivalent to the native <c>voiceWithLanguage:</c> method.
+            </summary>
+            <remarks>
+                <b>Parameters</b>
+                <p>
+                </p>
+                <em>language</em>
+                <p>A BCP-47 code specifying language and locale for a voice.</p>
+                <b>Return Value</b>
+                <p>An <c>AVSpeechSynthesisVoice</c> object for the specified language and locale.</p>
+                <b>Discussion</b>
+                <p>Returns <c>null</c> if the <em>language</em> parameter is <c>null</c> or references a language or locale for which no voice exists.</p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 7.0 and later.</li>
+                </ul>
+            </remarks>
+            <param name="language">
+            </param>
+        </member>
+        <member name="P:U3DXT.iOS.Native.AVFoundation.AVSpeechSynthesisVoice.language">
+            <summary>
+            A BCP-47 code identifying the voice’s language and locale. (read-only)
+            <br></br>Equivalent to the native <c>language</c> property.
+            </summary>
+            <remarks>
+                <b>Discussion</b>
+                <p>The language of a voice controls the conversion of text to spoken phonemes, so the text spoken in an <c>AVSpeechUtterance</c> should be written in the language matching that of the voice assigned to that utterance. The locale of a voice reflects regional variations in pronunciation or accent; for example, a voice with code <c>en-US</c> speaks English text with a North American accent, and a voice with code <c>en-AU</c> speaks English text with an Australian accent.</p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 7.0 and later.</li>
+                </ul>
+            </remarks>
+        </member>
+        <member name="T:U3DXT.iOS.Native.AVFoundation.AVSpeechSynthesizer">
+            <summary>
+            The <c>AVSpeechSynthesizer</c> class produces synthesized speech from text on an iOS device, and provides methods for controlling or monitoring the progress of ongoing speech.
+            </summary>
+            <remarks>
+                <p>To speak some amount of text, you must first create an <c>AVSpeechUtterance</c> instance containing the text. (Optionally, you may also use the utterance object to control parameters affecting its speech, such as voice, pitch, and rate.) Then, pass it to the <c>speakUtterance:</c> method on a speech synthesizer instance to speak that utterance.</p>
+                <p>The speech synthesizer maintains a queue of utterances to be spoken. If the synthesizer is not currently speaking, calling <c>speakUtterance:</c> begins speaking that utterance immediately (or begin waiting through its <c>preUtteranceDelay</c> if one is set). If the synthesizer is speaking, utterances are added to a queue and spoken in the order they are received.</p>
+                <p>After speech has begun, you can use the synthesizer object to pause or stop speech. After speech is paused, it may be continued from the point at which it left off; stopping ends speech entirely, removing any utterances yet to be spoken from the synthesizer’s queue.</p>
+                <p>You may monitor the speech synthesizer by examining its speaking and paused properties, or by setting a delegate. Messages in the <c>AVSpeechSynthesizerDelegate</c> protocol are sent as significant events occur during speech synthesis.</p>
+            </remarks>
+            <exception cref="T:U3DXT.Core.U3DXTException">
+            Is thrown when creation or initialization fails.
+            </exception>
+        </member>
+        <member name="E:U3DXT.iOS.Native.AVFoundation.AVSpeechSynthesizer.DidCancel">
+            <summary>
+            Tells the delegate when the synthesizer has canceled speaking an utterance.
+            <br></br>Equivalent to implementing the native <c>speechSynthesizer:didCancelSpeechUtterance:</c> method of <c>AVSpeechSynthesizerDelegate</c>.
+            </summary>
+        </member>
+        <member name="T:U3DXT.iOS.Native.AVFoundation.AVSpeechSynthesizer.DidCancelEventArgs">
+            <summary>
+            Event arguments for DidCancel.
+            </summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.AVFoundation.AVSpeechSynthesizer.DidCancelEventArgs.#ctor(U3DXT.iOS.Native.AVFoundation.AVSpeechUtterance)">
+            <summary>
+            </summary>
+        </member>
+        <member name="F:U3DXT.iOS.Native.AVFoundation.AVSpeechSynthesizer.DidCancelEventArgs.utterance">
+            <summary>utterance</summary>
+        </member>
+        <member name="E:U3DXT.iOS.Native.AVFoundation.AVSpeechSynthesizer.DidContinue">
+            <summary>
+            Tells the delegate when the synthesizer has resumed speaking an utterance after being paused.
+            <br></br>Equivalent to implementing the native <c>speechSynthesizer:didContinueSpeechUtterance:</c> method of <c>AVSpeechSynthesizerDelegate</c>.
+            </summary>
+        </member>
+        <member name="T:U3DXT.iOS.Native.AVFoundation.AVSpeechSynthesizer.DidContinueEventArgs">
+            <summary>
+            Event arguments for DidContinue.
+            </summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.AVFoundation.AVSpeechSynthesizer.DidContinueEventArgs.#ctor(U3DXT.iOS.Native.AVFoundation.AVSpeechUtterance)">
+            <summary>
+            </summary>
+        </member>
+        <member name="F:U3DXT.iOS.Native.AVFoundation.AVSpeechSynthesizer.DidContinueEventArgs.utterance">
+            <summary>utterance</summary>
+        </member>
+        <member name="E:U3DXT.iOS.Native.AVFoundation.AVSpeechSynthesizer.DidFinish">
+            <summary>
+            Tells the delegate when the synthesizer has finished speaking an utterance.
+            <br></br>Equivalent to implementing the native <c>speechSynthesizer:didFinishSpeechUtterance:</c> method of <c>AVSpeechSynthesizerDelegate</c>.
+            </summary>
+        </member>
+        <member name="T:U3DXT.iOS.Native.AVFoundation.AVSpeechSynthesizer.DidFinishEventArgs">
+            <summary>
+            Event arguments for DidFinish.
+            </summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.AVFoundation.AVSpeechSynthesizer.DidFinishEventArgs.#ctor(U3DXT.iOS.Native.AVFoundation.AVSpeechUtterance)">
+            <summary>
+            </summary>
+        </member>
+        <member name="F:U3DXT.iOS.Native.AVFoundation.AVSpeechSynthesizer.DidFinishEventArgs.utterance">
+            <summary>utterance</summary>
+        </member>
+        <member name="E:U3DXT.iOS.Native.AVFoundation.AVSpeechSynthesizer.DidPause">
+            <summary>
+            Tells the delegate when the synthesizer has paused while speaking an utterance.
+            <br></br>Equivalent to implementing the native <c>speechSynthesizer:didPauseSpeechUtterance:</c> method of <c>AVSpeechSynthesizerDelegate</c>.
+            </summary>
+        </member>
+        <member name="T:U3DXT.iOS.Native.AVFoundation.AVSpeechSynthesizer.DidPauseEventArgs">
+            <summary>
+            Event arguments for DidPause.
+            </summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.AVFoundation.AVSpeechSynthesizer.DidPauseEventArgs.#ctor(U3DXT.iOS.Native.AVFoundation.AVSpeechUtterance)">
+            <summary>
+            </summary>
+        </member>
+        <member name="F:U3DXT.iOS.Native.AVFoundation.AVSpeechSynthesizer.DidPauseEventArgs.utterance">
+            <summary>utterance</summary>
+        </member>
+        <member name="E:U3DXT.iOS.Native.AVFoundation.AVSpeechSynthesizer.DidStart">
+            <summary>
+            Tells the delegate when the synthesizer has begun speaking an utterance.
+            <br></br>Equivalent to implementing the native <c>speechSynthesizer:didStartSpeechUtterance:</c> method of <c>AVSpeechSynthesizerDelegate</c>.
+            </summary>
+        </member>
+        <member name="T:U3DXT.iOS.Native.AVFoundation.AVSpeechSynthesizer.DidStartEventArgs">
+            <summary>
+            Event arguments for DidStart.
+            </summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.AVFoundation.AVSpeechSynthesizer.DidStartEventArgs.#ctor(U3DXT.iOS.Native.AVFoundation.AVSpeechUtterance)">
+            <summary>
+            </summary>
+        </member>
+        <member name="F:U3DXT.iOS.Native.AVFoundation.AVSpeechSynthesizer.DidStartEventArgs.utterance">
+            <summary>utterance</summary>
+        </member>
+        <member name="E:U3DXT.iOS.Native.AVFoundation.AVSpeechSynthesizer.WillSpeakRangeOfSpeechString">
+            <summary>
+            Tells the delegate when the synthesizer is about to speak a portion of an utterance’s text.
+            <br></br>Equivalent to implementing the native <c>speechSynthesizer:willSpeakRangeOfSpeechString:utterance:</c> method of <c>AVSpeechSynthesizerDelegate</c>.
+            </summary>
+        </member>
+        <member name="T:U3DXT.iOS.Native.AVFoundation.AVSpeechSynthesizer.WillSpeakRangeOfSpeechStringEventArgs">
+            <summary>
+            Event arguments for WillSpeakRangeOfSpeechString.
+            </summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.AVFoundation.AVSpeechSynthesizer.WillSpeakRangeOfSpeechStringEventArgs.#ctor(U3DXT.iOS.Native.Foundation.NSRange,U3DXT.iOS.Native.AVFoundation.AVSpeechUtterance)">
+            <summary>
+            </summary>
+        </member>
+        <member name="F:U3DXT.iOS.Native.AVFoundation.AVSpeechSynthesizer.WillSpeakRangeOfSpeechStringEventArgs.characterRange">
+            <summary>characterRange</summary>
+        </member>
+        <member name="F:U3DXT.iOS.Native.AVFoundation.AVSpeechSynthesizer.WillSpeakRangeOfSpeechStringEventArgs.utterance">
+            <summary>utterance</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.AVFoundation.AVSpeechSynthesizer.UP_AVSpeechSynthesizer_get_delegate(System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.AVFoundation.AVSpeechSynthesizer.UP_AVSpeechSynthesizer_set_delegate(System.String,System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.AVFoundation.AVSpeechSynthesizer.UP_AVSpeechSynthesizer_get_paused(System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.AVFoundation.AVSpeechSynthesizer.UP_AVSpeechSynthesizer_get_speaking(System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.AVFoundation.AVSpeechSynthesizer.UP_AVSpeechSynthesizer_continueSpeaking(System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.AVFoundation.AVSpeechSynthesizer.UP_AVSpeechSynthesizer_pauseSpeakingAtBoundary_(System.String,System.Int32)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.AVFoundation.AVSpeechSynthesizer.UP_AVSpeechSynthesizer_speakUtterance_(System.String,System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.AVFoundation.AVSpeechSynthesizer.UP_AVSpeechSynthesizer_stopSpeakingAtBoundary_(System.String,System.Int32)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.AVFoundation.AVSpeechSynthesizer.#ctor(U3DXT.iOS.Native.Internals._IosBaseClass._NewHelper)">
+            <summary>
+            U3DXT internal constructor.
+            </summary>
+            <param name="helper">
+            </param>
+        </member>
+        <member name="M:U3DXT.iOS.Native.AVFoundation.AVSpeechSynthesizer.#ctor(U3DXT.iOS.Native.Internals._IosBaseClass._NewHelper,System.String)">
+            <summary>
+            U3DXT internal constructor.
+            </summary>
+            <param name="helper">
+            </param>
+            <param name="uuid">
+            </param>
+        </member>
+        <member name="M:U3DXT.iOS.Native.AVFoundation.AVSpeechSynthesizer.#ctor">
+            <summary>
+            Creates and initializes a new instance of the native <see cref="T:U3DXT.iOS.Native.AVFoundation.AVSpeechSynthesizer" /> class.
+            <br></br>Equivalent to the native <c>[[AVSpeechSynthesizer alloc] init]</c> calls.
+            </summary>
+            <exception cref="T:U3DXT.Core.U3DXTException">
+            Is thrown when creation or initialization fails.
+            </exception>
+        </member>
+        <member name="M:U3DXT.iOS.Native.AVFoundation.AVSpeechSynthesizer.InstancesRespondToSelector(System.String)">
+            <summary>
+            Returns whether native instances of this class can respond to a selector with the same name.
+            <br></br>Equivalent to the native <c>instancesRespondToSelector:</c> class method.
+            </summary>
+            <returns>
+                <c>true</c> if native instances of this class can respond to a selector with the same name, <c>false</c> otherwise.
+            </returns>
+            <param name="selectorName">The literal name of the selector.</param>
+        </member>
+        <member name="P:U3DXT.iOS.Native.AVFoundation.AVSpeechSynthesizer.ClassExists">
+            <summary>
+            Returns whether the native AVSpeechSynthesizer class exists on the platform.
+            </summary>
+            <value>
+                <c>true</c> if class exists; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:U3DXT.iOS.Native.AVFoundation.AVSpeechSynthesizer.Delegate">
+            <summary>
+            The delegate object for the speech synthesizer.
+            <br></br>Equivalent to the native <c>delegate</c> property.
+            </summary>
+            <remarks>
+                <b>Discussion</b>
+                <p>Messages in the <c>AVSpeechSynthesizerDelegate</c> are sent to the delegate for speech synthesis events.</p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 7.0 and later.</li>
+                </ul>
+            </remarks>
+        </member>
+        <member name="P:U3DXT.iOS.Native.AVFoundation.AVSpeechSynthesizer.paused">
+            <summary>
+            A Boolean value that indicates whether speech has been paused. (read-only)
+            <br></br>Equivalent to the native <c>paused</c> property.
+            </summary>
+            <remarks>
+                <b>Discussion</b>
+                <p>Returns <c>true</c> if the synthesizer has begun speaking an utterance and was paused using <c>pauseSpeakingAtBoundary:</c>; <c>false</c> otherwise.</p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 7.0 and later.</li>
+                </ul>
+            </remarks>
+        </member>
+        <member name="P:U3DXT.iOS.Native.AVFoundation.AVSpeechSynthesizer.speaking">
+            <summary>
+            A Boolean value that indicates whether the synthesizer is speaking. (read-only)
+            <br></br>Equivalent to the native <c>speaking</c> property.
+            </summary>
+            <remarks>
+                <b>Discussion</b>
+                <p>Returns <c>true</c> if the synthesizer is speaking or has utterances enqueued to speak, even if it is currently paused. Returns <c>false</c> if the synthesizer has finished speaking all utterances in its queue or if it has not yet been given an utterance to speak.</p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 7.0 and later.</li>
+                </ul>
+            </remarks>
+        </member>
+        <member name="M:U3DXT.iOS.Native.AVFoundation.AVSpeechSynthesizer.ContinueSpeaking">
+            <summary>
+            Continues speech from the point at which it left off.
+            <br></br>Equivalent to the native <c>continueSpeaking</c> method.
+            </summary>
+            <remarks>
+                <b>Return Value</b>
+                <p>
+                    <c>true</c> if speech has continued, or <c>false</c> otherwise.</p>
+                <b>Discussion</b>
+                <p>This method only has any effect if the synthesizer is paused.</p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 7.0 and later.</li>
+                </ul>
+            </remarks>
+        </member>
+        <member name="M:U3DXT.iOS.Native.AVFoundation.AVSpeechSynthesizer.PauseSpeakingAtBoundary(U3DXT.iOS.Native.AVFoundation.AVSpeechBoundary)">
+            <summary>
+            Pauses speech at the specified boundary constraint.
+            <br></br>Equivalent to the native <c>pauseSpeakingAtBoundary:</c> method.
+            </summary>
+            <remarks>
+                <b>Parameters</b>
+                <p>
+                </p>
+                <em>boundary</em>
+                <p>A constant describing whether speech should pause immediately or only after finishing the word currently being spoken.</p>
+                <b>Return Value</b>
+                <p>
+                    <c>true</c> if speech has paused, or <c>false</c> otherwise.</p>
+                <b>Discussion</b>
+                <p>The <em>boundary</em> parameter also affects the manner in which the synthesizer, once paused, continues speech upon a call to <c>continueSpeaking</c>. If paused with boundary constraint <c>AVSpeechBoundaryImmediate</c>, speech continues from exactly the point at which it was paused, even if that point occurred in the middle of pronouncing a word. If paused with <c>AVSpeechBoundaryWord</c>, speech continues from the word following the word on which it was paused.</p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 7.0 and later.</li>
+                </ul>
+            </remarks>
+            <param name="boundary">
+            </param>
+        </member>
+        <member name="M:U3DXT.iOS.Native.AVFoundation.AVSpeechSynthesizer.SpeakUtterance(U3DXT.iOS.Native.AVFoundation.AVSpeechUtterance)">
+            <summary>
+            Enqueues an utterance to be spoken.
+            <br></br>Equivalent to the native <c>speakUtterance:</c> method.
+            </summary>
+            <remarks>
+                <b>Parameters</b>
+                <p>
+                </p>
+                <em>utterance</em>
+                <p>An <c>AVSpeechUtterance</c> object containing text to be spoken.</p>
+                <b>Discussion</b>
+                <p>The <c>AVSpeechUtterance</c> object not only contains the text to be spoken, but also parameters controlling speech synthesis such as voice, pitch, and delays between utterances.</p>
+                <p>Calling this method adds the utterance to a queue; utterances are spoken in the order in which they are added to the queue. If the synthesizer is not currently speaking, the utterance is spoken immediately. Attempting to enqueue <c>AVSpeechUtterance</c> instance multiple times throws an exception.</p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 7.0 and later.</li>
+                </ul>
+            </remarks>
+            <param name="utterance">
+            </param>
+        </member>
+        <member name="M:U3DXT.iOS.Native.AVFoundation.AVSpeechSynthesizer.StopSpeakingAtBoundary(U3DXT.iOS.Native.AVFoundation.AVSpeechBoundary)">
+            <summary>
+            Stops all speech at the specified boundary constraint.
+            <br></br>Equivalent to the native <c>stopSpeakingAtBoundary:</c> method.
+            </summary>
+            <remarks>
+                <b>Parameters</b>
+                <p>
+                </p>
+                <em>boundary</em>
+                <p>A constant describing whether speech should stop immediately or only after finishing the word currently being spoken.</p>
+                <b>Return Value</b>
+                <p>
+                    <c>true</c> if speech has stopped, or <c>false</c> otherwise.</p>
+                <b>Discussion</b>
+                <p>Stopping the synthesizer cancels any further speech; in constrast with when the synthesizer is paused, speech cannot be resumed where it left off. Any utterances yet to be spoken are removed from the synthesizer’s queue.</p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 7.0 and later.</li>
+                </ul>
+            </remarks>
+            <param name="boundary">
+            </param>
+        </member>
+        <member name="T:U3DXT.iOS.Native.AVFoundation.AVSpeechSynthesizerDelegate">
+            <summary>
+            The <c>AVSpeechSynthesizerDelegate</c> protocol defines methods that the delegate of an <c>AVSpeechSynthesizer</c> object may implement; all methods in this protocol are optional. You can implement these methods to respond to events that occur during speech synthesis.
+            </summary>
+            <remarks>
+                <p>Delegate messages are sent by the synthesizer for three categories of events:</p>
+                <ul class="ul">
+                    <li class="li">
+                        <p>When speech pauses or resumes</p>
+                    </li>
+                    <li class="li">
+                        <p>When the synthesizer starts or finishes speaking a block of text (as encapsulated by an <c>AVSpeechUtterance</c> object)</p>
+                    </li>
+                    <li class="li">
+                        <p>As the synthesizer produces each individual unit of speech</p>
+                    </li>
+                </ul>
+                <p>For the third case, you can implement <c>speechSynthesizer:willSpeakRangeOfSpeechString:utterance:</c> to provide a user interface in which each word is visibly highlighted as it is spoken.</p>
+            </remarks>
+        </member>
+        <member name="M:U3DXT.iOS.Native.AVFoundation.AVSpeechSynthesizerDelegate.UP_AVSpeechSynthesizerDelegate_set__speechSynthesizer_didCancelSpeechUtterance__handler(System.String,System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.AVFoundation.AVSpeechSynthesizerDelegate.UP_AVSpeechSynthesizerDelegate_set__speechSynthesizer_didContinueSpeechUtterance__handler(System.String,System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.AVFoundation.AVSpeechSynthesizerDelegate.UP_AVSpeechSynthesizerDelegate_set__speechSynthesizer_didFinishSpeechUtterance__handler(System.String,System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.AVFoundation.AVSpeechSynthesizerDelegate.UP_AVSpeechSynthesizerDelegate_set__speechSynthesizer_didPauseSpeechUtterance__handler(System.String,System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.AVFoundation.AVSpeechSynthesizerDelegate.UP_AVSpeechSynthesizerDelegate_set__speechSynthesizer_didStartSpeechUtterance__handler(System.String,System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.AVFoundation.AVSpeechSynthesizerDelegate.UP_AVSpeechSynthesizerDelegate_set__speechSynthesizer_willSpeakRangeOfSpeechString_utterance__handler(System.String,System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.AVFoundation.AVSpeechSynthesizerDelegate.#ctor">
+            <summary>
+            Default constructor.
+            </summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.AVFoundation.AVSpeechSynthesizerDelegate.#ctor(U3DXT.iOS.Native.Internals._IosBaseClass._NewHelper,System.String)">
+            <summary>
+            U3DXT internal constructor.
+            </summary>
+            <param name="helper">
+            </param>
+            <param name="className">
+            </param>
+        </member>
+        <member name="M:U3DXT.iOS.Native.AVFoundation.AVSpeechSynthesizerDelegate._InitImplementedMethods">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.AVFoundation.AVSpeechSynthesizerDelegate.DidCancel(U3DXT.iOS.Native.AVFoundation.AVSpeechSynthesizer,U3DXT.iOS.Native.AVFoundation.AVSpeechUtterance)">
+            <summary>
+            (optional) Tells the delegate when the synthesizer has canceled speaking an utterance.
+            <br></br>Equivalent to the native <c>speechSynthesizer:didCancelSpeechUtterance:</c> method.
+            </summary>
+            <remarks>
+                <b>Parameters</b>
+                <p>
+                </p>
+                <em>synthesizer</em>
+                <p>The synthesizer speaking the utterance that this message applies to.</p>
+                <em>utterance</em>
+                <p>The utterance during which speech was canceled.</p>
+                <b>Discussion</b>
+                <p>This message is sent only if speech is stopped (using the <c>stopSpeakingAtBoundary:</c> method) while an utterance is being spoken. It is not sent if the synthesizer is currently in a delay between utterances when speech stops. This message is sent only for the utterance currently being spoken, not for utterances yet to be handled.</p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 7.0 and later.</li>
+                </ul>
+            </remarks>
+            <param name="synthesizer">
+            </param>
+            <param name="utterance">
+            </param>
+        </member>
+        <member name="M:U3DXT.iOS.Native.AVFoundation.AVSpeechSynthesizerDelegate.DidContinue(U3DXT.iOS.Native.AVFoundation.AVSpeechSynthesizer,U3DXT.iOS.Native.AVFoundation.AVSpeechUtterance)">
+            <summary>
+            (optional) Tells the delegate when the synthesizer has resumed speaking an utterance after being paused.
+            <br></br>Equivalent to the native <c>speechSynthesizer:didContinueSpeechUtterance:</c> method.
+            </summary>
+            <remarks>
+                <b>Parameters</b>
+                <p>
+                </p>
+                <em>synthesizer</em>
+                <p>The synthesizer speaking the utterance that this message applies to.</p>
+                <em>utterance</em>
+                <p>The utterance being spoken.</p>
+                <b>Discussion</b>
+                <p>This message is sent upon resuming speech only if speech was paused (using the <c>pauseSpeakingAtBoundary:</c> method) while an utterance was being spoken. It is not sent if the synthesizer was paused during a delay between utterances.</p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 7.0 and later.</li>
+                </ul>
+            </remarks>
+            <param name="synthesizer">
+            </param>
+            <param name="utterance">
+            </param>
+        </member>
+        <member name="M:U3DXT.iOS.Native.AVFoundation.AVSpeechSynthesizerDelegate.DidFinish(U3DXT.iOS.Native.AVFoundation.AVSpeechSynthesizer,U3DXT.iOS.Native.AVFoundation.AVSpeechUtterance)">
+            <summary>
+            (optional) Tells the delegate when the synthesizer has finished speaking an utterance.
+            <br></br>Equivalent to the native <c>speechSynthesizer:didFinishSpeechUtterance:</c> method.
+            </summary>
+            <remarks>
+                <b>Parameters</b>
+                <p>
+                </p>
+                <em>synthesizer</em>
+                <p>The synthesizer speaking the utterance that this message applies to.</p>
+                <em>utterance</em>
+                <p>The utterance that has finished being spoken.</p>
+                <b>Discussion</b>
+                <p>This message is sent immediately when speech ends; it is not postponed if the final utterance’s <c>postUtteranceDelay</c> is greater than zero.</p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 7.0 and later.</li>
+                </ul>
+            </remarks>
+            <param name="synthesizer">
+            </param>
+            <param name="utterance">
+            </param>
+        </member>
+        <member name="M:U3DXT.iOS.Native.AVFoundation.AVSpeechSynthesizerDelegate.DidPause(U3DXT.iOS.Native.AVFoundation.AVSpeechSynthesizer,U3DXT.iOS.Native.AVFoundation.AVSpeechUtterance)">
+            <summary>
+            (optional) Tells the delegate when the synthesizer has paused while speaking an utterance.
+            <br></br>Equivalent to the native <c>speechSynthesizer:didPauseSpeechUtterance:</c> method.
+            </summary>
+            <remarks>
+                <b>Parameters</b>
+                <p>
+                </p>
+                <em>synthesizer</em>
+                <p>The synthesizer speaking the utterance that this message applies to.</p>
+                <em>utterance</em>
+                <p>The utterance being spoken.</p>
+                <b>Discussion</b>
+                <p>This message is sent only if speech is paused (using the <c>pauseSpeakingAtBoundary:</c> method) while an utterance is being spoken. It is not sent if the synthesizer is currently in a delay between utterances when speech pauses.</p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 7.0 and later.</li>
+                </ul>
+            </remarks>
+            <param name="synthesizer">
+            </param>
+            <param name="utterance">
+            </param>
+        </member>
+        <member name="M:U3DXT.iOS.Native.AVFoundation.AVSpeechSynthesizerDelegate.DidStart(U3DXT.iOS.Native.AVFoundation.AVSpeechSynthesizer,U3DXT.iOS.Native.AVFoundation.AVSpeechUtterance)">
+            <summary>
+            (optional) Tells the delegate when the synthesizer has begun speaking an utterance.
+            <br></br>Equivalent to the native <c>speechSynthesizer:didStartSpeechUtterance:</c> method.
+            </summary>
+            <remarks>
+                <b>Parameters</b>
+                <p>
+                </p>
+                <em>synthesizer</em>
+                <p>The synthesizer speaking the utterance that this message applies to.</p>
+                <em>utterance</em>
+                <p>The utterance that has begun to be spoken.</p>
+                <b>Discussion</b>
+                <p>If the value of the utterance’s <c>preUtteranceDelay</c> property is grreater than zero, the message is not sent until the delay period has passed and speech has actually begun.</p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 7.0 and later.</li>
+                </ul>
+            </remarks>
+            <param name="synthesizer">
+            </param>
+            <param name="utterance">
+            </param>
+        </member>
+        <member name="M:U3DXT.iOS.Native.AVFoundation.AVSpeechSynthesizerDelegate.WillSpeakRangeOfSpeechString(U3DXT.iOS.Native.AVFoundation.AVSpeechSynthesizer,U3DXT.iOS.Native.Foundation.NSRange,U3DXT.iOS.Native.AVFoundation.AVSpeechUtterance)">
+            <summary>
+            (optional) Tells the delegate when the synthesizer is about to speak a portion of an utterance’s text.
+            <br></br>Equivalent to the native <c>speechSynthesizer:willSpeakRangeOfSpeechString:utterance:</c> method.
+            </summary>
+            <remarks>
+                <b>Parameters</b>
+                <p>
+                </p>
+                <em>synthesizer</em>
+                <p>The synthesizer speaking the utterance that this message applies to.</p>
+                <em>characterRange</em>
+                <p>The range of characters in the utterance’s <c>speechString</c> corresponding to the unit of speech about to be spoken.</p>
+                <em>utterance</em>
+                <p>The utterance currently being spoken.</p>
+                <b>Discussion</b>
+                <p>Because this delegate message is sent once for each unit of speech (generally, a word) in the utterance’s text, you can use it for such purposes as highlighting each word onscreen as it is spoken.</p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 7.0 and later.</li>
+                </ul>
+            </remarks>
+            <param name="synthesizer">
+            </param>
+            <param name="characterRange">
+            </param>
+            <param name="utterance">
+            </param>
+        </member>
+        <member name="P:U3DXT.iOS.Native.AVFoundation.AVSpeechSynthesizerDelegate._speechSynthesizer_didCancelSpeechUtterance__handler">
+            <summary>
+                <br>
+                </br>Equivalent to the native <c>_speechSynthesizer_didCancelSpeechUtterance__handler</c> property.
+            </summary>
+            <remarks>
+            </remarks>
+        </member>
+        <member name="P:U3DXT.iOS.Native.AVFoundation.AVSpeechSynthesizerDelegate._speechSynthesizer_didContinueSpeechUtterance__handler">
+            <summary>
+                <br>
+                </br>Equivalent to the native <c>_speechSynthesizer_didContinueSpeechUtterance__handler</c> property.
+            </summary>
+            <remarks>
+            </remarks>
+        </member>
+        <member name="P:U3DXT.iOS.Native.AVFoundation.AVSpeechSynthesizerDelegate._speechSynthesizer_didFinishSpeechUtterance__handler">
+            <summary>
+                <br>
+                </br>Equivalent to the native <c>_speechSynthesizer_didFinishSpeechUtterance__handler</c> property.
+            </summary>
+            <remarks>
+            </remarks>
+        </member>
+        <member name="P:U3DXT.iOS.Native.AVFoundation.AVSpeechSynthesizerDelegate._speechSynthesizer_didPauseSpeechUtterance__handler">
+            <summary>
+                <br>
+                </br>Equivalent to the native <c>_speechSynthesizer_didPauseSpeechUtterance__handler</c> property.
+            </summary>
+            <remarks>
+            </remarks>
+        </member>
+        <member name="P:U3DXT.iOS.Native.AVFoundation.AVSpeechSynthesizerDelegate._speechSynthesizer_didStartSpeechUtterance__handler">
+            <summary>
+                <br>
+                </br>Equivalent to the native <c>_speechSynthesizer_didStartSpeechUtterance__handler</c> property.
+            </summary>
+            <remarks>
+            </remarks>
+        </member>
+        <member name="P:U3DXT.iOS.Native.AVFoundation.AVSpeechSynthesizerDelegate._speechSynthesizer_willSpeakRangeOfSpeechString_utterance__handler">
+            <summary>
+                <br>
+                </br>Equivalent to the native <c>_speechSynthesizer_willSpeakRangeOfSpeechString_utterance__handler</c> property.
+            </summary>
+            <remarks>
+            </remarks>
+        </member>
+        <member name="T:U3DXT.iOS.Native.AVFoundation.AVSpeechUtterance">
+            <summary>
+            An <c>AVSpeechUtterance</c> is the basic unit of speech synthesis. An utterance encapsulates some amount of text to be spoken and a set of parameters affecting its speech: voice, pitch, rate, and delay.
+            </summary>
+            <remarks>
+                <p>To synthesize speech, you must:</p>
+                <ol class="ol">
+                    <li class="li">
+                        <p>Create an <c>AVSpeechUtterance</c> instance containing the text to be spoken. (See <c>“Creating an Utterance”</c>.)</p>
+                    </li>
+                    <li class="li">
+                        <p>(Optional) Change its voice, rate, or other parameters. (See <c>“Configuring Utterance Speech”</c>.</p>
+                    </li>
+                    <li class="li">
+                        <p>Pass the utterance to an <c>AVSpeechSynthesizer</c> instance to begin speech (or enqueue the utterance to be spoken later if the synthesizer is already speaking).</p>
+                    </li>
+                </ol>
+                <p>You may choose whether and how to split a body of text into multiple utterances for speech. Because an utterance can control speech parameters, you can split text into sections that require different parameters. For example, you can emphasize a sentence by increasing the pitch and decreasing the rate of that utterance relative to others, or you can introduce pauses between sentences by putting each one into an utterance with a leading or trailing delay. Because the speech synthesizer sends messages to its delegate as it starts or finishes speaking an utterance, you can create an utterance for each meaningful unit in a longer text in order to be notified as its speech progresses.</p>
+            </remarks>
+            <exception cref="T:U3DXT.Core.U3DXTException">
+            Is thrown when creation or initialization fails.
+            </exception>
+        </member>
+        <member name="F:U3DXT.iOS.Native.AVFoundation.AVSpeechUtterance.MinimumSpeechRate">
+            <summary>
+                <p>The minimum allowed speech rate.</p>
+                <p>Available in iOS 7.0 and later.</p>
+                <p>
+                </p>
+                <br>
+                </br>Equivalent to the native <c>AVSpeechUtteranceMinimumSpeechRate</c> constant.
+            </summary>
+            <remarks>
+            Constance specifying the range of allowed rates for synthesized speech.
+            <p></p><br />
+            	Provide Feedback
+            <p></p>This is a constant for "Speech Rate Constants".
+            </remarks>
+        </member>
+        <member name="F:U3DXT.iOS.Native.AVFoundation.AVSpeechUtterance.MaximumSpeechRate">
+            <summary>
+                <p>The maximum allowed speech rate.</p>
+                <p>Available in iOS 7.0 and later.</p>
+                <p>
+                </p>
+                <br>
+                </br>Equivalent to the native <c>AVSpeechUtteranceMaximumSpeechRate</c> constant.
+            </summary>
+            <remarks>
+            Constance specifying the range of allowed rates for synthesized speech.
+            <p></p><br />
+            	Provide Feedback
+            <p></p>This is a constant for "Speech Rate Constants".
+            </remarks>
+        </member>
+        <member name="F:U3DXT.iOS.Native.AVFoundation.AVSpeechUtterance.DefaultSpeechRate">
+            <summary>
+                <p>The default rate at which an utterance is spoken unless its <c>rate</c> property is changed.</p>
+                <p>Available in iOS 7.0 and later.</p>
+                <p>
+                </p>
+                <br>
+                </br>Equivalent to the native <c>AVSpeechUtteranceDefaultSpeechRate</c> constant.
+            </summary>
+            <remarks>
+            Constance specifying the range of allowed rates for synthesized speech.
+            <p></p><br />
+            	Provide Feedback
+            <p></p>This is a constant for "Speech Rate Constants".
+            </remarks>
+        </member>
+        <member name="M:U3DXT.iOS.Native.AVFoundation.AVSpeechUtterance.UP_AVSpeechUtterance_get_pitchMultiplier(System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.AVFoundation.AVSpeechUtterance.UP_AVSpeechUtterance_set_pitchMultiplier(System.String,System.Single)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.AVFoundation.AVSpeechUtterance.UP_AVSpeechUtterance_get_postUtteranceDelay(System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.AVFoundation.AVSpeechUtterance.UP_AVSpeechUtterance_set_postUtteranceDelay(System.String,System.Double)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.AVFoundation.AVSpeechUtterance.UP_AVSpeechUtterance_get_preUtteranceDelay(System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.AVFoundation.AVSpeechUtterance.UP_AVSpeechUtterance_set_preUtteranceDelay(System.String,System.Double)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.AVFoundation.AVSpeechUtterance.UP_AVSpeechUtterance_get_rate(System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.AVFoundation.AVSpeechUtterance.UP_AVSpeechUtterance_set_rate(System.String,System.Single)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.AVFoundation.AVSpeechUtterance.UP_AVSpeechUtterance_get_speechString(System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.AVFoundation.AVSpeechUtterance.UP_AVSpeechUtterance_get_voice(System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.AVFoundation.AVSpeechUtterance.UP_AVSpeechUtterance_set_voice(System.String,System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.AVFoundation.AVSpeechUtterance.UP_AVSpeechUtterance_get_volume(System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.AVFoundation.AVSpeechUtterance.UP_AVSpeechUtterance_set_volume(System.String,System.Single)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.AVFoundation.AVSpeechUtterance.UP_AVSpeechUtterance_alloc_initWithString_(System.String,System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.AVFoundation.AVSpeechUtterance.#ctor(U3DXT.iOS.Native.Internals._IosBaseClass._NewHelper)">
+            <summary>
+            U3DXT internal constructor.
+            </summary>
+            <param name="helper">
+            </param>
+        </member>
+        <member name="M:U3DXT.iOS.Native.AVFoundation.AVSpeechUtterance.#ctor(U3DXT.iOS.Native.Internals._IosBaseClass._NewHelper,System.String)">
+            <summary>
+            U3DXT internal constructor.
+            </summary>
+            <param name="helper">
+            </param>
+            <param name="uuid">
+            </param>
+        </member>
+        <member name="M:U3DXT.iOS.Native.AVFoundation.AVSpeechUtterance.#ctor">
+            <summary>
+            Creates and initializes a new instance of the native <see cref="T:U3DXT.iOS.Native.AVFoundation.AVSpeechUtterance" /> class.
+            <br></br>Equivalent to the native <c>[[AVSpeechUtterance alloc] init]</c> calls.
+            </summary>
+            <exception cref="T:U3DXT.Core.U3DXTException">
+            Is thrown when creation or initialization fails.
+            </exception>
+        </member>
+        <member name="M:U3DXT.iOS.Native.AVFoundation.AVSpeechUtterance.InstancesRespondToSelector(System.String)">
+            <summary>
+            Returns whether native instances of this class can respond to a selector with the same name.
+            <br></br>Equivalent to the native <c>instancesRespondToSelector:</c> class method.
+            </summary>
+            <returns>
+                <c>true</c> if native instances of this class can respond to a selector with the same name, <c>false</c> otherwise.
+            </returns>
+            <param name="selectorName">The literal name of the selector.</param>
+        </member>
+        <member name="P:U3DXT.iOS.Native.AVFoundation.AVSpeechUtterance.ClassExists">
+            <summary>
+            Returns whether the native AVSpeechUtterance class exists on the platform.
+            </summary>
+            <value>
+                <c>true</c> if class exists; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:U3DXT.iOS.Native.AVFoundation.AVSpeechUtterance.pitchMultiplier">
+            <summary>
+            The baseline pitch at which the utterance will be spoken.
+            <br></br>Equivalent to the native <c>pitchMultiplier</c> property.
+            </summary>
+            <remarks>
+                <b>Discussion</b>
+                <p>The default pitch is <c>1.0</c>. Allowed values are in the range from <c>0.5</c> (for lower pitch) to <c>2.0</c> (for higher pitch).</p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 7.0 and later.</li>
+                </ul>
+            </remarks>
+        </member>
+        <member name="P:U3DXT.iOS.Native.AVFoundation.AVSpeechUtterance.postUtteranceDelay">
+            <summary>
+            The amount of time a speech synthesizer will wait after the utterance is spoken before handling the next queued utterance.
+            <br></br>Equivalent to the native <c>postUtteranceDelay</c> property.
+            </summary>
+            <remarks>
+                <b>Discussion</b>
+                <p>When two or more utterances are spoken by an instance of <c>AVSpeechSynthesizer</c>, the time between periods when either is audible will be at least the sum of the first utterance’s <c>postUtteranceDelay</c> and the second utterance’s <c>preUtteranceDelay</c>.</p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 7.0 and later.</li>
+                </ul>
+            </remarks>
+        </member>
+        <member name="P:U3DXT.iOS.Native.AVFoundation.AVSpeechUtterance.preUtteranceDelay">
+            <summary>
+            The amount of time a speech synthesizer will wait before actually speaking the utterance upon beginning to handle it.
+            <br></br>Equivalent to the native <c>preUtteranceDelay</c> property.
+            </summary>
+            <remarks>
+                <b>Discussion</b>
+                <p>When two or more utterances are spoken by an instance of <c>AVSpeechSynthesizer</c>, the time between periods when either is audible will be at least the sum of the first utterance’s <c>postUtteranceDelay</c> and the second utterance’s <c>preUtteranceDelay</c>.</p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 7.0 and later.</li>
+                </ul>
+            </remarks>
+        </member>
+        <member name="P:U3DXT.iOS.Native.AVFoundation.AVSpeechUtterance.rate">
+            <summary>
+            The rate at which the utterance will be spoken.
+            <br></br>Equivalent to the native <c>rate</c> property.
+            </summary>
+            <remarks>
+                <b>Discussion</b>
+                <p>Speech rates are values in the range between <c>AVSpeechUtteranceMinimumSpeechRate</c> and <c>AVSpeechUtteranceMaximumSpeechRate</c>. Lower values correspond to slower speech, and vice versa. The default value is <c>AVSpeechUtteranceDefaultSpeechRate</c>.</p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 7.0 and later.</li>
+                </ul>
+            </remarks>
+        </member>
+        <member name="P:U3DXT.iOS.Native.AVFoundation.AVSpeechUtterance.speechString">
+            <summary>
+            The text to be spoken in the utterance. (read-only)
+            <br></br>Equivalent to the native <c>speechString</c> property.
+            </summary>
+            <remarks>
+                <b>Discussion</b>
+                <p>An utterance’s text cannot be changed once it is created. To speak different text, create a new utterance.</p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 7.0 and later.</li>
+                </ul>
+            </remarks>
+        </member>
+        <member name="P:U3DXT.iOS.Native.AVFoundation.AVSpeechUtterance.voice">
+            <summary>
+            The voice used to speak the utterance.
+            <br></br>Equivalent to the native <c>voice</c> property.
+            </summary>
+            <remarks>
+                <b>Discussion</b>
+                <p>The default value is <c>null</c>, which causes the utterance to be spoken in the default voice.</p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 7.0 and later.</li>
+                </ul>
+            </remarks>
+        </member>
+        <member name="P:U3DXT.iOS.Native.AVFoundation.AVSpeechUtterance.volume">
+            <summary>
+            The volume used when speaking the utterance.
+            <br></br>Equivalent to the native <c>volume</c> property.
+            </summary>
+            <remarks>
+                <b>Discussion</b>
+                <p>Allowed values are in the range from <c>0.0</c> (silent) to <c>1.0</c> (loudest). The default volume is <c>1.0</c>.</p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 7.0 and later.</li>
+                </ul>
+            </remarks>
+        </member>
+        <member name="M:U3DXT.iOS.Native.AVFoundation.AVSpeechUtterance.#ctor(System.String)">
+            <summary>
+            Creates an instance of the native AVSpeechUtterance and initializes the object. Initializes an utterance object with text to be spoken.
+            <br></br>Equivalent to the native <c>[[AVSpeechUtterance alloc] initWithString:]</c> calls.
+            </summary>
+            <remarks>
+                <b>Parameters</b>
+                <p>
+                </p>
+                <em>string</em>
+                <p>A string containing text to be spoken.</p>
+                <b>Return Value</b>
+                <p>An <c>AVSpeechUtterance</c> object that can speak the specified text.</p>
+                <b>Discussion</b>
+                <p>To speak the text, the utterance must be passed to an instance of <c>AVSpeechSynthesizer</c>.</p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 7.0 and later.</li>
+                </ul>
+                <b>See Also</b>
+                <ul>
+                    <li>
+                        <c>speakUtterance:</c>
+                    </li>
+                </ul>
+            </remarks>
+            <param name="aString">
+            </param>
+        </member>
+    </members>
+</doc>

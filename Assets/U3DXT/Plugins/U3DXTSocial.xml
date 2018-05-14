@@ -1,0 +1,3197 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>U3DXTSocial</name>
+    </assembly>
+    <members>
+        <member name="T:U3DXT.iOS.Native.Accounts.ACAccount">
+            <summary>
+            An <c>ACAccount</c> object encapsulates information about a user account stored in the Accounts database. You can create and retrieve accounts using an <c>ACAccountStore</c> object. The <c>ACAccountStore</c> object provides an interface to the persistent Accounts database. For each user, all account objects belong to a single <c>ACAccountStore</c> object.
+            </summary>
+            <remarks>
+            </remarks>
+            <exception cref="T:U3DXT.Core.U3DXTException">
+            Is thrown when creation or initialization fails.
+            </exception>
+        </member>
+        <member name="M:U3DXT.iOS.Native.Accounts.ACAccount.UP_ACAccount_get_accountDescription(System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.Accounts.ACAccount.UP_ACAccount_set_accountDescription(System.String,System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.Accounts.ACAccount.UP_ACAccount_get_accountType(System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.Accounts.ACAccount.UP_ACAccount_set_accountType(System.String,System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.Accounts.ACAccount.UP_ACAccount_get_credential(System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.Accounts.ACAccount.UP_ACAccount_set_credential(System.String,System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.Accounts.ACAccount.UP_ACAccount_get_identifier(System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.Accounts.ACAccount.UP_ACAccount_get_username(System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.Accounts.ACAccount.UP_ACAccount_set_username(System.String,System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.Accounts.ACAccount.UP_ACAccount_alloc_initWithAccountType_(System.String,System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.Accounts.ACAccount.#ctor(U3DXT.iOS.Native.Internals._IosBaseClass._NewHelper)">
+            <summary>
+            U3DXT internal constructor.
+            </summary>
+            <param name="helper">
+            </param>
+        </member>
+        <member name="M:U3DXT.iOS.Native.Accounts.ACAccount.#ctor(U3DXT.iOS.Native.Internals._IosBaseClass._NewHelper,System.String)">
+            <summary>
+            U3DXT internal constructor.
+            </summary>
+            <param name="helper">
+            </param>
+            <param name="uuid">
+            </param>
+        </member>
+        <member name="M:U3DXT.iOS.Native.Accounts.ACAccount.#ctor">
+            <summary>
+            Creates and initializes a new instance of the native <see cref="T:U3DXT.iOS.Native.Accounts.ACAccount" /> class.
+            <br></br>Equivalent to the native <c>[[ACAccount alloc] init]</c> calls.
+            </summary>
+            <exception cref="T:U3DXT.Core.U3DXTException">
+            Is thrown when creation or initialization fails.
+            </exception>
+        </member>
+        <member name="M:U3DXT.iOS.Native.Accounts.ACAccount.InstancesRespondToSelector(System.String)">
+            <summary>
+            Returns whether native instances of this class can respond to a selector with the same name.
+            <br></br>Equivalent to the native <c>instancesRespondToSelector:</c> class method.
+            </summary>
+            <returns>
+                <c>true</c> if native instances of this class can respond to a selector with the same name, <c>false</c> otherwise.
+            </returns>
+            <param name="selectorName">The literal name of the selector.</param>
+        </member>
+        <member name="P:U3DXT.iOS.Native.Accounts.ACAccount.ClassExists">
+            <summary>
+            Returns whether the native ACAccount class exists on the platform.
+            </summary>
+            <value>
+                <c>true</c> if class exists; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:U3DXT.iOS.Native.Accounts.ACAccount.accountDescription">
+            <summary>
+            A human-readable description of the account.
+            <br></br>Equivalent to the native <c>accountDescription</c> property.
+            </summary>
+            <remarks>
+                <b>Discussion</b>
+                <p>This property is available if the user grants the application access to this account; otherwise it is <c>null</c>.</p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 5.0 and later.</li>
+                </ul>
+            </remarks>
+        </member>
+        <member name="P:U3DXT.iOS.Native.Accounts.ACAccount.accountType">
+            <summary>
+            The type of service account.
+            <br></br>Equivalent to the native <c>accountType</c> property.
+            </summary>
+            <remarks>
+                <b>Discussion</b>
+                <p>This property is required. You specify the account type using the <c>initWithAccountType:</c> method. You can use the <c>accountsWithAccountType:</c> method to retrieve all accounts of a particular type. </p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 5.0 and later.</li>
+                </ul>
+                <b>See Also</b>
+                <ul>
+                    <li>
+                        <c>– initWithAccountType:</c>
+                    </li>
+                    <li>
+                        <c>– accountsWithAccountType:</c>
+                    </li>
+                </ul>
+            </remarks>
+        </member>
+        <member name="P:U3DXT.iOS.Native.Accounts.ACAccount.credential">
+            <summary>
+            The credential used to authenticate the user of this account.
+            <br></br>Equivalent to the native <c>credential</c> property.
+            </summary>
+            <remarks>
+                <b>Discussion</b>
+                <p>This property is required and must be set before the account is saved. For privacy reasons, this property is inaccessible after the account is saved.</p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 5.0 and later.</li>
+                </ul>
+            </remarks>
+        </member>
+        <member name="P:U3DXT.iOS.Native.Accounts.ACAccount.identifier">
+            <summary>
+            A unique identifier for this account. (read-only)
+            <br></br>Equivalent to the native <c>identifier</c> property.
+            </summary>
+            <remarks>
+                <b>Discussion</b>
+                <p>Use the <c>accountWithIdentifier:</c> method to get an account with the specified identifier.</p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 5.0 and later.</li>
+                </ul>
+                <b>See Also</b>
+                <ul>
+                    <li>
+                        <c>– accountWithIdentifier:</c>
+                    </li>
+                </ul>
+            </remarks>
+        </member>
+        <member name="P:U3DXT.iOS.Native.Accounts.ACAccount.username">
+            <summary>
+            The username for this account.
+            <br></br>Equivalent to the native <c>username</c> property.
+            </summary>
+            <remarks>
+                <b>Discussion</b>
+                <p>This property must be set before the account is saved. After the account is saved, this property is available if the user grants the application access to this account; otherwise it is <c>null</c>.</p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 5.0 and later.</li>
+                </ul>
+            </remarks>
+        </member>
+        <member name="M:U3DXT.iOS.Native.Accounts.ACAccount.#ctor(U3DXT.iOS.Native.Accounts.ACAccountType)">
+            <summary>
+            Creates an instance of the native ACAccount and initializes the object. Initializes a new account of the specified type.
+            <br></br>Equivalent to the native <c>[[ACAccount alloc] initWithAccountType:]</c> calls.
+            </summary>
+            <remarks>
+                <b>Parameters</b>
+                <p>
+                </p>
+                <em>type</em>
+                <p>The type of this account.</p>
+                <b>Return Value</b>
+                <p>The newly initialized account.</p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 5.0 and later.</li>
+                </ul>
+                <b>See Also</b>
+                <ul>
+                    <li>
+                        <c>accountType</c>
+                    </li>
+                </ul>
+            </remarks>
+            <param name="type">
+            </param>
+        </member>
+        <member name="T:U3DXT.iOS.Native.Accounts.ACAccountCredential">
+            <summary>
+            An <c>ACAccountCredential</c> object encapsulates the information needed to authenticate a user.
+            </summary>
+            <remarks>
+                <p>To create an account credential that uses the OAuth open authentication standard, use the <c>initWithOAuthToken:tokenSecret:</c> method. </p>
+            </remarks>
+            <exception cref="T:U3DXT.Core.U3DXTException">
+            Is thrown when creation or initialization fails.
+            </exception>
+        </member>
+        <member name="M:U3DXT.iOS.Native.Accounts.ACAccountCredential.UP_ACAccountCredential_get_oauthToken(System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.Accounts.ACAccountCredential.UP_ACAccountCredential_set_oauthToken(System.String,System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.Accounts.ACAccountCredential.UP_ACAccountCredential_alloc_initWithOAuth2Token_refreshToken_expiryDate_(System.String,System.String,System.String,System.Double)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.Accounts.ACAccountCredential.UP_ACAccountCredential_alloc_initWithOAuthToken_tokenSecret_(System.String,System.String,System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.Accounts.ACAccountCredential.#ctor(U3DXT.iOS.Native.Internals._IosBaseClass._NewHelper)">
+            <summary>
+            U3DXT internal constructor.
+            </summary>
+            <param name="helper">
+            </param>
+        </member>
+        <member name="M:U3DXT.iOS.Native.Accounts.ACAccountCredential.#ctor(U3DXT.iOS.Native.Internals._IosBaseClass._NewHelper,System.String)">
+            <summary>
+            U3DXT internal constructor.
+            </summary>
+            <param name="helper">
+            </param>
+            <param name="uuid">
+            </param>
+        </member>
+        <member name="M:U3DXT.iOS.Native.Accounts.ACAccountCredential.#ctor">
+            <summary>
+            Creates and initializes a new instance of the native <see cref="T:U3DXT.iOS.Native.Accounts.ACAccountCredential" /> class.
+            <br></br>Equivalent to the native <c>[[ACAccountCredential alloc] init]</c> calls.
+            </summary>
+            <exception cref="T:U3DXT.Core.U3DXTException">
+            Is thrown when creation or initialization fails.
+            </exception>
+        </member>
+        <member name="M:U3DXT.iOS.Native.Accounts.ACAccountCredential.InstancesRespondToSelector(System.String)">
+            <summary>
+            Returns whether native instances of this class can respond to a selector with the same name.
+            <br></br>Equivalent to the native <c>instancesRespondToSelector:</c> class method.
+            </summary>
+            <returns>
+                <c>true</c> if native instances of this class can respond to a selector with the same name, <c>false</c> otherwise.
+            </returns>
+            <param name="selectorName">The literal name of the selector.</param>
+        </member>
+        <member name="P:U3DXT.iOS.Native.Accounts.ACAccountCredential.ClassExists">
+            <summary>
+            Returns whether the native ACAccountCredential class exists on the platform.
+            </summary>
+            <value>
+                <c>true</c> if class exists; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:U3DXT.iOS.Native.Accounts.ACAccountCredential.oauthToken">
+            <summary>
+            The token used for the credential.
+            <br></br>Equivalent to the native <c>oauthToken</c> property.
+            </summary>
+            <remarks>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 6.0 and later.</li>
+                </ul>
+            </remarks>
+        </member>
+        <member name="M:U3DXT.iOS.Native.Accounts.ACAccountCredential.#ctor(System.String,System.String,System.DateTime)">
+            <summary>
+            Creates an instance of the native ACAccountCredential and initializes the object. Initializes an account credential using OAuth 2.
+            <br></br>Equivalent to the native <c>[[ACAccountCredential alloc] initWithOAuth2Token:refreshToken:expiryDate:]</c> calls.
+            </summary>
+            <remarks>
+                <b>Parameters</b>
+                <p>
+                </p>
+                <em>token</em>
+                <p>The client application’s token.</p>
+                <em>refreshToken</em>
+                <p>The client application’s refresh token.</p>
+                <em>expiryDate</em>
+                <p>The date the token expires.</p>
+                <b>Discussion</b>
+                <p>Accounts can optionally use the OAuth open authentication standard to authenticate your client application. Instead of the user giving their username and password to log in, the server authenticates the user, and your client application receives a token that grants it access to specific resources for a defined duration. The authentication mechanism uses a key and secret scheme similar to the public and private keys used by <c>ssh</c>. A token is a unique, random string of letters and numbers that is paired with a secret to protect the token from being abused. You initialize account credentials using this token and secret token.</p>
+                <p>To learn more about OAuth, go to  Hueniverse OAuth . </p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 6.0 and later.</li>
+                </ul>
+            </remarks>
+            <param name="token">
+            </param>
+            <param name="refreshToken">
+            </param>
+            <param name="expiryDate">
+            </param>
+        </member>
+        <member name="M:U3DXT.iOS.Native.Accounts.ACAccountCredential.#ctor(System.String,System.String)">
+            <summary>
+            Creates an instance of the native ACAccountCredential and initializes the object. Initializes an account credential using OAuth.
+            <br></br>Equivalent to the native <c>[[ACAccountCredential alloc] initWithOAuthToken:tokenSecret:]</c> calls.
+            </summary>
+            <remarks>
+                <b>Parameters</b>
+                <p>
+                </p>
+                <em>token</em>
+                <p>The client application’s token.</p>
+                <em>secret</em>
+                <p>The client application’s secret token.</p>
+                <b>Return Value</b>
+                <p>Newly initialized account credential.</p>
+                <b>Discussion</b>
+                <p>Accounts can optionally use the OAuth open authentication standard to authenticate your client application. Instead of the user giving their username and password to log in, the server authenticates the user, and your client application receives a token that grants it access to specific resources for a defined duration. The authentication mechanism uses a key and secret scheme similar to the public and private keys used by <c>ssh</c>. A token is a unique, random string of letters and numbers that is paired with a secret to protect the token from being abused. You initialize account credentials using this token and secret token.</p>
+                <p>To learn more about OAuth, go to  Hueniverse OAuth . </p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 5.0 and later.</li>
+                </ul>
+            </remarks>
+            <param name="token">
+            </param>
+            <param name="secret">
+            </param>
+        </member>
+        <member name="T:U3DXT.iOS.Native.Accounts.ACAccountCredentialRenewResult">
+            <summary>
+            Status codes of credential renewal requests.
+            </summary>
+            <remarks>
+            </remarks>
+        </member>
+        <member name="F:U3DXT.iOS.Native.Accounts.ACAccountCredentialRenewResult.Renewed">
+            <summary>
+                <p>The account’s credentials have been renewed and are now associated with the account.</p>
+                <p>Available in iOS 6.0 and later.</p>
+                <p>
+                </p>
+                <br>
+                </br>Equivalent to the native <c>ACAccountCredentialRenewResultRenewed</c> enum constant.
+            </summary>
+        </member>
+        <member name="F:U3DXT.iOS.Native.Accounts.ACAccountCredentialRenewResult.Rejected">
+            <summary>
+                <p>Renewal failed because the user revoked your access to their account.</p>
+                <p>Available in iOS 6.0 and later.</p>
+                <p>
+                </p>
+                <br>
+                </br>Equivalent to the native <c>ACAccountCredentialRenewResultRejected</c> enum constant.
+            </summary>
+        </member>
+        <member name="F:U3DXT.iOS.Native.Accounts.ACAccountCredentialRenewResult.Failed">
+            <summary>
+                <p>A non-user-initiated cancel of the prompt. Try again.</p>
+                <p>Available in iOS 6.0 and later.</p>
+                <p>
+                </p>
+                <br>
+                </br>Equivalent to the native <c>ACAccountCredentialRenewResultFailed</c> enum constant.
+            </summary>
+        </member>
+        <member name="T:U3DXT.iOS.Native.Accounts.ACAccountStore">
+            <summary>
+            The <c>ACAccountStore</c> class provides an interface for accessing, manipulating, and storing accounts. To create and retrieve accounts from the Accounts database, you must create an <c>ACAccountStore</c> object. Each <c>ACAccount</c> object belongs to a single <c>ACAccountStore</c> object.
+            </summary>
+            <remarks>
+            </remarks>
+            <exception cref="T:U3DXT.Core.U3DXTException">
+            Is thrown when creation or initialization fails.
+            </exception>
+        </member>
+        <member name="F:U3DXT.iOS.Native.Accounts.ACAccountStore.ACFacebookAppIdKey">
+            <summary>
+                <p>The Facebook App ID, as it appears on the Facebook website.</p>
+                <p>Available in iOS 6.0 and later.</p>
+                <p>
+                </p>
+                <br>
+                </br>Equivalent to the native <c>ACFacebookAppIdKey</c> constant.
+            </summary>
+            <remarks>
+            Dictionary keys supporting requests to Facebook accounts.
+            <p></p><p></p>This is a constant for "Facebook Access Keys".
+            </remarks>
+        </member>
+        <member name="F:U3DXT.iOS.Native.Accounts.ACAccountStore.ACFacebookPermissionsKey">
+            <summary>
+                <p>The array of permissions to request. Optional.</p>
+                <p>Available in iOS 6.0 and later.</p>
+                <p>
+                </p>
+                <br>
+                </br>Equivalent to the native <c>ACFacebookPermissionsKey</c> constant.
+            </summary>
+            <remarks>
+            Dictionary keys supporting requests to Facebook accounts.
+            <p></p><p></p>This is a constant for "Facebook Access Keys".
+            </remarks>
+        </member>
+        <member name="F:U3DXT.iOS.Native.Accounts.ACAccountStore.ACFacebookAudienceKey">
+            <summary>
+                <p>Only required when posting permissions are requested.</p>
+                <p>Available in iOS 6.0 and later.</p>
+                <p>
+                </p>
+                <br>
+                </br>Equivalent to the native <c>ACFacebookAudienceKey</c> constant.
+            </summary>
+            <remarks>
+            Dictionary keys supporting requests to Facebook accounts.
+            <p></p><p></p>This is a constant for "Facebook Access Keys".
+            </remarks>
+        </member>
+        <member name="F:U3DXT.iOS.Native.Accounts.ACAccountStore.ACFacebookAudienceEveryone">
+            <summary>
+                <p>Posts are visible to everyone.</p>
+                <p>Available in iOS 6.0 and later.</p>
+                <p>
+                </p>
+                <br>
+                </br>Equivalent to the native <c>ACFacebookAudienceEveryone</c> constant.
+            </summary>
+            <remarks>
+            Dictionary values supporting requests to Facebook accounts.
+            <p></p><p></p>This is a constant for "Facebook Access Values".
+            </remarks>
+        </member>
+        <member name="F:U3DXT.iOS.Native.Accounts.ACAccountStore.ACFacebookAudienceFriends">
+            <summary>
+                <p>Posts are visible only to friends.</p>
+                <p>Available in iOS 6.0 and later.</p>
+                <p>
+                </p>
+                <br>
+                </br>Equivalent to the native <c>ACFacebookAudienceFriends</c> constant.
+            </summary>
+            <remarks>
+            Dictionary values supporting requests to Facebook accounts.
+            <p></p><p></p>This is a constant for "Facebook Access Values".
+            </remarks>
+        </member>
+        <member name="F:U3DXT.iOS.Native.Accounts.ACAccountStore.ACFacebookAudienceOnlyMe">
+            <summary>
+                <p>Posts are visible to the user only.</p>
+                <p>Available in iOS 6.0 and later.</p>
+                <p>
+                </p>
+                <br>
+                </br>Equivalent to the native <c>ACFacebookAudienceOnlyMe</c> constant.
+            </summary>
+            <remarks>
+            Dictionary values supporting requests to Facebook accounts.
+            <p></p><p></p>This is a constant for "Facebook Access Values".
+            </remarks>
+        </member>
+        <member name="F:U3DXT.iOS.Native.Accounts.ACAccountStore.ACAccountStoreDidChangeNotification">
+            <summary>
+            Constant name for the native <c>ACAccountStoreDidChangeNotification</c> notification.
+            </summary>
+        </member>
+        <member name="E:U3DXT.iOS.Native.Accounts.ACAccountStore.DidChange">
+            <summary>
+                <b>ACAccountStoreDidChangeNotification</b> Posted when the accounts managed by this account store changed in the database. There is no <c>userInfo</c> dictionary associated with this notification. <p>This notification is sent if an account is saved or removed locally or externally. If you receive this notification, you should refetch all account objects.</p><b>Availability</b><ul><li>Available in iOS 5.0 and later.</li></ul><br></br>Equivalent to adding the event handler as an observer to the native <c>ACAccountStoreDidChangeNotification</c> notification.
+            </summary>
+            <remarks>
+            </remarks>
+        </member>
+        <member name="E:U3DXT.iOS.Native.Accounts.ACAccountStore.AllNotifications">
+            <summary>
+            Occurs when this object sends any notification.
+            </summary>
+        </member>
+        <member name="T:U3DXT.iOS.Native.Accounts.ACAccountStore.AllInstances">
+            <summary>
+            Static class for notifications of all instances of the <c>ACAccountStore</c> class.
+            </summary>
+        </member>
+        <member name="E:U3DXT.iOS.Native.Accounts.ACAccountStore.AllInstances.DidChange">
+            <summary>
+                <b>ACAccountStoreDidChangeNotification</b> Posted when the accounts managed by this account store changed in the database. There is no <c>userInfo</c> dictionary associated with this notification. <p>This notification is sent if an account is saved or removed locally or externally. If you receive this notification, you should refetch all account objects.</p><b>Availability</b><ul><li>Available in iOS 5.0 and later.</li></ul><br></br>Equivalent to adding the event handler as an observer to the native <c>ACAccountStoreDidChangeNotification</c> notification.
+            </summary>
+            <remarks>
+            </remarks>
+        </member>
+        <member name="M:U3DXT.iOS.Native.Accounts.ACAccountStore.UP_ACAccountStore_get_accounts(System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.Accounts.ACAccountStore.UP_ACAccountStore_accountsWithAccountType_(System.String,System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.Accounts.ACAccountStore.UP_ACAccountStore_accountTypeWithAccountTypeIdentifier_(System.String,System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.Accounts.ACAccountStore.UP_ACAccountStore_accountWithIdentifier_(System.String,System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.Accounts.ACAccountStore.UP_ACAccountStore_removeAccount_withCompletionHandler_(System.String,System.String,System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.Accounts.ACAccountStore.UP_ACAccountStore_renewCredentialsForAccount_completion_(System.String,System.String,System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.Accounts.ACAccountStore.UP_ACAccountStore_requestAccessToAccountsWithType_options_completion_(System.String,System.String,System.String,System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.Accounts.ACAccountStore.UP_ACAccountStore_requestAccessToAccountsWithType_withCompletionHandler_(System.String,System.String,System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.Accounts.ACAccountStore.UP_ACAccountStore_saveAccount_withCompletionHandler_(System.String,System.String,System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.Accounts.ACAccountStore.#ctor(U3DXT.iOS.Native.Internals._IosBaseClass._NewHelper)">
+            <summary>
+            U3DXT internal constructor.
+            </summary>
+            <param name="helper">
+            </param>
+        </member>
+        <member name="M:U3DXT.iOS.Native.Accounts.ACAccountStore.#ctor(U3DXT.iOS.Native.Internals._IosBaseClass._NewHelper,System.String)">
+            <summary>
+            U3DXT internal constructor.
+            </summary>
+            <param name="helper">
+            </param>
+            <param name="uuid">
+            </param>
+        </member>
+        <member name="M:U3DXT.iOS.Native.Accounts.ACAccountStore.#ctor">
+            <summary>
+            Creates and initializes a new instance of the native <see cref="T:U3DXT.iOS.Native.Accounts.ACAccountStore" /> class.
+            <br></br>Equivalent to the native <c>[[ACAccountStore alloc] init]</c> calls.
+            </summary>
+            <exception cref="T:U3DXT.Core.U3DXTException">
+            Is thrown when creation or initialization fails.
+            </exception>
+        </member>
+        <member name="M:U3DXT.iOS.Native.Accounts.ACAccountStore.InstancesRespondToSelector(System.String)">
+            <summary>
+            Returns whether native instances of this class can respond to a selector with the same name.
+            <br></br>Equivalent to the native <c>instancesRespondToSelector:</c> class method.
+            </summary>
+            <returns>
+                <c>true</c> if native instances of this class can respond to a selector with the same name, <c>false</c> otherwise.
+            </returns>
+            <param name="selectorName">The literal name of the selector.</param>
+        </member>
+        <member name="P:U3DXT.iOS.Native.Accounts.ACAccountStore.ClassExists">
+            <summary>
+            Returns whether the native ACAccountStore class exists on the platform.
+            </summary>
+            <value>
+                <c>true</c> if class exists; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:U3DXT.iOS.Native.Accounts.ACAccountStore.accounts">
+            <summary>
+            The accounts managed by this account store. (read-only)
+            <br></br>Equivalent to the native <c>accounts</c> property.
+            </summary>
+            <remarks>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 5.0 and later.</li>
+                </ul>
+            </remarks>
+        </member>
+        <member name="M:U3DXT.iOS.Native.Accounts.ACAccountStore.FindAccounts(U3DXT.iOS.Native.Accounts.ACAccountType)">
+            <summary>
+            Returns all accounts of the specified type.
+            <br></br>Equivalent to the native <c>accountsWithAccountType:</c> method.
+            </summary>
+            <remarks>
+                <b>Parameters</b>
+                <p>
+                </p>
+                <em>accountType</em>
+                <p>The type of an account.</p>
+                <b>Return Value</b>
+                <p>All accounts that match <em>accountType</em>.</p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 5.0 and later.</li>
+                </ul>
+                <b>See Also</b>
+                <ul>
+                    <li>
+                        <c>accountType</c>
+                    </li>
+                </ul>
+            </remarks>
+            <param name="accountType">
+            </param>
+        </member>
+        <member name="M:U3DXT.iOS.Native.Accounts.ACAccountStore.FindAccountType(System.String)">
+            <summary>
+            Returns an account type that matches the specified identifier.
+            <br></br>Equivalent to the native <c>accountTypeWithAccountTypeIdentifier:</c> method.
+            </summary>
+            <remarks>
+                <b>Parameters</b>
+                <p>
+                </p>
+                <em>typeIdentifier</em>
+                <p>The account type identifier.</p>
+                <b>Return Value</b>
+                <p>An account type that matches <em>typeIdentifier</em>.</p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 5.0 and later.</li>
+                </ul>
+                <b>See Also</b>
+                <ul>
+                    <li>
+                        <c>– requestAccessToAccountsWithType:withCompletionHandler:</c>
+                    </li>
+                </ul>
+            </remarks>
+            <param name="typeIdentifier">
+            </param>
+        </member>
+        <member name="M:U3DXT.iOS.Native.Accounts.ACAccountStore.FindAccount(System.String)">
+            <summary>
+            Returns the account with the specified identifier.
+            <br></br>Equivalent to the native <c>accountWithIdentifier:</c> method.
+            </summary>
+            <remarks>
+                <b>Parameters</b>
+                <p>
+                </p>
+                <em>identifier</em>
+                <p>A unique identifier for an account.</p>
+                <b>Return Value</b>
+                <p>The account that matches the value specified in <em>identifier</em>.</p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 5.0 and later.</li>
+                </ul>
+                <b>See Also</b>
+                <ul>
+                    <li>
+                        <c>identifier</c>
+                    </li>
+                </ul>
+            </remarks>
+            <param name="identifier">
+            </param>
+        </member>
+        <member name="M:U3DXT.iOS.Native.Accounts.ACAccountStore.RemoveAccount(U3DXT.iOS.Native.Accounts.ACAccount,System.Action{System.Boolean,U3DXT.iOS.Native.Foundation.NSError})">
+            <summary>
+            Removes an account from the account store.
+            <br></br>Equivalent to the native <c>removeAccount:withCompletionHandler:</c> method.
+            </summary>
+            <remarks>
+                <b>Parameters</b>
+                <p>
+                </p>
+                <em>account</em>
+                <p>The account to remove.</p>
+                <em>completionHandler</em>
+                <p>The handler to call when the removal has completed.</p>
+                <b>Discussion</b>
+                <p>This call will fail if you don't have sufficient rights to remove the account.</p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 6.0 and later.</li>
+                </ul>
+            </remarks>
+            <param name="account">
+            </param>
+            <param name="completionHandler"> A callback delegate.</param>
+        </member>
+        <member name="M:U3DXT.iOS.Native.Accounts.ACAccountStore.RenewCredentials(U3DXT.iOS.Native.Accounts.ACAccount,System.Action{U3DXT.iOS.Native.Accounts.ACAccountCredentialRenewResult,U3DXT.iOS.Native.Foundation.NSError})">
+            <summary>
+            Renews account credentials when the credentials are no longer valid.
+            <br></br>Equivalent to the native <c>renewCredentialsForAccount:completion:</c> method.
+            </summary>
+            <remarks>
+                <b>Parameters</b>
+                <p>
+                </p>
+                <em>account</em>
+                <p>The account to renew credentials.</p>
+                <em>completionHandler</em>
+                <p>The handler to call when the renewal has completed.</p>
+                <b>Discussion</b>
+                <p>For Twitter and Sina Weibo accounts, this method will prompt the user to go to Settings to re-enter their password.</p>
+                <p>For Facebook accounts, if the access token has become invalid due to a regular expiration, this method will obtain a new one.</p>
+                <p>If the user has deauthorized your app, this renewal request will return <c>ACAccountCredentialRenewResultRejected</c>.</p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 6.0 and later.</li>
+                </ul>
+            </remarks>
+            <param name="account">
+            </param>
+            <param name="completionHandler"> A callback delegate.</param>
+        </member>
+        <member name="M:U3DXT.iOS.Native.Accounts.ACAccountStore.RequestAccessToAccounts(U3DXT.iOS.Native.Accounts.ACAccountType,System.Collections.Generic.Dictionary{System.Object,System.Object},System.Action{System.Boolean,U3DXT.iOS.Native.Foundation.NSError})">
+            <summary>
+            Obtains permission to access protected user properties.
+            <br></br>Equivalent to the native <c>requestAccessToAccountsWithType:options:completion:</c> method.
+            </summary>
+            <remarks>
+                <b>Parameters</b>
+                <p>
+                </p>
+                <em>accountType</em>
+                <p>The account type.</p>
+                <em>options</em>
+                <p>The account type.</p>
+                <em>completion</em>
+                <p>The handler to call when the request has completed. The handler is called on an arbitrary queue.</p>
+                <b>Discussion</b>
+                <p>Certain account types (such as Facebook) require an options dictionary. This method will throw an <c>NSInvalidArgumentException</c> if the options dictionary is not provided for such account types. Conversely, if the account type does not require an options dictionary, the <c>options</c> parameter must be <c>null</c>.</p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 6.0 and later.</li>
+                </ul>
+                <b>See Also</b>
+                <ul>
+                    <li>
+                        <c>“Facebook Access Keys”</c>
+                    </li>
+                    <li>
+                        <c>“Facebook Access Values”</c>
+                    </li>
+                </ul>
+            </remarks>
+            <param name="accountType">
+            </param>
+            <param name="options">
+            </param>
+            <param name="completion"> A callback delegate.</param>
+        </member>
+        <member name="M:U3DXT.iOS.Native.Accounts.ACAccountStore.RequestAccessToAccounts(U3DXT.iOS.Native.Accounts.ACAccountType,System.Action{System.Boolean,U3DXT.iOS.Native.Foundation.NSError})">
+            <summary>
+            Requests access to accounts of the specified type. ( Deprecated in iOS 6.0. )
+            <br></br>Equivalent to the native <c>requestAccessToAccountsWithType:withCompletionHandler:</c> method.
+            </summary>
+            <remarks>
+                <b>Parameters</b>
+                <p>
+                </p>
+                <em>accountType</em>
+                <p>The account type.</p>
+                <em>handler</em>
+                <p>The handler to call when access is granted or denied. The handler is called on an arbitrary queue.</p>
+                <b>Discussion</b>
+                <p>This method displays a dialog to the user confirming whether the application has access to the account. If access is granted, the application has access to protected properties of and operations on all accounts of the specified type.</p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 5.0 and later.</li>
+                    <li>Deprecated in iOS 6.0.</li>
+                </ul>
+                <b>See Also</b>
+                <ul>
+                    <li>
+                        <c>– accountTypeWithAccountTypeIdentifier:</c>
+                    </li>
+                    <li>
+                        <c>accessGranted</c>
+                    </li>
+                </ul>
+            </remarks>
+            <param name="accountType">
+            </param>
+            <param name="handler"> A callback delegate.</param>
+        </member>
+        <member name="M:U3DXT.iOS.Native.Accounts.ACAccountStore.SaveAccount(U3DXT.iOS.Native.Accounts.ACAccount,System.Action{System.Boolean,U3DXT.iOS.Native.Foundation.NSError})">
+            <summary>
+            Saves an account to the Accounts database.
+            <br></br>Equivalent to the native <c>saveAccount:withCompletionHandler:</c> method.
+            </summary>
+            <remarks>
+                <b>Parameters</b>
+                <p>
+                </p>
+                <em>account</em>
+                <p>The account to save.</p>
+                <em>completionHandler</em>
+                <p>The handler to call when the operation is done. The handler is called on an arbitrary queue.</p>
+                <b>Discussion</b>
+                <p>If the account type supports authentication and the account is not authenticated, the account server uses the account's credentials to authenticate it. If the authentication is successful, the account is saved; otherwise it is not saved.</p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 5.0 and later.</li>
+                </ul>
+                <b>See Also</b>
+                <ul>
+                    <li>
+                        <c>ACAccountStoreDidChangeNotification</c>
+                    </li>
+                </ul>
+            </remarks>
+            <param name="account">
+            </param>
+            <param name="completionHandler"> A callback delegate.</param>
+        </member>
+        <member name="T:U3DXT.iOS.Native.Accounts.ACAccountType">
+            <summary>
+            An <c>ACAccountType</c> object encapsulates information about all accounts of a particular type. You do not create account type objects directly. To obtain an account type, use the <c>accountTypeWithAccountTypeIdentifier:</c> method or the <c>accountType</c> property of an account object.  “Account Type Identifiers”  describes the identifiers for currently supported account types. You can also use the <c>accountsWithAccountType:</c> method to obtain all accounts of a particular type.
+            </summary>
+            <remarks>
+            </remarks>
+            <exception cref="T:U3DXT.Core.U3DXTException">
+            Is thrown when creation or initialization fails.
+            </exception>
+        </member>
+        <member name="F:U3DXT.iOS.Native.Accounts.ACAccountType.IdentifierTwitter">
+            <summary>
+                <p>Identifier for the Twitter account type.</p>
+                <p>Available in iOS 5.0 and later.</p>
+                <p>
+                </p>
+                <br>
+                </br>Equivalent to the native <c>ACAccountTypeIdentifierTwitter</c> constant.
+            </summary>
+            <remarks>
+            Identifiers for supported account types.
+            <p></p><br /><!-- Media player includes --><!-- /Media player includes --><p></p>This is a constant for "Account Type Identifiers".
+            </remarks>
+        </member>
+        <member name="F:U3DXT.iOS.Native.Accounts.ACAccountType.IdentifierFacebook">
+            <summary>
+                <p>Identifier for the Facebook account type.</p>
+                <p>Available in iOS 6.0 and later.</p>
+                <p>
+                </p>
+                <br>
+                </br>Equivalent to the native <c>ACAccountTypeIdentifierFacebook</c> constant.
+            </summary>
+            <remarks>
+            Identifiers for supported account types.
+            <p></p><br /><!-- Media player includes --><!-- /Media player includes --><p></p>This is a constant for "Account Type Identifiers".
+            </remarks>
+        </member>
+        <member name="F:U3DXT.iOS.Native.Accounts.ACAccountType.IdentifierSinaWeibo">
+            <summary>
+                <p>Identifier for the Weibo account type.</p>
+                <p>Available in iOS 6.0 and later.</p>
+                <p>
+                </p>
+                <br>
+                </br>Equivalent to the native <c>ACAccountTypeIdentifierSinaWeibo</c> constant.
+            </summary>
+            <remarks>
+            Identifiers for supported account types.
+            <p></p><br /><!-- Media player includes --><!-- /Media player includes --><p></p>This is a constant for "Account Type Identifiers".
+            </remarks>
+        </member>
+        <member name="M:U3DXT.iOS.Native.Accounts.ACAccountType.UP_ACAccountType_get_accessGranted(System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.Accounts.ACAccountType.UP_ACAccountType_get_accountTypeDescription(System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.Accounts.ACAccountType.UP_ACAccountType_get_identifier(System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.Accounts.ACAccountType.#ctor(U3DXT.iOS.Native.Internals._IosBaseClass._NewHelper)">
+            <summary>
+            U3DXT internal constructor.
+            </summary>
+            <param name="helper">
+            </param>
+        </member>
+        <member name="M:U3DXT.iOS.Native.Accounts.ACAccountType.#ctor(U3DXT.iOS.Native.Internals._IosBaseClass._NewHelper,System.String)">
+            <summary>
+            U3DXT internal constructor.
+            </summary>
+            <param name="helper">
+            </param>
+            <param name="uuid">
+            </param>
+        </member>
+        <member name="M:U3DXT.iOS.Native.Accounts.ACAccountType.#ctor">
+            <summary>
+            Creates and initializes a new instance of the native <see cref="T:U3DXT.iOS.Native.Accounts.ACAccountType" /> class.
+            <br></br>Equivalent to the native <c>[[ACAccountType alloc] init]</c> calls.
+            </summary>
+            <exception cref="T:U3DXT.Core.U3DXTException">
+            Is thrown when creation or initialization fails.
+            </exception>
+        </member>
+        <member name="M:U3DXT.iOS.Native.Accounts.ACAccountType.InstancesRespondToSelector(System.String)">
+            <summary>
+            Returns whether native instances of this class can respond to a selector with the same name.
+            <br></br>Equivalent to the native <c>instancesRespondToSelector:</c> class method.
+            </summary>
+            <returns>
+                <c>true</c> if native instances of this class can respond to a selector with the same name, <c>false</c> otherwise.
+            </returns>
+            <param name="selectorName">The literal name of the selector.</param>
+        </member>
+        <member name="P:U3DXT.iOS.Native.Accounts.ACAccountType.ClassExists">
+            <summary>
+            Returns whether the native ACAccountType class exists on the platform.
+            </summary>
+            <value>
+                <c>true</c> if class exists; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:U3DXT.iOS.Native.Accounts.ACAccountType.accessGranted">
+            <summary>
+            A Boolean value indicating whether the user granted the application access to accounts of this type. (read-only)
+            <br></br>Equivalent to the native <c>accessGranted</c> property.
+            </summary>
+            <remarks>
+                <b>Discussion</b>
+                <p>
+                    <c>true</c> if the application has access to accounts of this type; otherwise <c>false</c>.</p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 5.0 and later.</li>
+                </ul>
+                <b>See Also</b>
+                <ul>
+                    <li>
+                        <c>requestAccessToAccountsWithType:withCompletionHandler:</c>
+                    </li>
+                </ul>
+            </remarks>
+        </member>
+        <member name="P:U3DXT.iOS.Native.Accounts.ACAccountType.accountTypeDescription">
+            <summary>
+            A human-readable description of the account type. (read-only)
+            <br></br>Equivalent to the native <c>accountTypeDescription</c> property.
+            </summary>
+            <remarks>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 5.0 and later.</li>
+                </ul>
+            </remarks>
+        </member>
+        <member name="P:U3DXT.iOS.Native.Accounts.ACAccountType.identifier">
+            <summary>
+            The unique identifier for the account type. (read-only)
+            <br></br>Equivalent to the native <c>identifier</c> property.
+            </summary>
+            <remarks>
+                <b>Discussion</b>
+                <p>Possible values are described in  “Account Type Identifiers.” </p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 5.0 and later.</li>
+                </ul>
+            </remarks>
+        </member>
+        <member name="T:U3DXT.iOS.Native.Accounts.ACErrorCode">
+            <summary>
+            Codes for errors that may occur.
+            </summary>
+            <remarks>
+                <br />
+                <!-- Media player includes -->
+                <!-- /Media player includes -->
+            </remarks>
+        </member>
+        <member name="F:U3DXT.iOS.Native.Accounts.ACErrorCode.AccountAlreadyExists">
+            <summary>
+                <p>An account was not added because it already exists.</p>
+                <p>Available in iOS 5.0 and later.</p>
+                <p>
+                </p>
+                <br>
+                </br>Equivalent to the native <c>ACErrorAccountAlreadyExists</c> enum constant.
+            </summary>
+        </member>
+        <member name="F:U3DXT.iOS.Native.Accounts.ACErrorCode.AccountMissingRequiredProperty">
+            <summary>
+                <p>An account was not saved because a required property is missing.</p>
+                <p>Available in iOS 5.0 and later.</p>
+                <p>
+                </p>
+                <br>
+                </br>Equivalent to the native <c>ACErrorAccountMissingRequiredProperty</c> enum constant.
+            </summary>
+        </member>
+        <member name="F:U3DXT.iOS.Native.Accounts.ACErrorCode.AccessInfoInvalid">
+            <summary>
+                <p>The client's access info dictionary has incorrect or missing values.</p>
+                <p>Available in iOS 6.0 and later.</p>
+                <p>
+                </p>
+                <br>
+                </br>Equivalent to the native <c>ACErrorAccessInfoInvalid</c> enum constant.
+            </summary>
+        </member>
+        <member name="F:U3DXT.iOS.Native.Accounts.ACErrorCode.AccountTypeInvalid">
+            <summary>
+                <p>An account was not saved because its account type is invalid.</p>
+                <p>Available in iOS 5.0 and later.</p>
+                <p>
+                </p>
+                <br>
+                </br>Equivalent to the native <c>ACErrorAccountTypeInvalid</c> enum constant.
+            </summary>
+        </member>
+        <member name="F:U3DXT.iOS.Native.Accounts.ACErrorCode.AccountNotFound">
+            <summary>
+                <p>An account was not deleted because it could not be found.</p>
+                <p>Available in iOS 5.0 and later.</p>
+                <p>
+                </p>
+                <br>
+                </br>Equivalent to the native <c>ACErrorAccountNotFound</c> enum constant.
+            </summary>
+        </member>
+        <member name="F:U3DXT.iOS.Native.Accounts.ACErrorCode.Unknown">
+            <summary>
+                <p>An unknown error occurred.</p>
+                <p>Available in iOS 5.0 and later.</p>
+                <p>
+                </p>
+                <br>
+                </br>Equivalent to the native <c>ACErrorUnknown</c> enum constant.
+            </summary>
+        </member>
+        <member name="F:U3DXT.iOS.Native.Accounts.ACErrorCode.PermissionDenied">
+            <summary>
+                <p>The operation failed because the application does not have permission to perform the operation.</p>
+                <p>Available in iOS 5.0 and later.</p>
+                <p>
+                </p>
+                <br>
+                </br>Equivalent to the native <c>ACErrorPermissionDenied</c> enum constant.
+            </summary>
+        </member>
+        <member name="F:U3DXT.iOS.Native.Accounts.ACErrorCode.AccountAuthenticationFailed">
+            <summary>
+                <p>An account was not saved because authentication of its credential failed.</p>
+                <p>Available in iOS 5.0 and later.</p>
+                <p>
+                </p>
+                <br>
+                </br>Equivalent to the native <c>ACErrorAccountAuthenticationFailed</c> enum constant.
+            </summary>
+        </member>
+        <member name="T:U3DXT.iOS.Native.MessageUI.MFMailComposeErrorCode">
+            <summary>
+            Error codes for <c>NSError</c> objects associated with the mail composition interface.
+            </summary>
+            <remarks>
+                <br />
+                <!-- Media player includes -->
+                <!-- /Media player includes -->
+            </remarks>
+        </member>
+        <member name="F:U3DXT.iOS.Native.MessageUI.MFMailComposeErrorCode.SendFailed">
+            <summary>
+                <p>An error occurred while trying to queue or send the email message.</p>
+                <p>Available in iOS 3.0 and later.</p>
+                <p>
+                </p>
+                <br>
+                </br>Equivalent to the native <c>MFMailComposeErrorCodeSendFailed</c> enum constant.
+            </summary>
+        </member>
+        <member name="F:U3DXT.iOS.Native.MessageUI.MFMailComposeErrorCode.SaveFailed">
+            <summary>
+                <p>An error occurred trying to save the email message to the Drafts folder.</p>
+                <p>Available in iOS 3.0 and later.</p>
+                <p>
+                </p>
+                <br>
+                </br>Equivalent to the native <c>MFMailComposeErrorCodeSaveFailed</c> enum constant.
+            </summary>
+        </member>
+        <member name="T:U3DXT.iOS.Native.MessageUI.MFMailComposeResult">
+            <summary>
+            Result codes returned when the mail composition interface is dismissed.
+            </summary>
+            <remarks>
+            </remarks>
+        </member>
+        <member name="F:U3DXT.iOS.Native.MessageUI.MFMailComposeResult.Cancelled">
+            <summary>
+                <p>The user cancelled the operation. No email message was queued.</p>
+                <p>Available in iOS 3.0 and later.</p>
+                <p>
+                </p>
+                <br>
+                </br>Equivalent to the native <c>MFMailComposeResultCancelled</c> enum constant.
+            </summary>
+        </member>
+        <member name="F:U3DXT.iOS.Native.MessageUI.MFMailComposeResult.Saved">
+            <summary>
+                <p>The email message was saved in the user’s Drafts folder.</p>
+                <p>Available in iOS 3.0 and later.</p>
+                <p>
+                </p>
+                <br>
+                </br>Equivalent to the native <c>MFMailComposeResultSaved</c> enum constant.
+            </summary>
+        </member>
+        <member name="F:U3DXT.iOS.Native.MessageUI.MFMailComposeResult.Failed">
+            <summary>
+                <p>The email message was not saved or queued, possibly due to an error.</p>
+                <p>Available in iOS 3.0 and later.</p>
+                <p>
+                </p>
+                <br>
+                </br>Equivalent to the native <c>MFMailComposeResultFailed</c> enum constant.
+            </summary>
+        </member>
+        <member name="F:U3DXT.iOS.Native.MessageUI.MFMailComposeResult.Sent">
+            <summary>
+                <p>The email message was queued in the user’s outbox. It is ready to send the next time the user connects to email.</p>
+                <p>Available in iOS 3.0 and later.</p>
+                <p>
+                </p>
+                <br>
+                </br>Equivalent to the native <c>MFMailComposeResultSent</c> enum constant.
+            </summary>
+        </member>
+        <member name="T:U3DXT.iOS.Native.MessageUI.MFMailComposeViewController">
+            <summary>
+            The <c>MFMailComposeViewController</c> class provides a standard interface that manages the editing and sending an email message. You can use this view controller to display a standard email view inside your application and populate the fields of that view with initial values, such as the subject, email recipients, body text, and attachments. The user can edit the initial contents you specify and choose to send the email or cancel the operation.
+            </summary>
+            <remarks>
+                <p>Using this interface does not guarantee immediate delivery of the corresponding email message. The user may cancel the creation of the message, and if the user does choose to send the message, the message is only queued in the Mail application outbox. This allows you to generate emails even in situations where the user does not have network access, such as in airplane mode. This interface does not provide a way for you to verify whether emails were actually sent. </p>
+                <p>Before using this class, you must always check to see if the current device is configured to send email at all using the <c>canSendMail</c> method. If the user’s device is not set up for the delivery of email, you can notify the user or simply disable the email dispatch features in your application. You should not attempt to use this interface if the <c>canSendMail</c> method returns <c>false</c>. </p>
+                <p>To display the view managed by this view controller, you can use any of the standard techniques for displaying view controllers. However, the most common way to present this interface is do so modally using the <c>presentModalViewController:animated:</c> method.  Figure 1  shows the view that is displayed when you present the mail composition interface, with some of the fields already filled in. For more information on displaying the views associated with view controllers, see <em>View Controller Programming Guide for iOS</em>.</p>
+                <figure class="figure">
+                    <figcaption>
+                        <strong class="caption_number">Figure 1</strong>  The mail composition interface</figcaption>
+                </figure>
+                <p>
+                    <strong>Important:</strong> The mail composition interface itself is not customizable and must not be modified by your application. In addition, after presenting the interface, your application is not allowed to make further changes to the email content. The user may still edit the content using the interface, but programmatic changes are ignored. Thus, you must set the values of content fields before presenting the interface.</p>
+                <p>
+                </p>
+            </remarks>
+            <exception cref="T:U3DXT.Core.U3DXTException">
+            Is thrown when creation or initialization fails.
+            </exception>
+        </member>
+        <member name="F:U3DXT.iOS.Native.MessageUI.MFMailComposeViewController.MFMailComposeErrorDomain">
+            <summary>
+                <p>The error domain associated with <c>NSError</c> objects.</p>
+                <p>Available in iOS 3.0 and later.</p>
+                <p>
+                </p>
+                <br>
+                </br>Equivalent to the native <c>MFMailComposeErrorDomain</c> constant.
+            </summary>
+            <remarks>
+            The domain used for <c>NSError</c> objects associated with the mail composition interface.
+            <p></p><p></p>This is a constant for "Mail Message Error Domain".
+            </remarks>
+        </member>
+        <member name="E:U3DXT.iOS.Native.MessageUI.MFMailComposeViewController.DidFinish">
+            <summary>
+            Tells the delegate that the user wants to dismiss the mail composition view.
+            <br></br>Equivalent to implementing the native <c>mailComposeController:didFinishWithResult:error:</c> method of <c>MFMailComposeViewControllerDelegate</c>.
+            </summary>
+        </member>
+        <member name="T:U3DXT.iOS.Native.MessageUI.MFMailComposeViewController.DidFinishEventArgs">
+            <summary>
+            Event arguments for DidFinish.
+            </summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.MessageUI.MFMailComposeViewController.DidFinishEventArgs.#ctor(U3DXT.iOS.Native.MessageUI.MFMailComposeResult,U3DXT.iOS.Native.Foundation.NSError)">
+            <summary>
+            </summary>
+        </member>
+        <member name="F:U3DXT.iOS.Native.MessageUI.MFMailComposeViewController.DidFinishEventArgs.result">
+            <summary>result</summary>
+        </member>
+        <member name="F:U3DXT.iOS.Native.MessageUI.MFMailComposeViewController.DidFinishEventArgs.error">
+            <summary>error</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.MessageUI.MFMailComposeViewController.UP_MFMailComposeViewController_canSendMail">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.MessageUI.MFMailComposeViewController.UP_MFMailComposeViewController_get_mailComposeDelegate(System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.MessageUI.MFMailComposeViewController.UP_MFMailComposeViewController_set_mailComposeDelegate(System.String,System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.MessageUI.MFMailComposeViewController.UP_MFMailComposeViewController_addAttachmentData_mimeType_fileName_(System.String,System.String,System.String,System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.MessageUI.MFMailComposeViewController.UP_MFMailComposeViewController_setBccRecipients_(System.String,System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.MessageUI.MFMailComposeViewController.UP_MFMailComposeViewController_setCcRecipients_(System.String,System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.MessageUI.MFMailComposeViewController.UP_MFMailComposeViewController_setMessageBody_isHTML_(System.String,System.String,System.Boolean)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.MessageUI.MFMailComposeViewController.UP_MFMailComposeViewController_setSubject_(System.String,System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.MessageUI.MFMailComposeViewController.UP_MFMailComposeViewController_setToRecipients_(System.String,System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.MessageUI.MFMailComposeViewController.#ctor(U3DXT.iOS.Native.Internals._IosBaseClass._NewHelper)">
+            <summary>
+            U3DXT internal constructor.
+            </summary>
+            <param name="helper">
+            </param>
+        </member>
+        <member name="M:U3DXT.iOS.Native.MessageUI.MFMailComposeViewController.#ctor(U3DXT.iOS.Native.Internals._IosBaseClass._NewHelper,System.String)">
+            <summary>
+            U3DXT internal constructor.
+            </summary>
+            <param name="helper">
+            </param>
+            <param name="uuid">
+            </param>
+        </member>
+        <member name="M:U3DXT.iOS.Native.MessageUI.MFMailComposeViewController.#ctor">
+            <summary>
+            Creates and initializes a new instance of the native <see cref="T:U3DXT.iOS.Native.MessageUI.MFMailComposeViewController" /> class.
+            <br></br>Equivalent to the native <c>[[MFMailComposeViewController alloc] init]</c> calls.
+            </summary>
+            <exception cref="T:U3DXT.Core.U3DXTException">
+            Is thrown when creation or initialization fails.
+            </exception>
+        </member>
+        <member name="M:U3DXT.iOS.Native.MessageUI.MFMailComposeViewController.InstancesRespondToSelector(System.String)">
+            <summary>
+            Returns whether native instances of this class can respond to a selector with the same name.
+            <br></br>Equivalent to the native <c>instancesRespondToSelector:</c> class method.
+            </summary>
+            <returns>
+                <c>true</c> if native instances of this class can respond to a selector with the same name, <c>false</c> otherwise.
+            </returns>
+            <param name="selectorName">The literal name of the selector.</param>
+        </member>
+        <member name="P:U3DXT.iOS.Native.MessageUI.MFMailComposeViewController.ClassExists">
+            <summary>
+            Returns whether the native MFMailComposeViewController class exists on the platform.
+            </summary>
+            <value>
+                <c>true</c> if class exists; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="M:U3DXT.iOS.Native.MessageUI.MFMailComposeViewController.CanSendMail">
+            <summary>
+            Returns a Boolean indicating whether the current device is able to send email.
+            <br></br>Equivalent to the native <c>canSendMail</c> method.
+            </summary>
+            <remarks>
+                <b>Return Value</b>
+                <p>
+                    <c>true</c> if the device is configured for sending email or <c>false</c> if it is not. </p>
+                <b>Discussion</b>
+                <p>You should call this method before attempting to display the mail composition interface. If it returns <c>false</c>, you must not display the mail composition interface. </p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 3.0 and later.</li>
+                </ul>
+            </remarks>
+        </member>
+        <member name="P:U3DXT.iOS.Native.MessageUI.MFMailComposeViewController.mailComposeDelegate">
+            <summary>
+            The mail composition view controller’s delegate.
+            <br></br>Equivalent to the native <c>mailComposeDelegate</c> property.
+            </summary>
+            <remarks>
+                <b>Discussion</b>
+                <p>The delegate object is responsible for dismissing the view presented by this view controller at the appropriate time. Therefore, you should always provide a delegate and that object should implement the methods of the <c>MFMailComposeViewControllerDelegate</c> protocol.  </p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 3.0 and later.</li>
+                </ul>
+            </remarks>
+        </member>
+        <member name="M:U3DXT.iOS.Native.MessageUI.MFMailComposeViewController.AddAttachmentData(U3DXT.iOS.Native.Foundation.NSData,System.String,System.String)">
+            <summary>
+            Adds the specified data as an attachment to the message.
+            <br></br>Equivalent to the native <c>addAttachmentData:mimeType:fileName:</c> method.
+            </summary>
+            <remarks>
+                <b>Parameters</b>
+                <p>
+                </p>
+                <em>attachment</em>
+                <p>The data to attach. Typically, this is the contents of a file that you want to include. This parameter must not be <c>null</c>. </p>
+                <em>mimeType</em>
+                <p>The MIME type of the specified data. (For example, the MIME type for a JPEG image is <c>image/jpeg</c>.) For a list of valid MIME types, see  http://www.iana.org/assignments/media-types/ . This parameter must not be <c>null</c>.</p>
+                <em>filename</em>
+                <p>The preferred filename to associate with the data. This is the default name applied to the file when it is transferred to its destination. Any path separator (<c>/</c>) characters in the filename are converted to underscore (<c>_</c>) characters prior to transmission. This parameter must not be <c>null</c>.</p>
+                <b>Discussion</b>
+                <p>This method attaches the specified data after the message body but before the user’s signature. You may attach multiple files (using different file names) but must do so prior to displaying the mail composition interface. Do not call this method after presenting the interface to the user.</p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 3.0 and later.</li>
+                </ul>
+            </remarks>
+            <param name="attachment">
+            </param>
+            <param name="mimeType">
+            </param>
+            <param name="filename">
+            </param>
+        </member>
+        <member name="M:U3DXT.iOS.Native.MessageUI.MFMailComposeViewController.SetBccRecipients(System.Object[])">
+            <summary>
+            Sets the initial recipients to include in the email’s “Bcc” field.
+            <br></br>Equivalent to the native <c>setBccRecipients:</c> method.
+            </summary>
+            <remarks>
+                <b>Parameters</b>
+                <p>
+                </p>
+                <em>bccRecipients</em>
+                <p>An array of <c>String</c> objects, each of which contains the email address of a single recipient.</p>
+                <b>Discussion</b>
+                <p>This method replaces the previous blind carbon-copy recipients with the new ones listed in the <em>bccRecipients</em> parameter. This method does not filter out duplicate email addresses, so if duplicates are present, multiple copies of the email message may be sent to the same address.</p>
+                <p>You should call this method before you display the mail composition interface only. Do not call it after presenting the interface to the user.</p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 3.0 and later.</li>
+                </ul>
+            </remarks>
+            <param name="bccRecipients">
+            </param>
+        </member>
+        <member name="M:U3DXT.iOS.Native.MessageUI.MFMailComposeViewController.SetCcRecipients(System.Object[])">
+            <summary>
+            Sets the initial recipients to include in the email’s “Cc” field.
+            <br></br>Equivalent to the native <c>setCcRecipients:</c> method.
+            </summary>
+            <remarks>
+                <b>Parameters</b>
+                <p>
+                </p>
+                <em>ccRecipients</em>
+                <p>An array of <c>String</c> objects, each of which contains the email address of a single recipient.</p>
+                <b>Discussion</b>
+                <p>This method replaces the previous carbon-copy recipients with the new ones listed in the <em>ccRecipients</em> parameter. This method does not filter out duplicate email addresses, so if duplicates are present, multiple copies of the email message may be sent to the same address.</p>
+                <p>You should call this method before you display the mail composition interface only. Do not call it after presenting the interface to the user.</p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 3.0 and later.</li>
+                </ul>
+            </remarks>
+            <param name="ccRecipients">
+            </param>
+        </member>
+        <member name="M:U3DXT.iOS.Native.MessageUI.MFMailComposeViewController.SetMessageBody(System.String,System.Boolean)">
+            <summary>
+            Sets the initial body text to include in the email.
+            <br></br>Equivalent to the native <c>setMessageBody:isHTML:</c> method.
+            </summary>
+            <remarks>
+                <b>Parameters</b>
+                <p>
+                </p>
+                <em>body</em>
+                <p>The initial body text of the message. The text is interpreted as either plain text or HTML depending on the value of the <em>isHTML</em> parameter.</p>
+                <em>isHTML</em>
+                <p>Specify <c>true</c> if the body parameter contains HTML content or specify <c>false</c> if it contains plain text. </p>
+                <b>Discussion</b>
+                <p>This method replaces the previous body content with the new content. If the user has a signature file, the body content is inserted immediately before the signature. If you want to include images with your content, you must attach the images separately using the <c>addAttachmentData:mimeType:fileName:</c> method.</p>
+                <p>You should call this method before you display the mail composition interface only. Do not call it after presenting the interface to the user.</p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 3.0 and later.</li>
+                </ul>
+            </remarks>
+            <param name="body">
+            </param>
+            <param name="isHTML">
+            </param>
+        </member>
+        <member name="M:U3DXT.iOS.Native.MessageUI.MFMailComposeViewController.SetSubject(System.String)">
+            <summary>
+            Sets the initial text for the subject line of the email.
+            <br></br>Equivalent to the native <c>setSubject:</c> method.
+            </summary>
+            <remarks>
+                <b>Parameters</b>
+                <p>
+                </p>
+                <em>subject</em>
+                <p>The text to display in the subject line.</p>
+                <b>Discussion</b>
+                <p>This method replaces the previous subject text with the new text. You should call this method before you display the mail composition interface only. Do not call it after presenting the interface to the user.  </p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 3.0 and later.</li>
+                </ul>
+            </remarks>
+            <param name="subject">
+            </param>
+        </member>
+        <member name="M:U3DXT.iOS.Native.MessageUI.MFMailComposeViewController.SetToRecipients(System.Object[])">
+            <summary>
+            Sets the initial recipients to include in the email’s “To” field.
+            <br></br>Equivalent to the native <c>setToRecipients:</c> method.
+            </summary>
+            <remarks>
+                <b>Parameters</b>
+                <p>
+                </p>
+                <em>toRecipients</em>
+                <p>An array of <c>String</c> objects, each of which contains the email address of a single recipient.</p>
+                <b>Discussion</b>
+                <p>This method replaces the previous recipients with the new ones listed in the <em>toRecipients</em> parameter. This method does not filter out duplicate email addresses, so if duplicates are present, multiple copies of the email message may be sent to the same address.</p>
+                <p>You should call this method before you display the mail composition interface only. Do not call it after presenting the interface to the user.</p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 3.0 and later.</li>
+                </ul>
+            </remarks>
+            <param name="toRecipients">
+            </param>
+        </member>
+        <member name="T:U3DXT.iOS.Native.MessageUI.MFMailComposeViewControllerDelegate">
+            <summary>
+            The <c>MFMailComposeViewControllerDelegate</c> protocol defines the method that your delegate must implement to manage the mail composition interface. The method of this protocol notifies your delegate object when the user has finished with the interface and is ready to dismiss it.
+            </summary>
+            <remarks>
+                <p>Your delegate object is responsible for dismissing the picker when the operation completes. You do this using the <c>dismissModalViewControllerAnimated:</c> method of the parent view controller responsible for displaying the <c>MFMailComposeViewController</c> object’s interface.</p>
+            </remarks>
+        </member>
+        <member name="M:U3DXT.iOS.Native.MessageUI.MFMailComposeViewControllerDelegate.UP_MFMailComposeViewControllerDelegate_set__mailComposeController_didFinishWithResult_error__handler(System.String,System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.MessageUI.MFMailComposeViewControllerDelegate.#ctor">
+            <summary>
+            Default constructor.
+            </summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.MessageUI.MFMailComposeViewControllerDelegate.#ctor(U3DXT.iOS.Native.Internals._IosBaseClass._NewHelper,System.String)">
+            <summary>
+            U3DXT internal constructor.
+            </summary>
+            <param name="helper">
+            </param>
+            <param name="className">
+            </param>
+        </member>
+        <member name="M:U3DXT.iOS.Native.MessageUI.MFMailComposeViewControllerDelegate._InitImplementedMethods">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.MessageUI.MFMailComposeViewControllerDelegate.DidFinish(U3DXT.iOS.Native.MessageUI.MFMailComposeViewController,U3DXT.iOS.Native.MessageUI.MFMailComposeResult,U3DXT.iOS.Native.Foundation.NSError)">
+            <summary>
+            (optional) Tells the delegate that the user wants to dismiss the mail composition view.
+            <br></br>Equivalent to the native <c>mailComposeController:didFinishWithResult:error:</c> method.
+            </summary>
+            <remarks>
+                <b>Parameters</b>
+                <p>
+                </p>
+                <em>controller</em>
+                <p>The view controller object managing the mail composition view.</p>
+                <em>result</em>
+                <p>The result of the user’s action. </p>
+                <em>error</em>
+                <p>If an error occurred, this parameter contains an error object with information about the type of failure. </p>
+                <b>Discussion</b>
+                <p>
+                </p>
+                <p>Your implementation of this method should dismiss the mail composition view. Implementation of this method is optional but expected.</p>
+                <p>If the user has opted to send the email created by this interface, that email should be queued in the user’s Mail program by the time this method is called. If an error occurred while queueing the email message, the <em>error</em> parameter contains an error object indicating the type of failure that occurred. </p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 3.0 and later.</li>
+                </ul>
+            </remarks>
+            <param name="controller">
+            </param>
+            <param name="result">
+            </param>
+            <param name="error">
+            </param>
+        </member>
+        <member name="P:U3DXT.iOS.Native.MessageUI.MFMailComposeViewControllerDelegate._mailComposeController_didFinishWithResult_error__handler">
+            <summary>
+                <br>
+                </br>Equivalent to the native <c>_mailComposeController_didFinishWithResult_error__handler</c> property.
+            </summary>
+            <remarks>
+            </remarks>
+        </member>
+        <member name="T:U3DXT.iOS.Native.MessageUI.MFMessageComposeViewController">
+            <summary>
+            The <c>MFMessageComposeViewController</c> class provides a standard system user interface for composing SMS (Short Message Service) text messages. Use this class to configure the initial recipients and body of the message, if desired, and to configure a delegate object to respond to the final result of the user’s action—whether they chose to cancel or send the message. After configuring initial values, present the view controller modally using the <c>presentModalViewController:animated:</c> method. When done, dismiss it using the <c>dismissModalViewControllerAnimated:</c> method.
+            </summary>
+            <remarks>
+                <p>Before presenting a message composition view, call the <c>canSendText</c> class method to ensure that the user’s device is appropriately configured. Do not attempt to present a message composition view if the <c>canSendText</c> method returns <c>false</c>. If SMS delivery isn’t available, you can notify the user or simply disable the SMS features in your application.</p>
+                <p>Starting in iOS 5, you can register to be notified of changes to the availability of text message sending by way of the <c>MFMessageComposeViewControllerTextMessageAvailabilityDidChangeNotification</c> notification.</p>
+                <p>Your delegate object is responsible for dismissing the message compose view controller in its <c>messageComposeViewController:didFinishWithResult:</c> method. For more information about implementing this method, see <em>MFMessageComposeViewControllerDelegate Protocol Reference</em>.</p>
+                <p>
+                    <strong>Important:</strong> The message composition interface itself is not customizable and must not be modified by your application. In addition, after presenting the interface, your application is unable to make further changes to the SMS content. The user can edit the content using the interface, but programmatic changes are ignored. Thus, you must set the values of content fields, if desired, before presenting the interface</p>
+                <p>
+                </p>
+            </remarks>
+            <exception cref="T:U3DXT.Core.U3DXTException">
+            Is thrown when creation or initialization fails.
+            </exception>
+        </member>
+        <member name="F:U3DXT.iOS.Native.MessageUI.MFMessageComposeViewController.TextMessageAvailabilityKey">
+            <summary>
+                <p>The value of this key is an <c>double</c> object containing a Boolean value. This value matches the result of the <c>canSendText</c> class method.</p>
+                <p>Available in iOS 5.0 and later.</p>
+                <p>
+                </p>
+                <br>
+                </br>Equivalent to the native <c>MFMessageComposeViewControllerTextMessageAvailabilityKey</c> constant.
+            </summary>
+            <remarks>
+            A <c>userInfo</c> dictionary key for the <c>MFMessageComposeViewControllerTextMessageAvailabilityDidChangeNotification</c> notification.
+            <p></p><p></p>This is a constant for "MFMessageComposeViewControllerTextMessageAvailabilityKey".
+            </remarks>
+        </member>
+        <member name="F:U3DXT.iOS.Native.MessageUI.MFMessageComposeViewController.MFMessageComposeViewControllerTextMessageAvailabilityDidChangeNotification">
+            <summary>
+            Constant name for the native <c>MFMessageComposeViewControllerTextMessageAvailabilityDidChangeNotification</c> notification.
+            </summary>
+        </member>
+        <member name="E:U3DXT.iOS.Native.MessageUI.MFMessageComposeViewController.TextMessageAvailabilityDidChange">
+            <summary>
+                <b>MFMessageComposeViewControllerTextMessageAvailabilityDidChangeNotification</b> Posted when the value returned by the <c>canSendText</c> class method has changed. <p>Upon receiving this notification, query its <c>userInfo</c> dictionary with the <c>MFMessageComposeViewControllerTextMessageAvailabilityKey</c> key. If the availability of text message sending has changed, your app should invalidate caches and update its user interface as appropriate.</p><b>Availability</b><ul><li>Available in iOS 5.0 and later.</li></ul><br></br>Equivalent to adding the event handler as an observer to the native <c>MFMessageComposeViewControllerTextMessageAvailabilityDidChangeNotification</c> notification.
+            </summary>
+            <remarks>
+            </remarks>
+        </member>
+        <member name="E:U3DXT.iOS.Native.MessageUI.MFMessageComposeViewController.AllNotifications">
+            <summary>
+            Occurs when this object sends any notification.
+            </summary>
+        </member>
+        <member name="T:U3DXT.iOS.Native.MessageUI.MFMessageComposeViewController.AllInstances">
+            <summary>
+            Static class for notifications of all instances of the <c>MFMessageComposeViewController</c> class.
+            </summary>
+        </member>
+        <member name="E:U3DXT.iOS.Native.MessageUI.MFMessageComposeViewController.AllInstances.TextMessageAvailabilityDidChange">
+            <summary>
+                <b>MFMessageComposeViewControllerTextMessageAvailabilityDidChangeNotification</b> Posted when the value returned by the <c>canSendText</c> class method has changed. <p>Upon receiving this notification, query its <c>userInfo</c> dictionary with the <c>MFMessageComposeViewControllerTextMessageAvailabilityKey</c> key. If the availability of text message sending has changed, your app should invalidate caches and update its user interface as appropriate.</p><b>Availability</b><ul><li>Available in iOS 5.0 and later.</li></ul><br></br>Equivalent to adding the event handler as an observer to the native <c>MFMessageComposeViewControllerTextMessageAvailabilityDidChangeNotification</c> notification.
+            </summary>
+            <remarks>
+            </remarks>
+        </member>
+        <member name="E:U3DXT.iOS.Native.MessageUI.MFMessageComposeViewController.DidFinish">
+            <summary>
+            Tells the delegate that the user finished composing the message. (required)
+            <br></br>Equivalent to implementing the native <c>messageComposeViewController:didFinishWithResult:</c> method of <c>MFMessageComposeViewControllerDelegate</c>.
+            </summary>
+        </member>
+        <member name="T:U3DXT.iOS.Native.MessageUI.MFMessageComposeViewController.DidFinishEventArgs">
+            <summary>
+            Event arguments for DidFinish.
+            </summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.MessageUI.MFMessageComposeViewController.DidFinishEventArgs.#ctor(U3DXT.iOS.Native.MessageUI.MessageComposeResult)">
+            <summary>
+            </summary>
+        </member>
+        <member name="F:U3DXT.iOS.Native.MessageUI.MFMessageComposeViewController.DidFinishEventArgs.result">
+            <summary>result</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.MessageUI.MFMessageComposeViewController.UP_MFMessageComposeViewController_canSendText">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.MessageUI.MFMessageComposeViewController.UP_MFMessageComposeViewController_get_body(System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.MessageUI.MFMessageComposeViewController.UP_MFMessageComposeViewController_set_body(System.String,System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.MessageUI.MFMessageComposeViewController.UP_MFMessageComposeViewController_get_messageComposeDelegate(System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.MessageUI.MFMessageComposeViewController.UP_MFMessageComposeViewController_set_messageComposeDelegate(System.String,System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.MessageUI.MFMessageComposeViewController.UP_MFMessageComposeViewController_get_recipients(System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.MessageUI.MFMessageComposeViewController.UP_MFMessageComposeViewController_set_recipients(System.String,System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.MessageUI.MFMessageComposeViewController.#ctor(U3DXT.iOS.Native.Internals._IosBaseClass._NewHelper)">
+            <summary>
+            U3DXT internal constructor.
+            </summary>
+            <param name="helper">
+            </param>
+        </member>
+        <member name="M:U3DXT.iOS.Native.MessageUI.MFMessageComposeViewController.#ctor(U3DXT.iOS.Native.Internals._IosBaseClass._NewHelper,System.String)">
+            <summary>
+            U3DXT internal constructor.
+            </summary>
+            <param name="helper">
+            </param>
+            <param name="uuid">
+            </param>
+        </member>
+        <member name="M:U3DXT.iOS.Native.MessageUI.MFMessageComposeViewController.#ctor">
+            <summary>
+            Creates and initializes a new instance of the native <see cref="T:U3DXT.iOS.Native.MessageUI.MFMessageComposeViewController" /> class.
+            <br></br>Equivalent to the native <c>[[MFMessageComposeViewController alloc] init]</c> calls.
+            </summary>
+            <exception cref="T:U3DXT.Core.U3DXTException">
+            Is thrown when creation or initialization fails.
+            </exception>
+        </member>
+        <member name="M:U3DXT.iOS.Native.MessageUI.MFMessageComposeViewController.InstancesRespondToSelector(System.String)">
+            <summary>
+            Returns whether native instances of this class can respond to a selector with the same name.
+            <br></br>Equivalent to the native <c>instancesRespondToSelector:</c> class method.
+            </summary>
+            <returns>
+                <c>true</c> if native instances of this class can respond to a selector with the same name, <c>false</c> otherwise.
+            </returns>
+            <param name="selectorName">The literal name of the selector.</param>
+        </member>
+        <member name="P:U3DXT.iOS.Native.MessageUI.MFMessageComposeViewController.ClassExists">
+            <summary>
+            Returns whether the native MFMessageComposeViewController class exists on the platform.
+            </summary>
+            <value>
+                <c>true</c> if class exists; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="M:U3DXT.iOS.Native.MessageUI.MFMessageComposeViewController.CanSendText">
+            <summary>
+            Returns a Boolean value indicating whether the current device is capable of sending text messages.
+            <br></br>Equivalent to the native <c>canSendText</c> method.
+            </summary>
+            <remarks>
+                <b>Return Value</b>
+                <p>
+                    <c>true</c> if the device can send text messages or <c>false</c> if it cannot.</p>
+                <b>Discussion</b>
+                <p>Always call this method before attempting to present the message compose view controller. A device may be unable to send messages if it does not support text message or if it is not currently configured to send messages. This method applies only to the ability to send text messages. Sending multimedia messages with this class is not supported.</p>
+                <p>in iOS 5.0 or later, you should register as an observer of the <c>MFMessageComposeViewControllerTextMessageAvailabilityDidChangeNotification</c> notification to be notified of changes in the availability of sending text messages.</p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 4.0 and later.</li>
+                </ul>
+            </remarks>
+        </member>
+        <member name="P:U3DXT.iOS.Native.MessageUI.MFMessageComposeViewController.body">
+            <summary>
+            The initial content of the message.
+            <br></br>Equivalent to the native <c>body</c> property.
+            </summary>
+            <remarks>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 4.0 and later.</li>
+                </ul>
+            </remarks>
+        </member>
+        <member name="P:U3DXT.iOS.Native.MessageUI.MFMessageComposeViewController.messageComposeDelegate">
+            <summary>
+            The delegate to which message-related notifications should be sent.
+            <br></br>Equivalent to the native <c>messageComposeDelegate</c> property.
+            </summary>
+            <remarks>
+                <b>Discussion</b>
+                <p>When the user taps a button to send or cancel the message, your delegate is notified and should respond by dismissing the message composition interface. For more information about implementing the methods of your delegate object, see <em>MFMessageComposeViewControllerDelegate Protocol Reference</em>. </p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 4.0 and later.</li>
+                </ul>
+            </remarks>
+        </member>
+        <member name="P:U3DXT.iOS.Native.MessageUI.MFMessageComposeViewController.recipients">
+            <summary>
+            An array of strings containing the initial recipients of the message.
+            <br></br>Equivalent to the native <c>recipients</c> property.
+            </summary>
+            <remarks>
+                <b>Discussion</b>
+                <p>Each string in the array should contain the phone number of the intended recipient.</p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 4.0 and later.</li>
+                </ul>
+            </remarks>
+        </member>
+        <member name="T:U3DXT.iOS.Native.MessageUI.MFMessageComposeViewControllerDelegate">
+            <summary>
+            The <c>MFMessageComposeViewControllerDelegate</c> protocol defines a single method that custom objects can implement to respond to updates from a message composition view (an instance of the  <c>MFMessageComposeViewController</c> class). Use the method of this protocol to respond to the end of the user composing an SMS message. The method includes information about whether the user chose to send or cancel the message or whether the attempt to send it failed.
+            </summary>
+            <remarks>
+            </remarks>
+        </member>
+        <member name="M:U3DXT.iOS.Native.MessageUI.MFMessageComposeViewControllerDelegate.UP_MFMessageComposeViewControllerDelegate_set__messageComposeViewController_didFinishWithResult__handler(System.String,System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.MessageUI.MFMessageComposeViewControllerDelegate.#ctor">
+            <summary>
+            Default constructor.
+            </summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.MessageUI.MFMessageComposeViewControllerDelegate.#ctor(U3DXT.iOS.Native.Internals._IosBaseClass._NewHelper,System.String)">
+            <summary>
+            U3DXT internal constructor.
+            </summary>
+            <param name="helper">
+            </param>
+            <param name="className">
+            </param>
+        </member>
+        <member name="M:U3DXT.iOS.Native.MessageUI.MFMessageComposeViewControllerDelegate._InitImplementedMethods">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.MessageUI.MFMessageComposeViewControllerDelegate.DidFinish(U3DXT.iOS.Native.MessageUI.MFMessageComposeViewController,U3DXT.iOS.Native.MessageUI.MessageComposeResult)">
+            <summary>
+            (<b>required</b>) Tells the delegate that the user finished composing the message. (required)
+            <br></br>Equivalent to the native <c>messageComposeViewController:didFinishWithResult:</c> method.
+            </summary>
+            <remarks>
+                <b>Parameters</b>
+                <p>
+                </p>
+                <em>controller</em>
+                <p>The message composition view controller that is returning the result.</p>
+                <em>result</em>
+                <p>A result code indicating how the user chose to complete the composition. See the <c>MessageComposeResult</c> enumeration.</p>
+                <b>Discussion</b>
+                <p>This method is called when the user taps one of the buttons to dismiss the message composition interface. Your implementation of this method should dismiss the view controller and perform any additional actions needed to process the sending of the message. The result parameter lets you know whether the user chose to cancel or send the message or whether sending the message failed.</p>
+                <p>Implementation of this method is required.</p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 4.0 and later.</li>
+                </ul>
+            </remarks>
+            <param name="controller">
+            </param>
+            <param name="result">
+            </param>
+        </member>
+        <member name="P:U3DXT.iOS.Native.MessageUI.MFMessageComposeViewControllerDelegate._messageComposeViewController_didFinishWithResult__handler">
+            <summary>
+                <br>
+                </br>Equivalent to the native <c>_messageComposeViewController_didFinishWithResult__handler</c> property.
+            </summary>
+            <remarks>
+            </remarks>
+        </member>
+        <member name="T:U3DXT.iOS.Native.MessageUI.MessageComposeResult">
+            <summary>
+            These constants describe the result of the message composition interface.
+            </summary>
+            <remarks>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 4.0 and later.</li>
+                </ul>
+            </remarks>
+        </member>
+        <member name="F:U3DXT.iOS.Native.MessageUI.MessageComposeResult.Cancelled">
+            <summary>
+                <p>The user canceled the composition.</p>
+                <p>Available in iOS 4.0 and later.</p>
+                <p>
+                </p>
+                <br>
+                </br>Equivalent to the native <c>MessageComposeResultCancelled</c> enum constant.
+            </summary>
+        </member>
+        <member name="F:U3DXT.iOS.Native.MessageUI.MessageComposeResult.Failed">
+            <summary>
+                <p>The user’s attempt to save or send the message was unsuccessful.</p>
+                <p>Available in iOS 4.0 and later.</p>
+                <p>
+                </p>
+                <br>
+                </br>Equivalent to the native <c>MessageComposeResultFailed</c> enum constant.
+            </summary>
+        </member>
+        <member name="F:U3DXT.iOS.Native.MessageUI.MessageComposeResult.Sent">
+            <summary>
+                <p>The user successfully queued or sent the message. </p>
+                <p>Available in iOS 4.0 and later.</p>
+                <p>
+                </p>
+                <br>
+                </br>Equivalent to the native <c>MessageComposeResultSent</c> enum constant.
+            </summary>
+        </member>
+        <member name="T:U3DXT.iOS.Native.Social.SLComposeViewController">
+            <summary>
+            The <c>SLComposeViewController</c> class presents a view to the user to compose a post for supported social networking services.
+            </summary>
+            <remarks>
+                <p>Use the <c>isAvailableForServiceType:</c> class method to check if a service account, such as Twitter, is set up and reachable before presenting this view to the user. </p>
+                <p>Set the initial content before presenting the view controller to the user. All the methods that set the content of a post return a Boolean value. They return <c>false</c> if the content doesn’t fit in the post or if the view controller has already been presented to the user. You must set all of the content in the post before presenting the view controller to the user. After presenting the view controller, only the user can edit the post.</p>
+                <p>You can set a handler—using the <c>completionHandler</c> property—to be notified when the user is done composing a post. Note that completion handlers are not called on any particular thread.</p>
+            </remarks>
+            <exception cref="T:U3DXT.Core.U3DXTException">
+            Is thrown when creation or initialization fails.
+            </exception>
+        </member>
+        <member name="M:U3DXT.iOS.Native.Social.SLComposeViewController.UP_SLComposeViewController_composeViewControllerForServiceType_(System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.Social.SLComposeViewController.UP_SLComposeViewController_isAvailableForServiceType_(System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.Social.SLComposeViewController.UP_SLComposeViewController_set_completionHandler(System.String,System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.Social.SLComposeViewController.UP_SLComposeViewController_get_serviceType(System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.Social.SLComposeViewController.UP_SLComposeViewController_addImage_(System.String,System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.Social.SLComposeViewController.UP_SLComposeViewController_addURL_(System.String,System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.Social.SLComposeViewController.UP_SLComposeViewController_removeAllImages(System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.Social.SLComposeViewController.UP_SLComposeViewController_removeAllURLs(System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.Social.SLComposeViewController.UP_SLComposeViewController_setInitialText_(System.String,System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.Social.SLComposeViewController.#ctor(U3DXT.iOS.Native.Internals._IosBaseClass._NewHelper)">
+            <summary>
+            U3DXT internal constructor.
+            </summary>
+            <param name="helper">
+            </param>
+        </member>
+        <member name="M:U3DXT.iOS.Native.Social.SLComposeViewController.#ctor(U3DXT.iOS.Native.Internals._IosBaseClass._NewHelper,System.String)">
+            <summary>
+            U3DXT internal constructor.
+            </summary>
+            <param name="helper">
+            </param>
+            <param name="uuid">
+            </param>
+        </member>
+        <member name="M:U3DXT.iOS.Native.Social.SLComposeViewController.#ctor">
+            <summary>
+            Creates and initializes a new instance of the native <see cref="T:U3DXT.iOS.Native.Social.SLComposeViewController" /> class.
+            <br></br>Equivalent to the native <c>[[SLComposeViewController alloc] init]</c> calls.
+            </summary>
+            <exception cref="T:U3DXT.Core.U3DXTException">
+            Is thrown when creation or initialization fails.
+            </exception>
+        </member>
+        <member name="M:U3DXT.iOS.Native.Social.SLComposeViewController.InstancesRespondToSelector(System.String)">
+            <summary>
+            Returns whether native instances of this class can respond to a selector with the same name.
+            <br></br>Equivalent to the native <c>instancesRespondToSelector:</c> class method.
+            </summary>
+            <returns>
+                <c>true</c> if native instances of this class can respond to a selector with the same name, <c>false</c> otherwise.
+            </returns>
+            <param name="selectorName">The literal name of the selector.</param>
+        </member>
+        <member name="P:U3DXT.iOS.Native.Social.SLComposeViewController.ClassExists">
+            <summary>
+            Returns whether the native SLComposeViewController class exists on the platform.
+            </summary>
+            <value>
+                <c>true</c> if class exists; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="M:U3DXT.iOS.Native.Social.SLComposeViewController.ComposeViewController(System.String)">
+            <summary>
+            Creates a new social compose view controller.
+            <br></br>Equivalent to the native <c>composeViewControllerForServiceType:</c> method.
+            </summary>
+            <remarks>
+                <b>Parameters</b>
+                <p>
+                </p>
+                <em>serviceType</em>
+                <p>This specifies the social networking service you want to post to. You must use one of the possible values listed in <c>Service_Type_Constants</c>. This also sets the value of <c>serviceType</c>. If an invalid <em>serviceType</em> is passed in, this method throws an exception.</p>
+                <b>Return Value</b>
+                <p>Returns a social compose view controller or <c>null</c> if an error occurs.</p>
+                <b>Discussion</b>
+                <p>Use this method to create a social compose view controller. Do not use any other methods.</p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 6.0 and later.</li>
+                </ul>
+            </remarks>
+            <param name="serviceType">
+            </param>
+        </member>
+        <member name="M:U3DXT.iOS.Native.Social.SLComposeViewController.IsAvailable(System.String)">
+            <summary>
+            Returns whether you can send a request for a particular service type.
+            <br></br>Equivalent to the native <c>isAvailableForServiceType:</c> method.
+            </summary>
+            <remarks>
+                <b>Parameters</b>
+                <p>
+                </p>
+                <em>serviceType</em>
+                <p>The social networking service. For a list of possible values, see <c>Service_Type_Constants</c>.</p>
+                <b>Return Value</b>
+                <p>Returns a Boolean value indicating whether the service is accessible and at least one account is set up.</p>
+                <b>Discussion</b>
+                <p> For the account to be available, the user must be logged into the social service in the device settings.</p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 6.0 and later.</li>
+                </ul>
+            </remarks>
+            <param name="serviceType">
+            </param>
+        </member>
+        <member name="P:U3DXT.iOS.Native.Social.SLComposeViewController.completionHandler">
+            <summary>
+            The handler to call when the user is done composing a post.
+            <br></br>Equivalent to the native <c>completionHandler</c> property.
+            </summary>
+            <remarks>
+                <b>Discussion</b>
+                <p>The handler has a single parameter that indicates whether the user finished or cancelled composing the post. This block is not guaranteed to be called on any particular thread.</p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 6.0 and later.</li>
+                </ul>
+            </remarks>
+        </member>
+        <member name="P:U3DXT.iOS.Native.Social.SLComposeViewController.serviceType">
+            <summary>
+            Specifies the social networking service.
+            <br></br>Equivalent to the native <c>serviceType</c> property.
+            </summary>
+            <remarks>
+                <b>Discussion</b>
+                <p>The value of this property is set when you initialize a social compose view controller in <c>composeViewControllerForServiceType:</c>. Each social view controller you present is connected to only one social service at a time. Use this property to check which service your social view controller has specified. For a list of possible values, see <c>Service_Type_Constants</c>.</p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 6.0 and later.</li>
+                </ul>
+            </remarks>
+        </member>
+        <member name="M:U3DXT.iOS.Native.Social.SLComposeViewController.AddImage(U3DXT.iOS.Native.UIKit.UIImage)">
+            <summary>
+            Adds an image to the post.
+            <br></br>Equivalent to the native <c>addImage:</c> method.
+            </summary>
+            <remarks>
+                <b>Parameters</b>
+                <p>
+                </p>
+                <em>image</em>
+                <p>The image to add to the post.</p>
+                <b>Return Value</b>
+                <p>Returns a Boolean value indicating whether the image was successfully added.</p>
+                <b>Discussion</b>
+                <p>This method returns <c>false</c> if <em>image</em> does not fit in the currently available space or if the view controller has already been presented to the user (and therefore cannot be changed). For the accepted <c>UIImage</c> formats, see  “Supported Image Formats”  in <em>UIImage Class Reference</em>. Image size limits are dependent on the target service and are documented by the service provider. For links to documentation for the supported services, see  “Table 1Social Services Individual Documentation Sites”  in <em>SLRequest Class Reference</em>.</p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 6.0 and later.</li>
+                </ul>
+            </remarks>
+            <param name="image">
+            </param>
+        </member>
+        <member name="M:U3DXT.iOS.Native.Social.SLComposeViewController.AddURL(U3DXT.iOS.Native.Foundation.NSURL)">
+            <summary>
+            Adds a URL to the post.
+            <br></br>Equivalent to the native <c>addURL:</c> method.
+            </summary>
+            <remarks>
+                <b>Parameters</b>
+                <p>
+                </p>
+                <em>url</em>
+                <p>The URL to add to the post.</p>
+                <b>Return Value</b>
+                <p>Returns a Boolean value indicating whether the URL was successfully added.</p>
+                <b>Discussion</b>
+                <p>This method returns <c>false</c> if <em>url</em> does not fit in the currently available character space or if the view controller has already been presented to the user (and therefore cannot be changed). Character limits are dependent on the target service and are documented by the service provider. For links to documentation for the supported services, see  “Table 1Social Services Individual Documentation Sites”  in <em>SLRequest Class Reference</em>.</p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 6.0 and later.</li>
+                </ul>
+            </remarks>
+            <param name="url">
+            </param>
+        </member>
+        <member name="M:U3DXT.iOS.Native.Social.SLComposeViewController.RemoveAllImages">
+            <summary>
+            Removes all images from the post.
+            <br></br>Equivalent to the native <c>removeAllImages</c> method.
+            </summary>
+            <remarks>
+                <b>Return Value</b>
+                <p>Returns a Boolean value indicating whether the images were successfully removed.</p>
+                <b>Discussion</b>
+                <p>If the view controller has already been presented to the user when <c>removeAllImages</c> is called, the method returns <c>false</c> and the images are not removed.</p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 6.0 and later.</li>
+                </ul>
+            </remarks>
+        </member>
+        <member name="M:U3DXT.iOS.Native.Social.SLComposeViewController.RemoveAllURLs">
+            <summary>
+            Removes all URLs from the post.
+            <br></br>Equivalent to the native <c>removeAllURLs</c> method.
+            </summary>
+            <remarks>
+                <b>Return Value</b>
+                <p>Returns a Boolean value indicating whether the URLs were successfully removed.</p>
+                <b>Discussion</b>
+                <p>If the view controller has already been presented to the user when <c>removeAllURLs</c> is called, the method returns <c>false</c> and the URLS are not removed.</p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 6.0 and later.</li>
+                </ul>
+            </remarks>
+        </member>
+        <member name="M:U3DXT.iOS.Native.Social.SLComposeViewController.SetInitialText(System.String)">
+            <summary>
+            Sets the initial text to be posted.
+            <br></br>Equivalent to the native <c>setInitialText:</c> method.
+            </summary>
+            <remarks>
+                <b>Parameters</b>
+                <p>
+                </p>
+                <em>text</em>
+                <p>The text to add to the post.</p>
+                <b>Return Value</b>
+                <p>Returns a Boolean value indicating whether the text was successfully set.</p>
+                <b>Discussion</b>
+                <p>This method returns <c>false</c> if <em>text</em> does not fit in the currently available character space or if the view controller has already been presented to the user (and therefore cannot be changed). Character limits are dependent on the target service and are documented by the service provider. For links to documentation for the supported services, see  “Table 1Social Services Individual Documentation Sites”  in <em>SLRequest Class Reference</em>.</p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 6.0 and later.</li>
+                </ul>
+            </remarks>
+            <param name="text">
+            </param>
+        </member>
+        <member name="T:U3DXT.iOS.Native.Social.SLComposeViewControllerResult">
+            <summary>
+            Possible values for the <em>result</em> parameter of the <c>completionHandler</c> property.
+            </summary>
+            <remarks>
+                <br />
+                <!-- Media player includes -->
+                <!-- /Media player includes -->
+            </remarks>
+        </member>
+        <member name="F:U3DXT.iOS.Native.Social.SLComposeViewControllerResult.Done">
+            <summary>
+                <p>The view controller is dismissed and the message is being sent in the background. This occurs when the user selects Done.</p>
+                <p>Available in iOS 6.0 and later.</p>
+                <p>
+                </p>
+                <br>
+                </br>Equivalent to the native <c>SLComposeViewControllerResultDone</c> enum constant.
+            </summary>
+        </member>
+        <member name="F:U3DXT.iOS.Native.Social.SLComposeViewControllerResult.Cancelled">
+            <summary>
+                <p>The view controller is dismissed without sending the post. For example, the user selects Cancel or the account is not available.</p>
+                <p>Available in iOS 6.0 and later.</p>
+                <p>
+                </p>
+                <br>
+                </br>Equivalent to the native <c>SLComposeViewControllerResultCancelled</c> enum constant.
+            </summary>
+        </member>
+        <member name="T:U3DXT.iOS.Native.Social.SLRequest">
+            <summary>
+            The <c>SLRequest</c> object encapsulates the properties of an HTTP request, providing a convenient template for you to make requests. You send a request to a social networking service to perform some operation on behalf of the user or to retrieve user information.
+            </summary>
+            <remarks>
+                <p>HTTP requests have these common components: an HTTP request method (GET, POST, or DELETE), a URL identifying the operation to perform, a set of query parameters, and an optional multipart POST body containing additional data. The values for these properties depend on the request you are sending and the target service provider. Refer to each supported social networking site’s documentation for possible values. Links to documentation are provided in  Table 1 .</p>
+                <p>Use the <c>requestForServiceType:requestMethod:URL:parameters:</c> method to initialize a newly created <c>SLRequest</c> object passing the required property values. Use the <c>addMultipartData:withName:type:</c> to optionally specify a multipart POST body. After you create your request, use the <c>performRequestWithHandler:</c> method to send the request, specifying the handler to call when the request is done.</p>
+                <p>If you already have a sending mechanism, you can use the <c>preparedURLRequest</c> method to create the request that you send using an <c>NSURLConnection</c> object. If the request requires user authorization, set the <c>account</c> property to an <c>ACAccount</c> object.</p>
+                <table class="graybox" border="0" cellspacing="0" cellpadding="5">
+                    <caption class="tablecaption">
+                        <strong class="caption_number">Table 1</strong>   Social Services Individual Documentation Sites</caption>
+                    <tr>
+                        <td scope="row">
+                            <p>Facebook</p>
+                        </td>
+                        <td>
+                            <p> https://developers.facebook.com/docs/ </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td scope="row">
+                            <p>Sina Weibo</p>
+                        </td>
+                        <td>
+                            <p> http://open.weibo.com/wiki/ </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td scope="row">
+                            <p>Twitter</p>
+                        </td>
+                        <td>
+                            <p> https://dev.twitter.com/docs </p>
+                        </td>
+                    </tr>
+                </table>
+                <p>
+                    <strong>Important:</strong> For Sina Weibo integration, users must have the Chinese keyboard enabled. Users can enable this keyboard in Settings &gt; General &gt; Keyboard. If a Chinese keyboard is not enabled, users wont be prompted to sign in to their Sina Weibo account.</p>
+                <p>
+                </p>
+            </remarks>
+            <exception cref="T:U3DXT.Core.U3DXTException">
+            Is thrown when creation or initialization fails.
+            </exception>
+        </member>
+        <member name="F:U3DXT.iOS.Native.Social.SLRequest.SLServiceTypeSinaWeibo">
+            <summary>
+                <p>A string constant that identifies the social networking site, Sina Weibo.</p>
+                <p>Available in iOS 6.0 and later.</p>
+                <p>
+                </p>
+                <br>
+                </br>Equivalent to the native <c>SLServiceTypeSinaWeibo</c> constant.
+            </summary>
+            <remarks>
+            Possible values for the <em>serviceType</em> parameter.
+            <p></p><p></p>This is a constant for "Service Type Constants".
+            </remarks>
+        </member>
+        <member name="F:U3DXT.iOS.Native.Social.SLRequest.SLServiceTypeFacebook">
+            <summary>
+                <p>A string constant that identifies the social networking site, Facebook.</p>
+                <p>Available in iOS 6.0 and later.</p>
+                <p>
+                </p>
+                <br>
+                </br>Equivalent to the native <c>SLServiceTypeFacebook</c> constant.
+            </summary>
+            <remarks>
+            Possible values for the <em>serviceType</em> parameter.
+            <p></p><p></p>This is a constant for "Service Type Constants".
+            </remarks>
+        </member>
+        <member name="F:U3DXT.iOS.Native.Social.SLRequest.SLServiceTypeTwitter">
+            <summary>
+                <p>A string constant that identifies the social networking site, Twitter.</p>
+                <p>Available in iOS 6.0 and later.</p>
+                <p>
+                </p>
+                <br>
+                </br>Equivalent to the native <c>SLServiceTypeTwitter</c> constant.
+            </summary>
+            <remarks>
+            Possible values for the <em>serviceType</em> parameter.
+            <p></p><p></p>This is a constant for "Service Type Constants".
+            </remarks>
+        </member>
+        <member name="M:U3DXT.iOS.Native.Social.SLRequest.UP_SLRequest_requestForServiceType_requestMethod_URL_parameters_(System.String,System.Int32,System.String,System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.Social.SLRequest.UP_SLRequest_get_account(System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.Social.SLRequest.UP_SLRequest_set_account(System.String,System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.Social.SLRequest.UP_SLRequest_get_parameters(System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.Social.SLRequest.UP_SLRequest_get_requestMethod(System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.Social.SLRequest.UP_SLRequest_get_URL(System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.Social.SLRequest.UP_SLRequest_addMultipartData_withName_type_filename_(System.String,System.String,System.String,System.String,System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.Social.SLRequest.UP_SLRequest_performRequestWithHandler_(System.String,System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.Social.SLRequest.UP_SLRequest_preparedURLRequest(System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.Social.SLRequest.#ctor(U3DXT.iOS.Native.Internals._IosBaseClass._NewHelper)">
+            <summary>
+            U3DXT internal constructor.
+            </summary>
+            <param name="helper">
+            </param>
+        </member>
+        <member name="M:U3DXT.iOS.Native.Social.SLRequest.#ctor(U3DXT.iOS.Native.Internals._IosBaseClass._NewHelper,System.String)">
+            <summary>
+            U3DXT internal constructor.
+            </summary>
+            <param name="helper">
+            </param>
+            <param name="uuid">
+            </param>
+        </member>
+        <member name="M:U3DXT.iOS.Native.Social.SLRequest.#ctor">
+            <summary>
+            Creates and initializes a new instance of the native <see cref="T:U3DXT.iOS.Native.Social.SLRequest" /> class.
+            <br></br>Equivalent to the native <c>[[SLRequest alloc] init]</c> calls.
+            </summary>
+            <exception cref="T:U3DXT.Core.U3DXTException">
+            Is thrown when creation or initialization fails.
+            </exception>
+        </member>
+        <member name="M:U3DXT.iOS.Native.Social.SLRequest.InstancesRespondToSelector(System.String)">
+            <summary>
+            Returns whether native instances of this class can respond to a selector with the same name.
+            <br></br>Equivalent to the native <c>instancesRespondToSelector:</c> class method.
+            </summary>
+            <returns>
+                <c>true</c> if native instances of this class can respond to a selector with the same name, <c>false</c> otherwise.
+            </returns>
+            <param name="selectorName">The literal name of the selector.</param>
+        </member>
+        <member name="P:U3DXT.iOS.Native.Social.SLRequest.ClassExists">
+            <summary>
+            Returns whether the native SLRequest class exists on the platform.
+            </summary>
+            <value>
+                <c>true</c> if class exists; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="M:U3DXT.iOS.Native.Social.SLRequest.Request(System.String,U3DXT.iOS.Native.Social.SLRequestMethod,U3DXT.iOS.Native.Foundation.NSURL,System.Collections.Generic.Dictionary{System.Object,System.Object})">
+            <summary>
+            Initializes a newly created request object with the specified properties.
+            <br></br>Equivalent to the native <c>requestForServiceType:requestMethod:URL:parameters:</c> method.
+            </summary>
+            <remarks>
+                <b>Parameters</b>
+                <p>
+                </p>
+                <em>serviceType</em>
+                <p>The social networking service type. For possible values, see  “Service Type Constants.” </p>
+                <em>requestMethod</em>
+                <p>The method to use for this HTTP request. For possible values, see  “SLRequestMethod.” </p>
+                <em>url</em>
+                <p>The destination URL for this HTTP request. The values and formatting for the URL are dependent on the target service and are documented by the service provider. For links to documentation for the supported services, see  Table 1 .</p>
+                <em>parameters</em>
+                <p>The parameters for this HTTP request. The values and formatting are dependent on the target service and are documented by the service provider. For links to documentation for the supported services, see  Table 1 .</p>
+                <b>Return Value</b>
+                <p>The newly initialized request object.</p>
+                <b>Discussion</b>
+                <p>Use this method to initialize an <c>SLRequest</c>. The value and formatting of each parameter is dependent on the target service.</p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 6.0 and later.</li>
+                </ul>
+            </remarks>
+            <param name="serviceType">
+            </param>
+            <param name="requestMethod">
+            </param>
+            <param name="url">
+            </param>
+            <param name="parameters">
+            </param>
+        </member>
+        <member name="P:U3DXT.iOS.Native.Social.SLRequest.account">
+            <summary>
+            Account information used to authenticate the request.
+            <br></br>Equivalent to the native <c>account</c> property.
+            </summary>
+            <remarks>
+                <b>Discussion</b>
+                <p>The account is used to sign a request with OAuth1 services or to add an access token for OAuth2 services. By associating the account with the request, the necessary tokens are added automatically. The default value is <c>null</c>.</p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 6.0 and later.</li>
+                </ul>
+            </remarks>
+        </member>
+        <member name="P:U3DXT.iOS.Native.Social.SLRequest.parameters">
+            <summary>
+            The parameters for this request. (read-only)
+            <br></br>Equivalent to the native <c>parameters</c> property.
+            </summary>
+            <remarks>
+                <b>Discussion</b>
+                <p>Use this property to look up the query parameters of the HTTP request that was set in <c>requestForServiceType:requestMethod:URL:parameters:</c>. Possible values are dependent on the target service and are documented by the service provider. For links to documentation for the supported services, see  Table 1 .</p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 6.0 and later.</li>
+                </ul>
+            </remarks>
+        </member>
+        <member name="P:U3DXT.iOS.Native.Social.SLRequest.requestMethod">
+            <summary>
+            The method to use for this request. (read-only)
+            <br></br>Equivalent to the native <c>requestMethod</c> property.
+            </summary>
+            <remarks>
+                <b>Discussion</b>
+                <p>Use this property to look up the method of the HTTP request that was set in <c>requestForServiceType:requestMethod:URL:parameters:</c>. Possible values are described in  “SLRequestMethod.” </p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 6.0 and later.</li>
+                </ul>
+            </remarks>
+        </member>
+        <member name="P:U3DXT.iOS.Native.Social.SLRequest.URL">
+            <summary>
+            The destination URL for this request. (read-only)
+            <br></br>Equivalent to the native <c>URL</c> property.
+            </summary>
+            <remarks>
+                <b>Discussion</b>
+                <p>Use this property to look up the URL of the HTTP request that was set in <c>requestForServiceType:requestMethod:URL:parameters:</c>. Possible values are dependent on the target service and are documented by the service provider. For links to documentation for the supported services, see  Table 1 .</p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 6.0 and later.</li>
+                </ul>
+            </remarks>
+        </member>
+        <member name="M:U3DXT.iOS.Native.Social.SLRequest.AddMultipartData(U3DXT.iOS.Native.Foundation.NSData,System.String,System.String,System.String)">
+            <summary>
+            Specifies a named multipart POST body for this request.
+            <br></br>Equivalent to the native <c>addMultipartData:withName:type:filename:</c> method.
+            </summary>
+            <remarks>
+                <b>Parameters</b>
+                <p>
+                </p>
+                <em>data</em>
+                <p>The data for the multipart POST body, such as an image or text.</p>
+                <em>name</em>
+                <p>The name of the multipart POST body. This is the name that a specific social service expects.</p>
+                <em>type</em>
+                <p>The type of the multipart POST body. This is the MIME content type of the multipart data.</p>
+                <em>filename</em>
+                <p>The filename of the attachment that you want to POST. Many social services require a filename in order to accept certain POST requests, such as uploading an image or video. If your multipart data does not require a filename, pass in <c>null</c>.</p>
+                <b>Discussion</b>
+                <p>Possible parameter values are dependent on the target service. This information, as well as guidance on when to use a multipart POST body, is documented by the service provider. For links to documentation for the supported services, see  Table 1 .</p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 6.0 and later.</li>
+                </ul>
+            </remarks>
+            <param name="data">
+            </param>
+            <param name="name">
+            </param>
+            <param name="type">
+            </param>
+            <param name="filename">
+            </param>
+        </member>
+        <member name="M:U3DXT.iOS.Native.Social.SLRequest.PerformRequest(System.Action{U3DXT.iOS.Native.Foundation.NSData,U3DXT.iOS.Native.Foundation.NSHTTPURLResponse,U3DXT.iOS.Native.Foundation.NSError})">
+            <summary>
+            Performs an asynchronous request and calls the specified handler when done.
+            <br></br>Equivalent to the native <c>performRequestWithHandler:</c> method.
+            </summary>
+            <remarks>
+                <b>Parameters</b>
+                <p>
+                </p>
+                <em>handler</em>
+                <p>The handler to call when the request is done. The parameters for this handler are described in <c>SLRequestHandler</c>. This handler is not guaranteed to be called on any particular thread and should not be nil.</p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 6.0 and later.</li>
+                </ul>
+            </remarks>
+            <param name="handler"> A callback delegate.</param>
+        </member>
+        <member name="M:U3DXT.iOS.Native.Social.SLRequest.PreparedURLRequest">
+            <summary>
+            Returns an authorized URL request that can be sent using an <c>NSURLConnection</c> object.
+            <br></br>Equivalent to the native <c>preparedURLRequest</c> method.
+            </summary>
+            <remarks>
+                <b>Return Value</b>
+                <p>An OAuth-compatible <c>NSURLRequest</c> object that allows an app to act on behalf of the user while keeping the user’s password private. The <c>NSURLRequest</c> is signed as OAuth1 by default, or OAuth2 by adding the appropriate token based on the user’s account.</p>
+                <b>Discussion</b>
+                <p>Use this method to modify your request before sending. By setting the account correctly, this method will automatically add any necessary tokens.</p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 6.0 and later.</li>
+                </ul>
+            </remarks>
+        </member>
+        <member name="T:U3DXT.iOS.Native.Social.SLRequestMethod">
+            <summary>
+            Indicates the request method used in the request.
+            </summary>
+            <remarks>
+                <b>Discussion</b>
+                <p>Use this constant to set the <c>requestMethod</c> property. The type of request to use depends on the target service. For links to documentation for the supported services, see  Table 1 .</p>
+            </remarks>
+        </member>
+        <member name="F:U3DXT.iOS.Native.Social.SLRequestMethod.GET">
+            <summary>
+                <p>Requests information from the specified resource. Use a GET request to fetch information from the specified server such as character limits or a user’s timeline.</p>
+                <p>Available in iOS 6.0 and later.</p>
+                <p>
+                </p>
+                <br>
+                </br>Equivalent to the native <c>SLRequestMethodGET</c> enum constant.
+            </summary>
+        </member>
+        <member name="F:U3DXT.iOS.Native.Social.SLRequestMethod.DELETE">
+            <summary>
+                <p>Deletes the specified resource.</p>
+                <p>Available in iOS 6.0 and later.</p>
+                <p>
+                </p>
+                <br>
+                </br>Equivalent to the native <c>SLRequestMethodDELETE</c> enum constant.
+            </summary>
+        </member>
+        <member name="F:U3DXT.iOS.Native.Social.SLRequestMethod.POST">
+            <summary>
+                <p>Submits data to be processed. Use a POST request to submit information to the specified server such as a status update or an image.</p>
+                <p>Available in iOS 6.0 and later.</p>
+                <p>
+                </p>
+                <br>
+                </br>Equivalent to the native <c>SLRequestMethodPOST</c> enum constant.
+            </summary>
+        </member>
+        <member name="T:U3DXT.iOS.Native.Twitter.TWRequest">
+            <summary>
+            The <c>TWRequest</c> object encapsulates the properties of an HTTP request that you send to Twitter to perform some operation on behalf of the user. The <c>TWRequest</c> class provides a convenient template for you to make Twitter requests, and handles user authentication.
+            </summary>
+            <remarks>
+                <p>Twitter HTTP requests have these common components: a URL identifying the operation to perform, the HTTP method (GET, POST, or DELETE), a set of query parameters that depends on the operation, and an optional multipart POST body containing additional data. The values for these properties depend on the request you are sending. Refer to Twitter’s documentation at  https://dev.twitter.com/docs  for details on the possible values.</p>
+                <p>Use the <c>initWithURL:parameters:requestMethod:</c> method to initialize a newly created <c>TWRequest</c> object passing the required property values. Use the <c>addMultiPartData:withName:type:</c> to optionally specify a multipart POST body. Use the <c>performRequestWithHandler:</c> method to perform the actual request specifying the handler to call when the request is done. Alternatively, you can use the <c>signedURLRequest</c> method to create a request that you send using an <c>NSURLConnection</c> object.</p>
+                <p>If the Twitter request requires user authorization, set the <c>account</c> property to an <c>ACAccount</c> object.</p>
+            </remarks>
+            <exception cref="T:U3DXT.Core.U3DXTException">
+            Is thrown when creation or initialization fails.
+            </exception>
+        </member>
+        <member name="M:U3DXT.iOS.Native.Twitter.TWRequest.UP_TWRequest_get_account(System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.Twitter.TWRequest.UP_TWRequest_set_account(System.String,System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.Twitter.TWRequest.UP_TWRequest_get_parameters(System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.Twitter.TWRequest.UP_TWRequest_get_requestMethod(System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.Twitter.TWRequest.UP_TWRequest_get_URL(System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.Twitter.TWRequest.UP_TWRequest_addMultiPartData_withName_type_(System.String,System.String,System.String,System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.Twitter.TWRequest.UP_TWRequest_alloc_initWithURL_parameters_requestMethod_(System.String,System.String,System.String,System.Int32)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.Twitter.TWRequest.UP_TWRequest_performRequestWithHandler_(System.String,System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.Twitter.TWRequest.UP_TWRequest_signedURLRequest(System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.Twitter.TWRequest.#ctor(U3DXT.iOS.Native.Internals._IosBaseClass._NewHelper)">
+            <summary>
+            U3DXT internal constructor.
+            </summary>
+            <param name="helper">
+            </param>
+        </member>
+        <member name="M:U3DXT.iOS.Native.Twitter.TWRequest.#ctor(U3DXT.iOS.Native.Internals._IosBaseClass._NewHelper,System.String)">
+            <summary>
+            U3DXT internal constructor.
+            </summary>
+            <param name="helper">
+            </param>
+            <param name="uuid">
+            </param>
+        </member>
+        <member name="M:U3DXT.iOS.Native.Twitter.TWRequest.#ctor">
+            <summary>
+            Creates and initializes a new instance of the native <see cref="T:U3DXT.iOS.Native.Twitter.TWRequest" /> class.
+            <br></br>Equivalent to the native <c>[[TWRequest alloc] init]</c> calls.
+            </summary>
+            <exception cref="T:U3DXT.Core.U3DXTException">
+            Is thrown when creation or initialization fails.
+            </exception>
+        </member>
+        <member name="M:U3DXT.iOS.Native.Twitter.TWRequest.InstancesRespondToSelector(System.String)">
+            <summary>
+            Returns whether native instances of this class can respond to a selector with the same name.
+            <br></br>Equivalent to the native <c>instancesRespondToSelector:</c> class method.
+            </summary>
+            <returns>
+                <c>true</c> if native instances of this class can respond to a selector with the same name, <c>false</c> otherwise.
+            </returns>
+            <param name="selectorName">The literal name of the selector.</param>
+        </member>
+        <member name="P:U3DXT.iOS.Native.Twitter.TWRequest.ClassExists">
+            <summary>
+            Returns whether the native TWRequest class exists on the platform.
+            </summary>
+            <value>
+                <c>true</c> if class exists; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:U3DXT.iOS.Native.Twitter.TWRequest.account">
+            <summary>
+            Optional account information used to authenticate the request.
+            <br></br>Equivalent to the native <c>account</c> property.
+            </summary>
+            <remarks>
+                <b>Discussion</b>
+                <p>Not all Twitter requests require authorization. The default value is <c>null</c>.</p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 5.0 and later.</li>
+                </ul>
+            </remarks>
+        </member>
+        <member name="P:U3DXT.iOS.Native.Twitter.TWRequest.parameters">
+            <summary>
+            The parameters for this request. (read-only)
+            <br></br>Equivalent to the native <c>parameters</c> property.
+            </summary>
+            <remarks>
+                <b>Discussion</b>
+                <p>These are the query parameters for this HTTP request. Possible values are described in Twitter’s documentation at  https://dev.twitter.com/docs .</p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 5.0 and later.</li>
+                </ul>
+            </remarks>
+        </member>
+        <member name="P:U3DXT.iOS.Native.Twitter.TWRequest.requestMethod">
+            <summary>
+            The method to use for this request. (read-only)
+            <br></br>Equivalent to the native <c>requestMethod</c> property.
+            </summary>
+            <remarks>
+                <b>Discussion</b>
+                <p>This property specifies the method of the HTTP request. Possible values are described in  “TWRequestMethod.” </p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 5.0 and later.</li>
+                </ul>
+            </remarks>
+        </member>
+        <member name="P:U3DXT.iOS.Native.Twitter.TWRequest.URL">
+            <summary>
+            The destination URL for this request. (read-only)
+            <br></br>Equivalent to the native <c>URL</c> property.
+            </summary>
+            <remarks>
+                <b>Discussion</b>
+                <p>This is the URL for the HTTP request. Possible values are described in Twitter’s documentation at  https://dev.twitter.com/docs .</p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 5.0 and later.</li>
+                </ul>
+            </remarks>
+        </member>
+        <member name="M:U3DXT.iOS.Native.Twitter.TWRequest.AddMultiPartData(U3DXT.iOS.Native.Foundation.NSData,System.String,System.String)">
+            <summary>
+            Specifies a named multipart POST body for this request.
+            <br></br>Equivalent to the native <c>addMultiPartData:withName:type:</c> method.
+            </summary>
+            <remarks>
+                <b>Parameters</b>
+                <p>
+                </p>
+                <em>data</em>
+                <p>The data for the multipart POST body.</p>
+                <em>name</em>
+                <p>The name of the multipart POST body.</p>
+                <em>type</em>
+                <p>The type of the multipart POST body.</p>
+                <b>Discussion</b>
+                <p>Refer to Twitter’s documentation at  https://dev.twitter.com/docs  for when a multipart POST body is needed and what parameters to pass to this method.</p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 5.0 and later.</li>
+                </ul>
+            </remarks>
+            <param name="data">
+            </param>
+            <param name="name">
+            </param>
+            <param name="type">
+            </param>
+        </member>
+        <member name="M:U3DXT.iOS.Native.Twitter.TWRequest.#ctor(U3DXT.iOS.Native.Foundation.NSURL,System.Collections.Generic.Dictionary{System.Object,System.Object},U3DXT.iOS.Native.Twitter.TWRequestMethod)">
+            <summary>
+            Creates an instance of the native TWRequest and initializes the object. Initializes a newly created request object with the specified properties.
+            <br></br>Equivalent to the native <c>[[TWRequest alloc] initWithURL:parameters:requestMethod:]</c> calls.
+            </summary>
+            <remarks>
+                <b>Parameters</b>
+                <p>
+                </p>
+                <em>url</em>
+                <p>The destination URL for this HTTP request.</p>
+                <em>parameters</em>
+                <p>The parameters for this HTTP request. </p>
+                <em>requestMethod</em>
+                <p>The method to use for this HTTP request.</p>
+                <b>Return Value</b>
+                <p>The newly initialized request object.</p>
+                <b>Discussion</b>
+                <p>Possible values for these parameters are described in Twitter’s documentation at  https://dev.twitter.com/docs .</p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 5.0 and later.</li>
+                </ul>
+            </remarks>
+            <param name="url">
+            </param>
+            <param name="parameters">
+            </param>
+            <param name="requestMethod">
+            </param>
+        </member>
+        <member name="M:U3DXT.iOS.Native.Twitter.TWRequest.PerformRequest(System.Action{U3DXT.iOS.Native.Foundation.NSData,U3DXT.iOS.Native.Foundation.NSHTTPURLResponse,U3DXT.iOS.Native.Foundation.NSError})">
+            <summary>
+            Performs the request and calls the specified handler when done.
+            <br></br>Equivalent to the native <c>performRequestWithHandler:</c> method.
+            </summary>
+            <remarks>
+                <b>Parameters</b>
+                <p>
+                </p>
+                <em>handler</em>
+                <p>The handler to call when the request is done. The parameters for this handler are described in <c>TWRequestHandler</c>. This handler is not guaranteed to be called on any particular thread.</p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 5.0 and later.</li>
+                </ul>
+            </remarks>
+            <param name="handler"> A callback delegate.</param>
+        </member>
+        <member name="M:U3DXT.iOS.Native.Twitter.TWRequest.SignedURLRequest">
+            <summary>
+            Returns an authorized request that can be sent using an <c>NSURLConnection</c> object.
+            <br></br>Equivalent to the native <c>signedURLRequest</c> method.
+            </summary>
+            <remarks>
+                <b>Return Value</b>
+                <p>An OAuth-compatible <c>NSURLRequest</c> object that allows an application to act on behalf of the user while keeping the user’s password private.</p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 5.0 and later.</li>
+                </ul>
+            </remarks>
+        </member>
+        <member name="T:U3DXT.iOS.Native.Twitter.TWRequestMethod">
+            <summary>
+            Indicates the method used in the request.
+            </summary>
+            <remarks>
+                <b>Discussion</b>
+                <p>Use this constant to set the <c>requestMethod</c> property.</p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 5.0 and later.</li>
+                </ul>
+            </remarks>
+        </member>
+        <member name="F:U3DXT.iOS.Native.Twitter.TWRequestMethod.POST">
+            <summary>
+                <p>Submits data to be processed.</p>
+                <p>Available in iOS 5.0 and later.</p>
+                <p>
+                </p>
+                <br>
+                </br>Equivalent to the native <c>TWRequestMethodPOST</c> enum constant.
+            </summary>
+        </member>
+        <member name="F:U3DXT.iOS.Native.Twitter.TWRequestMethod.DELETE">
+            <summary>
+                <p>Deletes the specified resource.</p>
+                <p>Available in iOS 5.0 and later.</p>
+                <p>
+                </p>
+                <br>
+                </br>Equivalent to the native <c>TWRequestMethodDELETE</c> enum constant.
+            </summary>
+        </member>
+        <member name="F:U3DXT.iOS.Native.Twitter.TWRequestMethod.GET">
+            <summary>
+                <p>Requests a representation of the specified resource.</p>
+                <p>Available in iOS 5.0 and later.</p>
+                <p>
+                </p>
+                <br>
+                </br>Equivalent to the native <c>TWRequestMethodGET</c> enum constant.
+            </summary>
+        </member>
+        <member name="T:U3DXT.iOS.Native.Twitter.TWTweetComposeViewController">
+            <summary>
+            The <c>TWTweetComposeViewController</c> class presents a view to the user to compose a tweet.
+            </summary>
+            <remarks>
+                <p>Although you may perform Twitter requests on behalf of the user, you cannot append text, images, or URLs to tweets without the user’s knowledge. Hence, you can set the initial text and other content before presenting the tweet to the user but cannot change the tweet after the user views it. All of the methods used to set the content of the tweet return a Boolean value. The methods return <c>false</c> if the content doesn’t fit in the tweet or if the view was already presented to the user and the tweet can no longer be changed.</p>
+                <p>Optionally, use the <c>canSendTweet</c> class method to check if Twitter is set up and reachable before presenting this view to the user. </p>
+                <p>You can also set a handler using the <c>completionHandler</c> property to be notified when the user is done composing the tweet. Note that completion handlers are not called on any particular thread.</p>
+                <p>
+                    <strong>Note:</strong> You cannot use a UIPopoverController object to present a TWTweetComposeViewController object.</p>
+                <p>
+                </p>
+            </remarks>
+            <exception cref="T:U3DXT.Core.U3DXTException">
+            Is thrown when creation or initialization fails.
+            </exception>
+        </member>
+        <member name="M:U3DXT.iOS.Native.Twitter.TWTweetComposeViewController.UP_TWTweetComposeViewController_canSendTweet">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.Twitter.TWTweetComposeViewController.UP_TWTweetComposeViewController_set_completionHandler(System.String,System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.Twitter.TWTweetComposeViewController.UP_TWTweetComposeViewController_addImage_(System.String,System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.Twitter.TWTweetComposeViewController.UP_TWTweetComposeViewController_addURL_(System.String,System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.Twitter.TWTweetComposeViewController.UP_TWTweetComposeViewController_removeAllImages(System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.Twitter.TWTweetComposeViewController.UP_TWTweetComposeViewController_removeAllURLs(System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.Twitter.TWTweetComposeViewController.UP_TWTweetComposeViewController_setInitialText_(System.String,System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.Twitter.TWTweetComposeViewController.#ctor(U3DXT.iOS.Native.Internals._IosBaseClass._NewHelper)">
+            <summary>
+            U3DXT internal constructor.
+            </summary>
+            <param name="helper">
+            </param>
+        </member>
+        <member name="M:U3DXT.iOS.Native.Twitter.TWTweetComposeViewController.#ctor(U3DXT.iOS.Native.Internals._IosBaseClass._NewHelper,System.String)">
+            <summary>
+            U3DXT internal constructor.
+            </summary>
+            <param name="helper">
+            </param>
+            <param name="uuid">
+            </param>
+        </member>
+        <member name="M:U3DXT.iOS.Native.Twitter.TWTweetComposeViewController.#ctor">
+            <summary>
+            Creates and initializes a new instance of the native <see cref="T:U3DXT.iOS.Native.Twitter.TWTweetComposeViewController" /> class.
+            <br></br>Equivalent to the native <c>[[TWTweetComposeViewController alloc] init]</c> calls.
+            </summary>
+            <exception cref="T:U3DXT.Core.U3DXTException">
+            Is thrown when creation or initialization fails.
+            </exception>
+        </member>
+        <member name="M:U3DXT.iOS.Native.Twitter.TWTweetComposeViewController.InstancesRespondToSelector(System.String)">
+            <summary>
+            Returns whether native instances of this class can respond to a selector with the same name.
+            <br></br>Equivalent to the native <c>instancesRespondToSelector:</c> class method.
+            </summary>
+            <returns>
+                <c>true</c> if native instances of this class can respond to a selector with the same name, <c>false</c> otherwise.
+            </returns>
+            <param name="selectorName">The literal name of the selector.</param>
+        </member>
+        <member name="P:U3DXT.iOS.Native.Twitter.TWTweetComposeViewController.ClassExists">
+            <summary>
+            Returns whether the native TWTweetComposeViewController class exists on the platform.
+            </summary>
+            <value>
+                <c>true</c> if class exists; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="M:U3DXT.iOS.Native.Twitter.TWTweetComposeViewController.CanSendTweet">
+            <summary>
+            Returns whether you can send a Twitter request.
+            <br></br>Equivalent to the native <c>canSendTweet</c> method.
+            </summary>
+            <remarks>
+                <b>Return Value</b>
+                <p>
+                    <c>true</c> if Twitter is accessible and at least one account is set up; otherwise <c>false</c>.</p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 5.0 and later.</li>
+                </ul>
+            </remarks>
+        </member>
+        <member name="P:U3DXT.iOS.Native.Twitter.TWTweetComposeViewController.completionHandler">
+            <summary>
+            The handler to call when the user is done composing the tweet.
+            <br></br>Equivalent to the native <c>completionHandler</c> property.
+            </summary>
+            <remarks>
+                <b>Discussion</b>
+                <p>The handler has a single parameter that indicates whether the user finished or cancelled composing the tweet.</p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 5.0 and later.</li>
+                </ul>
+            </remarks>
+        </member>
+        <member name="M:U3DXT.iOS.Native.Twitter.TWTweetComposeViewController.AddImage(U3DXT.iOS.Native.UIKit.UIImage)">
+            <summary>
+            Adds an image to the tweet.
+            <br></br>Equivalent to the native <c>addImage:</c> method.
+            </summary>
+            <remarks>
+                <b>Parameters</b>
+                <p>
+                </p>
+                <em>image</em>
+                <p>The image to add to the tweet.</p>
+                <b>Return Value</b>
+                <p>
+                    <c>true</c> if successful. <c>false</c> if <em>image</em> does not fit in the currently available character space or the view was presented to the user.</p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 5.0 and later.</li>
+                </ul>
+            </remarks>
+            <param name="image">
+            </param>
+        </member>
+        <member name="M:U3DXT.iOS.Native.Twitter.TWTweetComposeViewController.AddURL(U3DXT.iOS.Native.Foundation.NSURL)">
+            <summary>
+            Adds a URL to the tweet.
+            <br></br>Equivalent to the native <c>addURL:</c> method.
+            </summary>
+            <remarks>
+                <b>Parameters</b>
+                <p>
+                </p>
+                <em>url</em>
+                <p>The URL to add to the tweet.</p>
+                <b>Return Value</b>
+                <p>
+                    <c>true</c> if successful. <c>false</c> if <em>url</em> does not fit in the currently available character space or the view was presented to the user.</p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 5.0 and later.</li>
+                </ul>
+            </remarks>
+            <param name="url">
+            </param>
+        </member>
+        <member name="M:U3DXT.iOS.Native.Twitter.TWTweetComposeViewController.RemoveAllImages">
+            <summary>
+            Removes all images from the tweet.
+            <br></br>Equivalent to the native <c>removeAllImages</c> method.
+            </summary>
+            <remarks>
+                <b>Return Value</b>
+                <p>
+                    <c>true</c> if successful. <c>false</c> if the images were not removed because the view was presented to the user.</p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 5.0 and later.</li>
+                </ul>
+            </remarks>
+        </member>
+        <member name="M:U3DXT.iOS.Native.Twitter.TWTweetComposeViewController.RemoveAllURLs">
+            <summary>
+            Removes all URLs from the tweet.
+            <br></br>Equivalent to the native <c>removeAllURLs</c> method.
+            </summary>
+            <remarks>
+                <b>Return Value</b>
+                <p>
+                    <c>true</c> if successful. <c>false</c> if the URLs were not removed because the view was presented to the user.</p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 5.0 and later.</li>
+                </ul>
+            </remarks>
+        </member>
+        <member name="M:U3DXT.iOS.Native.Twitter.TWTweetComposeViewController.SetInitialText(System.String)">
+            <summary>
+            Sets the initial text for a tweet.
+            <br></br>Equivalent to the native <c>setInitialText:</c> method.
+            </summary>
+            <remarks>
+                <b>Parameters</b>
+                <p>
+                </p>
+                <em>text</em>
+                <p>The text to add to the tweet.</p>
+                <b>Return Value</b>
+                <p>
+                    <c>true</c> if successful. <c>false</c> if <em>text</em> does not fit in the currently available character space or the view was presented to the user.</p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 5.0 and later.</li>
+                </ul>
+            </remarks>
+            <param name="text">
+            </param>
+        </member>
+        <member name="T:U3DXT.iOS.Native.Twitter.TWTweetComposeViewControllerResult">
+            <summary>
+            Possible values for the <em>result</em> parameter of the <c>completionHandler</c> property.
+            </summary>
+            <remarks>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 5.0 and later.</li>
+                </ul>
+            </remarks>
+        </member>
+        <member name="F:U3DXT.iOS.Native.Twitter.TWTweetComposeViewControllerResult.Cancelled">
+            <summary>
+                <p>The user cancelled composing a tweet.</p>
+                <p>Available in iOS 5.0 and later.</p>
+                <p>
+                </p>
+                <br>
+                </br>Equivalent to the native <c>TWTweetComposeViewControllerResultCancelled</c> enum constant.
+            </summary>
+        </member>
+        <member name="F:U3DXT.iOS.Native.Twitter.TWTweetComposeViewControllerResult.Done">
+            <summary>
+                <p>The user finished composing a tweet.</p>
+                <p>Available in iOS 5.0 and later.</p>
+                <p>
+                </p>
+                <br>
+                </br>Equivalent to the native <c>TWTweetComposeViewControllerResultDone</c> enum constant.
+            </summary>
+        </member>
+        <member name="T:U3DXT.iOS.Native.UIKit.UIActivity">
+            <summary>
+            Constants belonging to UIActivity.
+            </summary>
+        </member>
+        <member name="F:U3DXT.iOS.Native.UIKit.UIActivity.TypePrint">
+            <summary>
+                <p>The object prints the provided content. When using this service, you can provide <c>UIImage</c> and <c>NSData</c> objects and <c>NSURL</c> objects pointing to local files as data for the activity items. You can also provide <c>UIPrintPageRenderer</c>, <c>UIPrintFormatter</c>, and <c>UIPrintInfo</c> objects. </p>
+                <p>Available in iOS 6.0 and later.</p>
+                <p>
+                </p>
+                <br>
+                </br>Equivalent to the native <c>UIActivityTypePrint</c> constant.
+            </summary>
+            <remarks>
+            Activity types for which the system has built-in support.
+            <p></p><b>Discussion</b><p>These constants represent the values that can be stored in the <c>activityType</c> property of system-defined activity objects.</p><br /><!-- Media player includes --><!-- /Media player includes --><p></p>This is a constant for "Built-in Activity Types".
+            </remarks>
+        </member>
+        <member name="F:U3DXT.iOS.Native.UIKit.UIActivity.TypeAssignToContact">
+            <summary>
+                <p>The object assigns the image to a contact. When using this service, you can provide a <c>UIImage</c> object as data for the activity items. </p>
+                <p>Available in iOS 6.0 and later.</p>
+                <p>
+                </p>
+                <br>
+                </br>Equivalent to the native <c>UIActivityTypeAssignToContact</c> constant.
+            </summary>
+            <remarks>
+            Activity types for which the system has built-in support.
+            <p></p><b>Discussion</b><p>These constants represent the values that can be stored in the <c>activityType</c> property of system-defined activity objects.</p><br /><!-- Media player includes --><!-- /Media player includes --><p></p>This is a constant for "Built-in Activity Types".
+            </remarks>
+        </member>
+        <member name="F:U3DXT.iOS.Native.UIKit.UIActivity.TypePostToFacebook">
+            <summary>
+                <p>The object posts the provided content to the user’s wall on Facebook. When using this service, you can provide <c>String</c>, <c>NSAttributedString</c>, <c>UIImage</c>, <c>AVAsset</c>, and <c>NSURL</c> objects as data for the activity items. You may also specify <c>NSURL</c> objects whose contents use the <c>assets-library</c> scheme.</p>
+                <p>Available in iOS 6.0 and later.</p>
+                <p>
+                </p>
+                <br>
+                </br>Equivalent to the native <c>UIActivityTypePostToFacebook</c> constant.
+            </summary>
+            <remarks>
+            Activity types for which the system has built-in support.
+            <p></p><b>Discussion</b><p>These constants represent the values that can be stored in the <c>activityType</c> property of system-defined activity objects.</p><br /><!-- Media player includes --><!-- /Media player includes --><p></p>This is a constant for "Built-in Activity Types".
+            </remarks>
+        </member>
+        <member name="F:U3DXT.iOS.Native.UIKit.UIActivity.TypeCopyToPasteboard">
+            <summary>
+                <p>The object posts the provided content to the pasteboard. When using this service, you can provide <c>String</c>, <c>UIImage</c>, <c>NSURL</c>, <c>UIColor</c>, and <c>Dictionary</c> objects as data for the activity items. </p>
+                <p>Available in iOS 6.0 and later.</p>
+                <p>
+                </p>
+                <br>
+                </br>Equivalent to the native <c>UIActivityTypeCopyToPasteboard</c> constant.
+            </summary>
+            <remarks>
+            Activity types for which the system has built-in support.
+            <p></p><b>Discussion</b><p>These constants represent the values that can be stored in the <c>activityType</c> property of system-defined activity objects.</p><br /><!-- Media player includes --><!-- /Media player includes --><p></p>This is a constant for "Built-in Activity Types".
+            </remarks>
+        </member>
+        <member name="F:U3DXT.iOS.Native.UIKit.UIActivity.TypePostToTwitter">
+            <summary>
+                <p>The object posts the provided content to the user’s Twitter feed. When using this service, you can provide <c>String</c>, <c>NSAttributedString</c>, <c>UIImage</c>, <c>AVAsset</c>, and <c>NSURL</c> objects as data for the activity items. You may also specify <c>NSURL</c> objects whose contents use the <c>assets-library</c> scheme. </p>
+                <p>Available in iOS 6.0 and later.</p>
+                <p>
+                </p>
+                <br>
+                </br>Equivalent to the native <c>UIActivityTypePostToTwitter</c> constant.
+            </summary>
+            <remarks>
+            Activity types for which the system has built-in support.
+            <p></p><b>Discussion</b><p>These constants represent the values that can be stored in the <c>activityType</c> property of system-defined activity objects.</p><br /><!-- Media player includes --><!-- /Media player includes --><p></p>This is a constant for "Built-in Activity Types".
+            </remarks>
+        </member>
+        <member name="F:U3DXT.iOS.Native.UIKit.UIActivity.TypePostToWeibo">
+            <summary>
+                <p>The object posts the provided content to the user’s wall Weibo feed. When using this service, you can provide <c>String</c>, <c>NSAttributedString</c>, <c>UIImage</c>, <c>AVAsset</c>, and <c>NSURL</c> objects as data for the activity items. You may also specify <c>NSURL</c> objects whose contents use the <c>assets-library</c> scheme.</p>
+                <p>Available in iOS 6.0 and later.</p>
+                <p>
+                </p>
+                <br>
+                </br>Equivalent to the native <c>UIActivityTypePostToWeibo</c> constant.
+            </summary>
+            <remarks>
+            Activity types for which the system has built-in support.
+            <p></p><b>Discussion</b><p>These constants represent the values that can be stored in the <c>activityType</c> property of system-defined activity objects.</p><br /><!-- Media player includes --><!-- /Media player includes --><p></p>This is a constant for "Built-in Activity Types".
+            </remarks>
+        </member>
+        <member name="F:U3DXT.iOS.Native.UIKit.UIActivity.TypeSaveToCameraRoll">
+            <summary>
+                <p>The object assigns the image or video to the user’s camera roll. When using this service, you can provide a <c>UIImage</c> object as data for image-based activity items. For video items, you can provide an <c>NSURL</c> object with a pointer to the video.  </p>
+                <p>Available in iOS 6.0 and later.</p>
+                <p>
+                </p>
+                <br>
+                </br>Equivalent to the native <c>UIActivityTypeSaveToCameraRoll</c> constant.
+            </summary>
+            <remarks>
+            Activity types for which the system has built-in support.
+            <p></p><b>Discussion</b><p>These constants represent the values that can be stored in the <c>activityType</c> property of system-defined activity objects.</p><br /><!-- Media player includes --><!-- /Media player includes --><p></p>This is a constant for "Built-in Activity Types".
+            </remarks>
+        </member>
+        <member name="F:U3DXT.iOS.Native.UIKit.UIActivity.TypeMail">
+            <summary>
+                <p>The object posts the provided content to a new email message. When using this service, you can provide <c>String</c> and <c>UIImage</c> objects and <c>NSURL</c> objects pointing to local files as data for the activity items. You may also specify <c>NSURL</c> objects whose contents use the <c>mailto</c> scheme. </p>
+                <p>Available in iOS 6.0 and later.</p>
+                <p>
+                </p>
+                <br>
+                </br>Equivalent to the native <c>UIActivityTypeMail</c> constant.
+            </summary>
+            <remarks>
+            Activity types for which the system has built-in support.
+            <p></p><b>Discussion</b><p>These constants represent the values that can be stored in the <c>activityType</c> property of system-defined activity objects.</p><br /><!-- Media player includes --><!-- /Media player includes --><p></p>This is a constant for "Built-in Activity Types".
+            </remarks>
+        </member>
+        <member name="F:U3DXT.iOS.Native.UIKit.UIActivity.TypeMessage">
+            <summary>
+                <p>The object posts the provided content to the Messages app. When using this service, you can provide <c>String</c> and <c>NSAttributedString</c> objects as data for the activity items. You may also specify <c>NSURL</c> objects whose contents use the <c>sms</c> scheme. </p>
+                <p>Available in iOS 6.0 and later.</p>
+                <p>
+                </p>
+                <br>
+                </br>Equivalent to the native <c>UIActivityTypeMessage</c> constant.
+            </summary>
+            <remarks>
+            Activity types for which the system has built-in support.
+            <p></p><b>Discussion</b><p>These constants represent the values that can be stored in the <c>activityType</c> property of system-defined activity objects.</p><br /><!-- Media player includes --><!-- /Media player includes --><p></p>This is a constant for "Built-in Activity Types".
+            </remarks>
+        </member>
+        <member name="T:U3DXT.iOS.Native.UIKit.UIActivityViewController">
+            <summary>
+            The <c>UIActivityViewController</c> class is a standard view controller that you can use to offer various services from your application. The system provides several standard services, such as copying items to the pasteboard, posting content to social media sites, sending items via email or SMS, and more. Apps can also define custom services.
+            </summary>
+            <remarks>
+                <p>Your app is responsible for configuring, presenting, and dismissing this view controller. Configuration for the view controller involves specifying the data objects on which the view controller should act. (You can also specify the list of custom services your app supports.) When presenting the view controller, you must do so using the appropriate means for the current device. On iPad, you must present the view controller in a popover. On iPhone and iPod touch, you must present it modally.</p>
+            </remarks>
+            <exception cref="T:U3DXT.Core.U3DXTException">
+            Is thrown when creation or initialization fails.
+            </exception>
+        </member>
+        <member name="M:U3DXT.iOS.Native.UIKit.UIActivityViewController.UP_UIActivityViewController_set_completionHandler(System.String,System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.UIKit.UIActivityViewController.UP_UIActivityViewController_get_excludedActivityTypes(System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.UIKit.UIActivityViewController.UP_UIActivityViewController_set_excludedActivityTypes(System.String,System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.UIKit.UIActivityViewController.UP_UIActivityViewController_alloc_initWithActivityItems_applicationActivities_(System.String,System.String,System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.UIKit.UIActivityViewController.#ctor(U3DXT.iOS.Native.Internals._IosBaseClass._NewHelper)">
+            <summary>
+            U3DXT internal constructor.
+            </summary>
+            <param name="helper">
+            </param>
+        </member>
+        <member name="M:U3DXT.iOS.Native.UIKit.UIActivityViewController.#ctor(U3DXT.iOS.Native.Internals._IosBaseClass._NewHelper,System.String)">
+            <summary>
+            U3DXT internal constructor.
+            </summary>
+            <param name="helper">
+            </param>
+            <param name="uuid">
+            </param>
+        </member>
+        <member name="M:U3DXT.iOS.Native.UIKit.UIActivityViewController.#ctor">
+            <summary>
+            Creates and initializes a new instance of the native <see cref="T:U3DXT.iOS.Native.UIKit.UIActivityViewController" /> class.
+            <br></br>Equivalent to the native <c>[[UIActivityViewController alloc] init]</c> calls.
+            </summary>
+            <exception cref="T:U3DXT.Core.U3DXTException">
+            Is thrown when creation or initialization fails.
+            </exception>
+        </member>
+        <member name="M:U3DXT.iOS.Native.UIKit.UIActivityViewController.InstancesRespondToSelector(System.String)">
+            <summary>
+            Returns whether native instances of this class can respond to a selector with the same name.
+            <br></br>Equivalent to the native <c>instancesRespondToSelector:</c> class method.
+            </summary>
+            <returns>
+                <c>true</c> if native instances of this class can respond to a selector with the same name, <c>false</c> otherwise.
+            </returns>
+            <param name="selectorName">The literal name of the selector.</param>
+        </member>
+        <member name="P:U3DXT.iOS.Native.UIKit.UIActivityViewController.ClassExists">
+            <summary>
+            Returns whether the native UIActivityViewController class exists on the platform.
+            </summary>
+            <value>
+                <c>true</c> if class exists; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:U3DXT.iOS.Native.UIKit.UIActivityViewController.completionHandler">
+            <summary>
+            The completion handler to execute after the activity view controller is dismissed.
+            <br></br>Equivalent to the native <c>completionHandler</c> property.
+            </summary>
+            <remarks>
+                <b>Discussion</b>
+                <p>When the user-selected service finishes operating on the data, or when the user dismisses the view controller, the view controller executes this completion handler to let your app know the final result of the operation.</p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 6.0 and later.</li>
+                </ul>
+            </remarks>
+        </member>
+        <member name="P:U3DXT.iOS.Native.UIKit.UIActivityViewController.excludedActivityTypes">
+            <summary>
+            The list of services that should not be displayed.
+            <br></br>Equivalent to the native <c>excludedActivityTypes</c> property.
+            </summary>
+            <remarks>
+                <b>Discussion</b>
+                <p>This property contains an array of strings, each of which corresponds to the value you would find in the <c>activityType</c> parameter of a <c>UIActivity</c> object. Each string you specify indicates a service that you do not want displayed to the user. You might exclude services that you feel are not suitable for the content you are providing. For example, you might not want to allow the user to print a specific image. If the value of this property is <c>null</c>, no services are excluded. </p>
+                <p>This value of this property is <c>null</c> by default.</p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 6.0 and later.</li>
+                </ul>
+            </remarks>
+        </member>
+        <member name="M:U3DXT.iOS.Native.UIKit.UIActivityViewController.#ctor(System.Object[],System.Object[])">
+            <summary>
+            Creates an instance of the native UIActivityViewController and initializes the object. Initializes and returns a new activity view controller object that acts on the specified data.
+            <br></br>Equivalent to the native <c>[[UIActivityViewController alloc] initWithActivityItems:applicationActivities:]</c> calls.
+            </summary>
+            <remarks>
+                <b>Parameters</b>
+                <p>
+                </p>
+                <em>activityItems</em>
+                <p>The array of data objects on which to perform the activity. The type of objects in the array is variable and dependent on the data your application manages. For example, the data might consist of one or more string or image objects representing the currently selected content.  </p>
+                <p>Instead of actual data objects, the objects in this array can be objects that adopt the <c>UIActivityItemSource</c> protocol, such as <c>UIActivityItemProvider</c> objects. Source and provider objects act as proxies for the corresponding data in situations where you do not want to provide that data until it is needed.</p>
+                <p>This array must not be <c>null</c> and must contain at least one object. </p>
+                <em>applicationActivities</em>
+                <p>An array of <c>UIActivity</c> objects representing the custom services that your application supports. This parameter may be <c>null</c>.  </p>
+                <b>Return Value</b>
+                <p>The activity view controller to present.</p>
+                <b>Discussion</b>
+                <p>It is your responsibility to present and dismiss the view controller using the appropriate means for the given device idiom. On iPad, you must present the view controller in a popover. On other devices, you must present it modally. </p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 6.0 and later.</li>
+                </ul>
+            </remarks>
+            <param name="activityItems">
+            </param>
+            <param name="applicationActivities">
+            </param>
+        </member>
+    </members>
+</doc>

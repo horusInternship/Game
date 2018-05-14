@@ -1,0 +1,1525 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>U3DXTGameController</name>
+    </assembly>
+    <members>
+        <member name="T:U3DXT.iOS.Native.GameController.GCController">
+            <summary>
+            A <c>GCController</c> object represents a connected physical game controller. Controllers can be connected directly to the device or through a wireless connection.
+            </summary>
+            <remarks>
+            </remarks>
+            <exception cref="T:U3DXT.Core.U3DXTException">
+            Is thrown when creation or initialization fails.
+            </exception>
+        </member>
+        <member name="F:U3DXT.iOS.Native.GameController.GCController.PlayerIndexUnset">
+            <summary>
+                <p>The default index for a player on a controller. No lights are lit on the controller.</p>
+                <p>Available in iOS 7.0 and later.</p>
+                <p>
+                </p>
+                <br>
+                </br>Equivalent to the native <c>GCControllerPlayerIndexUnset</c> constant.
+            </summary>
+            <remarks>
+            Predefined values for controller indices.
+            <p></p><p></p>This is a constant for "Controller Player Indices".
+            </remarks>
+        </member>
+        <member name="F:U3DXT.iOS.Native.GameController.GCController.GCControllerDidConnectNotification">
+            <summary>
+            Constant name for the native <c>GCControllerDidConnectNotification</c> notification.
+            </summary>
+        </member>
+        <member name="E:U3DXT.iOS.Native.GameController.GCController.DidConnect">
+            <summary>
+                <b>GCControllerDidConnectNotification</b> Posted immediately after a new controller is connected to the device. <p>The notification object is the <c>GCController</c> object that represents the connected device.</p><b>Availability</b><ul><li>Available in iOS 7.0 and later.</li></ul><br></br>Equivalent to adding the event handler as an observer to the native <c>GCControllerDidConnectNotification</c> notification.
+            </summary>
+            <remarks>
+            </remarks>
+        </member>
+        <member name="F:U3DXT.iOS.Native.GameController.GCController.GCControllerDidDisconnectNotification">
+            <summary>
+            Constant name for the native <c>GCControllerDidDisconnectNotification</c> notification.
+            </summary>
+        </member>
+        <member name="E:U3DXT.iOS.Native.GameController.GCController.DidDisconnect">
+            <summary>
+                <b>GCControllerDidDisconnectNotification</b> Posted immediately after a controller is disconnected from the device. <p>The notification object is the <c>GCController</c> object that represented the disconnected device.</p><b>Availability</b><ul><li>Available in iOS 7.0 and later.</li></ul><br></br>Equivalent to adding the event handler as an observer to the native <c>GCControllerDidDisconnectNotification</c> notification.
+            </summary>
+            <remarks>
+            </remarks>
+        </member>
+        <member name="E:U3DXT.iOS.Native.GameController.GCController.AllNotifications">
+            <summary>
+            Occurs when this object sends any notification.
+            </summary>
+        </member>
+        <member name="T:U3DXT.iOS.Native.GameController.GCController.AllInstances">
+            <summary>
+            Static class for notifications of all instances of the <c>GCController</c> class.
+            </summary>
+        </member>
+        <member name="E:U3DXT.iOS.Native.GameController.GCController.AllInstances.DidConnect">
+            <summary>
+                <b>GCControllerDidConnectNotification</b> Posted immediately after a new controller is connected to the device. <p>The notification object is the <c>GCController</c> object that represents the connected device.</p><b>Availability</b><ul><li>Available in iOS 7.0 and later.</li></ul><br></br>Equivalent to adding the event handler as an observer to the native <c>GCControllerDidConnectNotification</c> notification.
+            </summary>
+            <remarks>
+            </remarks>
+        </member>
+        <member name="E:U3DXT.iOS.Native.GameController.GCController.AllInstances.DidDisconnect">
+            <summary>
+                <b>GCControllerDidDisconnectNotification</b> Posted immediately after a controller is disconnected from the device. <p>The notification object is the <c>GCController</c> object that represented the disconnected device.</p><b>Availability</b><ul><li>Available in iOS 7.0 and later.</li></ul><br></br>Equivalent to adding the event handler as an observer to the native <c>GCControllerDidDisconnectNotification</c> notification.
+            </summary>
+            <remarks>
+            </remarks>
+        </member>
+        <member name="M:U3DXT.iOS.Native.GameController.GCController.UP_GCController_controllers">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.GameController.GCController.UP_GCController_startWirelessControllerDiscoveryWithCompletionHandler_(System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.GameController.GCController.UP_GCController_stopWirelessControllerDiscovery">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.GameController.GCController.UP_GCController_get_attachedToDevice(System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.GameController.GCController.UP_GCController_set_controllerPausedHandler(System.String,System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.GameController.GCController.UP_GCController_get_extendedGamepad(System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.GameController.GCController.UP_GCController_get_gamepad(System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.GameController.GCController.UP_GCController_get_playerIndex(System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.GameController.GCController.UP_GCController_set_playerIndex(System.String,System.Int32)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.GameController.GCController.UP_GCController_get_vendorName(System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.GameController.GCController.#ctor(U3DXT.iOS.Native.Internals._IosBaseClass._NewHelper)">
+            <summary>
+            U3DXT internal constructor.
+            </summary>
+            <param name="helper">
+            </param>
+        </member>
+        <member name="M:U3DXT.iOS.Native.GameController.GCController.#ctor(U3DXT.iOS.Native.Internals._IosBaseClass._NewHelper,System.String)">
+            <summary>
+            U3DXT internal constructor.
+            </summary>
+            <param name="helper">
+            </param>
+            <param name="uuid">
+            </param>
+        </member>
+        <member name="M:U3DXT.iOS.Native.GameController.GCController.#ctor">
+            <summary>
+            Creates and initializes a new instance of the native <see cref="T:U3DXT.iOS.Native.GameController.GCController" /> class.
+            <br></br>Equivalent to the native <c>[[GCController alloc] init]</c> calls.
+            </summary>
+            <exception cref="T:U3DXT.Core.U3DXTException">
+            Is thrown when creation or initialization fails.
+            </exception>
+        </member>
+        <member name="M:U3DXT.iOS.Native.GameController.GCController.InstancesRespondToSelector(System.String)">
+            <summary>
+            Returns whether native instances of this class can respond to a selector with the same name.
+            <br></br>Equivalent to the native <c>instancesRespondToSelector:</c> class method.
+            </summary>
+            <returns>
+                <c>true</c> if native instances of this class can respond to a selector with the same name, <c>false</c> otherwise.
+            </returns>
+            <param name="selectorName">The literal name of the selector.</param>
+        </member>
+        <member name="P:U3DXT.iOS.Native.GameController.GCController.ClassExists">
+            <summary>
+            Returns whether the native GCController class exists on the platform.
+            </summary>
+            <value>
+                <c>true</c> if class exists; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="M:U3DXT.iOS.Native.GameController.GCController.Controllers">
+            <summary>
+            The controllers connected to the device.
+            <br></br>Equivalent to the native <c>controllers</c> method.
+            </summary>
+            <remarks>
+                <b>Return Value</b>
+                <p>An array of <c>GCController</c> objects for all currently connected controllers.</p>
+                <b>Discussion</b>
+                <p>Whenever a controller is connected to or disconnected from the device, the array of controllers is updated and a notification is posted.</p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 7.0 and later.</li>
+                </ul>
+                <b>See Also</b>
+                <ul>
+                    <li>
+                        <c>GCControllerDidConnectNotification</c>
+                    </li>
+                    <li>
+                        <c>GCControllerDidDisconnectNotification</c>
+                    </li>
+                </ul>
+            </remarks>
+        </member>
+        <member name="M:U3DXT.iOS.Native.GameController.GCController.StartWirelessControllerDiscovery(System.Action)">
+            <summary>
+            Starts browsing for nearby controllers.
+            <br></br>Equivalent to the native <c>startWirelessControllerDiscoveryWithCompletionHandler:</c> method.
+            </summary>
+            <remarks>
+                <b>Parameters</b>
+                <p>
+                </p>
+                <em>completionHandler</em>
+                <p>A block to be called when browsing ends.</p>
+                <b>Discussion</b>
+                <p>You should include a user interface in your game to allow the player to determine when controllers are discovered. When the user chooses to search for controllers, call this method. The device searches asynchronously for discoverable wireless controllers. Whenever a new controller is connected, a <c>GCControllerDidConnectNotification</c> notification is posted. When no more devices can be found or the discovery process times out, the completion handler is called.</p>
+                <p>If this method is called multiple times, only the block associated with the last invocation is called when discovery times out.</p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 7.0 and later.</li>
+                </ul>
+                <b>See Also</b>
+                <ul>
+                    <li>
+                        <c>+ stopWirelessControllerDiscovery</c>
+                    </li>
+                </ul>
+            </remarks>
+            <param name="completionHandler"> A callback delegate.</param>
+        </member>
+        <member name="M:U3DXT.iOS.Native.GameController.GCController.StopWirelessControllerDiscovery">
+            <summary>
+            Stops browsing for nearby controllers.
+            <br></br>Equivalent to the native <c>stopWirelessControllerDiscovery</c> method.
+            </summary>
+            <remarks>
+                <b>Discussion</b>
+                <p>This method may be called at any time. If a search for new wireless controllers in progress, that search ends and its completion handler is called. </p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 7.0 and later.</li>
+                </ul>
+                <b>See Also</b>
+                <ul>
+                    <li>
+                        <c>+ startWirelessControllerDiscoveryWithCompletionHandler:</c>
+                    </li>
+                </ul>
+            </remarks>
+        </member>
+        <member name="P:U3DXT.iOS.Native.GameController.GCController.attachedToDevice">
+            <summary>
+            A Boolean property that indicates whether the controller is closely integrated with the device. (read-only)
+            <br></br>Equivalent to the native <c>attachedToDevice</c> property.
+            </summary>
+            <remarks>
+                <b>Discussion</b>
+                <p>If <c>true</c>, then the controller is attached to the device or is quite close to it. If <c>false</c>, then the controller is not guaranteed to be near the device. This property is provided to allow you to make informed decisions about what other user interface interactions with the device will make sense.</p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 7.0 and later.</li>
+                </ul>
+            </remarks>
+        </member>
+        <member name="P:U3DXT.iOS.Native.GameController.GCController.controllerPausedHandler">
+            <summary>
+            A block called when the controller’s pause button is pressed.
+            <br></br>Equivalent to the native <c>controllerPausedHandler</c> property.
+            </summary>
+            <remarks>
+                <b>Discussion</b>
+                <p>All controllers have a button that allows the player to suspend the current gameplay. When pressed, the block associated with this property is called. Your game should toggle between pausing and resuming gameplay. When paused, your game must display a user interface that indicates that the game is paused. This interface should tell the player how to resume the game. The exact design of this user interface is up to you; typically it should match the style of the rest of your game.</p>
+                <p>If your game is paused for other reasons defined by your game, and is in a state where it can be resumed, pressing the pause button should resume gameplay. Which is to say that the pause button on the controller as well as other things that pause gameplay should all present a seamless interface to the player.</p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 7.0 and later.</li>
+                </ul>
+            </remarks>
+        </member>
+        <member name="P:U3DXT.iOS.Native.GameController.GCController.extendedGamepad">
+            <summary>
+            The extended gamepad profile. (read-only)
+            <br></br>Equivalent to the native <c>extendedGamepad</c> property.
+            </summary>
+            <remarks>
+                <b>Discussion</b>
+                <p>If the controller supports the extended gamepad profile, then this property holds a <c>GCExtendedGamepad</c> object. You use this object to access the input elements of the controller. If the controller does not support the extended gamepad profile, this property holds <c>null</c>.</p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 7.0 and later.</li>
+                </ul>
+            </remarks>
+        </member>
+        <member name="P:U3DXT.iOS.Native.GameController.GCController.gamepad">
+            <summary>
+            The gamepad profile. (read-only)
+            <br></br>Equivalent to the native <c>gamepad</c> property.
+            </summary>
+            <remarks>
+                <b>Discussion</b>
+                <p>If the controller supports the gamepad profile, then this property holds a <c>GCGamepad</c> object. You use this object to access the input elements of the controller. If the controller does not support the gamepad profile, this property holds <c>null</c>.</p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 7.0 and later.</li>
+                </ul>
+            </remarks>
+        </member>
+        <member name="P:U3DXT.iOS.Native.GameController.GCController.playerIndex">
+            <summary>
+            The player index assigned to the controller.
+            <br></br>Equivalent to the native <c>playerIndex</c> property.
+            </summary>
+            <remarks>
+                <b>Discussion</b>
+                <p>The player index is a value that is persistently stored on the device for a particular controller. Once assigned, the device uses the same index for that controller whenever it is discovered. Your app can use this index to identify a particular controller in the future. The default value is <c>GCControllerPlayerIndexUnset</c>. An index value can be <c>0</c> or any positive integer value, but you should almost always use numbers between <c>0</c> and <c>3</c>. When you choose a number in this range, a matching LED on the controller lights up.</p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 7.0 and later.</li>
+                </ul>
+            </remarks>
+        </member>
+        <member name="P:U3DXT.iOS.Native.GameController.GCController.vendorName">
+            <summary>
+            The name of the vendor that manufactured the controller. (read-only)
+            <br></br>Equivalent to the native <c>vendorName</c> property.
+            </summary>
+            <remarks>
+                <b>Discussion</b>
+                <p>The value of this property may be <c>null</c> and is not guaranteed to be unique.</p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 7.0 and later.</li>
+                </ul>
+            </remarks>
+        </member>
+        <member name="T:U3DXT.iOS.Native.GameController.GCControllerAxisInput">
+            <summary>
+            A <c>GCControllerAxisInput</c> element measures movement along a particular axis. An axis element is always an analog element.
+            </summary>
+            <remarks>
+            </remarks>
+            <exception cref="T:U3DXT.Core.U3DXTException">
+            Is thrown when creation or initialization fails.
+            </exception>
+        </member>
+        <member name="M:U3DXT.iOS.Native.GameController.GCControllerAxisInput.UP_GCControllerAxisInput_get_value(System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.GameController.GCControllerAxisInput.UP_GCControllerAxisInput_set_valueChangedHandler(System.String,System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.GameController.GCControllerAxisInput.#ctor(U3DXT.iOS.Native.Internals._IosBaseClass._NewHelper)">
+            <summary>
+            U3DXT internal constructor.
+            </summary>
+            <param name="helper">
+            </param>
+        </member>
+        <member name="M:U3DXT.iOS.Native.GameController.GCControllerAxisInput.#ctor(U3DXT.iOS.Native.Internals._IosBaseClass._NewHelper,System.String)">
+            <summary>
+            U3DXT internal constructor.
+            </summary>
+            <param name="helper">
+            </param>
+            <param name="uuid">
+            </param>
+        </member>
+        <member name="M:U3DXT.iOS.Native.GameController.GCControllerAxisInput.#ctor">
+            <summary>
+            Creates and initializes a new instance of the native <see cref="T:U3DXT.iOS.Native.GameController.GCControllerAxisInput" /> class.
+            <br></br>Equivalent to the native <c>[[GCControllerAxisInput alloc] init]</c> calls.
+            </summary>
+            <exception cref="T:U3DXT.Core.U3DXTException">
+            Is thrown when creation or initialization fails.
+            </exception>
+        </member>
+        <member name="M:U3DXT.iOS.Native.GameController.GCControllerAxisInput.InstancesRespondToSelector(System.String)">
+            <summary>
+            Returns whether native instances of this class can respond to a selector with the same name.
+            <br></br>Equivalent to the native <c>instancesRespondToSelector:</c> class method.
+            </summary>
+            <returns>
+                <c>true</c> if native instances of this class can respond to a selector with the same name, <c>false</c> otherwise.
+            </returns>
+            <param name="selectorName">The literal name of the selector.</param>
+        </member>
+        <member name="P:U3DXT.iOS.Native.GameController.GCControllerAxisInput.ClassExists">
+            <summary>
+            Returns whether the native GCControllerAxisInput class exists on the platform.
+            </summary>
+            <value>
+                <c>true</c> if class exists; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:U3DXT.iOS.Native.GameController.GCControllerAxisInput.value">
+            <summary>
+            The current value of the axis. (read-only)
+            <br></br>Equivalent to the native <c>value</c> property.
+            </summary>
+            <remarks>
+                <b>Discussion</b>
+                <p>On a physical controller, it is common for a portion of the physical control’s moment to be ignored near its neutral position. This part of the control is known as its <strong>deadzone</strong>. The <c>GCControllerAxisInput</c> element handles the deadzone and other physical constraints of the hardware control and computes a normalized value. The value is in a range from <c>-1</c> to <c>1</c>.   If the value is <c>0</c>, then the movement is in the deadzone. A non-zero value indicates the moment is outside of the deadzone. The value is normalized so that no values are lost because of the deadzone.</p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 7.0 and later.</li>
+                </ul>
+            </remarks>
+        </member>
+        <member name="P:U3DXT.iOS.Native.GameController.GCControllerAxisInput.valueChangedHandler">
+            <summary>
+            A handler to be called when the axis changes value.
+            <br></br>Equivalent to the native <c>valueChangedHandler</c> property.
+            </summary>
+            <remarks>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 7.0 and later.</li>
+                </ul>
+            </remarks>
+        </member>
+        <member name="T:U3DXT.iOS.Native.GameController.GCControllerButtonInput">
+            <summary>
+            A <c>GCControllerButtonInput</c> element measure a button press. This element can either be analog or digital.
+            </summary>
+            <remarks>
+            </remarks>
+            <exception cref="T:U3DXT.Core.U3DXTException">
+            Is thrown when creation or initialization fails.
+            </exception>
+        </member>
+        <member name="M:U3DXT.iOS.Native.GameController.GCControllerButtonInput.UP_GCControllerButtonInput_get_pressed(System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.GameController.GCControllerButtonInput.UP_GCControllerButtonInput_get_value(System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.GameController.GCControllerButtonInput.UP_GCControllerButtonInput_set_valueChangedHandler(System.String,System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.GameController.GCControllerButtonInput.#ctor(U3DXT.iOS.Native.Internals._IosBaseClass._NewHelper)">
+            <summary>
+            U3DXT internal constructor.
+            </summary>
+            <param name="helper">
+            </param>
+        </member>
+        <member name="M:U3DXT.iOS.Native.GameController.GCControllerButtonInput.#ctor(U3DXT.iOS.Native.Internals._IosBaseClass._NewHelper,System.String)">
+            <summary>
+            U3DXT internal constructor.
+            </summary>
+            <param name="helper">
+            </param>
+            <param name="uuid">
+            </param>
+        </member>
+        <member name="M:U3DXT.iOS.Native.GameController.GCControllerButtonInput.#ctor">
+            <summary>
+            Creates and initializes a new instance of the native <see cref="T:U3DXT.iOS.Native.GameController.GCControllerButtonInput" /> class.
+            <br></br>Equivalent to the native <c>[[GCControllerButtonInput alloc] init]</c> calls.
+            </summary>
+            <exception cref="T:U3DXT.Core.U3DXTException">
+            Is thrown when creation or initialization fails.
+            </exception>
+        </member>
+        <member name="M:U3DXT.iOS.Native.GameController.GCControllerButtonInput.InstancesRespondToSelector(System.String)">
+            <summary>
+            Returns whether native instances of this class can respond to a selector with the same name.
+            <br></br>Equivalent to the native <c>instancesRespondToSelector:</c> class method.
+            </summary>
+            <returns>
+                <c>true</c> if native instances of this class can respond to a selector with the same name, <c>false</c> otherwise.
+            </returns>
+            <param name="selectorName">The literal name of the selector.</param>
+        </member>
+        <member name="P:U3DXT.iOS.Native.GameController.GCControllerButtonInput.ClassExists">
+            <summary>
+            Returns whether the native GCControllerButtonInput class exists on the platform.
+            </summary>
+            <value>
+                <c>true</c> if class exists; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:U3DXT.iOS.Native.GameController.GCControllerButtonInput.pressed">
+            <summary>
+            A Boolean value that indicates whether the button is pressed. (read-only)
+            <br></br>Equivalent to the native <c>pressed</c> property.
+            </summary>
+            <remarks>
+                <b>Discussion</b>
+                <p>If you do not care about pressure sensitive controls, use this property instead of reading the <c>value</c> property.</p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 7.0 and later.</li>
+                </ul>
+            </remarks>
+        </member>
+        <member name="P:U3DXT.iOS.Native.GameController.GCControllerButtonInput.value">
+            <summary>
+            The level of pressure being applied to the button. (read-only)
+            <br></br>Equivalent to the native <c>value</c> property.
+            </summary>
+            <remarks>
+                <b>Discussion</b>
+                <p>The value of the button is normalized to be between <c>0</c> and <c>1</c> inclusive. A higher value indicates more pressure.</p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 7.0 and later.</li>
+                </ul>
+            </remarks>
+        </member>
+        <member name="P:U3DXT.iOS.Native.GameController.GCControllerButtonInput.valueChangedHandler">
+            <summary>
+            A handler to be called when the button changes value.
+            <br></br>Equivalent to the native <c>valueChangedHandler</c> property.
+            </summary>
+            <remarks>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 7.0 and later.</li>
+                </ul>
+            </remarks>
+        </member>
+        <member name="T:U3DXT.iOS.Native.GameController.GCControllerDirectionPad">
+            <summary>
+            A <c>GCControllerDirectionPad</c> object represents a two-dimensional control such as a directional pad or a thumbstick. This element does not provide values of its own. Instead, its values are provided by its child elements. It provides two sets of children that map to the same physical controls, so your app can view the directional pad as either either a pair of axis elements (horizontal, vertical), or four button elements (up, down, left, right).
+            </summary>
+            <remarks>
+            </remarks>
+            <exception cref="T:U3DXT.Core.U3DXTException">
+            Is thrown when creation or initialization fails.
+            </exception>
+        </member>
+        <member name="M:U3DXT.iOS.Native.GameController.GCControllerDirectionPad.UP_GCControllerDirectionPad_get_down(System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.GameController.GCControllerDirectionPad.UP_GCControllerDirectionPad_get_left(System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.GameController.GCControllerDirectionPad.UP_GCControllerDirectionPad_get_right(System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.GameController.GCControllerDirectionPad.UP_GCControllerDirectionPad_get_up(System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.GameController.GCControllerDirectionPad.UP_GCControllerDirectionPad_set_valueChangedHandler(System.String,System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.GameController.GCControllerDirectionPad.UP_GCControllerDirectionPad_get_xAxis(System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.GameController.GCControllerDirectionPad.UP_GCControllerDirectionPad_get_yAxis(System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.GameController.GCControllerDirectionPad.#ctor(U3DXT.iOS.Native.Internals._IosBaseClass._NewHelper)">
+            <summary>
+            U3DXT internal constructor.
+            </summary>
+            <param name="helper">
+            </param>
+        </member>
+        <member name="M:U3DXT.iOS.Native.GameController.GCControllerDirectionPad.#ctor(U3DXT.iOS.Native.Internals._IosBaseClass._NewHelper,System.String)">
+            <summary>
+            U3DXT internal constructor.
+            </summary>
+            <param name="helper">
+            </param>
+            <param name="uuid">
+            </param>
+        </member>
+        <member name="M:U3DXT.iOS.Native.GameController.GCControllerDirectionPad.#ctor">
+            <summary>
+            Creates and initializes a new instance of the native <see cref="T:U3DXT.iOS.Native.GameController.GCControllerDirectionPad" /> class.
+            <br></br>Equivalent to the native <c>[[GCControllerDirectionPad alloc] init]</c> calls.
+            </summary>
+            <exception cref="T:U3DXT.Core.U3DXTException">
+            Is thrown when creation or initialization fails.
+            </exception>
+        </member>
+        <member name="M:U3DXT.iOS.Native.GameController.GCControllerDirectionPad.InstancesRespondToSelector(System.String)">
+            <summary>
+            Returns whether native instances of this class can respond to a selector with the same name.
+            <br></br>Equivalent to the native <c>instancesRespondToSelector:</c> class method.
+            </summary>
+            <returns>
+                <c>true</c> if native instances of this class can respond to a selector with the same name, <c>false</c> otherwise.
+            </returns>
+            <param name="selectorName">The literal name of the selector.</param>
+        </member>
+        <member name="P:U3DXT.iOS.Native.GameController.GCControllerDirectionPad.ClassExists">
+            <summary>
+            Returns whether the native GCControllerDirectionPad class exists on the platform.
+            </summary>
+            <value>
+                <c>true</c> if class exists; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:U3DXT.iOS.Native.GameController.GCControllerDirectionPad.down">
+            <summary>
+            A measurement of how far down the directional pad has been moved. (read-only)
+            <br></br>Equivalent to the native <c>down</c> property.
+            </summary>
+            <remarks>
+                <b>Discussion</b>
+                <p>The value of the <c>down</c> property is mutually exclusive with the value of the <c>up</c> property. This means that whenever the value of the <c>down</c> property is non-zero, the value of the <c>up</c> property is <c>0</c>.</p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 7.0 and later.</li>
+                </ul>
+            </remarks>
+        </member>
+        <member name="P:U3DXT.iOS.Native.GameController.GCControllerDirectionPad.left">
+            <summary>
+            A measurement of how far left the directional pad has been moved. (read-only)
+            <br></br>Equivalent to the native <c>left</c> property.
+            </summary>
+            <remarks>
+                <b>Discussion</b>
+                <p>The value of the <c>left</c> property is mutually exclusive with the value of the <c>right</c> property. This means that whenever the value of the <c>left</c> property is non-zero, the value of the <c>right</c> property is <c>0</c>.</p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 7.0 and later.</li>
+                </ul>
+            </remarks>
+        </member>
+        <member name="P:U3DXT.iOS.Native.GameController.GCControllerDirectionPad.right">
+            <summary>
+            A measurement of how far right the directional pad has been moved. (read-only)
+            <br></br>Equivalent to the native <c>right</c> property.
+            </summary>
+            <remarks>
+                <b>Discussion</b>
+                <p>The value of the <c>right</c> property is mutually exclusive with the value of the <c>left</c> property. This means that whenever the value of the <c>right</c> property is non-zero, the value of the <c>left</c> property is <c>0</c>.</p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 7.0 and later.</li>
+                </ul>
+            </remarks>
+        </member>
+        <member name="P:U3DXT.iOS.Native.GameController.GCControllerDirectionPad.up">
+            <summary>
+            A measurement of how far up the directional pad has been moved. (read-only)
+            <br></br>Equivalent to the native <c>up</c> property.
+            </summary>
+            <remarks>
+                <b>Discussion</b>
+                <p>The value of the <c>up</c> property is mutually exclusive with the value of the <c>down</c> property. This means that whenever the value of the <c>up</c> property is non-zero, the value of the <c>down</c> property is <c>0</c>.</p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 7.0 and later.</li>
+                </ul>
+            </remarks>
+        </member>
+        <member name="P:U3DXT.iOS.Native.GameController.GCControllerDirectionPad.valueChangedHandler">
+            <summary>
+            A handler to be called when the directional pad element changes values.
+            <br></br>Equivalent to the native <c>valueChangedHandler</c> property.
+            </summary>
+            <remarks>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 7.0 and later.</li>
+                </ul>
+            </remarks>
+        </member>
+        <member name="P:U3DXT.iOS.Native.GameController.GCControllerDirectionPad.xAxis">
+            <summary>
+            The value of the directional pad along the horizontal axis (left and right). (read-only)
+            <br></br>Equivalent to the native <c>xAxis</c> property.
+            </summary>
+            <remarks>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 7.0 and later.</li>
+                </ul>
+            </remarks>
+        </member>
+        <member name="P:U3DXT.iOS.Native.GameController.GCControllerDirectionPad.yAxis">
+            <summary>
+            The value of the directional pad along the vertical axis (up and down). (read-only)
+            <br></br>Equivalent to the native <c>yAxis</c> property.
+            </summary>
+            <remarks>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 7.0 and later.</li>
+                </ul>
+            </remarks>
+        </member>
+        <member name="T:U3DXT.iOS.Native.GameController.GCControllerElement">
+            <summary>
+            A <c>GCControllerElement</c> object represents a measurable value on a controller profile. Typically, elements are mapped to physical controls on a controller. When a player manipulates those controls, the element object’s values change. The <c>GCControllerElement</c> class is never instantiated directly. Instead, subclasses that represent the different kinds of elements are instantiated.  Table 1  lists the supported element types.
+            </summary>
+            <remarks>
+                <table class="graybox" border="0" cellspacing="0" cellpadding="5">
+                    <caption class="tablecaption">
+                        <strong class="caption_number">Table 1</strong>  Kinds of controller elements</caption>
+                    <tr>
+                        <th scope="col" class="TableHeading_TableRow_TableCell">
+                            <p>Class</p>
+                        </th>
+                        <th scope="col" class="TableHeading_TableRow_TableCell">
+                            <p>Description</p>
+                        </th>
+                    </tr>
+                    <tr>
+                        <td scope="row">
+                            <p>
+                                <c>GCControllerAxisInput</c>
+                            </p>
+                        </td>
+                        <td>
+                            <p>An element that measures movement along an axis.</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td scope="row">
+                            <p>
+                                <c>GCControllerButtonInput</c>
+                            </p>
+                        </td>
+                        <td>
+                            <p>An element that measures a button press.</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td scope="row">
+                            <p>
+                                <c>GCControllerDirectionPad</c>
+                            </p>
+                        </td>
+                        <td>
+                            <p>An element that measures movement across two different axes.</p>
+                        </td>
+                    </tr>
+                </table>
+                <p>An element class usually represents an isolated element, such as a button, whose values can be read. However, an element can itself have child elements. For example, a direction pad is a two-dimensional control whose values can either be read as a pair of axis elements or four button elements. If an element is a child of another element, its <c>collection</c> property points to its parent element.</p>
+                <p>The <c>analog</c> property determines whether the element returns a range of values or discrete (digital) values.</p>
+            </remarks>
+            <exception cref="T:U3DXT.Core.U3DXTException">
+            Is thrown when creation or initialization fails.
+            </exception>
+        </member>
+        <member name="M:U3DXT.iOS.Native.GameController.GCControllerElement.UP_GCControllerElement_get_analog(System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.GameController.GCControllerElement.UP_GCControllerElement_get_collection(System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.GameController.GCControllerElement.#ctor(U3DXT.iOS.Native.Internals._IosBaseClass._NewHelper)">
+            <summary>
+            U3DXT internal constructor.
+            </summary>
+            <param name="helper">
+            </param>
+        </member>
+        <member name="M:U3DXT.iOS.Native.GameController.GCControllerElement.#ctor(U3DXT.iOS.Native.Internals._IosBaseClass._NewHelper,System.String)">
+            <summary>
+            U3DXT internal constructor.
+            </summary>
+            <param name="helper">
+            </param>
+            <param name="uuid">
+            </param>
+        </member>
+        <member name="M:U3DXT.iOS.Native.GameController.GCControllerElement.#ctor">
+            <summary>
+            Creates and initializes a new instance of the native <see cref="T:U3DXT.iOS.Native.GameController.GCControllerElement" /> class.
+            <br></br>Equivalent to the native <c>[[GCControllerElement alloc] init]</c> calls.
+            </summary>
+            <exception cref="T:U3DXT.Core.U3DXTException">
+            Is thrown when creation or initialization fails.
+            </exception>
+        </member>
+        <member name="M:U3DXT.iOS.Native.GameController.GCControllerElement.InstancesRespondToSelector(System.String)">
+            <summary>
+            Returns whether native instances of this class can respond to a selector with the same name.
+            <br></br>Equivalent to the native <c>instancesRespondToSelector:</c> class method.
+            </summary>
+            <returns>
+                <c>true</c> if native instances of this class can respond to a selector with the same name, <c>false</c> otherwise.
+            </returns>
+            <param name="selectorName">The literal name of the selector.</param>
+        </member>
+        <member name="P:U3DXT.iOS.Native.GameController.GCControllerElement.ClassExists">
+            <summary>
+            Returns whether the native GCControllerElement class exists on the platform.
+            </summary>
+            <value>
+                <c>true</c> if class exists; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:U3DXT.iOS.Native.GameController.GCControllerElement.analog">
+            <summary>
+            Returns a Boolean value that indicates whether the element provides analog data. (read-only)
+            <br></br>Equivalent to the native <c>analog</c> property.
+            </summary>
+            <remarks>
+                <b>Discussion</b>
+                <p>If the value is <c>true</c>, then the value properties defined by the element subclass can return a range (from minimum to maximum) of possible values. For example, this element might be a pressure-sensitive button or an axis of a thumb stick that allows for a range of physical movement. If the value is <c>false</c>, then the element’s value properties only provides discrete values, typically <c>0</c> if the element is off, and <c>1</c> if the element is on. </p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 7.0 and later.</li>
+                </ul>
+            </remarks>
+        </member>
+        <member name="P:U3DXT.iOS.Native.GameController.GCControllerElement.collection">
+            <summary>
+            Returns the element that this element is part of. (read-only)
+            <br></br>Equivalent to the native <c>collection</c> property.
+            </summary>
+            <remarks>
+                <b>Discussion</b>
+                <p>If the element is part of another element, this property holds the parent element. Otherwise, it holds <c>null</c>.</p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 7.0 and later.</li>
+                </ul>
+            </remarks>
+        </member>
+        <member name="T:U3DXT.iOS.Native.GameController.GCExtendedGamepad">
+            <summary>
+            A <c>GCExtendedGamepad</c> object implements a logical profile for a set of gamepad controls. A profile maps the hardware controls of a particular controller to a set of elements usable by your game.
+            </summary>
+            <remarks>
+                <p>The controls associated with the extended gamepad profile include the following:</p>
+                <ul class="ul">
+                    <li class="li">
+                        <p>Two shoulder buttons.</p>
+                    </li>
+                    <li class="li">
+                        <p>Two triggers.</p>
+                    </li>
+                    <li class="li">
+                        <p>Four face buttons arranged in a diamond pattern.</p>
+                    </li>
+                    <li class="li">
+                        <p>One directional pad.</p>
+                    </li>
+                    <li class="li">
+                        <p>Two thumbsticks.</p>
+                    </li>
+                </ul>
+                <figure class="figure">
+                </figure>
+            </remarks>
+            <exception cref="T:U3DXT.Core.U3DXTException">
+            Is thrown when creation or initialization fails.
+            </exception>
+        </member>
+        <member name="M:U3DXT.iOS.Native.GameController.GCExtendedGamepad.UP_GCExtendedGamepad_get_buttonA(System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.GameController.GCExtendedGamepad.UP_GCExtendedGamepad_get_buttonB(System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.GameController.GCExtendedGamepad.UP_GCExtendedGamepad_get_buttonX(System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.GameController.GCExtendedGamepad.UP_GCExtendedGamepad_get_buttonY(System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.GameController.GCExtendedGamepad.UP_GCExtendedGamepad_get_controller(System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.GameController.GCExtendedGamepad.UP_GCExtendedGamepad_get_dpad(System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.GameController.GCExtendedGamepad.UP_GCExtendedGamepad_get_leftShoulder(System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.GameController.GCExtendedGamepad.UP_GCExtendedGamepad_get_leftThumbstick(System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.GameController.GCExtendedGamepad.UP_GCExtendedGamepad_get_leftTrigger(System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.GameController.GCExtendedGamepad.UP_GCExtendedGamepad_get_rightShoulder(System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.GameController.GCExtendedGamepad.UP_GCExtendedGamepad_get_rightThumbstick(System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.GameController.GCExtendedGamepad.UP_GCExtendedGamepad_get_rightTrigger(System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.GameController.GCExtendedGamepad.UP_GCExtendedGamepad_set_valueChangedHandler(System.String,System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.GameController.GCExtendedGamepad.UP_GCExtendedGamepad_saveSnapshot(System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.GameController.GCExtendedGamepad.#ctor(U3DXT.iOS.Native.Internals._IosBaseClass._NewHelper)">
+            <summary>
+            U3DXT internal constructor.
+            </summary>
+            <param name="helper">
+            </param>
+        </member>
+        <member name="M:U3DXT.iOS.Native.GameController.GCExtendedGamepad.#ctor(U3DXT.iOS.Native.Internals._IosBaseClass._NewHelper,System.String)">
+            <summary>
+            U3DXT internal constructor.
+            </summary>
+            <param name="helper">
+            </param>
+            <param name="uuid">
+            </param>
+        </member>
+        <member name="M:U3DXT.iOS.Native.GameController.GCExtendedGamepad.#ctor">
+            <summary>
+            Creates and initializes a new instance of the native <see cref="T:U3DXT.iOS.Native.GameController.GCExtendedGamepad" /> class.
+            <br></br>Equivalent to the native <c>[[GCExtendedGamepad alloc] init]</c> calls.
+            </summary>
+            <exception cref="T:U3DXT.Core.U3DXTException">
+            Is thrown when creation or initialization fails.
+            </exception>
+        </member>
+        <member name="M:U3DXT.iOS.Native.GameController.GCExtendedGamepad.InstancesRespondToSelector(System.String)">
+            <summary>
+            Returns whether native instances of this class can respond to a selector with the same name.
+            <br></br>Equivalent to the native <c>instancesRespondToSelector:</c> class method.
+            </summary>
+            <returns>
+                <c>true</c> if native instances of this class can respond to a selector with the same name, <c>false</c> otherwise.
+            </returns>
+            <param name="selectorName">The literal name of the selector.</param>
+        </member>
+        <member name="P:U3DXT.iOS.Native.GameController.GCExtendedGamepad.ClassExists">
+            <summary>
+            Returns whether the native GCExtendedGamepad class exists on the platform.
+            </summary>
+            <value>
+                <c>true</c> if class exists; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:U3DXT.iOS.Native.GameController.GCExtendedGamepad.buttonA">
+            <summary>
+            The bottom face button. (read-only)
+            <br></br>Equivalent to the native <c>buttonA</c> property.
+            </summary>
+            <remarks>
+                <b>Discussion</b>
+                <p>The face buttons in the extended gamepad profile are analog buttons.</p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 7.0 and later.</li>
+                </ul>
+            </remarks>
+        </member>
+        <member name="P:U3DXT.iOS.Native.GameController.GCExtendedGamepad.buttonB">
+            <summary>
+            The right face button. (read-only)
+            <br></br>Equivalent to the native <c>buttonB</c> property.
+            </summary>
+            <remarks>
+                <b>Discussion</b>
+                <p>The face buttons in the extended gamepad profile are analog buttons.</p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 7.0 and later.</li>
+                </ul>
+            </remarks>
+        </member>
+        <member name="P:U3DXT.iOS.Native.GameController.GCExtendedGamepad.buttonX">
+            <summary>
+            The left face button. (read-only)
+            <br></br>Equivalent to the native <c>buttonX</c> property.
+            </summary>
+            <remarks>
+                <b>Discussion</b>
+                <p>The face buttons in the extended gamepad profile are analog buttons.</p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 7.0 and later.</li>
+                </ul>
+            </remarks>
+        </member>
+        <member name="P:U3DXT.iOS.Native.GameController.GCExtendedGamepad.buttonY">
+            <summary>
+            The top face button. (read-only)
+            <br></br>Equivalent to the native <c>buttonY</c> property.
+            </summary>
+            <remarks>
+                <b>Discussion</b>
+                <p>The face buttons in the extended gamepad profile are analog buttons.</p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 7.0 and later.</li>
+                </ul>
+            </remarks>
+        </member>
+        <member name="P:U3DXT.iOS.Native.GameController.GCExtendedGamepad.controller">
+            <summary>
+            The controller this profile is associated with. (read-only)
+            <br></br>Equivalent to the native <c>controller</c> property.
+            </summary>
+            <remarks>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 7.0 and later.</li>
+                </ul>
+            </remarks>
+        </member>
+        <member name="P:U3DXT.iOS.Native.GameController.GCExtendedGamepad.dpad">
+            <summary>
+            The d-pad element. (read-only)
+            <br></br>Equivalent to the native <c>dpad</c> property.
+            </summary>
+            <remarks>
+                <b>Discussion</b>
+                <p>The directional pad in the extended gamepad profile is an analog control.</p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 7.0 and later.</li>
+                </ul>
+            </remarks>
+        </member>
+        <member name="P:U3DXT.iOS.Native.GameController.GCExtendedGamepad.leftShoulder">
+            <summary>
+            The left shoulder button element. (read-only)
+            <br></br>Equivalent to the native <c>leftShoulder</c> property.
+            </summary>
+            <remarks>
+                <b>Discussion</b>
+                <p>The shoulder buttons in the extended gamepad profile are analog buttons.</p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 7.0 and later.</li>
+                </ul>
+            </remarks>
+        </member>
+        <member name="P:U3DXT.iOS.Native.GameController.GCExtendedGamepad.leftThumbstick">
+            <summary>
+            The left thumbstick element. (read-only)
+            <br></br>Equivalent to the native <c>leftThumbstick</c> property.
+            </summary>
+            <remarks>
+                <b>Discussion</b>
+                <p>The thumbsticks in the extended gamepad profile are analog buttons.</p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 7.0 and later.</li>
+                </ul>
+            </remarks>
+        </member>
+        <member name="P:U3DXT.iOS.Native.GameController.GCExtendedGamepad.leftTrigger">
+            <summary>
+            The left trigger element. (read-only)
+            <br></br>Equivalent to the native <c>leftTrigger</c> property.
+            </summary>
+            <remarks>
+                <b>Discussion</b>
+                <p>The triggers in the extended gamepad profile are analog buttons.</p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 7.0 and later.</li>
+                </ul>
+            </remarks>
+        </member>
+        <member name="P:U3DXT.iOS.Native.GameController.GCExtendedGamepad.rightShoulder">
+            <summary>
+            The right shoulder button element. (read-only)
+            <br></br>Equivalent to the native <c>rightShoulder</c> property.
+            </summary>
+            <remarks>
+                <b>Discussion</b>
+                <p>The shoulder buttons in the extended gamepad profile are analog buttons.</p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 7.0 and later.</li>
+                </ul>
+            </remarks>
+        </member>
+        <member name="P:U3DXT.iOS.Native.GameController.GCExtendedGamepad.rightThumbstick">
+            <summary>
+            The right thumbstick element. (read-only)
+            <br></br>Equivalent to the native <c>rightThumbstick</c> property.
+            </summary>
+            <remarks>
+                <b>Discussion</b>
+                <p>The thumbsticks in the extended gamepad profile are analog buttons.</p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 7.0 and later.</li>
+                </ul>
+            </remarks>
+        </member>
+        <member name="P:U3DXT.iOS.Native.GameController.GCExtendedGamepad.rightTrigger">
+            <summary>
+            The right trigger element. (read-only)
+            <br></br>Equivalent to the native <c>rightTrigger</c> property.
+            </summary>
+            <remarks>
+                <b>Discussion</b>
+                <p>The triggers in the extended gamepad profile are analog buttons.</p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 7.0 and later.</li>
+                </ul>
+            </remarks>
+        </member>
+        <member name="P:U3DXT.iOS.Native.GameController.GCExtendedGamepad.valueChangedHandler">
+            <summary>
+            A block called when any element in the profile changes values.
+            <br></br>Equivalent to the native <c>valueChangedHandler</c> property.
+            </summary>
+            <remarks>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 7.0 and later.</li>
+                </ul>
+            </remarks>
+        </member>
+        <member name="M:U3DXT.iOS.Native.GameController.GCExtendedGamepad.SaveSnapshot">
+            <summary>
+            Saves a snapshot of all of the profile’s elements.
+            <br></br>Equivalent to the native <c>saveSnapshot</c> method.
+            </summary>
+            <remarks>
+                <b>Return Value</b>
+                <p>A snapshot object that contains the current controller state.</p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 7.0 and later.</li>
+                </ul>
+            </remarks>
+        </member>
+        <member name="T:U3DXT.iOS.Native.GameController.GCExtendedGamepadSnapshot">
+            <summary>
+            A <c>GCExtendedGamepadSnapshot</c> object records all of the values from an extended gamepad profile at a particular moment in time. The snapshot is stored in a device independent format. You use snapshots when you need to record control information and use it later.
+            </summary>
+            <remarks>
+                <p>To create a gamepad snapshot, call the <c>saveSnapshot</c> method on a <c>GCExtendedGamepad</c> object. The <c>GCExtendedGamepadSnapshot</c> class is a subclass of the <c>GCExtendedGamepad</c> class, so you can use the parent class’s properties to read the individual element values. To get the flattened data representation of the snapshot data, read the <c>snapshotData</c> property.</p>
+            </remarks>
+            <exception cref="T:U3DXT.Core.U3DXTException">
+            Is thrown when creation or initialization fails.
+            </exception>
+        </member>
+        <member name="M:U3DXT.iOS.Native.GameController.GCExtendedGamepadSnapshot.UP_GCExtendedGamepadSnapshot_get_snapshotData(System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.GameController.GCExtendedGamepadSnapshot.UP_GCExtendedGamepadSnapshot_set_snapshotData(System.String,System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.GameController.GCExtendedGamepadSnapshot.UP_GCExtendedGamepadSnapshot_alloc_initWithSnapshotData_(System.String,System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.GameController.GCExtendedGamepadSnapshot.#ctor(U3DXT.iOS.Native.Internals._IosBaseClass._NewHelper)">
+            <summary>
+            U3DXT internal constructor.
+            </summary>
+            <param name="helper">
+            </param>
+        </member>
+        <member name="M:U3DXT.iOS.Native.GameController.GCExtendedGamepadSnapshot.#ctor(U3DXT.iOS.Native.Internals._IosBaseClass._NewHelper,System.String)">
+            <summary>
+            U3DXT internal constructor.
+            </summary>
+            <param name="helper">
+            </param>
+            <param name="uuid">
+            </param>
+        </member>
+        <member name="M:U3DXT.iOS.Native.GameController.GCExtendedGamepadSnapshot.#ctor">
+            <summary>
+            Creates and initializes a new instance of the native <see cref="T:U3DXT.iOS.Native.GameController.GCExtendedGamepadSnapshot" /> class.
+            <br></br>Equivalent to the native <c>[[GCExtendedGamepadSnapshot alloc] init]</c> calls.
+            </summary>
+            <exception cref="T:U3DXT.Core.U3DXTException">
+            Is thrown when creation or initialization fails.
+            </exception>
+        </member>
+        <member name="M:U3DXT.iOS.Native.GameController.GCExtendedGamepadSnapshot.InstancesRespondToSelector(System.String)">
+            <summary>
+            Returns whether native instances of this class can respond to a selector with the same name.
+            <br></br>Equivalent to the native <c>instancesRespondToSelector:</c> class method.
+            </summary>
+            <returns>
+                <c>true</c> if native instances of this class can respond to a selector with the same name, <c>false</c> otherwise.
+            </returns>
+            <param name="selectorName">The literal name of the selector.</param>
+        </member>
+        <member name="P:U3DXT.iOS.Native.GameController.GCExtendedGamepadSnapshot.ClassExists">
+            <summary>
+            Returns whether the native GCExtendedGamepadSnapshot class exists on the platform.
+            </summary>
+            <value>
+                <c>true</c> if class exists; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:U3DXT.iOS.Native.GameController.GCExtendedGamepadSnapshot.snapshotData">
+            <summary>
+            Flattens a snapshot into an archivable memory representation.
+            <br></br>Equivalent to the native <c>snapshotData</c> property.
+            </summary>
+            <remarks>
+                <b>Discussion</b>
+                <p>You can assign another <c>NSData</c> object containing extended snapshot data to this property. The elements of the extended snapshot are updated to the values stored in the flattened data. This triggers any value handlers attached to those elements.</p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 7.0 and later.</li>
+                </ul>
+            </remarks>
+        </member>
+        <member name="M:U3DXT.iOS.Native.GameController.GCExtendedGamepadSnapshot.#ctor(U3DXT.iOS.Native.Foundation.NSData)">
+            <summary>
+            Creates an instance of the native GCExtendedGamepadSnapshot and initializes the object. Initializes a snapshot object with the flattened data representation obtained from another snapshot.
+            <br></br>Equivalent to the native <c>[[GCExtendedGamepadSnapshot alloc] initWithSnapshotData:]</c> calls.
+            </summary>
+            <remarks>
+                <b>Parameters</b>
+                <p>
+                </p>
+                <em>data</em>
+                <p>A data object that contains snapshot data.</p>
+                <b>Return Value</b>
+                <p>A new snapshot object.</p>
+                <b>Discussion</b>
+                <p>The data format for a snapshot is private. Your snapshot object should only be created from flattened data previously obtained from an extended snapshot.</p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 7.0 and later.</li>
+                </ul>
+            </remarks>
+            <param name="data">
+            </param>
+        </member>
+        <member name="T:U3DXT.iOS.Native.GameController.GCGamepad">
+            <summary>
+            A <c>GCGamepad</c> object implements a logical profile for a set of gamepad controls. A profile maps the hardware controls of a particular controller to a set of elements usable by your game.
+            </summary>
+            <remarks>
+                <p>The controls associated with the gamepad profile include the following:</p>
+                <ul class="ul">
+                    <li class="li">
+                        <p>Two shoulder buttons.</p>
+                    </li>
+                    <li class="li">
+                        <p>Four face buttons arranged in a diamond pattern.</p>
+                    </li>
+                    <li class="li">
+                        <p>One directional pad (D-pad).</p>
+                    </li>
+                </ul>
+                <figure class="figure">
+                </figure>
+            </remarks>
+            <exception cref="T:U3DXT.Core.U3DXTException">
+            Is thrown when creation or initialization fails.
+            </exception>
+        </member>
+        <member name="M:U3DXT.iOS.Native.GameController.GCGamepad.UP_GCGamepad_get_buttonA(System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.GameController.GCGamepad.UP_GCGamepad_get_buttonB(System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.GameController.GCGamepad.UP_GCGamepad_get_buttonX(System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.GameController.GCGamepad.UP_GCGamepad_get_buttonY(System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.GameController.GCGamepad.UP_GCGamepad_get_controller(System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.GameController.GCGamepad.UP_GCGamepad_get_dpad(System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.GameController.GCGamepad.UP_GCGamepad_get_leftShoulder(System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.GameController.GCGamepad.UP_GCGamepad_get_rightShoulder(System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.GameController.GCGamepad.UP_GCGamepad_set_valueChangedHandler(System.String,System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.GameController.GCGamepad.UP_GCGamepad_saveSnapshot(System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.GameController.GCGamepad.#ctor(U3DXT.iOS.Native.Internals._IosBaseClass._NewHelper)">
+            <summary>
+            U3DXT internal constructor.
+            </summary>
+            <param name="helper">
+            </param>
+        </member>
+        <member name="M:U3DXT.iOS.Native.GameController.GCGamepad.#ctor(U3DXT.iOS.Native.Internals._IosBaseClass._NewHelper,System.String)">
+            <summary>
+            U3DXT internal constructor.
+            </summary>
+            <param name="helper">
+            </param>
+            <param name="uuid">
+            </param>
+        </member>
+        <member name="M:U3DXT.iOS.Native.GameController.GCGamepad.#ctor">
+            <summary>
+            Creates and initializes a new instance of the native <see cref="T:U3DXT.iOS.Native.GameController.GCGamepad" /> class.
+            <br></br>Equivalent to the native <c>[[GCGamepad alloc] init]</c> calls.
+            </summary>
+            <exception cref="T:U3DXT.Core.U3DXTException">
+            Is thrown when creation or initialization fails.
+            </exception>
+        </member>
+        <member name="M:U3DXT.iOS.Native.GameController.GCGamepad.InstancesRespondToSelector(System.String)">
+            <summary>
+            Returns whether native instances of this class can respond to a selector with the same name.
+            <br></br>Equivalent to the native <c>instancesRespondToSelector:</c> class method.
+            </summary>
+            <returns>
+                <c>true</c> if native instances of this class can respond to a selector with the same name, <c>false</c> otherwise.
+            </returns>
+            <param name="selectorName">The literal name of the selector.</param>
+        </member>
+        <member name="P:U3DXT.iOS.Native.GameController.GCGamepad.ClassExists">
+            <summary>
+            Returns whether the native GCGamepad class exists on the platform.
+            </summary>
+            <value>
+                <c>true</c> if class exists; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:U3DXT.iOS.Native.GameController.GCGamepad.buttonA">
+            <summary>
+            The bottom face button. (read-only)
+            <br></br>Equivalent to the native <c>buttonA</c> property.
+            </summary>
+            <remarks>
+                <b>Discussion</b>
+                <p>The face buttons in the gamepad profile are analog buttons.</p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 7.0 and later.</li>
+                </ul>
+            </remarks>
+        </member>
+        <member name="P:U3DXT.iOS.Native.GameController.GCGamepad.buttonB">
+            <summary>
+            The right face button. (read-only)
+            <br></br>Equivalent to the native <c>buttonB</c> property.
+            </summary>
+            <remarks>
+                <b>Discussion</b>
+                <p>The face buttons in the gamepad profile are analog buttons.</p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 7.0 and later.</li>
+                </ul>
+            </remarks>
+        </member>
+        <member name="P:U3DXT.iOS.Native.GameController.GCGamepad.buttonX">
+            <summary>
+            The left face button. (read-only)
+            <br></br>Equivalent to the native <c>buttonX</c> property.
+            </summary>
+            <remarks>
+                <b>Discussion</b>
+                <p>The face buttons in the gamepad profile are analog buttons.</p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 7.0 and later.</li>
+                </ul>
+            </remarks>
+        </member>
+        <member name="P:U3DXT.iOS.Native.GameController.GCGamepad.buttonY">
+            <summary>
+            The top face button. (read-only)
+            <br></br>Equivalent to the native <c>buttonY</c> property.
+            </summary>
+            <remarks>
+                <b>Discussion</b>
+                <p>The face buttons in the gamepad profile are analog buttons.</p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 7.0 and later.</li>
+                </ul>
+            </remarks>
+        </member>
+        <member name="P:U3DXT.iOS.Native.GameController.GCGamepad.controller">
+            <summary>
+            The controller this profile is associated with. (read-only)
+            <br></br>Equivalent to the native <c>controller</c> property.
+            </summary>
+            <remarks>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 7.0 and later.</li>
+                </ul>
+            </remarks>
+        </member>
+        <member name="P:U3DXT.iOS.Native.GameController.GCGamepad.dpad">
+            <summary>
+            The D-pad element. (read-only)
+            <br></br>Equivalent to the native <c>dpad</c> property.
+            </summary>
+            <remarks>
+                <b>Discussion</b>
+                <p>The directional pad in the gamepad profile is an analog control.</p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 7.0 and later.</li>
+                </ul>
+            </remarks>
+        </member>
+        <member name="P:U3DXT.iOS.Native.GameController.GCGamepad.leftShoulder">
+            <summary>
+            The left shoulder button element. (read-only)
+            <br></br>Equivalent to the native <c>leftShoulder</c> property.
+            </summary>
+            <remarks>
+                <b>Discussion</b>
+                <p>The shoulder buttons in the gamepad profile are analog buttons.</p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 7.0 and later.</li>
+                </ul>
+            </remarks>
+        </member>
+        <member name="P:U3DXT.iOS.Native.GameController.GCGamepad.rightShoulder">
+            <summary>
+            The right shoulder button element. (read-only)
+            <br></br>Equivalent to the native <c>rightShoulder</c> property.
+            </summary>
+            <remarks>
+                <b>Discussion</b>
+                <p>The shoulder buttons in the gamepad profile are analog buttons.</p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 7.0 and later.</li>
+                </ul>
+            </remarks>
+        </member>
+        <member name="P:U3DXT.iOS.Native.GameController.GCGamepad.valueChangedHandler">
+            <summary>
+            A block called when any element in the profile changes.
+            <br></br>Equivalent to the native <c>valueChangedHandler</c> property.
+            </summary>
+            <remarks>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 7.0 and later.</li>
+                </ul>
+            </remarks>
+        </member>
+        <member name="M:U3DXT.iOS.Native.GameController.GCGamepad.SaveSnapshot">
+            <summary>
+            Saves a snapshot of all of the profile’s elements.
+            <br></br>Equivalent to the native <c>saveSnapshot</c> method.
+            </summary>
+            <remarks>
+                <b>Return Value</b>
+                <p>A snapshot object that contains the current controller state.</p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 7.0 and later.</li>
+                </ul>
+            </remarks>
+        </member>
+        <member name="T:U3DXT.iOS.Native.GameController.GCGamepadSnapshot">
+            <summary>
+            A <c>GCGamepadSnapshot</c> object records all of the values from a gamepad profile at a particular moment in time. The snapshot is stored in a device independent format. You use snapshots when you need to record control information and use it later.
+            </summary>
+            <remarks>
+                <p>To create a gamepad snapshot, call the <c>saveSnapshot</c> method on a <c>GCGamepad</c> object. The <c>GCGamepadSnapshot</c> class is a subclass of the <c>GCGamepad</c> class, so you can use the parent class’s properties to read the individual element values. To get the flattened data representation of the snapshot data, read the <c>snapshotData</c> property.</p>
+            </remarks>
+            <exception cref="T:U3DXT.Core.U3DXTException">
+            Is thrown when creation or initialization fails.
+            </exception>
+        </member>
+        <member name="M:U3DXT.iOS.Native.GameController.GCGamepadSnapshot.UP_GCGamepadSnapshot_get_snapshotData(System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.GameController.GCGamepadSnapshot.UP_GCGamepadSnapshot_set_snapshotData(System.String,System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.GameController.GCGamepadSnapshot.UP_GCGamepadSnapshot_alloc_initWithSnapshotData_(System.String,System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.GameController.GCGamepadSnapshot.#ctor(U3DXT.iOS.Native.Internals._IosBaseClass._NewHelper)">
+            <summary>
+            U3DXT internal constructor.
+            </summary>
+            <param name="helper">
+            </param>
+        </member>
+        <member name="M:U3DXT.iOS.Native.GameController.GCGamepadSnapshot.#ctor(U3DXT.iOS.Native.Internals._IosBaseClass._NewHelper,System.String)">
+            <summary>
+            U3DXT internal constructor.
+            </summary>
+            <param name="helper">
+            </param>
+            <param name="uuid">
+            </param>
+        </member>
+        <member name="M:U3DXT.iOS.Native.GameController.GCGamepadSnapshot.#ctor">
+            <summary>
+            Creates and initializes a new instance of the native <see cref="T:U3DXT.iOS.Native.GameController.GCGamepadSnapshot" /> class.
+            <br></br>Equivalent to the native <c>[[GCGamepadSnapshot alloc] init]</c> calls.
+            </summary>
+            <exception cref="T:U3DXT.Core.U3DXTException">
+            Is thrown when creation or initialization fails.
+            </exception>
+        </member>
+        <member name="M:U3DXT.iOS.Native.GameController.GCGamepadSnapshot.InstancesRespondToSelector(System.String)">
+            <summary>
+            Returns whether native instances of this class can respond to a selector with the same name.
+            <br></br>Equivalent to the native <c>instancesRespondToSelector:</c> class method.
+            </summary>
+            <returns>
+                <c>true</c> if native instances of this class can respond to a selector with the same name, <c>false</c> otherwise.
+            </returns>
+            <param name="selectorName">The literal name of the selector.</param>
+        </member>
+        <member name="P:U3DXT.iOS.Native.GameController.GCGamepadSnapshot.ClassExists">
+            <summary>
+            Returns whether the native GCGamepadSnapshot class exists on the platform.
+            </summary>
+            <value>
+                <c>true</c> if class exists; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:U3DXT.iOS.Native.GameController.GCGamepadSnapshot.snapshotData">
+            <summary>
+            The flattened control input values for the snapshot.
+            <br></br>Equivalent to the native <c>snapshotData</c> property.
+            </summary>
+            <remarks>
+                <b>Discussion</b>
+                <p>You can assign another <c>NSData</c> object containing snapshot data to this property. The elements of the snapshot are updated to the values stored in the flattened data. This triggers any value handlers attached to those elements.</p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 7.0 and later.</li>
+                </ul>
+            </remarks>
+        </member>
+        <member name="M:U3DXT.iOS.Native.GameController.GCGamepadSnapshot.#ctor(U3DXT.iOS.Native.Foundation.NSData)">
+            <summary>
+            Creates an instance of the native GCGamepadSnapshot and initializes the object. Initializes a snapshot object with the flattened data representation obtained from another snapshot.
+            <br></br>Equivalent to the native <c>[[GCGamepadSnapshot alloc] initWithSnapshotData:]</c> calls.
+            </summary>
+            <remarks>
+                <b>Parameters</b>
+                <p>
+                </p>
+                <em>data</em>
+                <p>A data object that contains snapshot data.</p>
+                <b>Return Value</b>
+                <p>A new snapshot object.</p>
+                <b>Discussion</b>
+                <p>The data format for a snapshot is private. Your snapshot object should only be created from flattened data previously obtained from a snapshot.</p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 7.0 and later.</li>
+                </ul>
+            </remarks>
+            <param name="data">
+            </param>
+        </member>
+    </members>
+</doc>

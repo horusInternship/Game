@@ -1,0 +1,728 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>U3DXTSocial_HL</name>
+    </assembly>
+    <members>
+        <member name="T:U3DXT.iOS.Social.DirectRequestService">
+            <summary>
+            Base class for Twitter, Facebook, and SinaWeibo to conveniently use SLRequest
+            to directly querying a service's API.</summary>
+            <remarks>
+            You don't have to use this class directly, but you may want to use its
+            GetFromURL() and PostToURL() methods with the Twitter, Facebook, or SinaWeibo instances.
+            </remarks>
+        </member>
+        <member name="E:U3DXT.iOS.Social.DirectRequestService.InitializationCompleted">
+            <summary>
+            Occurs when initialization has completed.
+            </summary>
+        </member>
+        <member name="E:U3DXT.iOS.Social.DirectRequestService.InitializationFailed">
+            <summary>
+            Occurs when initialization has failed.
+            </summary>
+        </member>
+        <member name="F:U3DXT.iOS.Social.DirectRequestService._service">
+            <summary> U3DXT internal. </summary>
+        </member>
+        <member name="F:U3DXT.iOS.Social.DirectRequestService._accountType">
+            <summary> U3DXT internal. </summary>
+        </member>
+        <member name="F:U3DXT.iOS.Social.DirectRequestService._serviceType">
+            <summary> U3DXT internal. </summary>
+        </member>
+        <member name="F:U3DXT.iOS.Social.DirectRequestService._options">
+            <summary> U3DXT internal. </summary>
+        </member>
+        <member name="F:U3DXT.iOS.Social.DirectRequestService._account">
+            <summary> U3DXT internal. </summary>
+        </member>
+        <member name="M:U3DXT.iOS.Social.DirectRequestService.#ctor(System.String,System.String)">
+            <summary> U3DXT internal. </summary>
+        </member>
+        <member name="M:U3DXT.iOS.Social.DirectRequestService._Init">
+            <summary> U3DXT internal. </summary>
+        </member>
+        <member name="P:U3DXT.iOS.Social.DirectRequestService.accountStore">
+            <summary>
+            Gets the low-level account store.
+            </summary>
+            <value>The account store.</value>
+        </member>
+        <member name="P:U3DXT.iOS.Social.DirectRequestService.accountType">
+            <summary>
+            Gets the low-level account type.
+            </summary>
+            <value>The low-level account type.</value>
+        </member>
+        <member name="P:U3DXT.iOS.Social.DirectRequestService.account">
+            <summary>
+            Gets the first account setup for this service.
+            </summary>
+            <value>The first account.</value>
+        </member>
+        <member name="M:U3DXT.iOS.Social.DirectRequestService._MakeCallback(System.Action{System.Object})">
+            <summary> U3DXT internal. </summary>
+        </member>
+        <member name="M:U3DXT.iOS.Social.DirectRequestService.GetFromURL(System.String,System.Action{System.Object,U3DXT.iOS.Native.Foundation.NSHTTPURLResponse,U3DXT.iOS.Native.Foundation.NSError})">
+            <summary>
+            Queries an URL with a GET. The request will have the system authenticated user
+            access info filled in. When the query is done, it calls the callback delegate
+            with a JSON object, the HTTP response, and an error if an error occurred.
+            </summary>
+            <param name="url"> The URL to query.</param>
+            <param name="callback"> A callback delegate to be called when done.</param>
+        </member>
+        <member name="M:U3DXT.iOS.Social.DirectRequestService.PostToURL(System.String,System.Collections.Generic.Dictionary{System.Object,System.Object},System.Action{System.Object,U3DXT.iOS.Native.Foundation.NSHTTPURLResponse,U3DXT.iOS.Native.Foundation.NSError})">
+            <summary>
+            Queries an URL with a POST. The parameters is added to the body of the query.
+            The request will have the system authenticated user
+            access info filled in. When the query is done, it calls the callback delegate
+            with a JSON object, the HTTP response, and an error if an error occurred.
+            </summary>
+            <param name="url"> The URL to query.</param>
+            <param name="parameters"> A JSON object.</param>
+            <param name="callback"> A callback delegate to be called when done.</param>
+        </member>
+        <member name="T:U3DXT.iOS.Social.Facebook">
+            <summary>
+            Provides methods to directly query the Facebook API.</summary>
+            <remarks>
+            All calls in this class works in the background without prompting the user.
+            So be mindful of privacy issues.
+            When a query is finished, it calls the callback delegate with a JSON object as the response.
+            <p></p>
+            his class does not have the complete Facebook API as direct methods,
+            but for anything not built-in, you can use the GetFromURL() or PostToURL() methods.
+            These two methods along with all the other direct methods
+            have the system authenticated user access info filled in already.
+            <p></p>
+            See https://developers.facebook.com/docs/reference/api/ for more information about Facebook Graph API.
+            </remarks>
+        </member>
+        <member name="M:U3DXT.iOS.Social.Facebook.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:U3DXT.iOS.Social.Facebook" /> class.
+            </summary>
+        </member>
+        <member name="M:U3DXT.iOS.Social.Facebook.Init(System.String,System.String[])">
+            <summary>
+            Initializes Facebook with a Facebook app ID and an array of permissions.
+            Raises InitializationCompleted event when completed, or InitializationFailed event when failed.
+            You can get the account information with the <c>account</c> property after successful initialization.
+            </summary>
+            <remarks>The Facebook app must enable iOS integration, and the bundle ID of the mobile app must be the same
+            as registered on the Facebook app.
+            </remarks>
+            <param name="appID">
+            The Facebook app ID.
+            </param>
+            <param name="permissions">
+            An array of strings representing permissions to request.
+            </param>
+        </member>
+        <member name="M:U3DXT.iOS.Social.Facebook.GetFeed(System.Action{System.Object})">
+            <summary>
+            Queries for user's feed.
+            </summary>
+            <param name="callback">
+            A callback delegate to be called on completion.
+            </param>
+        </member>
+        <member name="M:U3DXT.iOS.Social.Facebook.PostMessage(System.String,System.Action{System.Object})">
+            <summary>
+            Posts a message on the user's feed.
+            </summary>
+            <param name="message">
+            The message to post.
+            </param>
+            <param name="callback">
+            A callback delegate to be called on completion.
+            </param>
+        </member>
+        <member name="M:U3DXT.iOS.Social.Facebook.PostLink(System.String,System.String,System.Action{System.Object})">
+            <summary>
+            Posts a message and link on the user's feed.
+            </summary>
+            <param name="message">
+            The message to post.
+            </param>
+            <param name="link">
+            An URL to post.
+            </param>
+            <param name="callback">
+            A callback delegate to be called on completion.
+            </param>
+        </member>
+        <member name="M:U3DXT.iOS.Social.Facebook.PostPicture(System.String,System.String,System.String,System.String,System.String,System.Action{System.Object})">
+            <summary>
+            Posts a picture on the user's feed.
+            </summary>
+            <param name="message">
+            The message to post.
+            </param>
+            <param name="pictureURL">
+            The URL to the picture.
+            </param>
+            <param name="pictureName">
+            Name of the picture, or null.
+            </param>
+            <param name="pictureCaption">
+            Caption of the picture, or null.
+            </param>
+            <param name="pictureDescription">
+            Description of the picture, or null.
+            </param>
+            <param name="callback">
+            A callback delegate to be called on completion.
+            </param>
+        </member>
+        <member name="M:U3DXT.iOS.Social.Facebook.Search(System.String,System.String,System.Action{System.Object})">
+            <summary>
+            Searches for the query string for a specified type.
+            </summary>
+            <param name="query">
+            The string to search for.
+            </param>
+            <param name="type">
+            The type to search for.
+            </param>
+            <param name="callback">
+            A callback delegate to be called on completion.
+            </param>
+        </member>
+        <member name="M:U3DXT.iOS.Social.Facebook.GetFriends(System.Action{System.Object})">
+            <summary>
+            ueries for a list of the user's friends.
+            </summary>
+            <param name="callback">
+            A callback delegate to be called on completion.
+            </param>
+        </member>
+        <member name="M:U3DXT.iOS.Social.Facebook.GetUser(System.Action{System.Object})">
+            <summary>
+            Queries for info about the user.
+            </summary>
+            <param name="callback">
+            A callback delegate to be called on completion.
+            </param>
+        </member>
+        <member name="M:U3DXT.iOS.Social.Facebook.GetLikes(System.Action{System.Object})">
+            <summary>
+            Queries for a list of the user's likes.
+            </summary>
+            <param name="callback">
+            A callback delegate to be called on completion.
+            </param>
+        </member>
+        <member name="M:U3DXT.iOS.Social.Facebook.GetObject(System.String,System.Action{System.Object})">
+            <summary>
+            Queries for info about an object specified by name. It can be a person, a company, a group, etc.
+            </summary>
+            <param name="name">
+            The name of the object to query for..
+            </param>
+            <param name="callback">
+            A callback delegate to be called on completion.
+            </param>
+        </member>
+        <member name="T:U3DXT.iOS.Social.MailCompletedEventArgs">
+            <summary>
+            Provides data for MailCompleted event.
+            </summary>
+        </member>
+        <member name="F:U3DXT.iOS.Social.MailCompletedEventArgs.result">
+            <summary>
+            The result.
+            </summary>
+        </member>
+        <member name="F:U3DXT.iOS.Social.MailCompletedEventArgs.error">
+            <summary>
+            The error if any, or null.
+            </summary>
+        </member>
+        <member name="F:U3DXT.iOS.Social.MailCompletedEventArgs.completed">
+            <summary>
+            Whether the operation was completed.
+            </summary>
+        </member>
+        <member name="M:U3DXT.iOS.Social.MailCompletedEventArgs.#ctor(U3DXT.iOS.Native.MessageUI.MFMailComposeResult,U3DXT.iOS.Native.Foundation.NSError)">
+            <summary>
+            Initializes a new instance of the <see cref="T:U3DXT.iOS.Social.MailCompletedEventArgs" /> class.
+            </summary>
+            <param name="result">
+            Result.
+            </param>
+            <param name="error">
+            Error.
+            </param>
+        </member>
+        <member name="T:U3DXT.iOS.Social.PostCompletedEventArgs">
+            <summary>
+            Provides data for PostCompleted event.
+            </summary>
+        </member>
+        <member name="F:U3DXT.iOS.Social.PostCompletedEventArgs.completed">
+            <summary>
+            Whether the operation was completed.
+            </summary>
+        </member>
+        <member name="M:U3DXT.iOS.Social.PostCompletedEventArgs.#ctor(System.Boolean)">
+            <summary>
+            Initializes a new instance of the <see cref="T:U3DXT.iOS.Social.PostCompletedEventArgs" /> class.
+            </summary>
+            <param name="completed">
+            Completed.
+            </param>
+        </member>
+        <member name="T:U3DXT.iOS.Social.SMSCompletedEventArgs">
+            <summary>
+            Provides data for SMSCompleted event.
+            </summary>
+        </member>
+        <member name="F:U3DXT.iOS.Social.SMSCompletedEventArgs.result">
+            <summary>
+            The result.
+            </summary>
+        </member>
+        <member name="F:U3DXT.iOS.Social.SMSCompletedEventArgs.completed">
+            <summary>
+            Whether the operation was completed.
+            </summary>
+        </member>
+        <member name="M:U3DXT.iOS.Social.SMSCompletedEventArgs.#ctor(U3DXT.iOS.Native.MessageUI.MessageComposeResult)">
+            <summary>
+            Initializes a new instance of the <see cref="T:U3DXT.iOS.Social.SMSCompletedEventArgs" /> class.
+            </summary>
+            <param name="result">
+            Result.
+            </param>
+        </member>
+        <member name="T:U3DXT.iOS.Social.ShareCompletedEventArgs">
+            <summary>
+            Provides data for ShareCompleted event.
+            </summary>
+        </member>
+        <member name="F:U3DXT.iOS.Social.ShareCompletedEventArgs.activityType">
+            <summary>
+            The type of the activity.
+            See <see cref="T:U3DXT.iOS.Native.UIKit.UIActivity">Constants in UIActivity</see>.
+            </summary>
+        </member>
+        <member name="F:U3DXT.iOS.Social.ShareCompletedEventArgs.completed">
+            <summary>
+            Whether the operation was completed.
+            </summary>
+        </member>
+        <member name="M:U3DXT.iOS.Social.ShareCompletedEventArgs.#ctor(System.String,System.Boolean)">
+            <summary>
+            Initializes a new instance of the <see cref="T:U3DXT.iOS.Social.ShareCompletedEventArgs" /> class.
+            </summary>
+            <param name="activityType">
+            Activity type.
+            </param>
+            <param name="completed">
+            Completed.
+            </param>
+        </member>
+        <member name="T:U3DXT.iOS.Social.SinaWeibo">
+            <summary>
+            Provides methods to directly query the Sina Weibo API.</summary>
+            <remarks>
+            All calls in this class works in the background without prompting the user.
+            So be mindful of privacy issues.
+            When a query is finished, it calls the callback delegate with a JSON object as the response.
+            <p></p>
+            This class does not implement the complete Weibo API as direct methods,
+            but for anything not built-in, you can use the GetFromURL() or PostToURL() methods.
+            These two methods along with all the other direct methods
+            have the system authenticated user access info filled in already.
+            <p></p>
+            See http://open.weibo.com/wiki/API文档_V2/en for more information about Sina Weibo API.
+            </remarks>
+        </member>
+        <member name="M:U3DXT.iOS.Social.SinaWeibo.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:U3DXT.iOS.Social.SinaWeibo" /> class.
+            </summary>
+        </member>
+        <member name="M:U3DXT.iOS.Social.SinaWeibo.Init">
+            <summary>
+            Initializes Sina Weibo.
+            Raises InitializationCompleted event when completed, or InitializationFailed event when failed.
+            You can get the account information with the <c>account</c> property after successful initialization.
+            </summary>
+        </member>
+        <member name="M:U3DXT.iOS.Social.SinaWeibo.GetPublicTimeline(System.Action{System.Object})">
+            <summary>
+            Queries for the user's public timeline with a list of weibos.
+            </summary>
+            <param name="callback">
+            A callback delegate to be called on completion.
+            </param>
+        </member>
+        <member name="M:U3DXT.iOS.Social.SinaWeibo.GetHomeTimeline(System.Action{System.Object})">
+            <summary>
+            Queries for the user's home timeline with a list of weibos.
+            </summary>
+            <param name="callback">
+            A callback delegate to be called on completion.
+            </param>
+        </member>
+        <member name="M:U3DXT.iOS.Social.SinaWeibo.GetWeibo(System.String,System.Action{System.Object})">
+            <summary>
+            Queries for info about a weibo.
+            </summary>
+            <param name="id">
+            The weibo ID.
+            </param>
+            <param name="callback">
+            A callback delegate to be called on completion.
+            </param>
+        </member>
+        <member name="M:U3DXT.iOS.Social.SinaWeibo.PostWeibo(System.String,System.Action{System.Object})">
+            <summary>
+            Posts a weibo.
+            </summary>
+            <param name="status">
+            The status update.
+            </param>
+            <param name="callback">
+            A callback delegate to be called on completion.
+            </param>
+        </member>
+        <member name="M:U3DXT.iOS.Social.SinaWeibo.PostPicture(System.String,System.String,System.Action{System.Object})">
+            <summary>
+            Posts a status update with a picture.
+            </summary>
+            <param name="status">
+            The status update.
+            </param>
+            <param name="pictureURL">
+            The URL to the picture.
+            </param>
+            <param name="callback">
+            A callback delegate to be called on completion.
+            </param>
+        </member>
+        <member name="M:U3DXT.iOS.Social.SinaWeibo.GetUser(System.String,System.Action{System.Object})">
+            <summary>
+            Queries for info about a user.
+            </summary>
+            <param name="user">
+            The user to query for.
+            </param>
+            <param name="callback">
+            A callback delegate to be called on completion.
+            </param>
+        </member>
+        <member name="M:U3DXT.iOS.Social.SinaWeibo.SearchWeibo(System.String,System.Action{System.Object})">
+            <summary>
+            Searches for a list of weibo containing the query string.
+            </summary>
+            <param name="query">
+            The string to search.
+            </param>
+            <param name="callback">
+            A callback delegate to be called on completion.
+            </param>
+        </member>
+        <member name="M:U3DXT.iOS.Social.SinaWeibo.GetFriends(System.String,System.Action{System.Object})">
+            <summary>
+            Queries for the specified user's friends.
+            </summary>
+            <param name="user">
+            The user to query for.
+            </param>
+            <param name="callback">
+            A callback delegate to be called on completion.
+            </param>
+        </member>
+        <member name="M:U3DXT.iOS.Social.SinaWeibo.GetFollowers(System.String,System.Action{System.Object})">
+            <summary>
+            Queries for the specified user's followers.
+            </summary>
+            <param name="user">
+            The user to query for.
+            </param>
+            <param name="callback">
+            A callback delegate to be called on completion.
+            </param>
+        </member>
+        <member name="M:U3DXT.iOS.Social.SinaWeibo.SearchUser(System.String,System.Action{System.Object})">
+            <summary>
+            Searches for a list of users containing the query string.
+            </summary>
+            <param name="query">
+            The string to search for.
+            </param>
+            <param name="callback">
+            A callback delegate to be called on completion.
+            </param>
+        </member>
+        <member name="M:U3DXT.iOS.Social.SinaWeibo.GetFavorites(System.Action{System.Object})">
+            <summary>
+            Queries for the user's favorites.
+            </summary>
+            <param name="callback">
+            A callback delegate to be called on completion.
+            </param>
+        </member>
+        <member name="M:U3DXT.iOS.Social.SinaWeibo.GetRecentHourTrends(System.Action{System.Object})">
+            <summary>
+            Queries for the recent hour's trends.
+            </summary>
+            <param name="callback">
+            A callback delegate to be called on completion.
+            </param>
+        </member>
+        <member name="T:U3DXT.iOS.Social.SocialXT">
+            <summary>
+            Main class for iOS Social plugin. High-level API to share.</summary>
+            <remarks>
+            In iOS 6.0 and later, it is recommended to use the simple Share() method to
+            show the native interface to share messages, images, and URLs
+            via Facebook, Twitter, Sina Weibo, email, SMS, print, copy, save to camera roll, or
+            assign to contact.
+            <p></p>
+            You can also use the Post() method to post to a specific social networking service.
+            Or use Mail() and SMS() methods to send email and SMS.
+            </remarks>
+        </member>
+        <member name="E:U3DXT.iOS.Social.SocialXT.ShareCompleted">
+            <summary>
+            Occurs when a share operation has completed.
+            </summary>
+        </member>
+        <member name="E:U3DXT.iOS.Social.SocialXT.PostCompleted">
+            <summary>
+            Occurs when a post operation has completed.
+            </summary>
+        </member>
+        <member name="E:U3DXT.iOS.Social.SocialXT.MailCompleted">
+            <summary>
+            Occurs when a mail operation has completed.
+            </summary>
+        </member>
+        <member name="E:U3DXT.iOS.Social.SocialXT.SMSCompleted">
+            <summary>
+            Occurs when a SMS operation has completed.
+            </summary>
+        </member>
+        <member name="M:U3DXT.iOS.Social.SocialXT.Share(System.Object[],System.String[])">
+            <summary>
+            Shows the native UIActivityViewController to share message, images, and URLs
+            via Facebook, Twitter, Weibo, email, SMS, print, copy, save to camera roll, or
+            assign to contact.
+            Raises ShareCompleted event when completed.
+            </summary>
+            <remarks>
+            This is available in iOS 6.0 and later.</remarks>
+            <param name="items"> An array of items to share. Each item can be a string, NSURL, Texture2D, or UIImage.
+            			Strings starting with http:// or https:// will be automatically converted to URLs.</param>
+            <param name="excludedActivityTypes"> An array of strings representing the activity types to exclude from sharing.
+            			See <see cref="T:U3DXT.iOS.Native.UIKit.UIActivity">Constants in UIActivity</see>.</param>
+        </member>
+        <member name="M:U3DXT.iOS.Social.SocialXT.Post(System.String,System.String,UnityEngine.Texture2D,System.String,System.Boolean)">
+            <summary>
+            Shows the native SLComposeViewController to post a message with image and/or URL on Facebook, Twitter, or Weibo.
+            Raises PostCompleted event when completed.</summary>
+            <remarks>
+            This is available in iOS 6.0 and later.
+            </remarks>
+            <param name="serviceType"> The service to post to. See <see cref="T:U3DXT.iOS.Native.Social.SLRequest">Constants in SLRequest</see>.</param>
+            <param name="message"> The message to post or can be null.</param>
+            <param name="image"> The image to post or can be null.</param>
+            <param name="url"> The URL to post or can be null.</param>
+            <param name="checkServiceAvailable"> Whether to check if the service is available first.</param>
+            <returns> True if it is able to show the native view controller; false if the service type is not available.</returns>
+        </member>
+        <member name="M:U3DXT.iOS.Social.SocialXT.Post(System.String,System.String,U3DXT.iOS.Native.UIKit.UIImage,System.String,System.Boolean)">
+            <summary>
+            Shows the native SLComposeViewController to post a message with image and/or URL on Facebook, Twitter, or Weibo.
+            Raises PostCompleted event when completed.</summary>
+            <remarks>
+            This is available in iOS 6.0 and later.
+            </remarks>
+            <param name="serviceType"> The service to post to. See <see cref="T:U3DXT.iOS.Native.Social.SLRequest">Constants in SLRequest</see>.</param>
+            <param name="message"> The message to post or can be null.</param>
+            <param name="image"> The image to post or can be null.</param>
+            <param name="url"> The URL to post or can be null.</param>
+            <param name="checkServiceAvailable"> Whether to check if the service is available first.</param>
+            <returns> True if it is able to show the native view controller; false if the service type is not available.</returns>
+        </member>
+        <member name="M:U3DXT.iOS.Social.SocialXT.Mail(System.String[],System.String,System.String,System.Boolean,UnityEngine.Texture2D,System.Boolean)">
+            <summary>
+            Shows the native MFMailComposeViewController to send an email.
+            Raises MailCompleted event when completed.</summary>
+            <param name="recipients"> An array of strings representing the email addresses of the recipients.</param>
+            <param name="subject"> The subject of the email.</param>
+            <param name="body"> The body of the email.</param>
+            <param name="bodyIsHTML"> True if the body is HTML; false otherwise.</param>
+            <param name="image"> The image to attach to the email.</param>
+            <param name="checkServiceAvailable"> Whether to check if the service is available first.</param>
+            <returns> True if it is able to show the native view controller; false if it cannot send email.</returns>
+        </member>
+        <member name="M:U3DXT.iOS.Social.SocialXT.Mail(System.String[],System.String,System.String,System.Boolean,U3DXT.iOS.Native.UIKit.UIImage,System.Boolean)">
+            <summary>
+            Shows the native MFMailComposeViewController to send an email.
+            Raises MailCompleted event when completed.</summary>
+            <param name="recipients"> An array of strings representing the email addresses of the recipients.</param>
+            <param name="subject"> The subject of the email.</param>
+            <param name="body"> The body of the email.</param>
+            <param name="bodyIsHTML"> True if the body is HTML; false otherwise.</param>
+            <param name="image"> The image to attach to the email.</param>
+            <param name="checkServiceAvailable"> Whether to check if the service is available first.</param>
+            <returns> True if it is able to show the native view controller; false if it cannot send email.</returns>
+        </member>
+        <member name="M:U3DXT.iOS.Social.SocialXT.SMS(System.String[],System.String,System.Boolean)">
+            <summary>
+            Shows the native MFMessageComposeViewController to send a SMS.
+            Raises SMSCompleted event when completed.</summary>
+            <param name="recipients"> An array of strings representing the phone numbers of the recipients.</param>
+            <param name="body"> The body of the SMS.</param>
+            <param name="checkServiceAvailable"> Whether to check if the service is available first.</param>
+            <returns> True if it is able to show the native view controller; false if it cannot send SMS.</returns>
+        </member>
+        <member name="M:U3DXT.iOS.Social.SocialXT.Instagram(UnityEngine.Texture2D,System.String)">
+            <summary>
+            Open Instagram with the specified texture and caption.
+            </summary>
+            <returns>
+                <c>true</c> if Instagram is installed, <c>false</c> otherwise.</returns>
+            <param name="texture">Texture.</param>
+            <param name="caption">Caption.</param>
+        </member>
+        <member name="M:U3DXT.iOS.Social.SocialXT.Instagram(U3DXT.iOS.Native.UIKit.UIImage,System.String)">
+            <summary>
+            Open Instagram with the specified image and caption.
+            </summary>
+            <returns>
+                <c>true</c> if Instagram is installed, <c>false</c> otherwise.</returns>
+            <param name="image">Image.</param>
+            <param name="caption">Caption.</param>
+        </member>
+        <member name="T:U3DXT.iOS.Social.Twitter">
+            <summary>
+            Provides methods to directly query the Twitter API 1.1.</summary>
+            <remarks>
+            All calls in this class works in the background without prompting the user.
+            So be mindful of privacy issues.
+            When a query is finished, it calls the callback delegate with a JSON object as the response.
+            <p></p>
+            This class does not implement the complete Twitter API as direct methods,
+            but for anything not built-in, you can use the GetFromURL() or PostToURL() methods.
+            These two methods along with all the other direct methods
+            have the system authenticated user access info filled in already.
+            <p></p>
+            See https://dev.twitter.com/docs/api/1.1 for more information about Twitter API.
+            </remarks>
+        </member>
+        <member name="M:U3DXT.iOS.Social.Twitter.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:U3DXT.iOS.Social.Twitter" /> class.
+            </summary>
+        </member>
+        <member name="M:U3DXT.iOS.Social.Twitter.Init">
+            <summary>
+            Initializes Twitter.
+            Raises InitializationCompleted event when completed, or InitializationFailed event when failed.
+            You can get the account information with the <c>account</c> property after successful initialization.
+            </summary>
+        </member>
+        <member name="M:U3DXT.iOS.Social.Twitter.GetTweets(System.Action{System.Object})">
+            <summary>
+            Queries for a list of tweets.
+            </summary>
+            <param name="callback">
+            A callback delegate to be called on completion.
+            </param>
+        </member>
+        <member name="M:U3DXT.iOS.Social.Twitter.GetTweet(System.String,System.Action{System.Object})">
+            <summary>
+            Queries for info about a tweet.
+            </summary>
+            <param name="id">
+            The tweet ID.
+            </param>
+            <param name="callback">
+            A callback delegate to be called on completion.
+            </param>
+        </member>
+        <member name="M:U3DXT.iOS.Social.Twitter.Update(System.String,System.Action{System.Object})">
+            <summary>
+            Posts a status update.
+            </summary>
+            <param name="status">
+            The status update.
+            </param>
+            <param name="callback">
+            A callback delegate to be called on completion.
+            </param>
+        </member>
+        <member name="M:U3DXT.iOS.Social.Twitter.SearchTweet(System.String,System.Action{System.Object})">
+            <summary>
+            Queries for tweets containing the query string.
+            </summary>
+            <param name="query">
+            The string to search for.
+            </param>
+            <param name="callback">
+            A callback delegate to be called on completion.
+            </param>
+        </member>
+        <member name="M:U3DXT.iOS.Social.Twitter.GetFriends(System.String,System.Action{System.Object})">
+            <summary>
+            Queries for a list of friends for a specified user.
+            </summary>
+            <param name="user">
+            The user to query for his/her friends.
+            </param>
+            <param name="callback">
+            A callback delegate to be called on completion.
+            </param>
+        </member>
+        <member name="M:U3DXT.iOS.Social.Twitter.GetFollowers(System.String,System.Action{System.Object})">
+            <summary>
+            Queries for a list of followers for a specified user.
+            </summary>
+            <param name="user">
+            The user to query for his/her followers.
+            </param>
+            <param name="callback">
+            A callback delegate to be called on completion.
+            </param>
+        </member>
+        <member name="M:U3DXT.iOS.Social.Twitter.GetUser(System.String,System.Action{System.Object})">
+            <summary>
+            Queries for information about a user.
+            </summary>
+            <param name="user">
+            The user to query for.
+            </param>
+            <param name="callback">
+            A callback delegate to be called on completion.
+            </param>
+        </member>
+        <member name="M:U3DXT.iOS.Social.Twitter.SearchUser(System.String,System.Action{System.Object})">
+            <summary>
+            Queries for a list of users containing the query string.
+            </summary>
+            <param name="query">
+            The string to search for.
+            </param>
+            <param name="callback">
+            A callback delegate to be called on completion.
+            </param>
+        </member>
+        <member name="M:U3DXT.iOS.Social.Twitter.GetFavorites(System.Action{System.Object})">
+            <summary>
+            Queries for a list of the current user's favorites.
+            </summary>
+            <param name="callback">
+            A callback delegate to be called on completion.
+            </param>
+        </member>
+    </members>
+</doc>

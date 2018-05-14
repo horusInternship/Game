@@ -1,0 +1,132 @@
+<linker>
+  <assembly fullname="U3DXTCore">
+    <namespace fullname="U3DXT.Utils" preserve="all" />
+    <namespace fullname="U3DXT.Core" preserve="all" />
+    <namespace fullname="U3DXT.iOS.Internals" preserve="all" />
+    <namespace fullname="System" preserve="all" />
+    <namespace fullname="U3DXT.iOS.Native.CoreFoundation" preserve="all" />
+    <namespace fullname="U3DXT.iOS.Native.CoreGraphics" preserve="all" />
+    <namespace fullname="U3DXT.iOS.Native.Foundation" preserve="all" />
+    <namespace fullname="U3DXT.iOS.Native.Internals" preserve="all" />
+    <namespace fullname="U3DXT.iOS.Native.QuartzCore" preserve="all" />
+    <namespace fullname="U3DXT.iOS.Native.UIKit" preserve="all" />
+  </assembly>
+  <assembly fullname="U3DXTCore_HL">
+    <namespace fullname="U3DXT.iOS.GUI" preserve="all" />
+  </assembly>
+  <assembly fullname="U3DXTCoreExtras">
+    <namespace fullname="U3DXT.iOS.Native.AssetsLibrary" preserve="all" />
+    <namespace fullname="U3DXT.iOS.Native.Foundation" preserve="all" />
+    <namespace fullname="U3DXT.iOS.Native.Internals" preserve="all" />
+    <namespace fullname="U3DXT.iOS.Native.MobileCoreServices" preserve="all" />
+    <namespace fullname="U3DXT.iOS.Native.UIKit" preserve="all" />
+    <namespace fullname="U3DXT.iOS.Native.AudioToolbox" preserve="all" />
+    <namespace fullname="U3DXT.iOS.Native.Security" preserve="all" />
+  </assembly>
+  <assembly fullname="U3DXTCoreExtras_HL">
+    <namespace fullname="U3DXT.iOS.Data" preserve="all" />
+    <namespace fullname="U3DXT.iOS.UserMedia" preserve="all" />
+  </assembly>
+  <assembly fullname="U3DXTIAP">
+    <namespace fullname="U3DXT.iOS.Native.StoreKit" preserve="all" />
+    <namespace fullname="U3DXT.iOS.Native.Internals" preserve="all" />
+  </assembly>
+  <assembly fullname="U3DXTIAP_HL">
+    <namespace fullname="U3DXT.iOS.IAP" preserve="all" />
+    <namespace fullname="U3DXT.iOS.IAP.Helpers" preserve="all" />
+  </assembly>
+  <assembly fullname="U3DXTSocial">
+    <namespace fullname="U3DXT.iOS.Native.Accounts" preserve="all" />
+    <namespace fullname="U3DXT.iOS.Native.MessageUI" preserve="all" />
+    <namespace fullname="U3DXT.iOS.Native.Social" preserve="all" />
+    <namespace fullname="U3DXT.iOS.Native.Twitter" preserve="all" />
+    <namespace fullname="U3DXT.iOS.Native.UIKit" preserve="all" />
+    <namespace fullname="U3DXT.iOS.Native.Internals" preserve="all" />
+  </assembly>
+  <assembly fullname="U3DXTSocial_HL">
+    <namespace fullname="U3DXT.iOS.Social" preserve="all" />
+    <namespace fullname="U3DXT.iOS.Social.Helpers" preserve="all" />
+  </assembly>
+  <assembly fullname="U3DXTGameKit7">
+    <namespace fullname="U3DXT.iOS.Native.GameKit" preserve="all" />
+    <namespace fullname="U3DXT.iOS.Native.Internals" preserve="all" />
+  </assembly>
+  <assembly fullname="U3DXTGameKit7_HL">
+    <namespace fullname="U3DXT.iOS.GameKit" preserve="all" />
+    <namespace fullname="U3DXT.iOS.GameKit.Helpers" preserve="all" />
+  </assembly>
+  <assembly fullname="U3DXTCoreImage">
+    <namespace fullname="U3DXT.iOS.Native.CoreImage" preserve="all" />
+    <namespace fullname="U3DXT.iOS.Native.CoreVideo" preserve="all" />
+    <namespace fullname="U3DXT.iOS.Native.OpenGLES" preserve="all" />
+    <namespace fullname="U3DXT.iOS.Native.Internals" preserve="all" />
+  </assembly>
+  <assembly fullname="U3DXTCoreImage_HL">
+    <namespace fullname="U3DXT.iOS.CoreImage" preserve="all" />
+  </assembly>
+  <assembly fullname="U3DXTMediaPlayer">
+    <namespace fullname="U3DXT.iOS.Native.AVFoundation" preserve="all" />
+    <namespace fullname="U3DXT.iOS.Native.Internals" preserve="all" />
+    <namespace fullname="U3DXT.iOS.Native.MediaPlayer" preserve="all" />
+  </assembly>
+  <assembly fullname="U3DXTMediaPlayer_HL">
+    <namespace fullname="U3DXT.iOS.MediaPlayer" preserve="all" />
+  </assembly>
+  <assembly fullname="U3DXTPersonal">
+    <namespace fullname="U3DXT.iOS.Native.AddressBook" preserve="all" />
+    <namespace fullname="U3DXT.iOS.Native.AddressBookUI" preserve="all" />
+    <namespace fullname="U3DXT.iOS.Native.CoreLocation" preserve="all" />
+    <namespace fullname="U3DXT.iOS.Native.EventKit" preserve="all" />
+    <namespace fullname="U3DXT.iOS.Native.EventKitUI" preserve="all" />
+    <namespace fullname="U3DXT.iOS.Native.Internals" preserve="all" />
+  </assembly>
+  <assembly fullname="U3DXTPersonal_HL">
+    <namespace fullname="U3DXT.iOS.Personal" preserve="all" />
+  </assembly>
+  <assembly fullname="U3DXTGameController">
+    <namespace fullname="U3DXT.iOS.Native.GameController" preserve="all" />
+    <namespace fullname="U3DXT.iOS.Native.Internals" preserve="all" />
+  </assembly>
+  <assembly fullname="U3DXTGameController_HL">
+    <namespace fullname="U3DXT.iOS.GameController" preserve="all" />
+  </assembly>
+  <assembly fullname="U3DXTMultipeer">
+    <namespace fullname="U3DXT.iOS.Native.Foundation" preserve="all" />
+    <namespace fullname="U3DXT.iOS.Native.MultipeerConnectivity" preserve="all" />
+    <namespace fullname="U3DXT.iOS.Native.Internals" preserve="all" />
+  </assembly>
+  <assembly fullname="U3DXTMultipeer_HL">
+    <namespace fullname="U3DXT.iOS.Multipeer" preserve="all" />
+    <namespace fullname="U3DXT.iOS.Multipeer.Helpers" preserve="all" />
+  </assembly>
+  <assembly fullname="U3DXTSpeech">
+    <namespace fullname="U3DXT.iOS.Native.AVFoundation" preserve="all" />
+    <namespace fullname="U3DXT.iOS.Native.Internals" preserve="all" />
+  </assembly>
+  <assembly fullname="U3DXTSpeech_HL">
+    <namespace fullname="U3DXT.iOS.Speech" preserve="all" />
+    <namespace fullname="U3DXT.iOS.Speech.Helpers" preserve="all" />
+  </assembly>
+  <assembly fullname="U3DXTSpriteKit">
+    <namespace fullname="U3DXT.iOS.Native.CoreGraphics" preserve="all" />
+    <namespace fullname="U3DXT.iOS.Native.SpriteKit" preserve="all" />
+    <namespace fullname="U3DXT.iOS.Native.Internals" preserve="all" />
+  </assembly>
+  <assembly fullname="U3DXTSpriteKit_HL">
+    <namespace fullname="U3DXT.iOS.SpriteKit" preserve="all" />
+  </assembly>
+  <assembly fullname="U3DXTMaps">
+    <namespace fullname="U3DXT.iOS.Native.Internals" preserve="all" />
+    <namespace fullname="U3DXT.iOS.Native.MapKit" preserve="all" />
+  </assembly>
+  <assembly fullname="U3DXTMaps_HL">
+    <namespace fullname="U3DXT.iOS.Maps" preserve="all" />
+  </assembly>
+  <assembly fullname="U3DXTBluetooth">
+    <namespace fullname="U3DXT.iOS.Native.Internals" preserve="all" />
+    <namespace fullname="U3DXT.iOS.Native.CoreBluetooth" preserve="all" />
+  </assembly>
+  <assembly fullname="U3DXTBluetooth_HL">
+    <namespace fullname="U3DXT.iOS.Bluetooth" preserve="all" />
+  </assembly>
+</linker>

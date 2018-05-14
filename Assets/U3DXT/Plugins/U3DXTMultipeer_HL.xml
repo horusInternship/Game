@@ -1,0 +1,243 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>U3DXTMultipeer_HL</name>
+    </assembly>
+    <members>
+        <member name="T:U3DXT.iOS.Multipeer.MultipeerXT">
+            <summary>
+            Main class for iOS Multipeer plugin. High-level API.</summary>
+            <remarks>
+            </remarks>
+        </member>
+        <member name="E:U3DXT.iOS.Multipeer.MultipeerXT.BrowserCompleted">
+            <summary>
+            Occurs when a share operation has completed.
+            </summary>
+        </member>
+        <member name="E:U3DXT.iOS.Multipeer.MultipeerXT.BrowserCancelled">
+            <summary>
+            Occurs when a share operation has completed.
+            </summary>
+        </member>
+        <member name="E:U3DXT.iOS.Multipeer.MultipeerXT.AdvertiserDismissedInvitation">
+            <summary>
+            Occurs when a share operation has completed.
+            </summary>
+        </member>
+        <member name="E:U3DXT.iOS.Multipeer.MultipeerXT.AdvertiserWillPresentInvitation">
+            <summary>
+            Occurs when a share operation has completed.
+            </summary>
+        </member>
+        <member name="E:U3DXT.iOS.Multipeer.MultipeerXT.SessionChanged">
+            <summary>
+            Occurs when a share operation has completed.
+            </summary>
+        </member>
+        <member name="E:U3DXT.iOS.Multipeer.MultipeerXT.SessionFinishedReceivingResourceWithName">
+            <summary>
+            Occurs when a share operation has completed.
+            </summary>
+        </member>
+        <member name="E:U3DXT.iOS.Multipeer.MultipeerXT.SessionReceived">
+            <summary>
+            Occurs when a share operation has completed.
+            </summary>
+        </member>
+        <member name="E:U3DXT.iOS.Multipeer.MultipeerXT.SessionStartedReceivingResourceWithName">
+            <summary>
+            Occurs when a share operation has completed.
+            </summary>
+        </member>
+        <member name="E:U3DXT.iOS.Multipeer.MultipeerXT.SessionDidReceiveCertificate">
+            <summary>
+            Occurs when a share operation has completed.
+            </summary>
+        </member>
+        <member name="M:U3DXT.iOS.Multipeer.MultipeerXT.ShowBrowser(System.String,System.String)">
+            <summary>
+            Shows the default iOS7.0 Browser view that enables users to invite nearby devices to a session.
+            </summary>
+            <param name="displayName">
+            The display name for the local peer
+            </param>
+            <param name="serviceType">
+            The type of service to browse for. Must be 1-15 characters long, only ASCII lower case characters.
+            </param>
+        </member>
+        <member name="M:U3DXT.iOS.Multipeer.MultipeerXT.StartAdvertiserAssistant(System.String,System.String)">
+            <summary>
+            Starts the advertiser assistant.
+            </summary>
+            <param name="displayName">
+            The display name for the local peer
+            </param>
+            <param name="serviceType">
+            The type of service to advertise. Must be 1-15 characters long, only ASCII lower case characters.
+            </param>
+        </member>
+        <member name="T:U3DXT.iOS.Multipeer.SessionChangedEventArgs">
+            <summary>
+            Provides data for ShareCompleted event.
+            </summary>
+        </member>
+        <member name="F:U3DXT.iOS.Multipeer.SessionChangedEventArgs.session">
+            <summary>
+            The session.
+            </summary>
+        </member>
+        <member name="F:U3DXT.iOS.Multipeer.SessionChangedEventArgs.peerID">
+            <summary>
+            The peer I.
+            </summary>
+        </member>
+        <member name="F:U3DXT.iOS.Multipeer.SessionChangedEventArgs.state">
+            <summary>
+            The state.
+            </summary>
+        </member>
+        <member name="M:U3DXT.iOS.Multipeer.SessionChangedEventArgs.#ctor(U3DXT.iOS.Native.MultipeerConnectivity.MCSession,U3DXT.iOS.Native.MultipeerConnectivity.MCPeerID,U3DXT.iOS.Native.MultipeerConnectivity.MCSessionState)">
+            <summary>
+            Initializes a new instance of the <see cref="T:U3DXT.iOS.Multipeer.SessionChangedEventArgs" /> class.
+            </summary>
+            <param name="_session">_session.</param>
+            <param name="_peerID">_peer I.</param>
+            <param name="_state">_state.</param>
+        </member>
+        <member name="T:U3DXT.iOS.Multipeer.SessionFinishedReceivingResourceWithNameEventArgs">
+            <summary>
+            Provides data for ShareCompleted event.
+            </summary>
+        </member>
+        <member name="F:U3DXT.iOS.Multipeer.SessionFinishedReceivingResourceWithNameEventArgs.session">
+            <summary>
+            The session.
+            </summary>
+        </member>
+        <member name="F:U3DXT.iOS.Multipeer.SessionFinishedReceivingResourceWithNameEventArgs.resourceName">
+            <summary>
+            The name of the resource.
+            </summary>
+        </member>
+        <member name="F:U3DXT.iOS.Multipeer.SessionFinishedReceivingResourceWithNameEventArgs.peerID">
+            <summary>
+            The peer I.
+            </summary>
+        </member>
+        <member name="F:U3DXT.iOS.Multipeer.SessionFinishedReceivingResourceWithNameEventArgs.localURL">
+            <summary>
+            The local UR.
+            </summary>
+        </member>
+        <member name="F:U3DXT.iOS.Multipeer.SessionFinishedReceivingResourceWithNameEventArgs.error">
+            <summary>
+            The error.
+            </summary>
+        </member>
+        <member name="M:U3DXT.iOS.Multipeer.SessionFinishedReceivingResourceWithNameEventArgs.#ctor(U3DXT.iOS.Native.MultipeerConnectivity.MCSession,System.String,U3DXT.iOS.Native.MultipeerConnectivity.MCPeerID,U3DXT.iOS.Native.Foundation.NSURL,U3DXT.iOS.Native.Foundation.NSError)">
+            <summary>
+            Initializes a new instance of the
+            <see cref="T:U3DXT.iOS.Multipeer.SessionFinishedReceivingResourceWithNameEventArgs" /> class.
+            </summary>
+            <param name="_session">_session.</param>
+            <param name="_resourceName">_resource name.</param>
+            <param name="_peerID">_peer I.</param>
+            <param name="_localURL">_local UR.</param>
+            <param name="_error">_error.</param>
+        </member>
+        <member name="T:U3DXT.iOS.Multipeer.SessionReceivedEventArgs">
+            <summary>
+            Provides data for ShareCompleted event.
+            </summary>
+        </member>
+        <member name="F:U3DXT.iOS.Multipeer.SessionReceivedEventArgs.session">
+            <summary>
+            The session.
+            </summary>
+        </member>
+        <member name="F:U3DXT.iOS.Multipeer.SessionReceivedEventArgs.data">
+            <summary>
+            The data.
+            </summary>
+        </member>
+        <member name="F:U3DXT.iOS.Multipeer.SessionReceivedEventArgs.peerID">
+            <summary>
+            The peer I.
+            </summary>
+        </member>
+        <member name="M:U3DXT.iOS.Multipeer.SessionReceivedEventArgs.#ctor(U3DXT.iOS.Native.MultipeerConnectivity.MCSession,U3DXT.iOS.Native.Foundation.NSData,U3DXT.iOS.Native.MultipeerConnectivity.MCPeerID)">
+            <summary>
+            Initializes a new instance of the <see cref="T:U3DXT.iOS.Multipeer.SessionReceivedEventArgs" /> class.
+            </summary>
+            <param name="_session">_session.</param>
+            <param name="_data">_data.</param>
+            <param name="_peerID">_peer I.</param>
+        </member>
+        <member name="T:U3DXT.iOS.Multipeer.SessionStartedReceivingResourceWithNameEventArgs">
+            <summary>
+            Provides data for ShareCompleted event.
+            </summary>
+        </member>
+        <member name="F:U3DXT.iOS.Multipeer.SessionStartedReceivingResourceWithNameEventArgs.session">
+            <summary>
+            The session.
+            </summary>
+        </member>
+        <member name="F:U3DXT.iOS.Multipeer.SessionStartedReceivingResourceWithNameEventArgs.resourceName">
+            <summary>
+            The name of the resource.
+            </summary>
+        </member>
+        <member name="F:U3DXT.iOS.Multipeer.SessionStartedReceivingResourceWithNameEventArgs.peerID">
+            <summary>
+            The peer I.
+            </summary>
+        </member>
+        <member name="F:U3DXT.iOS.Multipeer.SessionStartedReceivingResourceWithNameEventArgs.progress">
+            <summary>
+            The progress.
+            </summary>
+        </member>
+        <member name="M:U3DXT.iOS.Multipeer.SessionStartedReceivingResourceWithNameEventArgs.#ctor(U3DXT.iOS.Native.MultipeerConnectivity.MCSession,System.String,U3DXT.iOS.Native.MultipeerConnectivity.MCPeerID,U3DXT.iOS.Native.Foundation.NSProgress)">
+            <summary>
+            Initializes a new instance of the
+            <see cref="T:U3DXT.iOS.Multipeer.SessionStartedReceivingResourceWithNameEventArgs" /> class.
+            </summary>
+            <param name="_session">_session.</param>
+            <param name="_resourceName">_resource name.</param>
+            <param name="_peerID">_peer I.</param>
+            <param name="_progress">_progress.</param>
+        </member>
+        <member name="T:U3DXT.iOS.Multipeer.SessionDidReceiveCertificateEventArgs">
+            <summary>
+            Provides data for ShareCompleted event.
+            </summary>
+        </member>
+        <member name="F:U3DXT.iOS.Multipeer.SessionDidReceiveCertificateEventArgs.session">
+            <summary>
+            The session.
+            </summary>
+        </member>
+        <member name="F:U3DXT.iOS.Multipeer.SessionDidReceiveCertificateEventArgs.peerID">
+            <summary>
+            The peer I.
+            </summary>
+        </member>
+        <member name="F:U3DXT.iOS.Multipeer.SessionDidReceiveCertificateEventArgs.progress">
+            <summary>
+            The progress.
+            </summary>
+        </member>
+        <member name="M:U3DXT.iOS.Multipeer.SessionDidReceiveCertificateEventArgs.#ctor(U3DXT.iOS.Native.MultipeerConnectivity.MCSession,System.Object[],U3DXT.iOS.Native.MultipeerConnectivity.MCPeerID,System.Boolean)">
+            <summary>
+            Initializes a new instance of the
+            <see cref="T:U3DXT.iOS.Multipeer.SessionStartedReceivingResourceWithNameEventArgs" /> class.
+            </summary>
+            <param name="_session">_session.</param>
+            <param name="_resourceName">_resource name.</param>
+            <param name="_peerID">_peer I.</param>
+            <param name="_progress">_progress.</param>
+        </member>
+    </members>
+</doc>

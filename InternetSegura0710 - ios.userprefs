@@ -1,0 +1,30 @@
+﻿<Properties StartupItem="Assembly-CSharp.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/U3DXT/Examples/gamekit7/GameKitBasics/GameKitBasicsJS.js">
+    <Files>
+      <File FileName="Assets/DeltaDNA/Example/DeltaDNAExample.cs" Line="17" Column="17" />
+      <File FileName="Assets/Scripts/Controls/CameraControl.cs" Line="310" Column="23" />
+      <File FileName="Assets/Scripts/GUIs/ButtonMainMenu.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Controls/QuizControl.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/GUIs/AnimatorSpeedup.cs" Line="1" Column="1" />
+      <File FileName="Assets/PlayerStateAnim.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Data/PlayerData.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/GUIs/PlayerSelectMenu.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Controls/TDLevelControl.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Generic/SaveLoadData.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Controls/TowerSpotsGUIs.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Controls/TowerSpotControl.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/GUIs/WinPauseLoseGame.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Data/GlobalData.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Controls/EnemyControl.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Generic/FontSizeController.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/GUIs/TowerButtonsPositions.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/GUIs/LevelsMenu.cs" Line="12" Column="3" />
+      <File FileName="Assets/U3DXT/Examples/gamekit7/GameKitBasics/GameKitBasicsJS.js" Line="59" Column="6" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

@@ -1,0 +1,34 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Generic/APIManager.cs">
+    <Files>
+      <File FileName="../../Desktop/AMIGA_Balance/Assets/Assets/Scripts/Movement.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/GUIs/Credits.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/GUIs/OptionsMenu.cs" Line="1" Column="1" />
+      <File FileName="Assets/Resources/CSV/Languages.csv" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Data/GlobalData.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Generic/FontSizeController.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/GUIs/ButtonMainMenu.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/GUIs/Glossary.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Controls/QuizControl.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/DataStructures/QuizQuestion.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/DataStructures/Quiz.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Generic/ActionAfterTimer.cs" Line="1" Column="1" />
+      <File FileName="Assets/Resources/CSV/0.csv" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Generic/APIManager.cs" Line="240" Column="28" />
+      <File FileName="Assets/Scripts/Controls/TDLevelControl.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Controls/CameraControl.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Controls/EnemyControl.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Controls/TowerSpotsGUIs.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Controls/TowerSpotControl.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/GUIs/TowerButtonsPositions.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/GUIs/Tutorial_Arrow.cs" Line="1" Column="1" />
+      <File FileName="Assets/Plugins/Android/AndroidManifest.xml" Line="7" Column="291" />
+      <File FileName="Assets/LeaderBoard.cs" Line="60" Column="5" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

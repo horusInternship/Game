@@ -1,0 +1,2741 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>U3DXTMultipeer</name>
+    </assembly>
+    <members>
+        <member name="T:U3DXT.iOS.Native.Foundation.NSProgress">
+            <summary>
+            </summary>
+            <remarks>
+            </remarks>
+            <exception cref="T:U3DXT.Core.U3DXTException">
+            Is thrown when creation or initialization fails.
+            </exception>
+        </member>
+        <member name="M:U3DXT.iOS.Native.Foundation.NSProgress.UP_NSProgress_currentProgress">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.Foundation.NSProgress.UP_NSProgress_get_totalUnitCount(System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.Foundation.NSProgress.UP_NSProgress_set_totalUnitCount(System.String,System.Int64)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.Foundation.NSProgress.UP_NSProgress_get_completedUnitCount(System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.Foundation.NSProgress.UP_NSProgress_set_completedUnitCount(System.String,System.Int64)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.Foundation.NSProgress.UP_NSProgress_get_localizedDescription(System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.Foundation.NSProgress.UP_NSProgress_set_localizedDescription(System.String,System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.Foundation.NSProgress.UP_NSProgress_get_localizedAdditionalDescription(System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.Foundation.NSProgress.UP_NSProgress_set_localizedAdditionalDescription(System.String,System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.Foundation.NSProgress.UP_NSProgress_get_pausable(System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.Foundation.NSProgress.UP_NSProgress_set_pausable(System.String,System.Boolean)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.Foundation.NSProgress.UP_NSProgress_get_cancellable(System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.Foundation.NSProgress.UP_NSProgress_set_cancellable(System.String,System.Boolean)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.Foundation.NSProgress.UP_NSProgress_get_cancelled(System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.Foundation.NSProgress.UP_NSProgress_get_paused(System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.Foundation.NSProgress.UP_NSProgress_set_cancellationHandler(System.String,System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.Foundation.NSProgress.UP_NSProgress_set_pausingHandler(System.String,System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.Foundation.NSProgress.UP_NSProgress_cancel(System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.Foundation.NSProgress.UP_NSProgress_pause(System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.Foundation.NSProgress.#ctor(U3DXT.iOS.Native.Internals._IosBaseClass._NewHelper)">
+            <summary>
+            U3DXT internal constructor.
+            </summary>
+            <param name="helper">
+            </param>
+        </member>
+        <member name="M:U3DXT.iOS.Native.Foundation.NSProgress.#ctor(U3DXT.iOS.Native.Internals._IosBaseClass._NewHelper,System.String)">
+            <summary>
+            U3DXT internal constructor.
+            </summary>
+            <param name="helper">
+            </param>
+            <param name="uuid">
+            </param>
+        </member>
+        <member name="M:U3DXT.iOS.Native.Foundation.NSProgress.#ctor">
+            <summary>
+            Creates and initializes a new instance of the native <see cref="T:U3DXT.iOS.Native.Foundation.NSProgress" /> class.
+            <br></br>Equivalent to the native <c>[[NSProgress alloc] init]</c> calls.
+            </summary>
+            <exception cref="T:U3DXT.Core.U3DXTException">
+            Is thrown when creation or initialization fails.
+            </exception>
+        </member>
+        <member name="M:U3DXT.iOS.Native.Foundation.NSProgress.InstancesRespondToSelector(System.String)">
+            <summary>
+            Returns whether native instances of this class can respond to a selector with the same name.
+            <br></br>Equivalent to the native <c>instancesRespondToSelector:</c> class method.
+            </summary>
+            <returns>
+                <c>true</c> if native instances of this class can respond to a selector with the same name, <c>false</c> otherwise.
+            </returns>
+            <param name="selectorName">The literal name of the selector.</param>
+        </member>
+        <member name="P:U3DXT.iOS.Native.Foundation.NSProgress.ClassExists">
+            <summary>
+            Returns whether the native NSProgress class exists on the platform.
+            </summary>
+            <value>
+                <c>true</c> if class exists; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="M:U3DXT.iOS.Native.Foundation.NSProgress.CurrentProgress">
+            <summary>
+                <br>
+                </br>Equivalent to the native <c>currentProgress</c> method.
+            </summary>
+            <remarks>
+            </remarks>
+        </member>
+        <member name="P:U3DXT.iOS.Native.Foundation.NSProgress.totalUnitCount">
+            <summary>
+                <br>
+                </br>Equivalent to the native <c>totalUnitCount</c> property.
+            </summary>
+            <remarks>
+            </remarks>
+        </member>
+        <member name="P:U3DXT.iOS.Native.Foundation.NSProgress.completedUnitCount">
+            <summary>
+                <br>
+                </br>Equivalent to the native <c>completedUnitCount</c> property.
+            </summary>
+            <remarks>
+            </remarks>
+        </member>
+        <member name="P:U3DXT.iOS.Native.Foundation.NSProgress.localizedDescription">
+            <summary>
+                <br>
+                </br>Equivalent to the native <c>localizedDescription</c> property.
+            </summary>
+            <remarks>
+            </remarks>
+        </member>
+        <member name="P:U3DXT.iOS.Native.Foundation.NSProgress.localizedAdditionalDescription">
+            <summary>
+                <br>
+                </br>Equivalent to the native <c>localizedAdditionalDescription</c> property.
+            </summary>
+            <remarks>
+            </remarks>
+        </member>
+        <member name="P:U3DXT.iOS.Native.Foundation.NSProgress.pausable">
+            <summary>
+                <br>
+                </br>Equivalent to the native <c>pausable</c> property.
+            </summary>
+            <remarks>
+            </remarks>
+        </member>
+        <member name="P:U3DXT.iOS.Native.Foundation.NSProgress.cancellable">
+            <summary>
+                <br>
+                </br>Equivalent to the native <c>cancellable</c> property.
+            </summary>
+            <remarks>
+            </remarks>
+        </member>
+        <member name="P:U3DXT.iOS.Native.Foundation.NSProgress.cancelled">
+            <summary>
+                <br>
+                </br>Equivalent to the native <c>cancelled</c> property.
+            </summary>
+            <remarks>
+            </remarks>
+        </member>
+        <member name="P:U3DXT.iOS.Native.Foundation.NSProgress.paused">
+            <summary>
+                <br>
+                </br>Equivalent to the native <c>paused</c> property.
+            </summary>
+            <remarks>
+            </remarks>
+        </member>
+        <member name="P:U3DXT.iOS.Native.Foundation.NSProgress.cancellationHandler">
+            <summary>
+                <br>
+                </br>Equivalent to the native <c>cancellationHandler</c> property.
+            </summary>
+            <remarks>
+            </remarks>
+        </member>
+        <member name="P:U3DXT.iOS.Native.Foundation.NSProgress.pausingHandler">
+            <summary>
+                <br>
+                </br>Equivalent to the native <c>pausingHandler</c> property.
+            </summary>
+            <remarks>
+            </remarks>
+        </member>
+        <member name="M:U3DXT.iOS.Native.Foundation.NSProgress.Cancel">
+            <summary>
+                <br>
+                </br>Equivalent to the native <c>cancel</c> method.
+            </summary>
+            <remarks>
+            </remarks>
+        </member>
+        <member name="M:U3DXT.iOS.Native.Foundation.NSProgress.Pause">
+            <summary>
+                <br>
+                </br>Equivalent to the native <c>pause</c> method.
+            </summary>
+            <remarks>
+            </remarks>
+        </member>
+        <member name="T:U3DXT.iOS.Native.MultipeerConnectivity.MCAdvertiserAssistant">
+            <summary>
+            The <c>MCAdvertiserAssistant</c> is a convenience class that handles advertising, presents incoming invitations to the user and handles users’ responses. This class should be used to provide a user interface for handling invitations when your app does not require programmatic control over the invitation process.
+            </summary>
+            <remarks>
+                <p>Before you can advertise a service, you must create an <c>MCPeerID</c> object that identifies your app and the user to nearby devices.</p>
+                <p>The serviceType parameter is a short text string used to describe the app's networking protocol.  It should be in the same format as a Bonjour service type: 1–15 characters long and valid characters include ASCII lowercase letters, numbers, and the hyphen.  A short name that distinguishes itself from unrelated services is recommended; for example, a text chat app made by ABC company could use the service type <c>"abc-txtchat"</c>. For more information about service types, read  “Domain Naming Conventions” .</p>
+                <p>The discoveryInfo parameter is a dictionary of string key/value pairs that will be advertised for browsers to see. The content of <c>discoveryInfo</c> will be advertised within Bonjour TXT records, so you should keep the dictionary small for better discovery performance.</p>
+                <p>For more information about TXT records, read  “Bonjour Operations” .</p>
+            </remarks>
+            <exception cref="T:U3DXT.Core.U3DXTException">
+            Is thrown when creation or initialization fails.
+            </exception>
+        </member>
+        <member name="E:U3DXT.iOS.Native.MultipeerConnectivity.MCAdvertiserAssistant.DidDismissInvitation">
+            <summary>
+                <br>
+                </br>Equivalent to implementing the native <c>advertiserAssistantDidDismissInvitation:</c> method of <c>MCAdvertiserAssistantDelegate</c>.
+            </summary>
+        </member>
+        <member name="E:U3DXT.iOS.Native.MultipeerConnectivity.MCAdvertiserAssistant.AssitantWillPresentInvitation">
+            <summary>
+                <br>
+                </br>Equivalent to implementing the native <c>advertiserAssitantWillPresentInvitation:</c> method of <c>MCAdvertiserAssistantDelegate</c>.
+            </summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.MultipeerConnectivity.MCAdvertiserAssistant.UP_MCAdvertiserAssistant_get_delegate(System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.MultipeerConnectivity.MCAdvertiserAssistant.UP_MCAdvertiserAssistant_set_delegate(System.String,System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.MultipeerConnectivity.MCAdvertiserAssistant.UP_MCAdvertiserAssistant_get_discoveryInfo(System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.MultipeerConnectivity.MCAdvertiserAssistant.UP_MCAdvertiserAssistant_get_serviceType(System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.MultipeerConnectivity.MCAdvertiserAssistant.UP_MCAdvertiserAssistant_get_session(System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.MultipeerConnectivity.MCAdvertiserAssistant.UP_MCAdvertiserAssistant_alloc_initWithServiceType_discoveryInfo_session_(System.String,System.String,System.String,System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.MultipeerConnectivity.MCAdvertiserAssistant.UP_MCAdvertiserAssistant_start(System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.MultipeerConnectivity.MCAdvertiserAssistant.UP_MCAdvertiserAssistant_stop(System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.MultipeerConnectivity.MCAdvertiserAssistant.#ctor(U3DXT.iOS.Native.Internals._IosBaseClass._NewHelper)">
+            <summary>
+            U3DXT internal constructor.
+            </summary>
+            <param name="helper">
+            </param>
+        </member>
+        <member name="M:U3DXT.iOS.Native.MultipeerConnectivity.MCAdvertiserAssistant.#ctor(U3DXT.iOS.Native.Internals._IosBaseClass._NewHelper,System.String)">
+            <summary>
+            U3DXT internal constructor.
+            </summary>
+            <param name="helper">
+            </param>
+            <param name="uuid">
+            </param>
+        </member>
+        <member name="M:U3DXT.iOS.Native.MultipeerConnectivity.MCAdvertiserAssistant.#ctor">
+            <summary>
+            Creates and initializes a new instance of the native <see cref="T:U3DXT.iOS.Native.MultipeerConnectivity.MCAdvertiserAssistant" /> class.
+            <br></br>Equivalent to the native <c>[[MCAdvertiserAssistant alloc] init]</c> calls.
+            </summary>
+            <exception cref="T:U3DXT.Core.U3DXTException">
+            Is thrown when creation or initialization fails.
+            </exception>
+        </member>
+        <member name="M:U3DXT.iOS.Native.MultipeerConnectivity.MCAdvertiserAssistant.InstancesRespondToSelector(System.String)">
+            <summary>
+            Returns whether native instances of this class can respond to a selector with the same name.
+            <br></br>Equivalent to the native <c>instancesRespondToSelector:</c> class method.
+            </summary>
+            <returns>
+                <c>true</c> if native instances of this class can respond to a selector with the same name, <c>false</c> otherwise.
+            </returns>
+            <param name="selectorName">The literal name of the selector.</param>
+        </member>
+        <member name="P:U3DXT.iOS.Native.MultipeerConnectivity.MCAdvertiserAssistant.ClassExists">
+            <summary>
+            Returns whether the native MCAdvertiserAssistant class exists on the platform.
+            </summary>
+            <value>
+                <c>true</c> if class exists; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:U3DXT.iOS.Native.MultipeerConnectivity.MCAdvertiserAssistant.Delegate">
+            <summary>
+            The delegate object that handles advertising-assistant-related events.
+            <br></br>Equivalent to the native <c>delegate</c> property.
+            </summary>
+            <remarks>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 7.0 and later.</li>
+                </ul>
+            </remarks>
+        </member>
+        <member name="P:U3DXT.iOS.Native.MultipeerConnectivity.MCAdvertiserAssistant.discoveryInfo">
+            <summary>
+            The <c>info</c> dictionary passed when this object was initialized. (read-only)
+            <br></br>Equivalent to the native <c>discoveryInfo</c> property.
+            </summary>
+            <remarks>
+                <b>Discussion</b>
+                <p>This property’s value is set when you initialize the object, and cannot be changed later.</p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 7.0 and later.</li>
+                </ul>
+            </remarks>
+        </member>
+        <member name="P:U3DXT.iOS.Native.MultipeerConnectivity.MCAdvertiserAssistant.serviceType">
+            <summary>
+            The service type that your app is advertising. (read-only)
+            <br></br>Equivalent to the native <c>serviceType</c> property.
+            </summary>
+            <remarks>
+                <b>Discussion</b>
+                <p>This property’s value is set when you initialize the object, and cannot be changed later.</p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 7.0 and later.</li>
+                </ul>
+            </remarks>
+        </member>
+        <member name="P:U3DXT.iOS.Native.MultipeerConnectivity.MCAdvertiserAssistant.session">
+            <summary>
+            The session into which new peers are added after user confirmation. (read-only)
+            <br></br>Equivalent to the native <c>session</c> property.
+            </summary>
+            <remarks>
+                <b>Discussion</b>
+                <p>This property’s value is set when you initialize the object, and cannot be changed later.</p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 7.0 and later.</li>
+                </ul>
+            </remarks>
+        </member>
+        <member name="M:U3DXT.iOS.Native.MultipeerConnectivity.MCAdvertiserAssistant.#ctor(System.String,System.Collections.Generic.Dictionary{System.Object,System.Object},U3DXT.iOS.Native.MultipeerConnectivity.MCSession)">
+            <summary>
+            Creates an instance of the native MCAdvertiserAssistant and initializes the object. Initializes an advertiser assistant object.
+            <br></br>Equivalent to the native <c>[[MCAdvertiserAssistant alloc] initWithServiceType:discoveryInfo:session:]</c> calls.
+            </summary>
+            <remarks>
+                <b>Parameters</b>
+                <p>
+                </p>
+                <em>serviceType</em>
+                <p>The type of service to advertise. This should be a short text string that describes the app's networking protocol, in the same format as a Bonjour service type:</p>
+                <ul class="termdef">
+                    <li class="termdef">
+                        <p>Must be 1–15 characters long</p>
+                    </li>
+                    <li class="termdef">
+                        <p>Can contain only ASCII lowercase letters, numbers, and hyphens.</p>
+                    </li>
+                </ul>
+                <p>This name should be easily distinguished from unrelated services. For example, a text chat app made by ABC company could use the service type <c>abc-txtchat</c>.</p>
+                <p>For more details, read  “Domain Naming Conventions” .</p>
+                <em>info</em>
+                <p>A dictionary of key-value pairs that are made available to browsers.</p>
+                <p>This data is advertised using a Bonjour TXT record, encoded according to  RFC 6763  (section 6). As a result:</p>
+                <ul class="termdef">
+                    <li class="termdef">
+                        <p>The key-value pair must be no longer than 255 bytes (total) when encoded in UTF-8 format with an equals sign (<c>=</c>) between the key and the value.</p>
+                    </li>
+                    <li class="termdef">
+                        <p>Keys cannot contain an equals sign.</p>
+                    </li>
+                </ul>
+                <p>For optimal performance, the total size of the keys and values in this dictionary should be no more than about 400 bytes so that the entire advertisement can fit within a single Bluetooth data packet. For details on the maximum allowable length, read  “Monitoring a Bonjour Service”  in <em>NSNetServices and CFNetServices Programming Guide</em>.</p>
+                <p>If the data you need to provide is too large to fit within these constraints, you should create a custom discovery class using Bonjour for discovery and your choice of networking protocols for exchanging the information.</p>
+                <em>session</em>
+                <p>The session into which new peers should be added after they accept the invitation.</p>
+                <b>Return Value</b>
+                <p>Returns an initialized instance, or <c>null</c> if an error occurred.</p>
+                <b>Discussion</b>
+                <p>This method throws an exception if a valid <c>peerID</c> object is not provided or if <c>serviceType</c> is not a legal Bonjour service type.</p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 7.0 and later.</li>
+                </ul>
+            </remarks>
+            <param name="serviceType">
+            </param>
+            <param name="info">
+            </param>
+            <param name="session">
+            </param>
+        </member>
+        <member name="M:U3DXT.iOS.Native.MultipeerConnectivity.MCAdvertiserAssistant.Start">
+            <summary>
+            Begins advertising the service provided by a local peer and starts the assistant.
+            <br></br>Equivalent to the native <c>start</c> method.
+            </summary>
+            <remarks>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 7.0 and later.</li>
+                </ul>
+            </remarks>
+        </member>
+        <member name="M:U3DXT.iOS.Native.MultipeerConnectivity.MCAdvertiserAssistant.Stop">
+            <summary>
+            Stops advertising the service provided by a local peer and stops the assistant..
+            <br></br>Equivalent to the native <c>stop</c> method.
+            </summary>
+            <remarks>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 7.0 and later.</li>
+                </ul>
+            </remarks>
+        </member>
+        <member name="T:U3DXT.iOS.Native.MultipeerConnectivity.MCAdvertiserAssistantDelegate">
+            <summary>
+            </summary>
+            <remarks>
+            </remarks>
+        </member>
+        <member name="M:U3DXT.iOS.Native.MultipeerConnectivity.MCAdvertiserAssistantDelegate.UP_MCAdvertiserAssistantDelegate_set__advertiserAssistantDidDismissInvitation__handler(System.String,System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.MultipeerConnectivity.MCAdvertiserAssistantDelegate.UP_MCAdvertiserAssistantDelegate_set__advertiserAssitantWillPresentInvitation__handler(System.String,System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.MultipeerConnectivity.MCAdvertiserAssistantDelegate.#ctor">
+            <summary>
+            Default constructor.
+            </summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.MultipeerConnectivity.MCAdvertiserAssistantDelegate.#ctor(U3DXT.iOS.Native.Internals._IosBaseClass._NewHelper,System.String)">
+            <summary>
+            U3DXT internal constructor.
+            </summary>
+            <param name="helper">
+            </param>
+            <param name="className">
+            </param>
+        </member>
+        <member name="M:U3DXT.iOS.Native.MultipeerConnectivity.MCAdvertiserAssistantDelegate._InitImplementedMethods">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.MultipeerConnectivity.MCAdvertiserAssistantDelegate.DidDismissInvitation(U3DXT.iOS.Native.MultipeerConnectivity.MCAdvertiserAssistant)">
+            <summary>
+            (<b>required</b>)
+            <br></br>Equivalent to the native <c>advertiserAssistantDidDismissInvitation:</c> method.
+            </summary>
+            <remarks>
+            </remarks>
+            <param name="advertiserAssistant">
+            </param>
+        </member>
+        <member name="M:U3DXT.iOS.Native.MultipeerConnectivity.MCAdvertiserAssistantDelegate.AssitantWillPresentInvitation(U3DXT.iOS.Native.MultipeerConnectivity.MCAdvertiserAssistant)">
+            <summary>
+            (<b>required</b>)
+            <br></br>Equivalent to the native <c>advertiserAssitantWillPresentInvitation:</c> method.
+            </summary>
+            <remarks>
+            </remarks>
+            <param name="advertiserAssistant">
+            </param>
+        </member>
+        <member name="P:U3DXT.iOS.Native.MultipeerConnectivity.MCAdvertiserAssistantDelegate._advertiserAssistantDidDismissInvitation__handler">
+            <summary>
+                <br>
+                </br>Equivalent to the native <c>_advertiserAssistantDidDismissInvitation__handler</c> property.
+            </summary>
+            <remarks>
+            </remarks>
+        </member>
+        <member name="P:U3DXT.iOS.Native.MultipeerConnectivity.MCAdvertiserAssistantDelegate._advertiserAssitantWillPresentInvitation__handler">
+            <summary>
+                <br>
+                </br>Equivalent to the native <c>_advertiserAssitantWillPresentInvitation__handler</c> property.
+            </summary>
+            <remarks>
+            </remarks>
+        </member>
+        <member name="T:U3DXT.iOS.Native.MultipeerConnectivity.MCBrowserViewController">
+            <summary>
+            The <c>MCBrowserViewController</c> class presents nearby devices to the user and enables the user to invite nearby devices to a session. To use this class, call methods from the underlying <c>UIViewController</c> class (<c>prepareForSegue:sender:</c> and <c>performSegueWithIdentifier:sender:</c> for storyboards or <c>presentViewController:animated:completion:</c> and <c>dismissViewControllerAnimated:completion:</c> for nib-based views) to present and dismiss the view controller.
+            </summary>
+            <remarks>
+            </remarks>
+            <exception cref="T:U3DXT.Core.U3DXTException">
+            Is thrown when creation or initialization fails.
+            </exception>
+        </member>
+        <member name="P:U3DXT.iOS.Native.MultipeerConnectivity.MCBrowserViewController.shouldPresentNearbyHandler">
+            <summary>
+            Called when a new peer is discovered to decide whether to show it in the user interface. (required)
+            <br></br>Equivalent to implementing the native <c>browserViewController:shouldPresentNearbyPeer:withDiscoveryInfo:</c> method of <c>MCBrowserViewControllerDelegate</c>.
+            </summary>
+        </member>
+        <member name="E:U3DXT.iOS.Native.MultipeerConnectivity.MCBrowserViewController.DidFinish">
+            <summary>
+            Called when the picker view controller is dismissed with peers chosen. (required)
+            <br></br>Equivalent to implementing the native <c>browserViewControllerDidFinish:</c> method of <c>MCBrowserViewControllerDelegate</c>.
+            </summary>
+        </member>
+        <member name="E:U3DXT.iOS.Native.MultipeerConnectivity.MCBrowserViewController.WasCancelled">
+            <summary>
+            Called when the user cancels the picker view. (required)
+            <br></br>Equivalent to implementing the native <c>browserViewControllerWasCancelled:</c> method of <c>MCBrowserViewControllerDelegate</c>.
+            </summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.MultipeerConnectivity.MCBrowserViewController.UP_MCBrowserViewController_get_browser(System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.MultipeerConnectivity.MCBrowserViewController.UP_MCBrowserViewController_get_delegate(System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.MultipeerConnectivity.MCBrowserViewController.UP_MCBrowserViewController_set_delegate(System.String,System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.MultipeerConnectivity.MCBrowserViewController.UP_MCBrowserViewController_get_maximumNumberOfPeers(System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.MultipeerConnectivity.MCBrowserViewController.UP_MCBrowserViewController_set_maximumNumberOfPeers(System.String,System.UInt32)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.MultipeerConnectivity.MCBrowserViewController.UP_MCBrowserViewController_get_minimumNumberOfPeers(System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.MultipeerConnectivity.MCBrowserViewController.UP_MCBrowserViewController_set_minimumNumberOfPeers(System.String,System.UInt32)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.MultipeerConnectivity.MCBrowserViewController.UP_MCBrowserViewController_get_session(System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.MultipeerConnectivity.MCBrowserViewController.UP_MCBrowserViewController_alloc_initWithBrowser_session_(System.String,System.String,System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.MultipeerConnectivity.MCBrowserViewController.UP_MCBrowserViewController_alloc_initWithServiceType_session_(System.String,System.String,System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.MultipeerConnectivity.MCBrowserViewController.UP_MCBrowserViewController_browser_foundPeer_withDiscoveryInfo_(System.String,System.String,System.String,System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.MultipeerConnectivity.MCBrowserViewController.UP_MCBrowserViewController_browser_lostPeer_(System.String,System.String,System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.MultipeerConnectivity.MCBrowserViewController.#ctor(U3DXT.iOS.Native.Internals._IosBaseClass._NewHelper)">
+            <summary>
+            U3DXT internal constructor.
+            </summary>
+            <param name="helper">
+            </param>
+        </member>
+        <member name="M:U3DXT.iOS.Native.MultipeerConnectivity.MCBrowserViewController.#ctor(U3DXT.iOS.Native.Internals._IosBaseClass._NewHelper,System.String)">
+            <summary>
+            U3DXT internal constructor.
+            </summary>
+            <param name="helper">
+            </param>
+            <param name="uuid">
+            </param>
+        </member>
+        <member name="M:U3DXT.iOS.Native.MultipeerConnectivity.MCBrowserViewController.#ctor">
+            <summary>
+            Creates and initializes a new instance of the native <see cref="T:U3DXT.iOS.Native.MultipeerConnectivity.MCBrowserViewController" /> class.
+            <br></br>Equivalent to the native <c>[[MCBrowserViewController alloc] init]</c> calls.
+            </summary>
+            <exception cref="T:U3DXT.Core.U3DXTException">
+            Is thrown when creation or initialization fails.
+            </exception>
+        </member>
+        <member name="M:U3DXT.iOS.Native.MultipeerConnectivity.MCBrowserViewController.InstancesRespondToSelector(System.String)">
+            <summary>
+            Returns whether native instances of this class can respond to a selector with the same name.
+            <br></br>Equivalent to the native <c>instancesRespondToSelector:</c> class method.
+            </summary>
+            <returns>
+                <c>true</c> if native instances of this class can respond to a selector with the same name, <c>false</c> otherwise.
+            </returns>
+            <param name="selectorName">The literal name of the selector.</param>
+        </member>
+        <member name="P:U3DXT.iOS.Native.MultipeerConnectivity.MCBrowserViewController.ClassExists">
+            <summary>
+            Returns whether the native MCBrowserViewController class exists on the platform.
+            </summary>
+            <value>
+                <c>true</c> if class exists; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:U3DXT.iOS.Native.MultipeerConnectivity.MCBrowserViewController.browser">
+            <summary>
+            The browser object that is used for discovering peers. (read-only)
+            <br></br>Equivalent to the native <c>browser</c> property.
+            </summary>
+            <remarks>
+                <b>Discussion</b>
+                <p>This value is set when you initialize the object, and cannot be changed later.</p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 7.0 and later.</li>
+                </ul>
+            </remarks>
+        </member>
+        <member name="P:U3DXT.iOS.Native.MultipeerConnectivity.MCBrowserViewController.Delegate">
+            <summary>
+            The delegate object that handles view-controller-related events.
+            <br></br>Equivalent to the native <c>delegate</c> property.
+            </summary>
+            <remarks>
+                <b>Discussion</b>
+                <p>A browser view controller notifies the delegate:</p>
+                <ul class="ul">
+                    <li class="li">
+                        <p>When the user presses the “Done” button, which is enabled when the specified minimum number of peers are connected in a session.</p>
+                    </li>
+                    <li class="li">
+                        <p>When the user cancels the view controller.</p>
+                    </li>
+                </ul>
+                <p>Also, as new peers are discovered, the delegate can choose whether to present them in the user interface.</p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 7.0 and later.</li>
+                </ul>
+            </remarks>
+        </member>
+        <member name="P:U3DXT.iOS.Native.MultipeerConnectivity.MCBrowserViewController.maximumNumberOfPeers">
+            <summary>
+            The maximum number of peers allowed in a session, including the local peer.
+            <br></br>Equivalent to the native <c>maximumNumberOfPeers</c> property.
+            </summary>
+            <remarks>
+                <b>Discussion</b>
+                <p>The largest allowable value (and the default) is 8.</p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 7.0 and later.</li>
+                </ul>
+            </remarks>
+        </member>
+        <member name="P:U3DXT.iOS.Native.MultipeerConnectivity.MCBrowserViewController.minimumNumberOfPeers">
+            <summary>
+            The minimum number of peers that need to be in a session, including the local peer.
+            <br></br>Equivalent to the native <c>minimumNumberOfPeers</c> property.
+            </summary>
+            <remarks>
+                <b>Discussion</b>
+                <p>The smallest allowable value (and the default) is 2.</p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 7.0 and later.</li>
+                </ul>
+            </remarks>
+        </member>
+        <member name="P:U3DXT.iOS.Native.MultipeerConnectivity.MCBrowserViewController.session">
+            <summary>
+            The multipeer session to which the invited peers are connected. (read-only)
+            <br></br>Equivalent to the native <c>session</c> property.
+            </summary>
+            <remarks>
+                <b>Discussion</b>
+                <p>This value is set when you initialize the object, and cannot be changed later.</p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 7.0 and later.</li>
+                </ul>
+            </remarks>
+        </member>
+        <member name="M:U3DXT.iOS.Native.MultipeerConnectivity.MCBrowserViewController.#ctor(U3DXT.iOS.Native.MultipeerConnectivity.MCNearbyServiceBrowser,U3DXT.iOS.Native.MultipeerConnectivity.MCSession)">
+            <summary>
+            Creates an instance of the native MCBrowserViewController and initializes the object. Initializes a browser view controller with the provided browser.
+            <br></br>Equivalent to the native <c>[[MCBrowserViewController alloc] initWithBrowser:session:]</c> calls.
+            </summary>
+            <remarks>
+                <b>Parameters</b>
+                <p>
+                </p>
+                <em>browser</em>
+                <p>An object that the browser view controller uses for browsing. This is usually an instance of <c>MCNearbyServiceBrowser</c>. However, if your app is using a custom discovery scheme, you can instead pass any custom subclass that calls the methods defined in the <c>MCNearbyServiceBrowserDelegate</c> protocol on its delegate when peers are found and lost.</p>
+                <p>
+                    <strong>Important:</strong> If you want the browser view controller to manage the browsing process, the browser object must not be actively browsing, and its delegate must be <c>null</c>.</p>
+                <p>
+                </p>
+                <em>session</em>
+                <p>The multipeer session into which the invited peers are connected.</p>
+                <b>Return Value</b>
+                <p>Returns an initialized object, or <c>null</c> if an error occurred.</p>
+                <b>Discussion</b>
+                <p>This method throws an exception if the <c>browser</c> or <c>session</c> parameters do not contain valid objects.</p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 7.0 and later.</li>
+                </ul>
+            </remarks>
+            <param name="browser">
+            </param>
+            <param name="session">
+            </param>
+        </member>
+        <member name="M:U3DXT.iOS.Native.MultipeerConnectivity.MCBrowserViewController.#ctor(System.String,U3DXT.iOS.Native.MultipeerConnectivity.MCSession)">
+            <summary>
+            Creates an instance of the native MCBrowserViewController and initializes the object. Initializes a browser view controller using the provided service type string.
+            <br></br>Equivalent to the native <c>[[MCBrowserViewController alloc] initWithServiceType:session:]</c> calls.
+            </summary>
+            <remarks>
+                <b>Parameters</b>
+                <p>
+                </p>
+                <em>serviceType</em>
+                <p>The type of service to browse for. This should be a short text string that describes the app's networking protocol, in the same format as a Bonjour service type:</p>
+                <ul class="termdef">
+                    <li class="termdef">
+                        <p>Must be 1–15 characters long</p>
+                    </li>
+                    <li class="termdef">
+                        <p>Can contain only ASCII lowercase letters, numbers, and hyphens.</p>
+                    </li>
+                </ul>
+                <p>This name should be easily distinguished from unrelated services. For example, a text chat app made by ABC company could use the service type <c>abc-txtchat</c>.</p>
+                <p>For more details, read  “Domain Naming Conventions” .</p>
+                <em>session</em>
+                <p>The multipeer session that any user-chosen peers should be invited to join.</p>
+                <b>Return Value</b>
+                <p>Returns an initialized object, or <c>null</c> if an error occurred.</p>
+                <b>Discussion</b>
+                <p>This method throws an exception if the <c>session</c> or <c>serviceType</c> parameters do not contain valid objects or the specified Bonjour service type is not valid.</p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 7.0 and later.</li>
+                </ul>
+            </remarks>
+            <param name="serviceType">
+            </param>
+            <param name="session">
+            </param>
+        </member>
+        <member name="M:U3DXT.iOS.Native.MultipeerConnectivity.MCBrowserViewController.Browser(U3DXT.iOS.Native.MultipeerConnectivity.MCNearbyServiceBrowser,U3DXT.iOS.Native.MultipeerConnectivity.MCPeerID,System.Collections.Generic.Dictionary{System.Object,System.Object})">
+            <summary>
+            Called when a new peer appears. (required)
+            <br></br>Equivalent to the native <c>browser:foundPeer:withDiscoveryInfo:</c> method.
+            </summary>
+            <remarks>
+                <b>Parameters</b>
+                <p>
+                </p>
+                <em>browser</em>
+                <p>The browser object that discovered this peer.</p>
+                <em>peerID</em>
+                <p>The unique ID of the peer that was discovered.</p>
+                <em>info</em>
+                <p>A collection of information that the Multipeer Connectivity framework uses when communicating with the peer.</p>
+                <b>Discussion</b>
+                <p>The peer ID and discovery info provided to this delegate method can be used to invite a new peer to join a session.</p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 7.0 and later.</li>
+                </ul>
+            </remarks>
+            <param name="browser">
+            </param>
+            <param name="peerID">
+            </param>
+            <param name="info">
+            </param>
+        </member>
+        <member name="M:U3DXT.iOS.Native.MultipeerConnectivity.MCBrowserViewController.Browser(U3DXT.iOS.Native.MultipeerConnectivity.MCNearbyServiceBrowser,U3DXT.iOS.Native.MultipeerConnectivity.MCPeerID)">
+            <summary>
+            Called when a peer disappears. (required)
+            <br></br>Equivalent to the native <c>browser:lostPeer:</c> method.
+            </summary>
+            <remarks>
+                <b>Parameters</b>
+                <p>
+                </p>
+                <em>browser</em>
+                <p>The browser object that previously discovered this peer.</p>
+                <em>peerID</em>
+                <p>The unique ID of the peer that disappeared.</p>
+                <b>Discussion</b>
+                <p>This callback is primarily intended as a hint that it is no longer possible to communicate with that peer, and that your app should remove that peer from its user interface.</p>
+                <p>
+                    <strong>Important:</strong> Because there is a delay between when a host leaves a network and when the underlying Bonjour layer detects that it has left, the fact that your app has not yet received a disappearance callback does not guarantee that it can communicate with the peer successfully.</p>
+                <p>
+                </p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 7.0 and later.</li>
+                </ul>
+            </remarks>
+            <param name="browser">
+            </param>
+            <param name="peerID">
+            </param>
+        </member>
+        <member name="T:U3DXT.iOS.Native.MultipeerConnectivity.MCBrowserViewControllerDelegate">
+            <summary>
+            The <c>MCBrowserViewControllerDelegate</c> protocol defines the methods that your delegate object must implement to handle callbacks from the <c>MCBrowserViewController</c> class.
+            </summary>
+            <remarks>
+            </remarks>
+        </member>
+        <member name="M:U3DXT.iOS.Native.MultipeerConnectivity.MCBrowserViewControllerDelegate.UP_MCBrowserViewControllerDelegate_set__browserViewController_shouldPresentNearbyPeer_withDiscoveryInfo__handler(System.String,System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.MultipeerConnectivity.MCBrowserViewControllerDelegate.UP_MCBrowserViewControllerDelegate_set__browserViewControllerDidFinish__handler(System.String,System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.MultipeerConnectivity.MCBrowserViewControllerDelegate.UP_MCBrowserViewControllerDelegate_set__browserViewControllerWasCancelled__handler(System.String,System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.MultipeerConnectivity.MCBrowserViewControllerDelegate.#ctor">
+            <summary>
+            Default constructor.
+            </summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.MultipeerConnectivity.MCBrowserViewControllerDelegate.#ctor(U3DXT.iOS.Native.Internals._IosBaseClass._NewHelper,System.String)">
+            <summary>
+            U3DXT internal constructor.
+            </summary>
+            <param name="helper">
+            </param>
+            <param name="className">
+            </param>
+        </member>
+        <member name="M:U3DXT.iOS.Native.MultipeerConnectivity.MCBrowserViewControllerDelegate._InitImplementedMethods">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.MultipeerConnectivity.MCBrowserViewControllerDelegate.ShouldPresentNearby(U3DXT.iOS.Native.MultipeerConnectivity.MCBrowserViewController,U3DXT.iOS.Native.MultipeerConnectivity.MCPeerID,System.Collections.Generic.Dictionary{System.Object,System.Object})">
+            <summary>
+            (optional) Called when a new peer is discovered to decide whether to show it in the user interface. (required)
+            <br></br>Equivalent to the native <c>browserViewController:shouldPresentNearbyPeer:withDiscoveryInfo:</c> method.
+            </summary>
+            <remarks>
+                <b>Parameters</b>
+                <p>
+                </p>
+                <em>picker</em>
+                <p>The picker object whose associated browser discovered the new peer.</p>
+                <em>peerID</em>
+                <p>The unique ID of the remote peer.</p>
+                <em>info</em>
+                <p>The info dictionary advertised by the peer. For more information on the contents of this dictionary, see the documentation for <c>initWithPeer:discoveryInfo:serviceType:</c> in <em>MCNearbyServiceAdvertiser Class Reference</em>.</p>
+                <b>Return Value</b>
+                <p>This delegate method should return <c>true</c> if the newly discovered peer should be shown in the user interface, or <c>false</c> otherwise.</p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 7.0 and later.</li>
+                </ul>
+            </remarks>
+            <param name="browserViewController">
+            </param>
+            <param name="peerID">
+            </param>
+            <param name="info">
+            </param>
+        </member>
+        <member name="M:U3DXT.iOS.Native.MultipeerConnectivity.MCBrowserViewControllerDelegate.DidFinish(U3DXT.iOS.Native.MultipeerConnectivity.MCBrowserViewController)">
+            <summary>
+            (<b>required</b>) Called when the picker view controller is dismissed with peers chosen. (required)
+            <br></br>Equivalent to the native <c>browserViewControllerDidFinish:</c> method.
+            </summary>
+            <remarks>
+                <b>Parameters</b>
+                <p>
+                </p>
+                <em>browserViewController</em>
+                <p>The view controller that was dismissed.</p>
+                <b>Discussion</b>
+                <p>This call is intended to allow you to resume any UI updates for views that are no longer hidden.</p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 7.0 and later.</li>
+                </ul>
+            </remarks>
+            <param name="browserViewController">
+            </param>
+        </member>
+        <member name="M:U3DXT.iOS.Native.MultipeerConnectivity.MCBrowserViewControllerDelegate.WasCancelled(U3DXT.iOS.Native.MultipeerConnectivity.MCBrowserViewController)">
+            <summary>
+            (<b>required</b>) Called when the user cancels the picker view. (required)
+            <br></br>Equivalent to the native <c>browserViewControllerWasCancelled:</c> method.
+            </summary>
+            <remarks>
+                <b>Parameters</b>
+                <p>
+                </p>
+                <em>picker</em>
+                <p>The picker view controller whose picker view was canceled.</p>
+                <b>Discussion</b>
+                <p>This call is intended to allow you to resume any UI updates for views that are no longer hidden.</p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 7.0 and later.</li>
+                </ul>
+            </remarks>
+            <param name="browserViewController">
+            </param>
+        </member>
+        <member name="P:U3DXT.iOS.Native.MultipeerConnectivity.MCBrowserViewControllerDelegate._browserViewController_shouldPresentNearbyPeer_withDiscoveryInfo__handler">
+            <summary>
+                <br>
+                </br>Equivalent to the native <c>_browserViewController_shouldPresentNearbyPeer_withDiscoveryInfo__handler</c> property.
+            </summary>
+            <remarks>
+            </remarks>
+        </member>
+        <member name="P:U3DXT.iOS.Native.MultipeerConnectivity.MCBrowserViewControllerDelegate._browserViewControllerDidFinish__handler">
+            <summary>
+                <br>
+                </br>Equivalent to the native <c>_browserViewControllerDidFinish__handler</c> property.
+            </summary>
+            <remarks>
+            </remarks>
+        </member>
+        <member name="P:U3DXT.iOS.Native.MultipeerConnectivity.MCBrowserViewControllerDelegate._browserViewControllerWasCancelled__handler">
+            <summary>
+                <br>
+                </br>Equivalent to the native <c>_browserViewControllerWasCancelled__handler</c> property.
+            </summary>
+            <remarks>
+            </remarks>
+        </member>
+        <member name="T:U3DXT.iOS.Native.MultipeerConnectivity.MCEncryptionPreference">
+            <summary>
+            Indicates whether a session should use encryption when communicating with remote peers.
+            </summary>
+            <remarks>
+            </remarks>
+        </member>
+        <member name="F:U3DXT.iOS.Native.MultipeerConnectivity.MCEncryptionPreference.None">
+            <summary>
+                <p>The session should not be encrypted.</p>
+                <p>Available in iOS 7.0 and later.</p>
+                <p>
+                </p>
+                <br>
+                </br>Equivalent to the native <c>MCEncryptionNone</c> enum constant.
+            </summary>
+        </member>
+        <member name="F:U3DXT.iOS.Native.MultipeerConnectivity.MCEncryptionPreference.Optional">
+            <summary>
+                <p>The session prefers to use encryption, but will accept unencrypted connections.</p>
+                <p>Available in iOS 7.0 and later.</p>
+                <p>
+                </p>
+                <br>
+                </br>Equivalent to the native <c>MCEncryptionOptional</c> enum constant.
+            </summary>
+        </member>
+        <member name="F:U3DXT.iOS.Native.MultipeerConnectivity.MCEncryptionPreference.Required">
+            <summary>
+                <p>The session requires encryption.</p>
+                <p>Available in iOS 7.0 and later.</p>
+                <p>
+                </p>
+                <br>
+                </br>Equivalent to the native <c>MCEncryptionRequired</c> enum constant.
+            </summary>
+        </member>
+        <member name="T:U3DXT.iOS.Native.MultipeerConnectivity.MCErrorCode">
+            <summary>
+            Error codes found in <c>MCErrorDomain</c> error domain <c>NSError</c> objects returned by methods in the Multipeer Connectivity framework.
+            </summary>
+            <remarks>
+                <table class="graybox" border="0" cellspacing="0" cellpadding="5">
+                    <tr>
+                        <th scope="col" align="left">
+                            <p>
+                                <strong>Constant</strong>
+                            </p>
+                        </th>
+                        <th scope="col" align="left">
+                            <p>
+                                <strong>Description</strong>
+                            </p>
+                        </th>
+                    </tr>
+                    <tr>
+                        <td scope="row">
+                            <c>MCErrorDomain</c>
+                        </td>
+                        <td>
+                            <p>The <c>NSError</c> domain for errors specific to Multipeer Connectivity.</p>
+                            <table>
+                                <tr>
+                                    <td>
+                                        <pre>NSString * const MCErrorDomain;  </pre>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td scope="row">
+                            <c>kMCSessionMaximumNumberOfPeers</c>
+                        </td>
+                        <td>
+                            <p>The maximum number of peers that a session can support.</p>
+                            <table>
+                                <tr>
+                                    <td>
+                                        <pre>NSUInteger const kMCSessionMaximumNumberOfPeers;  </pre>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td scope="row">
+                            <c>kMCSessionMinimumNumberOfPeers</c>
+                        </td>
+                        <td>
+                            <p>The minimum number of peers that a session can support.</p>
+                            <table>
+                                <tr>
+                                    <td>
+                                        <pre>NSUInteger const kMCSessionMinimumNumberOfPeers;  </pre>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+                <br />
+            	Provide Feedback
+            </remarks>
+        </member>
+        <member name="F:U3DXT.iOS.Native.MultipeerConnectivity.MCErrorCode.Unsupported">
+            <summary>
+                <p>The operation is unsupported.</p>
+                <p>Available in iOS 7.0 and later.</p>
+                <p>
+                </p>
+                <br>
+                </br>Equivalent to the native <c>MCErrorUnsupported</c> enum constant.
+            </summary>
+        </member>
+        <member name="F:U3DXT.iOS.Native.MultipeerConnectivity.MCErrorCode.InvalidParameter">
+            <summary>
+                <p>Your app passed an invalid value as a parameter.</p>
+                <p>Available in iOS 7.0 and later.</p>
+                <p>
+                </p>
+                <br>
+                </br>Equivalent to the native <c>MCErrorInvalidParameter</c> enum constant.
+            </summary>
+        </member>
+        <member name="F:U3DXT.iOS.Native.MultipeerConnectivity.MCErrorCode.TimedOut">
+            <summary>
+                <p>The connection attempt timed out.</p>
+                <p>Available in iOS 7.0 and later.</p>
+                <p>
+                </p>
+                <br>
+                </br>Equivalent to the native <c>MCErrorTimedOut</c> enum constant.
+            </summary>
+        </member>
+        <member name="F:U3DXT.iOS.Native.MultipeerConnectivity.MCErrorCode.Unknown">
+            <summary>
+                <p>An unknown error occurred.</p>
+                <p>Available in iOS 7.0 and later.</p>
+                <p>
+                </p>
+                <br>
+                </br>Equivalent to the native <c>MCErrorUnknown</c> enum constant.
+            </summary>
+        </member>
+        <member name="F:U3DXT.iOS.Native.MultipeerConnectivity.MCErrorCode.Cancelled">
+            <summary>
+                <p>The operation was cancelled by the user.</p>
+                <p>Available in iOS 7.0 and later.</p>
+                <p>
+                </p>
+                <br>
+                </br>Equivalent to the native <c>MCErrorCancelled</c> enum constant.
+            </summary>
+        </member>
+        <member name="F:U3DXT.iOS.Native.MultipeerConnectivity.MCErrorCode.NotConnected">
+            <summary>
+                <p>Your app attempted to send data to a peer that is not connected.</p>
+                <p>Available in iOS 7.0 and later.</p>
+                <p>
+                </p>
+                <br>
+                </br>Equivalent to the native <c>MCErrorNotConnected</c> enum constant.
+            </summary>
+        </member>
+        <member name="T:U3DXT.iOS.Native.MultipeerConnectivity.MCNearbyServiceAdvertiser">
+            <summary>
+            The <c>MCNearbyServiceAdvertiser</c> class publishes an advertisement for a specific service that your app provides through the Multipeer Connectivity framework and notifies its delegate about invitations from nearby peers.
+            </summary>
+            <remarks>
+                <p>Before you can advertise a service, you must create an <c>MCPeerID</c> object that identifies your app and the user to nearby devices.</p>
+                <p>The serviceType parameter is a short text string used to describe the app's networking protocol.  It should be in the same format as a Bonjour service type: 1–15 characters long and valid characters include ASCII lowercase letters, numbers, and the hyphen.  A short name that distinguishes itself from unrelated services is recommended; for example, a text chat app made by ABC company could use the service type <c>"abc-txtchat"</c>. For more information about service types, read  “Domain Naming Conventions” .</p>
+                <p>The discoveryInfo parameter is a dictionary of string key/value pairs that will be advertised for browsers to see.  The content of <c>discoveryInfo</c> will be advertised within Bonjour TXT records, so you should keep the dictionary small for better discovery performance.</p>
+                <p>For more information about TXT records, read  “Bonjour Operations” .</p>
+            </remarks>
+            <exception cref="T:U3DXT.Core.U3DXTException">
+            Is thrown when creation or initialization fails.
+            </exception>
+        </member>
+        <member name="E:U3DXT.iOS.Native.MultipeerConnectivity.MCNearbyServiceAdvertiser.DidNotStartAdvertisingPeer">
+            <summary>
+            Called when advertisement fails. (required)
+            <br></br>Equivalent to implementing the native <c>advertiser:didNotStartAdvertisingPeer:</c> method of <c>MCNearbyServiceAdvertiserDelegate</c>.
+            </summary>
+        </member>
+        <member name="T:U3DXT.iOS.Native.MultipeerConnectivity.MCNearbyServiceAdvertiser.DidNotStartAdvertisingPeerEventArgs">
+            <summary>
+            Event arguments for DidNotStartAdvertisingPeer.
+            </summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.MultipeerConnectivity.MCNearbyServiceAdvertiser.DidNotStartAdvertisingPeerEventArgs.#ctor(U3DXT.iOS.Native.Foundation.NSError)">
+            <summary>
+            </summary>
+        </member>
+        <member name="F:U3DXT.iOS.Native.MultipeerConnectivity.MCNearbyServiceAdvertiser.DidNotStartAdvertisingPeerEventArgs.error">
+            <summary>error</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.MultipeerConnectivity.MCNearbyServiceAdvertiser.UP_MCNearbyServiceAdvertiser_get_delegate(System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.MultipeerConnectivity.MCNearbyServiceAdvertiser.UP_MCNearbyServiceAdvertiser_set_delegate(System.String,System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.MultipeerConnectivity.MCNearbyServiceAdvertiser.UP_MCNearbyServiceAdvertiser_get_discoveryInfo(System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.MultipeerConnectivity.MCNearbyServiceAdvertiser.UP_MCNearbyServiceAdvertiser_get_myPeerID(System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.MultipeerConnectivity.MCNearbyServiceAdvertiser.UP_MCNearbyServiceAdvertiser_get_serviceType(System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.MultipeerConnectivity.MCNearbyServiceAdvertiser.UP_MCNearbyServiceAdvertiser_alloc_initWithPeer_discoveryInfo_serviceType_(System.String,System.String,System.String,System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.MultipeerConnectivity.MCNearbyServiceAdvertiser.UP_MCNearbyServiceAdvertiser_startAdvertisingPeer(System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.MultipeerConnectivity.MCNearbyServiceAdvertiser.UP_MCNearbyServiceAdvertiser_stopAdvertisingPeer(System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.MultipeerConnectivity.MCNearbyServiceAdvertiser.#ctor(U3DXT.iOS.Native.Internals._IosBaseClass._NewHelper)">
+            <summary>
+            U3DXT internal constructor.
+            </summary>
+            <param name="helper">
+            </param>
+        </member>
+        <member name="M:U3DXT.iOS.Native.MultipeerConnectivity.MCNearbyServiceAdvertiser.#ctor(U3DXT.iOS.Native.Internals._IosBaseClass._NewHelper,System.String)">
+            <summary>
+            U3DXT internal constructor.
+            </summary>
+            <param name="helper">
+            </param>
+            <param name="uuid">
+            </param>
+        </member>
+        <member name="M:U3DXT.iOS.Native.MultipeerConnectivity.MCNearbyServiceAdvertiser.#ctor">
+            <summary>
+            Creates and initializes a new instance of the native <see cref="T:U3DXT.iOS.Native.MultipeerConnectivity.MCNearbyServiceAdvertiser" /> class.
+            <br></br>Equivalent to the native <c>[[MCNearbyServiceAdvertiser alloc] init]</c> calls.
+            </summary>
+            <exception cref="T:U3DXT.Core.U3DXTException">
+            Is thrown when creation or initialization fails.
+            </exception>
+        </member>
+        <member name="M:U3DXT.iOS.Native.MultipeerConnectivity.MCNearbyServiceAdvertiser.InstancesRespondToSelector(System.String)">
+            <summary>
+            Returns whether native instances of this class can respond to a selector with the same name.
+            <br></br>Equivalent to the native <c>instancesRespondToSelector:</c> class method.
+            </summary>
+            <returns>
+                <c>true</c> if native instances of this class can respond to a selector with the same name, <c>false</c> otherwise.
+            </returns>
+            <param name="selectorName">The literal name of the selector.</param>
+        </member>
+        <member name="P:U3DXT.iOS.Native.MultipeerConnectivity.MCNearbyServiceAdvertiser.ClassExists">
+            <summary>
+            Returns whether the native MCNearbyServiceAdvertiser class exists on the platform.
+            </summary>
+            <value>
+                <c>true</c> if class exists; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:U3DXT.iOS.Native.MultipeerConnectivity.MCNearbyServiceAdvertiser.Delegate">
+            <summary>
+            The delegate object that handles advertising events, such as receiving invitations to join a session.
+            <br></br>Equivalent to the native <c>delegate</c> property.
+            </summary>
+            <remarks>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 7.0 and later.</li>
+                </ul>
+            </remarks>
+        </member>
+        <member name="P:U3DXT.iOS.Native.MultipeerConnectivity.MCNearbyServiceAdvertiser.discoveryInfo">
+            <summary>
+            The <c>info</c> dictionary passed when this object was initialized. (read-only)
+            <br></br>Equivalent to the native <c>discoveryInfo</c> property.
+            </summary>
+            <remarks>
+                <b>Discussion</b>
+                <p>This value is set when you initialize the object, and cannot be changed later.</p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 7.0 and later.</li>
+                </ul>
+            </remarks>
+        </member>
+        <member name="P:U3DXT.iOS.Native.MultipeerConnectivity.MCNearbyServiceAdvertiser.myPeerID">
+            <summary>
+            The local peer ID for this instance. (read-only)
+            <br></br>Equivalent to the native <c>myPeerID</c> property.
+            </summary>
+            <remarks>
+                <b>Discussion</b>
+                <p>This value is set when you initialize the object, and cannot be changed later.</p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 7.0 and later.</li>
+                </ul>
+            </remarks>
+        </member>
+        <member name="P:U3DXT.iOS.Native.MultipeerConnectivity.MCNearbyServiceAdvertiser.serviceType">
+            <summary>
+            The service type that your app is advertising (read-only)
+            <br></br>Equivalent to the native <c>serviceType</c> property.
+            </summary>
+            <remarks>
+                <b>Discussion</b>
+                <p>This value is set when you initialize the object, and cannot be changed later.</p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 7.0 and later.</li>
+                </ul>
+            </remarks>
+        </member>
+        <member name="M:U3DXT.iOS.Native.MultipeerConnectivity.MCNearbyServiceAdvertiser.#ctor(U3DXT.iOS.Native.MultipeerConnectivity.MCPeerID,System.Collections.Generic.Dictionary{System.Object,System.Object},System.String)">
+            <summary>
+            Creates an instance of the native MCNearbyServiceAdvertiser and initializes the object. Initializes an advertiser object.
+            <br></br>Equivalent to the native <c>[[MCNearbyServiceAdvertiser alloc] initWithPeer:discoveryInfo:serviceType:]</c> calls.
+            </summary>
+            <remarks>
+                <b>Parameters</b>
+                <p>
+                </p>
+                <em>myPeerID</em>
+                <p>Your app’s local peer ID.</p>
+                <em>info</em>
+                <p>A dictionary of key-value pairs that are made available to browsers.</p>
+                <p>This data is advertised using a Bonjour TXT record, encoded according to  RFC 6763  (section 6). As a result:</p>
+                <ul class="termdef">
+                    <li class="termdef">
+                        <p>The key-value pair must be no longer than 255 bytes (total) when encoded in UTF-8 format with an equals sign (<c>=</c>) between the key and the value.</p>
+                    </li>
+                    <li class="termdef">
+                        <p>Keys cannot contain an equals sign.</p>
+                    </li>
+                </ul>
+                <p>For optimal performance, the total size of the keys and values in this dictionary should be no more than about 400 bytes so that the entire advertisement can fit within a single Bluetooth data packet. For details on the maximum allowable length, read  “Monitoring a Bonjour Service”  in <em>NSNetServices and CFNetServices Programming Guide</em>.</p>
+                <p>If the data you need to provide is too large to fit within these constraints, you should create a custom discovery class using Bonjour for discovery and your choice of networking protocols for exchanging the information.</p>
+                <em>serviceType</em>
+                <p>The type of service to advertise. This should be a short text string that describes the app's networking protocol, in the same format as a Bonjour service type:</p>
+                <ul class="termdef">
+                    <li class="termdef">
+                        <p>Must be 1–15 characters long</p>
+                    </li>
+                    <li class="termdef">
+                        <p>Can contain only ASCII lowercase letters, numbers, and hyphens.</p>
+                    </li>
+                </ul>
+                <p>This name should be easily distinguished from unrelated services. For example, a text chat app made by ABC company could use the service type <c>abc-txtchat</c>.</p>
+                <p>For more details, read  “Domain Naming Conventions” .</p>
+                <b>Return Value</b>
+                <p>Returns an initialized instance, or <c>null</c> if an error occurred.</p>
+                <b>Discussion</b>
+                <p>This method throws an exception if a valid <c>peerID</c> object is not provided or if the value of <c>serviceType</c> is not a legal Bonjour service type.</p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 7.0 and later.</li>
+                </ul>
+            </remarks>
+            <param name="myPeerID">
+            </param>
+            <param name="info">
+            </param>
+            <param name="serviceType">
+            </param>
+        </member>
+        <member name="M:U3DXT.iOS.Native.MultipeerConnectivity.MCNearbyServiceAdvertiser.StartAdvertisingPeer">
+            <summary>
+            Begins advertising the service provided by a local peer.
+            <br></br>Equivalent to the native <c>startAdvertisingPeer</c> method.
+            </summary>
+            <remarks>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 7.0 and later.</li>
+                </ul>
+            </remarks>
+        </member>
+        <member name="M:U3DXT.iOS.Native.MultipeerConnectivity.MCNearbyServiceAdvertiser.StopAdvertisingPeer">
+            <summary>
+            Stops advertising the service provided by a local peer.
+            <br></br>Equivalent to the native <c>stopAdvertisingPeer</c> method.
+            </summary>
+            <remarks>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 7.0 and later.</li>
+                </ul>
+            </remarks>
+        </member>
+        <member name="T:U3DXT.iOS.Native.MultipeerConnectivity.MCNearbyServiceAdvertiserDelegate">
+            <summary>
+            The <c>MCNearbyServiceAdvertiserDelegate</c> protocol describes the methods that the delegate object for an <c>MCNearbyServiceAdvertiser</c> instance must implement.
+            </summary>
+            <remarks>
+            </remarks>
+        </member>
+        <member name="M:U3DXT.iOS.Native.MultipeerConnectivity.MCNearbyServiceAdvertiserDelegate.UP_MCNearbyServiceAdvertiserDelegate_set__advertiser_didNotStartAdvertisingPeer__handler(System.String,System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.MultipeerConnectivity.MCNearbyServiceAdvertiserDelegate.#ctor">
+            <summary>
+            Default constructor.
+            </summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.MultipeerConnectivity.MCNearbyServiceAdvertiserDelegate.#ctor(U3DXT.iOS.Native.Internals._IosBaseClass._NewHelper,System.String)">
+            <summary>
+            U3DXT internal constructor.
+            </summary>
+            <param name="helper">
+            </param>
+            <param name="className">
+            </param>
+        </member>
+        <member name="M:U3DXT.iOS.Native.MultipeerConnectivity.MCNearbyServiceAdvertiserDelegate._InitImplementedMethods">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.MultipeerConnectivity.MCNearbyServiceAdvertiserDelegate.DidNotStartAdvertisingPeer(U3DXT.iOS.Native.MultipeerConnectivity.MCNearbyServiceAdvertiser,U3DXT.iOS.Native.Foundation.NSError)">
+            <summary>
+            (optional) Called when advertisement fails. (required)
+            <br></br>Equivalent to the native <c>advertiser:didNotStartAdvertisingPeer:</c> method.
+            </summary>
+            <remarks>
+                <b>Parameters</b>
+                <p>
+                </p>
+                <em>advertiser</em>
+                <p>The advertiser object that failed to begin advertising.</p>
+                <em>error</em>
+                <p>An error object that indicates what went wrong.</p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 7.0 and later.</li>
+                </ul>
+            </remarks>
+            <param name="advertiser">
+            </param>
+            <param name="error">
+            </param>
+        </member>
+        <member name="P:U3DXT.iOS.Native.MultipeerConnectivity.MCNearbyServiceAdvertiserDelegate._advertiser_didNotStartAdvertisingPeer__handler">
+            <summary>
+                <br>
+                </br>Equivalent to the native <c>_advertiser_didNotStartAdvertisingPeer__handler</c> property.
+            </summary>
+            <remarks>
+            </remarks>
+        </member>
+        <member name="T:U3DXT.iOS.Native.MultipeerConnectivity.MCNearbyServiceBrowser">
+            <summary>
+            Searches (by service type) for services offered by nearby devices using infrastructure Wi-Fi, peer-to-peer Wi-Fi, and Bluetooth, and provides the ability to easily invite those devices to a Multipeer Connectivity session (<c>MCSession</c>).
+            </summary>
+            <remarks>
+            </remarks>
+            <exception cref="T:U3DXT.Core.U3DXTException">
+            Is thrown when creation or initialization fails.
+            </exception>
+        </member>
+        <member name="E:U3DXT.iOS.Native.MultipeerConnectivity.MCNearbyServiceBrowser.DidNotStartBrowsingForPeers">
+            <summary>
+            Called when a browser failed to start browsing for peers. (required)
+            <br></br>Equivalent to implementing the native <c>browser:didNotStartBrowsingForPeers:</c> method of <c>MCNearbyServiceBrowserDelegate</c>.
+            </summary>
+        </member>
+        <member name="T:U3DXT.iOS.Native.MultipeerConnectivity.MCNearbyServiceBrowser.DidNotStartBrowsingForPeersEventArgs">
+            <summary>
+            Event arguments for DidNotStartBrowsingForPeers.
+            </summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.MultipeerConnectivity.MCNearbyServiceBrowser.DidNotStartBrowsingForPeersEventArgs.#ctor(U3DXT.iOS.Native.Foundation.NSError)">
+            <summary>
+            </summary>
+        </member>
+        <member name="F:U3DXT.iOS.Native.MultipeerConnectivity.MCNearbyServiceBrowser.DidNotStartBrowsingForPeersEventArgs.error">
+            <summary>error</summary>
+        </member>
+        <member name="E:U3DXT.iOS.Native.MultipeerConnectivity.MCNearbyServiceBrowser.Found">
+            <summary>
+            Called when a new peer appears. (required)
+            <br></br>Equivalent to implementing the native <c>browser:foundPeer:withDiscoveryInfo:</c> method of <c>MCNearbyServiceBrowserDelegate</c>.
+            </summary>
+        </member>
+        <member name="T:U3DXT.iOS.Native.MultipeerConnectivity.MCNearbyServiceBrowser.FoundEventArgs">
+            <summary>
+            Event arguments for Found.
+            </summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.MultipeerConnectivity.MCNearbyServiceBrowser.FoundEventArgs.#ctor(U3DXT.iOS.Native.MultipeerConnectivity.MCPeerID,System.Collections.Generic.Dictionary{System.Object,System.Object})">
+            <summary>
+            </summary>
+        </member>
+        <member name="F:U3DXT.iOS.Native.MultipeerConnectivity.MCNearbyServiceBrowser.FoundEventArgs.peerID">
+            <summary>peerID</summary>
+        </member>
+        <member name="F:U3DXT.iOS.Native.MultipeerConnectivity.MCNearbyServiceBrowser.FoundEventArgs.info">
+            <summary>info</summary>
+        </member>
+        <member name="E:U3DXT.iOS.Native.MultipeerConnectivity.MCNearbyServiceBrowser.Lost">
+            <summary>
+            Called when a peer disappears. (required)
+            <br></br>Equivalent to implementing the native <c>browser:lostPeer:</c> method of <c>MCNearbyServiceBrowserDelegate</c>.
+            </summary>
+        </member>
+        <member name="T:U3DXT.iOS.Native.MultipeerConnectivity.MCNearbyServiceBrowser.LostEventArgs">
+            <summary>
+            Event arguments for Lost.
+            </summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.MultipeerConnectivity.MCNearbyServiceBrowser.LostEventArgs.#ctor(U3DXT.iOS.Native.MultipeerConnectivity.MCPeerID)">
+            <summary>
+            </summary>
+        </member>
+        <member name="F:U3DXT.iOS.Native.MultipeerConnectivity.MCNearbyServiceBrowser.LostEventArgs.peerID">
+            <summary>peerID</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.MultipeerConnectivity.MCNearbyServiceBrowser.UP_MCNearbyServiceBrowser_get_delegate(System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.MultipeerConnectivity.MCNearbyServiceBrowser.UP_MCNearbyServiceBrowser_set_delegate(System.String,System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.MultipeerConnectivity.MCNearbyServiceBrowser.UP_MCNearbyServiceBrowser_get_myPeerID(System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.MultipeerConnectivity.MCNearbyServiceBrowser.UP_MCNearbyServiceBrowser_get_serviceType(System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.MultipeerConnectivity.MCNearbyServiceBrowser.UP_MCNearbyServiceBrowser_alloc_initWithPeer_serviceType_(System.String,System.String,System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.MultipeerConnectivity.MCNearbyServiceBrowser.UP_MCNearbyServiceBrowser_invitePeer_toSession_withContext_timeout_(System.String,System.String,System.String,System.String,System.Double)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.MultipeerConnectivity.MCNearbyServiceBrowser.UP_MCNearbyServiceBrowser_startBrowsingForPeers(System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.MultipeerConnectivity.MCNearbyServiceBrowser.UP_MCNearbyServiceBrowser_stopBrowsingForPeers(System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.MultipeerConnectivity.MCNearbyServiceBrowser.#ctor(U3DXT.iOS.Native.Internals._IosBaseClass._NewHelper)">
+            <summary>
+            U3DXT internal constructor.
+            </summary>
+            <param name="helper">
+            </param>
+        </member>
+        <member name="M:U3DXT.iOS.Native.MultipeerConnectivity.MCNearbyServiceBrowser.#ctor(U3DXT.iOS.Native.Internals._IosBaseClass._NewHelper,System.String)">
+            <summary>
+            U3DXT internal constructor.
+            </summary>
+            <param name="helper">
+            </param>
+            <param name="uuid">
+            </param>
+        </member>
+        <member name="M:U3DXT.iOS.Native.MultipeerConnectivity.MCNearbyServiceBrowser.#ctor">
+            <summary>
+            Creates and initializes a new instance of the native <see cref="T:U3DXT.iOS.Native.MultipeerConnectivity.MCNearbyServiceBrowser" /> class.
+            <br></br>Equivalent to the native <c>[[MCNearbyServiceBrowser alloc] init]</c> calls.
+            </summary>
+            <exception cref="T:U3DXT.Core.U3DXTException">
+            Is thrown when creation or initialization fails.
+            </exception>
+        </member>
+        <member name="M:U3DXT.iOS.Native.MultipeerConnectivity.MCNearbyServiceBrowser.InstancesRespondToSelector(System.String)">
+            <summary>
+            Returns whether native instances of this class can respond to a selector with the same name.
+            <br></br>Equivalent to the native <c>instancesRespondToSelector:</c> class method.
+            </summary>
+            <returns>
+                <c>true</c> if native instances of this class can respond to a selector with the same name, <c>false</c> otherwise.
+            </returns>
+            <param name="selectorName">The literal name of the selector.</param>
+        </member>
+        <member name="P:U3DXT.iOS.Native.MultipeerConnectivity.MCNearbyServiceBrowser.ClassExists">
+            <summary>
+            Returns whether the native MCNearbyServiceBrowser class exists on the platform.
+            </summary>
+            <value>
+                <c>true</c> if class exists; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:U3DXT.iOS.Native.MultipeerConnectivity.MCNearbyServiceBrowser.Delegate">
+            <summary>
+            The delegate object that handles browser-related events, such as when nearby peers are found or lost.
+            <br></br>Equivalent to the native <c>delegate</c> property.
+            </summary>
+            <remarks>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 7.0 and later.</li>
+                </ul>
+            </remarks>
+        </member>
+        <member name="P:U3DXT.iOS.Native.MultipeerConnectivity.MCNearbyServiceBrowser.myPeerID">
+            <summary>
+            The local peer ID for this instance. (read-only)
+            <br></br>Equivalent to the native <c>myPeerID</c> property.
+            </summary>
+            <remarks>
+                <b>Discussion</b>
+                <p>This value is set when you initialize the object, and cannot be changed later.</p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 7.0 and later.</li>
+                </ul>
+            </remarks>
+        </member>
+        <member name="P:U3DXT.iOS.Native.MultipeerConnectivity.MCNearbyServiceBrowser.serviceType">
+            <summary>
+            The service type to browse for. (read-only)
+            <br></br>Equivalent to the native <c>serviceType</c> property.
+            </summary>
+            <remarks>
+                <b>Discussion</b>
+                <p>This value is set when you initialize the object, and cannot be changed later.</p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 7.0 and later.</li>
+                </ul>
+            </remarks>
+        </member>
+        <member name="M:U3DXT.iOS.Native.MultipeerConnectivity.MCNearbyServiceBrowser.#ctor(U3DXT.iOS.Native.MultipeerConnectivity.MCPeerID,System.String)">
+            <summary>
+            Creates an instance of the native MCNearbyServiceBrowser and initializes the object. Initializes the nearby service browser object.
+            <br></br>Equivalent to the native <c>[[MCNearbyServiceBrowser alloc] initWithPeer:serviceType:]</c> calls.
+            </summary>
+            <remarks>
+                <b>Parameters</b>
+                <p>
+                </p>
+                <em>myPeerID</em>
+                <p>The local peer ID for this instance.</p>
+                <em>serviceType</em>
+                <ul class="termdef">
+                    <li class="termdef">
+                        <p>Must be 1–15 characters long</p>
+                    </li>
+                    <li class="termdef">
+                        <p>Can contain only ASCII lowercase letters, numbers, and hyphens.</p>
+                    </li>
+                </ul>
+                <p>This name should be easily distinguished from unrelated services. For example, a text chat app made by ABC company could use the service type <c>abc-txtchat</c>.</p>
+                <p>For more details, read  “Domain Naming Conventions” .</p>
+                <b>Return Value</b>
+                <p>Returns an initialized nearby service browser object, or <c>null</c> if an error occurs.</p>
+                <b>Discussion</b>
+                <p>This method throws an exception if the <c>session</c> or <c>serviceType</c> parameters do not contain valid objects or the specified Bonjour service type is not valid.</p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 7.0 and later.</li>
+                </ul>
+            </remarks>
+            <param name="myPeerID">
+            </param>
+            <param name="serviceType">
+            </param>
+        </member>
+        <member name="M:U3DXT.iOS.Native.MultipeerConnectivity.MCNearbyServiceBrowser.InvitePeer(U3DXT.iOS.Native.MultipeerConnectivity.MCPeerID,U3DXT.iOS.Native.MultipeerConnectivity.MCSession,U3DXT.iOS.Native.Foundation.NSData,System.Double)">
+            <summary>
+            Invites a discovered peer to join a Multipeer Connectivity session.
+            <br></br>Equivalent to the native <c>invitePeer:toSession:withContext:timeout:</c> method.
+            </summary>
+            <remarks>
+                <b>Parameters</b>
+                <p>
+                </p>
+                <em>peer</em>
+                <p>The ID of the peer to invite.</p>
+                <em>session</em>
+                <p>The session you wish the invited peer to join.</p>
+                <em>context</em>
+                <p>An arbitrary piece of data that is passed to the remote peer. This can be used to provide further information to the user about the nature of the invitation.</p>
+                <p>
+                    <strong>Important:</strong> The remote peer should treat any data it receives as potentially untrusted. To learn more about working with untrusted data, read <em>Secure Coding Guide</em>.</p>
+                <p>
+                </p>
+                <em>timeout</em>
+                <p>The amount of time to wait for the peer to respond to the invitation.</p>
+                <p>This timeout is measured in seconds, and must be a positive value. If a negative value or zero is specified, the default timeout (30 seconds) is used.</p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 7.0 and later.</li>
+                </ul>
+            </remarks>
+            <param name="peerID">
+            </param>
+            <param name="session">
+            </param>
+            <param name="context">
+            </param>
+            <param name="timeout">
+            </param>
+        </member>
+        <member name="M:U3DXT.iOS.Native.MultipeerConnectivity.MCNearbyServiceBrowser.StartBrowsing">
+            <summary>
+            Starts browsing for peers.
+            <br></br>Equivalent to the native <c>startBrowsingForPeers</c> method.
+            </summary>
+            <remarks>
+                <b>Discussion</b>
+                <p>After this method is called (until you call <c>stopBrowsingForPeers</c>), the framework calls your delegate's <c>browser:foundPeer:withDiscoveryInfo:</c> and <c>browser:lostPeer:</c> methods as new peers are found and lost.</p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 7.0 and later.</li>
+                </ul>
+            </remarks>
+        </member>
+        <member name="M:U3DXT.iOS.Native.MultipeerConnectivity.MCNearbyServiceBrowser.StopBrowsing">
+            <summary>
+            Stops browsing for peers.
+            <br></br>Equivalent to the native <c>stopBrowsingForPeers</c> method.
+            </summary>
+            <remarks>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 7.0 and later.</li>
+                </ul>
+            </remarks>
+        </member>
+        <member name="T:U3DXT.iOS.Native.MultipeerConnectivity.MCNearbyServiceBrowserDelegate">
+            <summary>
+            The <c>MCNearbyServiceBrowserDelegate</c> protocol defines methods that a <c>MCNearbyServiceBrowser</c> object’s delegate must implement.
+            </summary>
+            <remarks>
+            </remarks>
+        </member>
+        <member name="M:U3DXT.iOS.Native.MultipeerConnectivity.MCNearbyServiceBrowserDelegate.UP_MCNearbyServiceBrowserDelegate_set__browser_didNotStartBrowsingForPeers__handler(System.String,System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.MultipeerConnectivity.MCNearbyServiceBrowserDelegate.UP_MCNearbyServiceBrowserDelegate_set__browser_foundPeer_withDiscoveryInfo__handler(System.String,System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.MultipeerConnectivity.MCNearbyServiceBrowserDelegate.UP_MCNearbyServiceBrowserDelegate_set__browser_lostPeer__handler(System.String,System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.MultipeerConnectivity.MCNearbyServiceBrowserDelegate.#ctor">
+            <summary>
+            Default constructor.
+            </summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.MultipeerConnectivity.MCNearbyServiceBrowserDelegate.#ctor(U3DXT.iOS.Native.Internals._IosBaseClass._NewHelper,System.String)">
+            <summary>
+            U3DXT internal constructor.
+            </summary>
+            <param name="helper">
+            </param>
+            <param name="className">
+            </param>
+        </member>
+        <member name="M:U3DXT.iOS.Native.MultipeerConnectivity.MCNearbyServiceBrowserDelegate._InitImplementedMethods">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.MultipeerConnectivity.MCNearbyServiceBrowserDelegate.DidNotStartBrowsingForPeers(U3DXT.iOS.Native.MultipeerConnectivity.MCNearbyServiceBrowser,U3DXT.iOS.Native.Foundation.NSError)">
+            <summary>
+            (optional) Called when a browser failed to start browsing for peers. (required)
+            <br></br>Equivalent to the native <c>browser:didNotStartBrowsingForPeers:</c> method.
+            </summary>
+            <remarks>
+                <b>Parameters</b>
+                <p>
+                </p>
+                <em>browser</em>
+                <p>The browser object that failed to start browsing.</p>
+                <em>error</em>
+                <p>An error object indicating what went wrong.</p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 7.0 and later.</li>
+                </ul>
+            </remarks>
+            <param name="browser">
+            </param>
+            <param name="error">
+            </param>
+        </member>
+        <member name="M:U3DXT.iOS.Native.MultipeerConnectivity.MCNearbyServiceBrowserDelegate.Found(U3DXT.iOS.Native.MultipeerConnectivity.MCNearbyServiceBrowser,U3DXT.iOS.Native.MultipeerConnectivity.MCPeerID,System.Collections.Generic.Dictionary{System.Object,System.Object})">
+            <summary>
+            (<b>required</b>) Called when a new peer appears. (required)
+            <br></br>Equivalent to the native <c>browser:foundPeer:withDiscoveryInfo:</c> method.
+            </summary>
+            <remarks>
+                <b>Parameters</b>
+                <p>
+                </p>
+                <em>browser</em>
+                <p>The browser object that discovered this peer.</p>
+                <em>peerID</em>
+                <p>The unique ID of the peer that was discovered.</p>
+                <em>info</em>
+                <p>A collection of information that the Multipeer Connectivity framework uses when communicating with the peer.</p>
+                <b>Discussion</b>
+                <p>The peer ID and discovery info provided to this delegate method can be used to invite a new peer to join a session.</p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 7.0 and later.</li>
+                </ul>
+            </remarks>
+            <param name="browser">
+            </param>
+            <param name="peerID">
+            </param>
+            <param name="info">
+            </param>
+        </member>
+        <member name="M:U3DXT.iOS.Native.MultipeerConnectivity.MCNearbyServiceBrowserDelegate.Lost(U3DXT.iOS.Native.MultipeerConnectivity.MCNearbyServiceBrowser,U3DXT.iOS.Native.MultipeerConnectivity.MCPeerID)">
+            <summary>
+            (<b>required</b>) Called when a peer disappears. (required)
+            <br></br>Equivalent to the native <c>browser:lostPeer:</c> method.
+            </summary>
+            <remarks>
+                <b>Parameters</b>
+                <p>
+                </p>
+                <em>browser</em>
+                <p>The browser object that previously discovered this peer.</p>
+                <em>peerID</em>
+                <p>The unique ID of the peer that disappeared.</p>
+                <b>Discussion</b>
+                <p>This callback is primarily intended as a hint that it is no longer possible to communicate with that peer, and that your app should remove that peer from its user interface.</p>
+                <p>
+                    <strong>Important:</strong> Because there is a delay between when a host leaves a network and when the underlying Bonjour layer detects that it has left, the fact that your app has not yet received a disappearance callback does not guarantee that it can communicate with the peer successfully.</p>
+                <p>
+                </p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 7.0 and later.</li>
+                </ul>
+            </remarks>
+            <param name="browser">
+            </param>
+            <param name="peerID">
+            </param>
+        </member>
+        <member name="P:U3DXT.iOS.Native.MultipeerConnectivity.MCNearbyServiceBrowserDelegate._browser_didNotStartBrowsingForPeers__handler">
+            <summary>
+                <br>
+                </br>Equivalent to the native <c>_browser_didNotStartBrowsingForPeers__handler</c> property.
+            </summary>
+            <remarks>
+            </remarks>
+        </member>
+        <member name="P:U3DXT.iOS.Native.MultipeerConnectivity.MCNearbyServiceBrowserDelegate._browser_foundPeer_withDiscoveryInfo__handler">
+            <summary>
+                <br>
+                </br>Equivalent to the native <c>_browser_foundPeer_withDiscoveryInfo__handler</c> property.
+            </summary>
+            <remarks>
+            </remarks>
+        </member>
+        <member name="P:U3DXT.iOS.Native.MultipeerConnectivity.MCNearbyServiceBrowserDelegate._browser_lostPeer__handler">
+            <summary>
+                <br>
+                </br>Equivalent to the native <c>_browser_lostPeer__handler</c> property.
+            </summary>
+            <remarks>
+            </remarks>
+        </member>
+        <member name="T:U3DXT.iOS.Native.MultipeerConnectivity.MCPeerID">
+            <summary>
+            The <c>MCPeerID</c> class represents a peer in a multipeer session.
+            </summary>
+            <remarks>
+                <p>The Multipeer Connectivity framework is responsible for creating peer objects that represent other devices. Your app is responsible for creating a single peer object that represents the instance of your app that is running on the local device.</p>
+                <p>To create a new peer ID for the local app and associate a display name with that ID, call <c>initWithDisplayName:</c>. The peer’s name must be no longer than 63 bytes in UTF-8 encoding.</p>
+            </remarks>
+            <exception cref="T:U3DXT.Core.U3DXTException">
+            Is thrown when creation or initialization fails.
+            </exception>
+        </member>
+        <member name="M:U3DXT.iOS.Native.MultipeerConnectivity.MCPeerID.UP_MCPeerID_get_displayName(System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.MultipeerConnectivity.MCPeerID.UP_MCPeerID_alloc_initWithDisplayName_(System.String,System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.MultipeerConnectivity.MCPeerID.#ctor(U3DXT.iOS.Native.Internals._IosBaseClass._NewHelper)">
+            <summary>
+            U3DXT internal constructor.
+            </summary>
+            <param name="helper">
+            </param>
+        </member>
+        <member name="M:U3DXT.iOS.Native.MultipeerConnectivity.MCPeerID.#ctor(U3DXT.iOS.Native.Internals._IosBaseClass._NewHelper,System.String)">
+            <summary>
+            U3DXT internal constructor.
+            </summary>
+            <param name="helper">
+            </param>
+            <param name="uuid">
+            </param>
+        </member>
+        <member name="M:U3DXT.iOS.Native.MultipeerConnectivity.MCPeerID.#ctor">
+            <summary>
+            Creates and initializes a new instance of the native <see cref="T:U3DXT.iOS.Native.MultipeerConnectivity.MCPeerID" /> class.
+            <br></br>Equivalent to the native <c>[[MCPeerID alloc] init]</c> calls.
+            </summary>
+            <exception cref="T:U3DXT.Core.U3DXTException">
+            Is thrown when creation or initialization fails.
+            </exception>
+        </member>
+        <member name="M:U3DXT.iOS.Native.MultipeerConnectivity.MCPeerID.InstancesRespondToSelector(System.String)">
+            <summary>
+            Returns whether native instances of this class can respond to a selector with the same name.
+            <br></br>Equivalent to the native <c>instancesRespondToSelector:</c> class method.
+            </summary>
+            <returns>
+                <c>true</c> if native instances of this class can respond to a selector with the same name, <c>false</c> otherwise.
+            </returns>
+            <param name="selectorName">The literal name of the selector.</param>
+        </member>
+        <member name="P:U3DXT.iOS.Native.MultipeerConnectivity.MCPeerID.ClassExists">
+            <summary>
+            Returns whether the native MCPeerID class exists on the platform.
+            </summary>
+            <value>
+                <c>true</c> if class exists; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:U3DXT.iOS.Native.MultipeerConnectivity.MCPeerID.displayName">
+            <summary>
+            The display name for this peer. (read-only)
+            <br></br>Equivalent to the native <c>displayName</c> property.
+            </summary>
+            <remarks>
+                <b>Discussion</b>
+                <p>For the local peer, this property is set when the object is initialized and cannot be changed.</p>
+                <p>For other peer objects provided to you by the framework, this property is provided by the peer and cannot be changed.</p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 7.0 and later.</li>
+                </ul>
+            </remarks>
+        </member>
+        <member name="M:U3DXT.iOS.Native.MultipeerConnectivity.MCPeerID.#ctor(System.String)">
+            <summary>
+            Creates an instance of the native MCPeerID and initializes the object. Initializes a peer.
+            <br></br>Equivalent to the native <c>[[MCPeerID alloc] initWithDisplayName:]</c> calls.
+            </summary>
+            <remarks>
+                <b>Parameters</b>
+                <p>
+                </p>
+                <em>myDisplayName</em>
+                <p>The display name for the local peer. If you use the multipeer browser view controller, this name is shown.</p>
+                <p>The display name is intended for use in UI elements, and should be short and descriptive of the local peer. The maximum allowable length is 63 bytes in UTF-8 encoding. The <c>displayName</c> parameter may not be <c>null</c> or an empty string.</p>
+                <b>Return Value</b>
+                <p>Returns an initialized object.</p>
+                <b>Discussion</b>
+                <p>This method should be called <em>only</em> when creating the local peer, not for creating objects that represent other devices.</p>
+                <p>This method throws an exception if the <c>displayName</c> value is too long, empty, or <c>null</c>.</p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 7.0 and later.</li>
+                </ul>
+            </remarks>
+            <param name="myDisplayName">
+            </param>
+        </member>
+        <member name="T:U3DXT.iOS.Native.MultipeerConnectivity.MCSession">
+            <summary>
+            An <c>MCSession</c> object facilitates communication among all peers in a Multipeer Connectivity session.
+            </summary>
+            <remarks>
+                <b>Setting Up Sessions</b>
+                <p>To set up a session, your app must do the following:</p>
+                <ol class="ol">
+                    <li class="li">
+                        <p>Create an <c>MCPeerID</c> object that represents the local peer, and use it to initialize the session object.</p>
+                    </li>
+                    <li class="li">
+                        <p>Add peers to the session using a browser object, a browser view controller, or manually.</p>
+                    </li>
+                    <li class="li">
+                        <p>Wait until your delegate object’s <c>session:peer:didChangeState:</c> method is called with <c>MCSessionStateConnected</c> as the new state. This callback provides an object representing a peer that has joined the session.</p>
+                    </li>
+                </ol>
+                <p>
+                    <strong>Relevant Method Group:</strong>  “Joining a Session” </p>
+                <p>
+                </p>
+                <b>Communicating With Peers</b>
+                <p>Once you have set up the session, your app can send data to other peers by calling one of the following methods:</p>
+                <ul class="ul">
+                    <li class="li">
+                        <p>
+                            <c>sendData:toPeers:withMode:error:</c> sends an <c>NSData</c> object to the specified peers.</p>
+                        <p>On each recipient device, the delegate object’s <c>session:didReceiveData:fromPeer:</c> method is called with the data object when the data has been fully received.</p>
+                    </li>
+                    <li class="li">
+                        <p>
+                            <c>sendResourceAtURL:withName:toPeer:withCompletionHandler:</c> sends the contents from an <c>NSURL</c> object to the specified peer. The URL can be either a local file URL or a web URL. The <c>completionHandler</c> block is called when the resource is fully received by the remote peer or when an error occurs during transmission.</p>
+                        <p>This method returns an <c>NSProgress</c> object that you can use to cancel the transfer or check the current status of the transfer.</p>
+                        <p>On the recipient device, the session calls its delegate object’s <c>session:didStartReceivingResourceWithName:fromPeer:withProgress:</c> method the device begins receiving the resource, and calls its <c>session:didFinishReceivingResourceWithName:fromPeer:atURL:withError:</c> method when the resource has been fully received.</p>
+                    </li>
+                    <li class="li">
+                        <p>
+                            <c>startStreamWithName:toPeer:error:</c> creates a connected byte stream (<c>NSOutputStream</c>) that you can use to send data to the remote peer.</p>
+                        <p>On the recipient device, the session calls its delegate object’s <c>session:didReceiveStream:withName:fromPeer:</c> method with an <c>NSInputStream</c> object that represents the other endpoint of communication.</p>
+                        <p>On both sides, your code must set the stream’s delegate, schedule the stream on a run loop, and open the stream. Your code must also implement stream delegate methods to manage sending and receiving stream data.</p>
+                    </li>
+                </ul>
+                <p>
+                    <strong>Important:</strong> Delegate calls occur on a private operation queue. If your app needs to perform an action on a particular run loop or operation queue, its delegate method should explicitly dispatch or schedule that work.</p>
+                <p>
+                </p>
+                <p>
+                    <strong>Relevant Method Group:</strong>  “Sending Data and Resources” </p>
+                <p>
+                </p>
+                <b>Managing Peers Manually</b>
+                <p>If you decide to write your own peer discovery code (with <c>NSNetService</c> or the Bonjour C API, for example), you can also manually connect the remote peers into a session. To do this, your app must do the following:</p>
+                <ol class="ol">
+                    <li class="li">
+                        <p>Exchange peer IDs with the remote peer. The sender should serialize the <c>MCPeerID</c> objects with <c>NSKeyedArchiver</c>, and the receiver should unserialize them with <c>NSKeyedUnarchiver</c>.</p>
+                    </li>
+                    <li class="li">
+                        <p>Exchange connection data. The <c>nearbyConnectionDataForPeer:withCompletionHandler:</c> can provide you with a connection data object based on the remote peer’s per ID object. When the completion handler block is called, send the resulting connection data object to the remote peer. The remote peer must similarly send its connection data to you.</p>
+                    </li>
+                    <li class="li">
+                        <p>After you receive the connection data from the remote peer, call <c>connectPeer:withNearbyConnectionData:</c> to connect to the remote peer and add it to the session. The remote peer must do the same, using the connection data that your app sent.</p>
+                    </li>
+                </ol>
+                <p>You can also cancel an outstanding connection attempt by calling <c>cancelConnectPeer:</c></p>
+                <p>
+                    <strong>Relevant Method Group:</strong>  “Managing Peers Manually” </p>
+                <p>
+                </p>
+                <b>Cleaning Up</b>
+                <p>To leave a session, your app must call <c>disconnect</c>.</p>
+                <p>
+                    <strong>Relevant Method Group:</strong>  “Leaving a Session” </p>
+                <p>
+                </p>
+            </remarks>
+            <exception cref="T:U3DXT.Core.U3DXTException">
+            Is thrown when creation or initialization fails.
+            </exception>
+        </member>
+        <member name="E:U3DXT.iOS.Native.MultipeerConnectivity.MCSession.DidFinishReceivingResourceWithName">
+            <summary>
+            Called when a remote peer sends a file-like resource to the local peer. (required)
+            <br></br>Equivalent to implementing the native <c>session:didFinishReceivingResourceWithName:fromPeer:atURL:withError:</c> method of <c>MCSessionDelegate</c>.
+            </summary>
+        </member>
+        <member name="T:U3DXT.iOS.Native.MultipeerConnectivity.MCSession.DidFinishReceivingResourceWithNameEventArgs">
+            <summary>
+            Event arguments for DidFinishReceivingResourceWithName.
+            </summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.MultipeerConnectivity.MCSession.DidFinishReceivingResourceWithNameEventArgs.#ctor(System.String,U3DXT.iOS.Native.MultipeerConnectivity.MCPeerID,U3DXT.iOS.Native.Foundation.NSURL,U3DXT.iOS.Native.Foundation.NSError)">
+            <summary>
+            </summary>
+        </member>
+        <member name="F:U3DXT.iOS.Native.MultipeerConnectivity.MCSession.DidFinishReceivingResourceWithNameEventArgs.resourceName">
+            <summary>resourceName</summary>
+        </member>
+        <member name="F:U3DXT.iOS.Native.MultipeerConnectivity.MCSession.DidFinishReceivingResourceWithNameEventArgs.peerID">
+            <summary>peerID</summary>
+        </member>
+        <member name="F:U3DXT.iOS.Native.MultipeerConnectivity.MCSession.DidFinishReceivingResourceWithNameEventArgs.localURL">
+            <summary>localURL</summary>
+        </member>
+        <member name="F:U3DXT.iOS.Native.MultipeerConnectivity.MCSession.DidFinishReceivingResourceWithNameEventArgs.error">
+            <summary>error</summary>
+        </member>
+        <member name="P:U3DXT.iOS.Native.MultipeerConnectivity.MCSession.didReceiveCertificateHandler">
+            <summary>
+            Called to validate the client certificate provided by a peer when the connection is first established.
+            <br></br>Equivalent to implementing the native <c>session:didReceiveCertificate:fromPeer:certificateHandler:</c> method of <c>MCSessionDelegate</c>.
+            </summary>
+        </member>
+        <member name="E:U3DXT.iOS.Native.MultipeerConnectivity.MCSession.DidReceive">
+            <summary>
+            Called when a remote peer sends an <c>NSData</c> object to the local peer. (required)
+            <br></br>Equivalent to implementing the native <c>session:didReceiveData:fromPeer:</c> method of <c>MCSessionDelegate</c>.
+            </summary>
+        </member>
+        <member name="T:U3DXT.iOS.Native.MultipeerConnectivity.MCSession.DidReceiveEventArgs">
+            <summary>
+            Event arguments for DidReceive.
+            </summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.MultipeerConnectivity.MCSession.DidReceiveEventArgs.#ctor(U3DXT.iOS.Native.Foundation.NSData,U3DXT.iOS.Native.MultipeerConnectivity.MCPeerID)">
+            <summary>
+            </summary>
+        </member>
+        <member name="F:U3DXT.iOS.Native.MultipeerConnectivity.MCSession.DidReceiveEventArgs.data">
+            <summary>data</summary>
+        </member>
+        <member name="F:U3DXT.iOS.Native.MultipeerConnectivity.MCSession.DidReceiveEventArgs.peerID">
+            <summary>peerID</summary>
+        </member>
+        <member name="E:U3DXT.iOS.Native.MultipeerConnectivity.MCSession.DidStartReceivingResourceWithName">
+            <summary>
+            Called when a remote peer begins sending a file-like resource to the local peer. (required)
+            <br></br>Equivalent to implementing the native <c>session:didStartReceivingResourceWithName:fromPeer:withProgress:</c> method of <c>MCSessionDelegate</c>.
+            </summary>
+        </member>
+        <member name="T:U3DXT.iOS.Native.MultipeerConnectivity.MCSession.DidStartReceivingResourceWithNameEventArgs">
+            <summary>
+            Event arguments for DidStartReceivingResourceWithName.
+            </summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.MultipeerConnectivity.MCSession.DidStartReceivingResourceWithNameEventArgs.#ctor(System.String,U3DXT.iOS.Native.MultipeerConnectivity.MCPeerID,U3DXT.iOS.Native.Foundation.NSProgress)">
+            <summary>
+            </summary>
+        </member>
+        <member name="F:U3DXT.iOS.Native.MultipeerConnectivity.MCSession.DidStartReceivingResourceWithNameEventArgs.resourceName">
+            <summary>resourceName</summary>
+        </member>
+        <member name="F:U3DXT.iOS.Native.MultipeerConnectivity.MCSession.DidStartReceivingResourceWithNameEventArgs.peerID">
+            <summary>peerID</summary>
+        </member>
+        <member name="F:U3DXT.iOS.Native.MultipeerConnectivity.MCSession.DidStartReceivingResourceWithNameEventArgs.progress">
+            <summary>progress</summary>
+        </member>
+        <member name="E:U3DXT.iOS.Native.MultipeerConnectivity.MCSession.DidChange">
+            <summary>
+            Called when the state of a remote peer changes. (required)
+            <br></br>Equivalent to implementing the native <c>session:peer:didChangeState:</c> method of <c>MCSessionDelegate</c>.
+            </summary>
+        </member>
+        <member name="T:U3DXT.iOS.Native.MultipeerConnectivity.MCSession.DidChangeEventArgs">
+            <summary>
+            Event arguments for DidChange.
+            </summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.MultipeerConnectivity.MCSession.DidChangeEventArgs.#ctor(U3DXT.iOS.Native.MultipeerConnectivity.MCPeerID,U3DXT.iOS.Native.MultipeerConnectivity.MCSessionState)">
+            <summary>
+            </summary>
+        </member>
+        <member name="F:U3DXT.iOS.Native.MultipeerConnectivity.MCSession.DidChangeEventArgs.peerID">
+            <summary>peerID</summary>
+        </member>
+        <member name="F:U3DXT.iOS.Native.MultipeerConnectivity.MCSession.DidChangeEventArgs.state">
+            <summary>state</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.MultipeerConnectivity.MCSession.UP_MCSession_get_connectedPeers(System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.MultipeerConnectivity.MCSession.UP_MCSession_get_delegate(System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.MultipeerConnectivity.MCSession.UP_MCSession_set_delegate(System.String,System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.MultipeerConnectivity.MCSession.UP_MCSession_get_encryptionPreference(System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.MultipeerConnectivity.MCSession.UP_MCSession_get_myPeerID(System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.MultipeerConnectivity.MCSession.UP_MCSession_get_securityIdentity(System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.MultipeerConnectivity.MCSession.UP_MCSession_cancelConnectPeer_(System.String,System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.MultipeerConnectivity.MCSession.UP_MCSession_connectPeer_withNearbyConnectionData_(System.String,System.String,System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.MultipeerConnectivity.MCSession.UP_MCSession_disconnect(System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.MultipeerConnectivity.MCSession.UP_MCSession_alloc_initWithPeer_(System.String,System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.MultipeerConnectivity.MCSession.UP_MCSession_alloc_initWithPeer_securityIdentity_encryptionPreference_(System.String,System.String,System.String,System.Int32)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.MultipeerConnectivity.MCSession.UP_MCSession_nearbyConnectionDataForPeer_withCompletionHandler_(System.String,System.String,System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.MultipeerConnectivity.MCSession.UP_MCSession_sendData_toPeers_withMode_error_(System.String,System.String,System.String,System.Int32,System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.MultipeerConnectivity.MCSession.UP_MCSession_sendResourceAtURL_withName_toPeer_withCompletionHandler_(System.String,System.String,System.String,System.String,System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.MultipeerConnectivity.MCSession.#ctor(U3DXT.iOS.Native.Internals._IosBaseClass._NewHelper)">
+            <summary>
+            U3DXT internal constructor.
+            </summary>
+            <param name="helper">
+            </param>
+        </member>
+        <member name="M:U3DXT.iOS.Native.MultipeerConnectivity.MCSession.#ctor(U3DXT.iOS.Native.Internals._IosBaseClass._NewHelper,System.String)">
+            <summary>
+            U3DXT internal constructor.
+            </summary>
+            <param name="helper">
+            </param>
+            <param name="uuid">
+            </param>
+        </member>
+        <member name="M:U3DXT.iOS.Native.MultipeerConnectivity.MCSession.#ctor">
+            <summary>
+            Creates and initializes a new instance of the native <see cref="T:U3DXT.iOS.Native.MultipeerConnectivity.MCSession" /> class.
+            <br></br>Equivalent to the native <c>[[MCSession alloc] init]</c> calls.
+            </summary>
+            <exception cref="T:U3DXT.Core.U3DXTException">
+            Is thrown when creation or initialization fails.
+            </exception>
+        </member>
+        <member name="M:U3DXT.iOS.Native.MultipeerConnectivity.MCSession.InstancesRespondToSelector(System.String)">
+            <summary>
+            Returns whether native instances of this class can respond to a selector with the same name.
+            <br></br>Equivalent to the native <c>instancesRespondToSelector:</c> class method.
+            </summary>
+            <returns>
+                <c>true</c> if native instances of this class can respond to a selector with the same name, <c>false</c> otherwise.
+            </returns>
+            <param name="selectorName">The literal name of the selector.</param>
+        </member>
+        <member name="P:U3DXT.iOS.Native.MultipeerConnectivity.MCSession.ClassExists">
+            <summary>
+            Returns whether the native MCSession class exists on the platform.
+            </summary>
+            <value>
+                <c>true</c> if class exists; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:U3DXT.iOS.Native.MultipeerConnectivity.MCSession.connectedPeers">
+            <summary>
+            An array of all peers that are currently connected to this session. (read-only)
+            <br></br>Equivalent to the native <c>connectedPeers</c> property.
+            </summary>
+            <remarks>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 7.0 and later.</li>
+                </ul>
+            </remarks>
+        </member>
+        <member name="P:U3DXT.iOS.Native.MultipeerConnectivity.MCSession.Delegate">
+            <summary>
+            The delegate object that handles events.
+            <br></br>Equivalent to the native <c>delegate</c> property.
+            </summary>
+            <remarks>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 7.0 and later.</li>
+                </ul>
+            </remarks>
+        </member>
+        <member name="P:U3DXT.iOS.Native.MultipeerConnectivity.MCSession.encryptionPreference">
+            <summary>
+            Indicates whether the connection prefers encrypted connections, unencrypted connections, or has no preference. (read-only)
+            <br></br>Equivalent to the native <c>encryptionPreference</c> property.
+            </summary>
+            <remarks>
+                <b>Discussion</b>
+                <p>This value is set when you first initialize the object, and cannot be changed later.</p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 7.0 and later.</li>
+                </ul>
+            </remarks>
+        </member>
+        <member name="P:U3DXT.iOS.Native.MultipeerConnectivity.MCSession.myPeerID">
+            <summary>
+            The local peer ID. (read-only)
+            <br></br>Equivalent to the native <c>myPeerID</c> property.
+            </summary>
+            <remarks>
+                <b>Discussion</b>
+                <p>This value is set when you first initialize the object, and cannot be changed later.</p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 7.0 and later.</li>
+                </ul>
+            </remarks>
+        </member>
+        <member name="P:U3DXT.iOS.Native.MultipeerConnectivity.MCSession.securityIdentity">
+            <summary>
+            The security identity of the local peer. (read-only)
+            <br></br>Equivalent to the native <c>securityIdentity</c> property.
+            </summary>
+            <remarks>
+                <b>Discussion</b>
+                <p>This value is set when you first initialize the object, and cannot be changed later.</p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 7.0 and later.</li>
+                </ul>
+            </remarks>
+        </member>
+        <member name="M:U3DXT.iOS.Native.MultipeerConnectivity.MCSession.CancelConnectPeer(U3DXT.iOS.Native.MultipeerConnectivity.MCPeerID)">
+            <summary>
+            Cancels an attempt to connect to a peer.
+            <br></br>Equivalent to the native <c>cancelConnectPeer:</c> method.
+            </summary>
+            <remarks>
+                <b>Parameters</b>
+                <p>
+                </p>
+                <em>peerID</em>
+                <p>The ID of the remote peer.</p>
+                <b>Discussion</b>
+                <p>This method is used for canceling connections to peers when you are using your own service discovery code. For more information, see  “Managing Peers Manually.” </p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 7.0 and later.</li>
+                </ul>
+            </remarks>
+            <param name="peerID">
+            </param>
+        </member>
+        <member name="M:U3DXT.iOS.Native.MultipeerConnectivity.MCSession.ConnectPeer(U3DXT.iOS.Native.MultipeerConnectivity.MCPeerID,U3DXT.iOS.Native.Foundation.NSData)">
+            <summary>
+            Connect a peer to the session manually.
+            <br></br>Equivalent to the native <c>connectPeer:withNearbyConnectionData:</c> method.
+            </summary>
+            <remarks>
+                <b>Parameters</b>
+                <p>
+                </p>
+                <em>peerID</em>
+                <p>The peer ID of the remote peer.</p>
+                <em>data</em>
+                <p>The connection data object sent by the remote peer.</p>
+                <b>Discussion</b>
+                <p>This method is used for connecting to peers when you are using your own service discovery code. For more information, see  “Managing Peers Manually.” </p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 7.0 and later.</li>
+                </ul>
+            </remarks>
+            <param name="peerID">
+            </param>
+            <param name="data">
+            </param>
+        </member>
+        <member name="M:U3DXT.iOS.Native.MultipeerConnectivity.MCSession.Disconnect">
+            <summary>
+            Disconnects the local peer from the session.
+            <br></br>Equivalent to the native <c>disconnect</c> method.
+            </summary>
+            <remarks>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 7.0 and later.</li>
+                </ul>
+            </remarks>
+        </member>
+        <member name="M:U3DXT.iOS.Native.MultipeerConnectivity.MCSession.#ctor(U3DXT.iOS.Native.MultipeerConnectivity.MCPeerID)">
+            <summary>
+            Creates an instance of the native MCSession and initializes the object. Creates a Multipeer Connectivity session.
+            <br></br>Equivalent to the native <c>[[MCSession alloc] initWithPeer:]</c> calls.
+            </summary>
+            <remarks>
+                <b>Parameters</b>
+                <p>
+                </p>
+                <em>myPeerID</em>
+                <p>A local identifier that represents the device on which your app is currently running, presented to other devices.</p>
+                <b>Return Value</b>
+                <p>Returns the initialized session object, or <c>null</c> if an error occurs.</p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 7.0 and later.</li>
+                </ul>
+            </remarks>
+            <param name="myPeerID">
+            </param>
+        </member>
+        <member name="M:U3DXT.iOS.Native.MultipeerConnectivity.MCSession.#ctor(U3DXT.iOS.Native.MultipeerConnectivity.MCPeerID,System.Object[],U3DXT.iOS.Native.MultipeerConnectivity.MCEncryptionPreference)">
+            <summary>
+            Creates an instance of the native MCSession and initializes the object. Creates a Multipeer Connectivity session, providing security info.
+            <br></br>Equivalent to the native <c>[[MCSession alloc] initWithPeer:securityIdentity:encryptionPreference:]</c> calls.
+            </summary>
+            <remarks>
+                <b>Parameters</b>
+                <p>
+                </p>
+                <em>myPeerID</em>
+                <p>A local identifier that represents the device on which your app is currently running, presented to other devices.</p>
+                <em>identity</em>
+                <p>An array containing a <c>SecIdentityRef</c> object and (optionally) additional certificates needed to verify that identity.</p>
+                <em>encryptionPreference</em>
+                <p>An integer value that indicates whether encryption is required, preferred, or undesirable.</p>
+                <b>Return Value</b>
+                <p>Returns the initialized session object, or <c>null</c> if an error occurs.</p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 7.0 and later.</li>
+                </ul>
+            </remarks>
+            <param name="myPeerID">
+            </param>
+            <param name="identity">
+            </param>
+            <param name="encryptionPreference">
+            </param>
+        </member>
+        <member name="M:U3DXT.iOS.Native.MultipeerConnectivity.MCSession.NearbyConnectionData(U3DXT.iOS.Native.MultipeerConnectivity.MCPeerID,System.Action{U3DXT.iOS.Native.Foundation.NSData,U3DXT.iOS.Native.Foundation.NSError})">
+            <summary>
+            Obtains connection data for a specific peer.
+            <br></br>Equivalent to the native <c>nearbyConnectionDataForPeer:withCompletionHandler:</c> method.
+            </summary>
+            <remarks>
+                <b>Parameters</b>
+                <p>
+                </p>
+                <em>peerID</em>
+                <p>The peer ID that you wish to connect to.</p>
+                <em>completionHandler</em>
+                <p>A handler to be called when connection data is available.</p>
+                <b>Discussion</b>
+                <p>This method is used for connecting to peers when you are using your own service discovery code. For more information, see  “Managing Peers Manually.” </p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 7.0 and later.</li>
+                </ul>
+            </remarks>
+            <param name="peerID">
+            </param>
+            <param name="completionHandler"> A callback delegate.</param>
+        </member>
+        <member name="M:U3DXT.iOS.Native.MultipeerConnectivity.MCSession.SendData(U3DXT.iOS.Native.Foundation.NSData,System.Object[],U3DXT.iOS.Native.MultipeerConnectivity.MCSessionSendDataMode,U3DXT.iOS.Native.Foundation.NSError)">
+            <summary>
+            Sends the contents of an <c>NSData</c> object to the remote peer.
+            <br></br>Equivalent to the native <c>sendData:toPeers:withMode:error:</c> method.
+            </summary>
+            <remarks>
+                <b>Parameters</b>
+                <p>
+                </p>
+                <em>data</em>
+                <p>An object containing the data to send.</p>
+                <em>peerIDs</em>
+                <p>An array of peers that should receive the data.</p>
+                <em>mode</em>
+                <p>The transmission mode to use (reliable or unreliable delivery).</p>
+                <em>error</em>
+                <p>The address of an NSError pointer where an error object should be stored upon error.</p>
+                <b>Return Value</b>
+                <p>Returns true if the data was successfully enqueued for delivery.</p>
+                <b>Discussion</b>
+                <p>On the peer device, the delegate’s <c>-session:didReceiveData:fromPeer:</c> method is called with the data upon successful delivery.</p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 7.0 and later.</li>
+                </ul>
+            </remarks>
+            <param name="data">
+            </param>
+            <param name="peerIDs">
+            </param>
+            <param name="mode">
+            </param>
+            <param name="error">
+            </param>
+        </member>
+        <member name="M:U3DXT.iOS.Native.MultipeerConnectivity.MCSession.SendResourceAtURL(U3DXT.iOS.Native.Foundation.NSURL,System.String,U3DXT.iOS.Native.MultipeerConnectivity.MCPeerID,System.Action{U3DXT.iOS.Native.Foundation.NSError})">
+            <summary>
+            Sends the contents of a URL to a peer.
+            <br></br>Equivalent to the native <c>sendResourceAtURL:withName:toPeer:withCompletionHandler:</c> method.
+            </summary>
+            <remarks>
+                <b>Parameters</b>
+                <p>
+                </p>
+                <em>resourceURL</em>
+                <p>A file or HTTP URL.</p>
+                <em>resourceName</em>
+                <p>A name for the resource.</p>
+                <em>peerID</em>
+                <p>The peer that should receive this resource.</p>
+                <em>completionHandler</em>
+                <p>A block that gets called when delivery succeeds or fails. Upon success, the handler is called with an error value of <c>null</c>. Upon failure, the handle is called with an error object that indicates what went wrong.</p>
+                <b>Return Value</b>
+                <p>Returns an <c>NSProgress</c> object that can be used to query the status of the transfer.</p>
+                <b>Discussion</b>
+                <p>On the local device, the completion handler block is called when delivery succeeds or when an error occurs</p>
+                <p>On the peer device, the delegate’s <c>-session:didReceiveResourceAtURL:fromPeer:</c> is called upon successful delivery. The received resource is written to a file in a temporary location with the same base name; the app is responsible for saving it in a permanent location if desired..</p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 7.0 and later.</li>
+                </ul>
+            </remarks>
+            <param name="resourceURL">
+            </param>
+            <param name="resourceName">
+            </param>
+            <param name="peerID">
+            </param>
+            <param name="completionHandler"> A callback delegate.</param>
+        </member>
+        <member name="T:U3DXT.iOS.Native.MultipeerConnectivity.MCSessionDelegate">
+            <summary>
+            The protocol for delegate objects that handle callbacks from the Multipeer Connectivity session class. For more information, see <em>MCSession Class Reference</em>.
+            </summary>
+            <remarks>
+            </remarks>
+        </member>
+        <member name="M:U3DXT.iOS.Native.MultipeerConnectivity.MCSessionDelegate.UP_MCSessionDelegate_set__session_didFinishReceivingResourceWithName_fromPeer_atURL_withError__handler(System.String,System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.MultipeerConnectivity.MCSessionDelegate.UP_MCSessionDelegate_set__session_didReceiveCertificate_fromPeer_certificateHandler__handler(System.String,System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.MultipeerConnectivity.MCSessionDelegate.UP_MCSessionDelegate_set__session_didReceiveData_fromPeer__handler(System.String,System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.MultipeerConnectivity.MCSessionDelegate.UP_MCSessionDelegate_set__session_didStartReceivingResourceWithName_fromPeer_withProgress__handler(System.String,System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.MultipeerConnectivity.MCSessionDelegate.UP_MCSessionDelegate_set__session_peer_didChangeState__handler(System.String,System.String)">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.MultipeerConnectivity.MCSessionDelegate.#ctor">
+            <summary>
+            Default constructor.
+            </summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.MultipeerConnectivity.MCSessionDelegate.#ctor(U3DXT.iOS.Native.Internals._IosBaseClass._NewHelper,System.String)">
+            <summary>
+            U3DXT internal constructor.
+            </summary>
+            <param name="helper">
+            </param>
+            <param name="className">
+            </param>
+        </member>
+        <member name="M:U3DXT.iOS.Native.MultipeerConnectivity.MCSessionDelegate._InitImplementedMethods">
+            <summary>U3DXT internal.</summary>
+        </member>
+        <member name="M:U3DXT.iOS.Native.MultipeerConnectivity.MCSessionDelegate.DidFinishReceivingResourceWithName(U3DXT.iOS.Native.MultipeerConnectivity.MCSession,System.String,U3DXT.iOS.Native.MultipeerConnectivity.MCPeerID,U3DXT.iOS.Native.Foundation.NSURL,U3DXT.iOS.Native.Foundation.NSError)">
+            <summary>
+            (<b>required</b>) Called when a remote peer sends a file-like resource to the local peer. (required)
+            <br></br>Equivalent to the native <c>session:didFinishReceivingResourceWithName:fromPeer:atURL:withError:</c> method.
+            </summary>
+            <remarks>
+                <b>Parameters</b>
+                <p>
+                </p>
+                <em>session</em>
+                <p>The session through which the data was sent.</p>
+                <em>resourceName</em>
+                <p>The name of the resource, as provided by the peer.</p>
+                <em>peerID</em>
+                <p>The remote peer’s ID.</p>
+                <em>localURL</em>
+                <p>An <c>NSURL</c> object that provides the location of a temporary file containing the received data.</p>
+                <em>error</em>
+                <p>An error object indicating what went wrong if the file was not received successfully, or <c>null</c>.</p>
+                <b>Discussion</b>
+                <p>The file referenced by <c>resourceURL</c> is a temporary file. Your app must either read the file or make a copy in a permanent location before this delegate method returns.</p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 7.0 and later.</li>
+                </ul>
+            </remarks>
+            <param name="session">
+            </param>
+            <param name="resourceName">
+            </param>
+            <param name="peerID">
+            </param>
+            <param name="localURL">
+            </param>
+            <param name="error">
+            </param>
+        </member>
+        <member name="M:U3DXT.iOS.Native.MultipeerConnectivity.MCSessionDelegate.DidReceiveCertificate(U3DXT.iOS.Native.MultipeerConnectivity.MCSession,System.Object[],U3DXT.iOS.Native.MultipeerConnectivity.MCPeerID)">
+            <summary>
+            (optional) Called to validate the client certificate provided by a peer when the connection is first established.
+            <br></br>Equivalent to the native <c>session:didReceiveCertificate:fromPeer:certificateHandler:</c> method.
+            </summary>
+            <remarks>
+                <b>Parameters</b>
+                <p>
+                </p>
+                <em>session</em>
+                <p>The session that the nearby peer wishes to join.</p>
+                <em>certificate</em>
+                <p>A certificate chain, presented as an array of SecCertificateRef certificate objects. The first certificate in this chain is the peer’s certificate, which is derived from the identity that the peer provided when it called the <c>initWithPeer:securityIdentity:encryptionPreference:</c> method. The other certificates are the (optional) additional chain certificates provided in that same array.</p>
+                <p>If the nearby peer initialized the session by calling the <c>initWithPeer:</c> method, or if the nearby peer did not provide a security identity, then this parameter’s value is <c>null</c>.</p>
+                <em>peerID</em>
+                <p>The peer ID of the sender.</p>
+                <em>certificateHandler</em>
+                <p>Your app should call this handler with a value of <c>true</c> if the nearby peer should be allowed to join the session, or <c>false</c> otherwise.</p>
+                <b>Discussion</b>
+                <p>Your app should inspect the nearby peer’s certificate, and then should decide whether to trust that certificate. Upon making that determination, your app should call the provided <c>certificateHandler</c> block, passing either <c>true</c> (to trust the nearby peer) or <c>false</c> (to reject it).</p>
+                <p>For information about validating certificates, read <em>Cryptographic Services Guide</em>.</p>
+                <p>
+                    <strong>Important:</strong> The multipeer connectivity framework makes no attempt to validate the peer-provided identity or certificates in any way. If your delegate does not implement this method, all certificates are accepted automatically.</p>
+                <p>
+                </p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 7.0 and later.</li>
+                </ul>
+            </remarks>
+            <param name="session">
+            </param>
+            <param name="certificate">
+            </param>
+            <param name="peerID">
+            </param>
+        </member>
+        <member name="M:U3DXT.iOS.Native.MultipeerConnectivity.MCSessionDelegate.DidReceive(U3DXT.iOS.Native.MultipeerConnectivity.MCSession,U3DXT.iOS.Native.Foundation.NSData,U3DXT.iOS.Native.MultipeerConnectivity.MCPeerID)">
+            <summary>
+            (<b>required</b>) Called when a remote peer sends an <c>NSData</c> object to the local peer. (required)
+            <br></br>Equivalent to the native <c>session:didReceiveData:fromPeer:</c> method.
+            </summary>
+            <remarks>
+                <b>Parameters</b>
+                <p>
+                </p>
+                <em>session</em>
+                <p>The session through which the data was sent.</p>
+                <em>data</em>
+                <p>An object containing the received data.</p>
+                <em>peerID</em>
+                <p>The remote peer’s ID.</p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 7.0 and later.</li>
+                </ul>
+            </remarks>
+            <param name="session">
+            </param>
+            <param name="data">
+            </param>
+            <param name="peerID">
+            </param>
+        </member>
+        <member name="M:U3DXT.iOS.Native.MultipeerConnectivity.MCSessionDelegate.DidStartReceivingResourceWithName(U3DXT.iOS.Native.MultipeerConnectivity.MCSession,System.String,U3DXT.iOS.Native.MultipeerConnectivity.MCPeerID,U3DXT.iOS.Native.Foundation.NSProgress)">
+            <summary>
+            (<b>required</b>) Called when a remote peer begins sending a file-like resource to the local peer. (required)
+            <br></br>Equivalent to the native <c>session:didStartReceivingResourceWithName:fromPeer:withProgress:</c> method.
+            </summary>
+            <remarks>
+                <b>Parameters</b>
+                <p>
+                </p>
+                <em>session</em>
+                <p>The session through which the data was sent.</p>
+                <em>resourceName</em>
+                <p>The name of the resource, as provided by the peer.</p>
+                <em>peerID</em>
+                <p>The remote peer’s ID.</p>
+                <em>progress</em>
+                <p>An <c>NSProgress</c> object that can be queried to determine how far the transfer has progressed.</p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 7.0 and later.</li>
+                </ul>
+            </remarks>
+            <param name="session">
+            </param>
+            <param name="resourceName">
+            </param>
+            <param name="peerID">
+            </param>
+            <param name="progress">
+            </param>
+        </member>
+        <member name="M:U3DXT.iOS.Native.MultipeerConnectivity.MCSessionDelegate.DidChange(U3DXT.iOS.Native.MultipeerConnectivity.MCSession,U3DXT.iOS.Native.MultipeerConnectivity.MCPeerID,U3DXT.iOS.Native.MultipeerConnectivity.MCSessionState)">
+            <summary>
+            (<b>required</b>) Called when the state of a remote peer changes. (required)
+            <br></br>Equivalent to the native <c>session:peer:didChangeState:</c> method.
+            </summary>
+            <remarks>
+                <b>Parameters</b>
+                <p>
+                </p>
+                <em>session</em>
+                <p>The session that the remote peer joined or left.</p>
+                <em>peerID</em>
+                <p>The remote peer’s ID.</p>
+                <em>state</em>
+                <p>The current state of the remote peer.</p>
+                <b>Discussion</b>
+                <p>When a remote peer is invited to join a session, its state changes from <c>MCSessionStateNotConnected</c> to <c>MCSessionStateConnecting</c> and then to <c>MCSessionStateConnected</c> (if a connection was successfully made). When the remote peer leaves a session, its state changes back to <c>MCSessionStateNotConnected</c>.</p>
+                <b>Availability</b>
+                <ul>
+                    <li>Available in iOS 7.0 and later.</li>
+                </ul>
+            </remarks>
+            <param name="session">
+            </param>
+            <param name="peerID">
+            </param>
+            <param name="state">
+            </param>
+        </member>
+        <member name="P:U3DXT.iOS.Native.MultipeerConnectivity.MCSessionDelegate._session_didFinishReceivingResourceWithName_fromPeer_atURL_withError__handler">
+            <summary>
+                <br>
+                </br>Equivalent to the native <c>_session_didFinishReceivingResourceWithName_fromPeer_atURL_withError__handler</c> property.
+            </summary>
+            <remarks>
+            </remarks>
+        </member>
+        <member name="P:U3DXT.iOS.Native.MultipeerConnectivity.MCSessionDelegate._session_didReceiveCertificate_fromPeer_certificateHandler__handler">
+            <summary>
+                <br>
+                </br>Equivalent to the native <c>_session_didReceiveCertificate_fromPeer_certificateHandler__handler</c> property.
+            </summary>
+            <remarks>
+            </remarks>
+        </member>
+        <member name="P:U3DXT.iOS.Native.MultipeerConnectivity.MCSessionDelegate._session_didReceiveData_fromPeer__handler">
+            <summary>
+                <br>
+                </br>Equivalent to the native <c>_session_didReceiveData_fromPeer__handler</c> property.
+            </summary>
+            <remarks>
+            </remarks>
+        </member>
+        <member name="P:U3DXT.iOS.Native.MultipeerConnectivity.MCSessionDelegate._session_didStartReceivingResourceWithName_fromPeer_withProgress__handler">
+            <summary>
+                <br>
+                </br>Equivalent to the native <c>_session_didStartReceivingResourceWithName_fromPeer_withProgress__handler</c> property.
+            </summary>
+            <remarks>
+            </remarks>
+        </member>
+        <member name="P:U3DXT.iOS.Native.MultipeerConnectivity.MCSessionDelegate._session_peer_didChangeState__handler">
+            <summary>
+                <br>
+                </br>Equivalent to the native <c>_session_peer_didChangeState__handler</c> property.
+            </summary>
+            <remarks>
+            </remarks>
+        </member>
+        <member name="T:U3DXT.iOS.Native.MultipeerConnectivity.MCSessionSendDataMode">
+            <summary>
+            Indicates whether delivery of data should be guaranteed.
+            </summary>
+            <remarks>
+            </remarks>
+        </member>
+        <member name="F:U3DXT.iOS.Native.MultipeerConnectivity.MCSessionSendDataMode.Reliable">
+            <summary>
+                <p>Messages to peers should guarantee delivery of each message, enqueueing data as needed, and ensuring in-order delivery.</p>
+                <p>Available in iOS 7.0 and later.</p>
+                <p>
+                </p>
+                <br>
+                </br>Equivalent to the native <c>MCSessionSendDataReliable</c> enum constant.
+            </summary>
+        </member>
+        <member name="F:U3DXT.iOS.Native.MultipeerConnectivity.MCSessionSendDataMode.Unreliable">
+            <summary>
+                <p>Messages to peers should be sent immediately without socket-level queueing. If a message cannot be sent immediately, it should be dropped. The order of messages is not guaranteed.</p>
+                <p>Available in iOS 7.0 and later.</p>
+                <p>
+                </p>
+                <br>
+                </br>Equivalent to the native <c>MCSessionSendDataUnreliable</c> enum constant.
+            </summary>
+        </member>
+        <member name="T:U3DXT.iOS.Native.MultipeerConnectivity.MCSessionState">
+            <summary>
+            Indicates the current state of a given peer within a session.
+            </summary>
+            <remarks>
+            </remarks>
+        </member>
+        <member name="F:U3DXT.iOS.Native.MultipeerConnectivity.MCSessionState.Connected">
+            <summary>
+                <p>The peer is connected to this session.</p>
+                <p>Available in iOS 7.0 and later.</p>
+                <p>
+                </p>
+                <br>
+                </br>Equivalent to the native <c>MCSessionStateConnected</c> enum constant.
+            </summary>
+        </member>
+        <member name="F:U3DXT.iOS.Native.MultipeerConnectivity.MCSessionState.NotConnected">
+            <summary>
+                <p>The peer is not (or is no longer) in this session.</p>
+                <p>Available in iOS 7.0 and later.</p>
+                <p>
+                </p>
+                <br>
+                </br>Equivalent to the native <c>MCSessionStateNotConnected</c> enum constant.
+            </summary>
+        </member>
+        <member name="F:U3DXT.iOS.Native.MultipeerConnectivity.MCSessionState.Connecting">
+            <summary>
+                <p>A connection to the peer is currently being established.</p>
+                <p>Available in iOS 7.0 and later.</p>
+                <p>
+                </p>
+                <br>
+                </br>Equivalent to the native <c>MCSessionStateConnecting</c> enum constant.
+            </summary>
+        </member>
+    </members>
+</doc>

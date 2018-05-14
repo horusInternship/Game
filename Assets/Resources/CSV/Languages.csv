@@ -1,0 +1,35 @@
+Text,GUIName,Chapter
+Jogar,btn_PlayButton,6.1.1
+Classificação,btn_LeaderBoard,6.1.1
+Definições,btn_Options,6.1.1
+Glossário,btn_Quiz,6.1.1
+Início,btn_Home,6.1.1
+Fácil,btn_Easy,6.1.1
+Médio,btn_Medium,6.1.1
+Difícil,btn_Hard,6.1.1
+Nome,Insertnamehere,6.1.1
+Restauro,btn_Reset,6.1.1
+Ficha Técnica,btn_Credits,6.1.1
+Sair,btn_QuitLevel,6.2.1
+Recomeçar,btn_RestartLevel,6.2.1
+Continuar,btn_ResumeLevel,6.2.1
+Próximo,btn_NextLevel,6.2.1
+Custo,pnl_info,3.5
+Descrição da torre 1 Firewall ataque laser,pnl_info,3.5
+Descrição da torre 2 Antivirus ataque eletrico,pnl_info,3.5
+Descrição da torre 3 Encrypt ataque spreadshot,pnl_info,3.5
+Descrição da torre 4 Update ataque de stop,pnl_info,3.5
+Descrição da torre 5 Reset ataque com aoe,pnl_info,3.5
+Energia,energy_bar,6.2.7
+LALALALA LALALAaaaa,Ia 1,
+AHAHAH Apanhei-te!,Ia 2 a,
+Nãoooooo,Ia 2 b,
+Estás agora sob o meus agentes maliciosos da internet!,Ia 3,
+Não podes escapar!,Ia 4,
+Espera ainda tens uma chance,Ia 5 a,
+Não tens nada AHAHAH,Ia 5 b,
+Envio-te umas dicas e umas armas. ,Ia 5 c,
+Tens de saber como estares seguro na Internet! ,,
+Lembra-te que o conhecimento é a melhor forma de estar protegido na Internet!,i6 a,
+,,
+Este jogo necessita de ligação à internet para download de dados para o glossário,MainMenu – Connection Message,

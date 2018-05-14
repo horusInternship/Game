@@ -1,0 +1,139 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>U3DXTSpeech_HL</name>
+    </assembly>
+    <members>
+        <member name="T:U3DXT.iOS.Speech.SpeechEventArgs">
+            <summary>
+            Speech event arguments.
+            </summary>
+        </member>
+        <member name="F:U3DXT.iOS.Speech.SpeechEventArgs.utterance">
+            <summary>
+            The utterance.
+            </summary>
+        </member>
+        <member name="M:U3DXT.iOS.Speech.SpeechEventArgs.#ctor(U3DXT.iOS.Native.AVFoundation.AVSpeechUtterance)">
+            <summary>
+            Initializes a new instance of the <see cref="T:U3DXT.iOS.Speech.SpeechEventArgs" /> class.
+            </summary>
+            <param name="utterance">Utterance.</param>
+        </member>
+        <member name="T:U3DXT.iOS.Speech.SpeechWillSpeakEventArgs">
+            <summary>
+            Speech will speak event arguments.
+            </summary>
+        </member>
+        <member name="F:U3DXT.iOS.Speech.SpeechWillSpeakEventArgs.characterRange">
+            <summary>
+            The character range.
+            </summary>
+        </member>
+        <member name="M:U3DXT.iOS.Speech.SpeechWillSpeakEventArgs.#ctor(U3DXT.iOS.Native.AVFoundation.AVSpeechUtterance,U3DXT.iOS.Native.Foundation.NSRange)">
+            <summary>
+            Initializes a new instance of the <see cref="T:U3DXT.iOS.Speech.SpeechWillSpeakEventArgs" /> class.
+            </summary>
+            <param name="utterance">Utterance.</param>
+            <param name="characterRange">Character range.</param>
+        </member>
+        <member name="T:U3DXT.iOS.Speech.SpeechXT">
+            <summary>
+            Main class for iOS Speech plugin. High-level API.</summary>
+            <remarks>
+            </remarks>
+        </member>
+        <member name="E:U3DXT.iOS.Speech.SpeechXT.SpeechStopped">
+            <summary>
+            Occurs when a speech has stopped.
+            </summary>
+        </member>
+        <member name="E:U3DXT.iOS.Speech.SpeechXT.SpeechContinued">
+            <summary>
+            Occurs when a speech has continued.
+            </summary>
+        </member>
+        <member name="E:U3DXT.iOS.Speech.SpeechXT.SpeechFinished">
+            <summary>
+            Occurs when a speech has finished.
+            </summary>
+        </member>
+        <member name="E:U3DXT.iOS.Speech.SpeechXT.SpeechPaused">
+            <summary>
+            Occurs when a speech has paused.
+            </summary>
+        </member>
+        <member name="E:U3DXT.iOS.Speech.SpeechXT.SpeechStarted">
+            <summary>
+            Occurs when a speech has started.
+            </summary>
+        </member>
+        <member name="E:U3DXT.iOS.Speech.SpeechXT.WillSpeak">
+            <summary>
+            Occurs when a portion of a speech is about to be spoken.
+            </summary>
+        </member>
+        <member name="P:U3DXT.iOS.Speech.SpeechXT.isSynthesisSupported">
+            <summary>
+            Indicates whether the current device/iOS version supports speech synthesis.
+            </summary>
+            <value>
+                <c>true</c> if is supported; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="M:U3DXT.iOS.Speech.SpeechXT.Speak(System.String)">
+            <summary>
+            Speak the specified text.
+            </summary>
+            <param name="text">Text.</param>
+        </member>
+        <member name="M:U3DXT.iOS.Speech.SpeechXT.Pause(U3DXT.iOS.Native.AVFoundation.AVSpeechBoundary)">
+            <summary>
+            Pause speech.
+            </summary>
+            <param name="boundary">Whether to pause immediately or at word.</param>
+        </member>
+        <member name="M:U3DXT.iOS.Speech.SpeechXT.Continue">
+            <summary>
+            Continue speech.
+            </summary>
+        </member>
+        <member name="M:U3DXT.iOS.Speech.SpeechXT.Stop(U3DXT.iOS.Native.AVFoundation.AVSpeechBoundary)">
+            <summary>
+            Stop speech.
+            </summary>
+            <param name="boundary">Whether to stop immediately or at word.</param>
+        </member>
+        <member name="P:U3DXT.iOS.Speech.SpeechXT.isPaused">
+            <summary>
+            Gets a value indicating whether this <see cref="T:U3DXT.iOS.Speech.SpeechXT" /> is paused.
+            </summary>
+            <value>
+                <c>true</c> if is paused; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:U3DXT.iOS.Speech.SpeechXT.isSpeaking">
+            <summary>
+            Gets a value indicating whether this <see cref="T:U3DXT.iOS.Speech.SpeechXT" /> is speaking.
+            </summary>
+            <value>
+                <c>true</c> if is speaking; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:U3DXT.iOS.Speech.SpeechXT.settings">
+            <summary>
+            The settings for speech. Change it only affects the next time you call Speak().
+            </summary>
+            <value>The settings.</value>
+        </member>
+        <member name="P:U3DXT.iOS.Speech.SpeechXT.availableVoices">
+            <summary>
+            Gets the available voices.
+            </summary>
+            <value>The available voices.</value>
+        </member>
+        <member name="P:U3DXT.iOS.Speech.SpeechXT.currentLocaleVoice">
+            <summary>
+            Gets the current voice.
+            </summary>
+            <value>The current voice.</value>
+        </member>
+    </members>
+</doc>

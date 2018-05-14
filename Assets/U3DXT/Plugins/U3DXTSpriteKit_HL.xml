@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>U3DXTSpriteKit_HL</name>
+    </assembly>
+    <members>
+        <member name="T:U3DXT.iOS.SpriteKit.SpriteKitXT">
+            <summary>
+            Main class for iOS SpriteKit plugin. High-level API.</summary>
+            <remarks>
+            </remarks>
+        </member>
+    </members>
+</doc>

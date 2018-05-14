@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>U3DXTMaps_HL</name>
+    </assembly>
+    <members>
+        <member name="T:U3DXT.iOS.Maps.MapsXT">
+            <summary>
+            Main class for iOS Maps plugin. High-level API.</summary>
+            <remarks>
+            </remarks>
+        </member>
+    </members>
+</doc>

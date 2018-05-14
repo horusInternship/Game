@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>U3DXTBluetooth_HL</name>
+    </assembly>
+    <members>
+        <member name="T:U3DXT.iOS.Bluetooth.BluetoothXT">
+            <summary>
+            Main class for iOS Bluetooth plugin. High-level API.</summary>
+            <remarks>
+            </remarks>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.unity3d.player" android:installLocation="preferExternal" android:theme="@android:style/Theme.NoTitleBar" android:versionCode="1" android:versionName="1.0">
+  <uses-permission android:name="com.android.vending.BILLING" />
+  <supports-screens android:smallScreens="true" android:normalScreens="true" android:largeScreens="true" android:xlargeScreens="true" android:anyDensity="true" />
+  <uses-sdk android:minSdkVersion="9" />
+  <application android:icon="@drawable/app_icon" android:label="@string/app_name" android:debuggable="true" android:name="com.soomla.SoomlaApp">
+    <activity android:name="com.unity3d.player.UnityPlayerNativeActivity" android:label="@string/app_name" android:configChanges="fontScale|keyboard|keyboardHidden|locale|mnc|mcc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|uiMode|touchscreen" android:screenOrientation="landscape">
+      <intent-filter>
+        <action generator="CashPlay" android:name="android.intent.action.MAIN" />
+        <category generator="CashPlay" android:name="android.intent.category.LAUNCHER" />
+        <category generator="CashPlay" android:name="android.intent.category.LEANBACK_LAUNCHER" />
+      </intent-filter>
+      <meta-data android:name="unityplayer.UnityActivity" android:value="true" />
+      <meta-data android:name="unityplayer.ForwardNativeEventsToDalvik" android:value="true" />
+    </activity>
+    <activity android:name="co.cashplay.android.client.WebUi" android:configChanges="fontScale|keyboard|keyboardHidden|locale|mnc|mcc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|uiMode|touchscreen" android:label="CashPlay" android:windowSoftInputMode="adjustPan" android:screenOrientation="landscape" />
+    <activity android:name="com.facebook.unity.FBUnityLoginActivity" android:configChanges="fontScale|keyboard|keyboardHidden|locale|mnc|mcc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|uiMode|touchscreen" android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen">
+    </activity>
+    <activity android:name="com.facebook.unity.FBUnityDialogsActivity" android:configChanges="fontScale|keyboard|keyboardHidden|locale|mnc|mcc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|uiMode|touchscreen" android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen">
+    </activity>
+    <activity android:name="com.facebook.LoginActivity" android:configChanges="keyboardHidden|orientation" android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen">
+    </activity>
+    <activity android:name="com.facebook.unity.FBUnityDeepLinkingActivity" android:exported="true">
+    </activity>
+    <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="\ 790930027693814" />
+    <activity android:name="com.soomla.store.billing.google.GooglePlayIabService$IabActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" />
+    <meta-data android:name="billing.service" android:value="google.GooglePlayIabService" />
+    <service android:name="co.cashplay.android.client.GcmRegistrationService" />
+    <receiver android:name="co.cashplay.android.client.GcmBroadcastReceiver" android:permission="com.google.android.c2dm.permission.SEND">
+      <intent-filter>
+        <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+        <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+        <category android:name="com.HGE.PutterGame" />
+      </intent-filter>
+    </receiver>
+    <meta-data generator="CashPlay" android:name="co.cashplay.GAME_ID" android:value="7e1386e0f2b001329c85723c9118d984 " />
+    <meta-data generator="CashPlay" android:name="co.cashplay.SECRET" android:value="kezVfohKgtKRYUNXcCv9iejgTgSO7vy4RDju2Wh1Hgsy8/20IQqZuNxEGbmPC/UGh8Wa5aLqx2o6ewWBuPBHSQ==" />
+    <meta-data generator="CashPlay" android:name="co.cashplay.STORE_ID" android:value="7e178860f2b001329c86723c9118d984" />
+    <meta-data generator="CashPlay" android:name="co.cashplay.TEST_MODE" android:value="false" />
+    <meta-data generator="CashPlay" android:name="co.cashplay.LOG_ENABLED" android:value="false" />
+    <meta-data generator="CashPlay" android:name="co.cashplay.NO_CASH" android:value="false" />
+    <meta-data generator="CashPlay" android:name="co.cashplay.ALTERNATIVE_RESULTS_DELIVERY" android:value="true" />
+    <receiver generator="CashPlay" android:name="co.cashplay.android.client.NotificationReceiver" />
+  </application>
+  <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+  <uses-permission android:name="android.permission.WAKE_LOCK" />
+  <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+  <uses-permission android:name="com.HGE.PutterGame.permission.C2D_MESSAGE" />
+  <permission android:name="com.HGE.PutterGame.permission.C2D_MESSAGE" android:protectionLevel="signature" />
+  <uses-permission generator="CashPlay" android:name="android.permission.CAMERA" android:required="false" />
+  <uses-permission generator="CashPlay" android:name="android.permission.ACCESS_FINE_LOCATION" android:required="false" />
+  <uses-permission generator="CashPlay" android:name="android.permission.ACCESS_COARSE_LOCATION" />
+  <uses-permission generator="CashPlay" android:name="android.permission.INTERNET" />
+  <uses-permission generator="CashPlay" android:name="android.permission.ACCESS_NETWORK_STATE" />
+  <uses-permission generator="CashPlay" android:name="android.permission.READ_PHONE_STATE" />
+  <uses-feature generator="CashPlay" android:name="android.hardware.location" android:required="false" />
+  <uses-feature generator="CashPlay" android:name="android.hardware.location.gps" android:required="false" />
+  <uses-feature generator="CashPlay" android:name="android.hardware.location.network" android:required="false" />
+  <uses-feature generator="CashPlay" android:name="android.hardware.camera" android:required="false" />
+  <uses-feature generator="CashPlay" android:name="android.hardware.camera.front" android:required="false" />
+</manifest>

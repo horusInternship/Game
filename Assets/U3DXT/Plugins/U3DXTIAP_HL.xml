@@ -1,0 +1,268 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>U3DXTIAP_HL</name>
+    </assembly>
+    <members>
+        <member name="T:U3DXT.iOS.IAP.IAPXT">
+            <summary>
+            Main class for iOS IAP plugin. High-level API to in-app purchase.</summary>
+            <remarks>
+            At launch of your app, subscribe to InitializationCompleted and InitializationFailed events first.
+            Then call Init() with an array of product IDs that you have configured on iTunes Connect.
+            Only after InitializationCompleted event can you call other methods.
+            InitializationFailed event contains an array of invalid product IDs which you can then investigate.
+            </remarks>
+        </member>
+        <member name="E:U3DXT.iOS.IAP.IAPXT.InitializationCompleted">
+            <summary>
+            Occurs when initialization has completed.
+            </summary>
+        </member>
+        <member name="E:U3DXT.iOS.IAP.IAPXT.InitializationFailed">
+            <summary>
+            Occurs when initialization has failed.
+            </summary>
+        </member>
+        <member name="E:U3DXT.iOS.IAP.IAPXT.TransactionCompleted">
+            <summary>
+            Occurs when transaction has completed.
+            </summary>
+        </member>
+        <member name="E:U3DXT.iOS.IAP.IAPXT.TransactionFailed">
+            <summary>
+            Occurs when transaction has failed.
+            </summary>
+        </member>
+        <member name="E:U3DXT.iOS.IAP.IAPXT.DownloadUpdated">
+            <summary>
+            Occurs when a download progress has updated.
+            </summary>
+        </member>
+        <member name="E:U3DXT.iOS.IAP.IAPXT.RestorationCompleted">
+            <summary>
+            Occurs when restoration has completed.
+            </summary>
+        </member>
+        <member name="E:U3DXT.iOS.IAP.IAPXT.RestorationFailed">
+            <summary>
+            Occurs when restoration has failed.
+            </summary>
+        </member>
+        <member name="E:U3DXT.iOS.IAP.IAPXT.StoreViewLoadFailed">
+            <summary>
+            Occurs when initialization has completed.
+            </summary>
+        </member>
+        <member name="F:U3DXT.iOS.IAP.IAPXT.displayActivityIndicator">
+            <summary>
+            Indicates whether to display native activity indicator when purchasing and downloading
+            </summary>
+        </member>
+        <member name="F:U3DXT.iOS.IAP.IAPXT.useEncryptionForCache">
+            <summary>
+            Indicates whether to use encryption to cache which products the user has bought on local install.
+            This makes it more difficult for users to modify the PlayerPref to hack bought products.
+            If you want to disable using encryption, set this to false.
+            </summary>
+        </member>
+        <member name="P:U3DXT.iOS.IAP.IAPXT.encryptionKey">
+            <summary>
+            Gets or sets the encryption key.
+            Default is "u3d" for a key size of 48 bits, and thus not violating export laws.
+            </summary>
+            <value>The encryption key.</value>
+        </member>
+        <member name="M:U3DXT.iOS.IAP.IAPXT.Init(System.String[])">
+            <summary>
+            Initializes IAPXT with an array of product IDs.
+            </summary>
+            <remarks>Raises InitializationCompleted event when completed, or InitializationFailed event when failed.</remarks>
+            <param name="productIDs">Product IDs.</param>
+        </member>
+        <member name="P:U3DXT.iOS.IAP.IAPXT.canMakePayments">
+            <summary>
+            Indicates whether the platform can make payments. If the user has disabled in-app purchase, this would be false.
+            </summary>
+            <value>
+                <c>true</c> if the platform can make payments; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:U3DXT.iOS.IAP.IAPXT.products">
+            <summary>
+            A Dictionary of product IDs to SKProduct objects that have been successfully initialized.
+            </summary>
+            <value>The initialized products.</value>
+        </member>
+        <member name="M:U3DXT.iOS.IAP.IAPXT.GetProduct(System.String)">
+            <summary>
+            Returns an initialized SKProduct object matching the specified product ID.
+            </summary>
+            <returns>The product.</returns>
+            <param name="productID">Product ID</param>
+        </member>
+        <member name="M:U3DXT.iOS.IAP.IAPXT.HasBought(System.String)">
+            <summary>
+            Returns whether the product has been bought and stored in local cache.
+            </summary>
+            <remarks>
+            This method only checks the local cache and not the server.
+            So if it returns true, the user has definitely bought the product.
+            However, if it returns false, it DOES NOT mean the user has not bought the product.
+            It just means the user has not bought the product on this device with this installation.
+            The user may have bought the same product on a different device or on a previous installation
+            on the same device.
+            </remarks>
+            <returns>
+                <c>true</c> if has bought the specified productID; <c>false</c> if not bought locally.</returns>
+            <param name="productID">the product ID to check whether it has been bought.</param>
+        </member>
+        <member name="M:U3DXT.iOS.IAP.IAPXT.ClearCache">
+            <summary>
+            Clears the local cache on whether products are bought.
+            You should only use this during development for debugging purposes.
+            </summary>
+        </member>
+        <member name="M:U3DXT.iOS.IAP.IAPXT.Buy(System.String,System.Int32)">
+            <summary>
+            Buy a product with specified productID and quantity.
+            </summary>
+            <remarks>
+            This method starts a transaction with the server.
+            If the DisplayActivityIndicator property is true, a semi-transparent native activity indicator view with label
+            would cover the entire screen, blocking any user input from Unity.
+            If you set the DisplayActivityIndicator property to false, you should provide a similar view blocking input
+            during the purchase process so the user cannot start another purchase at the same time, for example.
+            <p></p>
+            On transaction complete, it raises either the TransactionCompleted or TransactionFailed event.
+            On TransactionCompleted event, you should provide content to the user for what they have just bought.
+            On TransactionFailed event, you can display an error message to the user.
+            If the product has hosted download on Apple servers (available iOS 6.0 and later),
+            the content would have been extracted and moved to app-storage:/downloads/[productID]/ by the time this event is raised.
+            You can then move it somewhere else or use it as it is.
+            </remarks>
+            <returns>
+                <c>true</c> if a transaction has started; <c>false</c> otherwise.</returns>
+            <param name="productID">The product to buy.</param>
+            <param name="quantity">The quantity of the product to buy; it should be 1 for non-consumables.</param>
+        </member>
+        <member name="P:U3DXT.iOS.IAP.IAPXT.pendingTransactions">
+            <summary>
+            The array of pending transactions.
+            These are the transactions that have started but not yet called finished.
+            </summary>
+            <value>The pending transactions.</value>
+        </member>
+        <member name="M:U3DXT.iOS.IAP.IAPXT.RestoreCompletedTransactions">
+            <summary>
+            Restores all completed products that the user has bought.
+            It's similar to Buy() in that it starts transactions. So it raises to the same events on transaction completion.
+            Additionally, it raises RestorationCompleted and RestorationFailed events on completion.
+            </summary>
+            <seealso cref="M:U3DXT.iOS.IAP.IAPXT.Buy(System.String,System.Int32)" />
+        </member>
+        <member name="M:U3DXT.iOS.IAP.IAPXT.ShowStore(System.String)">
+            <summary>
+            Presents the native App Store interface with the product identified by its iTunes ID.
+            <p></p>
+            This is available in iOS 6.0 and later.
+            </summary>
+            <param name="iTunesID">The iTunes ID that identifies the product to show.</param>
+        </member>
+        <member name="T:U3DXT.iOS.IAP.Helpers.ProductsRequestDelegate">
+            <summary>
+            Products request delegate.
+            </summary>
+        </member>
+        <member name="T:U3DXT.iOS.IAP.InitializationEventArgs">
+            <summary>
+            Initialization event arguments.
+            </summary>
+        </member>
+        <member name="F:U3DXT.iOS.IAP.InitializationEventArgs.invalidIDs">
+            <summary>
+            The invalid IDs.
+            </summary>
+        </member>
+        <member name="F:U3DXT.iOS.IAP.InitializationEventArgs.products">
+            <summary>
+            The products.
+            </summary>
+        </member>
+        <member name="F:U3DXT.iOS.IAP.InitializationEventArgs.error">
+            <summary>
+            The error if exists.
+            </summary>
+        </member>
+        <member name="M:U3DXT.iOS.IAP.InitializationEventArgs.#ctor(U3DXT.iOS.Native.StoreKit.SKProductsResponse)">
+            <summary>
+            Initializes a new instance of the <see cref="T:U3DXT.iOS.IAP.InitializationEventArgs" /> class.
+            </summary>
+            <param name="response">Response.</param>
+        </member>
+        <member name="M:U3DXT.iOS.IAP.InitializationEventArgs.#ctor(System.String[],U3DXT.iOS.Native.Foundation.NSError)">
+            <summary>
+            Initializes a new instance of the <see cref="T:U3DXT.iOS.IAP.InitializationEventArgs" /> class.
+            </summary>
+            <param name="invalidIDs">Invalid IDs.</param>
+            <param name="error">Error.</param>
+        </member>
+        <member name="T:U3DXT.iOS.IAP.Helpers.PaymentTransactionObserver">
+            <summary>
+            Payment transaction observer.
+            </summary>
+        </member>
+        <member name="T:U3DXT.iOS.IAP.TransactionEventArgs">
+            <summary>
+            Transaction event arguments.
+            </summary>
+        </member>
+        <member name="F:U3DXT.iOS.IAP.TransactionEventArgs.transaction">
+            <summary>
+            The native transaction.
+            </summary>
+        </member>
+        <member name="F:U3DXT.iOS.IAP.TransactionEventArgs.productID">
+            <summary>
+            The product ID.
+            </summary>
+        </member>
+        <member name="F:U3DXT.iOS.IAP.TransactionEventArgs.quantity">
+            <summary>
+            The quantity.
+            </summary>
+        </member>
+        <member name="F:U3DXT.iOS.IAP.TransactionEventArgs.error">
+            <summary>
+            The error if occurred.
+            </summary>
+        </member>
+        <member name="F:U3DXT.iOS.IAP.TransactionEventArgs.hasDownloads">
+            <summary>
+            Indicates whether this transaction has any downloads.
+            </summary>
+        </member>
+        <member name="M:U3DXT.iOS.IAP.TransactionEventArgs.#ctor(U3DXT.iOS.Native.StoreKit.SKPaymentTransaction,U3DXT.iOS.Native.Foundation.NSError)">
+            <summary>
+            Initializes a new instance of the <see cref="T:U3DXT.iOS.IAP.TransactionEventArgs" /> class.
+            </summary>
+            <param name="transaction">Transaction.</param>
+            <param name="error">Error.</param>
+        </member>
+        <member name="T:U3DXT.iOS.IAP.DownloadEventArgs">
+            <summary>
+            Download event arguments.
+            </summary>
+        </member>
+        <member name="F:U3DXT.iOS.IAP.DownloadEventArgs.downloads">
+            <summary>
+            The downloads.
+            </summary>
+        </member>
+        <member name="M:U3DXT.iOS.IAP.DownloadEventArgs.#ctor(System.Object[])">
+            <summary>
+            Initializes a new instance of the <see cref="T:U3DXT.iOS.IAP.DownloadEventArgs" /> class.
+            </summary>
+            <param name="downloads">Downloads.</param>
+        </member>
+    </members>
+</doc>

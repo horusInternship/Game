@@ -1,0 +1,29 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Controls/TDLevelControl.cs">
+    <Files>
+      <File FileName="Assets/Scripts/GUIs/PlayerSelectMenu.cs" Line="43" Column="4" />
+      <File FileName="Assets/Scripts/Controls/TowerControl.cs" Line="101" Column="2" />
+      <File FileName="Assets/Scripts/Controls/TowerSpotsGUIs.cs" Line="106" Column="37" />
+      <File FileName="Assets/Scripts/Controls/TowerSpotControl.cs" Line="69" Column="4" />
+      <File FileName="Assets/Scripts/GUIs/WinPauseLoseGame.cs" Line="68" Column="111" />
+      <File FileName="Assets/Scripts/DataStructures/EnemyStatus.cs" Line="16" Column="21" />
+      <File FileName="Assets/Scripts/Controls/EnemyControl.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/GUIs/ButtonMainMenu.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/GUIs/OptionsMenu.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Data/GlobalData.cs" Line="217" Column="4" />
+      <File FileName="Assets/Scripts/Generic/SaveLoadData.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Generic/JSONMaker.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/GUIs/Glossary.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Data/PlayerData.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Controls/QuizControl.cs" Line="418" Column="8" />
+      <File FileName="Assets/Scripts/GUIs/AnimatorSpeedup.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/GUIs/Credits.cs" Line="33" Column="57" />
+      <File FileName="Assets/Scripts/Controls/TDLevelControl.cs" Line="518" Column="4" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
